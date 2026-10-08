@@ -1,0 +1,18 @@
+id: q1_calibration
+text: >-
+  Does post-hoc probability calibration (Platt scaling or isotonic regression) improve the
+  probability estimates of tree ensembles on tabular classification, and at what cost in
+  discrimination?
+keywords: [probability calibration, random forest, isotonic regression, Platt scaling]
+concepts: [calibration, random forest, isotonic regression, Platt scaling, brier score]
+domain_hint: machine learning
+# Written by a person; used only by the rule reasoner (the language-model reasoner gets the
+# toolbox catalogue instead and must operationalise the question itself).
+operationalisation:
+  independent_variable: post-hoc calibration (Platt or isotonic) of a random forest
+  dependent_variable: brier
+  expected_direction: decrease
+  control: random_forest
+  treatments: [random_forest+platt, random_forest+isotonic]
+  metrics: [brier, roc_auc, ece]
+  datasets: [breast_cancer, wine_binary, digits_binary]

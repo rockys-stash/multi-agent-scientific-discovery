@@ -1,0 +1,15 @@
+id: q2_scaling_knn
+text: >-
+  Does standardising features before k-nearest-neighbour classification improve accuracy on
+  tabular data whose features are on different scales?
+keywords: [feature scaling, standardization, k-nearest neighbors, classification accuracy]
+concepts: [feature scaling, standardization, nearest neighbor, distance, accuracy]
+domain_hint: machine learning
+operationalisation:
+  independent_variable: feature standardisation before k-nearest-neighbour classification
+  dependent_variable: accuracy
+  expected_direction: increase
+  control: knn
+  treatments: [knn+standardize]
+  metrics: [accuracy, balanced_accuracy]
+  datasets: [breast_cancer, wine_binary, digits_binary]

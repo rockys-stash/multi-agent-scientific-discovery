@@ -1,0 +1,15 @@
+id: q3_imbalance
+text: >-
+  For imbalanced binary classification, does random oversampling of the minority class
+  recover more minority-class recall than class weighting in logistic regression?
+keywords: [class imbalance, oversampling, class weighting, logistic regression, recall]
+concepts: [class imbalance, oversampling, class weight, logistic regression, recall]
+domain_hint: machine learning
+operationalisation:
+  independent_variable: random oversampling of the minority class instead of class weighting
+  dependent_variable: minority_recall
+  expected_direction: increase
+  control: logistic_regression+class_weight
+  treatments: [logistic_regression+oversample]
+  metrics: [minority_recall, balanced_accuracy, roc_auc]
+  datasets: [breast_cancer_imb10, digits_binary_imb10]

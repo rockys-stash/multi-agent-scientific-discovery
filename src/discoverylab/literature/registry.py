@@ -1,0 +1,64 @@
+"""Search across sources and resolve identifiers to authoritative records."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+
+from discoverylab.literature.sources import Source, normalise_identifier
+from discoverylab.models import Paper
+
+# Which sources are authoritative for each identifier scheme, in order. The first answer
+# supplies the metadata; every answer contributes source text for quote checks.
+RESOLVERS: dict[str, tuple[str, ...]] = {
+    "doi": ("crossref", "openalex", "semanticscholar"),
+    "arxiv": ("arxiv", "semanticscholar"),
+    "openalex": ("openalex",),
+}
+
+
+@dataclass
+class Resolved:
+    identifier: str
+    record: Paper | None
+    texts: dict[str, str] = field(default_factory=dict)  # source name -> title + abstract
+    tried: list[str] = field(default_factory=list)
+
+
+class SourceRegistry:
+    def __init__(self, sources: list[Source], resolvers: dict[str, tuple[str, ...]] | None = None) -> None:
+        self.sources = {s.name: s for s in sources}
+        self.resolvers = resolvers or RESOLVERS
+
+    def search(self, query: str, per_source: int = 10) -> list[Paper]:
+        """Union of results from every source, de-duplicated by identifier.
+
+        When two sources return the same work, the first keeps its metadata and an empty
+        abstract is filled from the other.
+        """
+        merged: dict[str, Paper] = {}
+        for src in self.sources.values():
+            for p in src.search(query, per_source):
+                if p.id in merged:
+                    if not merged[p.id].abstract and p.abstract:
+                        merged[p.id] = merged[p.id].model_copy(update={"abstract": p.abstract})
+                else:
+                    merged[p.id] = p
+        return list(merged.values())
+
+    def resolve(self, raw_identifier: str) -> Resolved:
+        ident = normalise_identifier(raw_identifier)
+        if ident is None:
+            return Resolved(raw_identifier, None)
+        out = Resolved(ident, None)
+        for name in self.resolvers.get(ident.split(":", 1)[0], ()):
+            src = self.sources.get(name)
+            if src is None:
+                continue
+            out.tried.append(name)
+            rec = src.resolve(ident)
+            if rec is None:
+                continue
+            if out.record is None:
+                out.record = rec
+            out.texts[name] = f"{rec.title}\n{rec.abstract}"
+        return out
