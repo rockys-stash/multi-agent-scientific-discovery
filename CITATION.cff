@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Multi-agent scientific discovery lab: a Research Director coordinating literature, hypothesis, experiment and critic agents, judged on process with every citation verified"
+type: software
+authors:
+  - alias: rockys-stash
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/rockys-stash/multi-agent-scientific-discovery"
+keywords:
+  - multi-agent systems
+  - scientific discovery
+  - citation verification
+  - research agents
+  - evaluation

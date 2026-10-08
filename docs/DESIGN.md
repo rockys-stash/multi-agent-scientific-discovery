@@ -59,7 +59,7 @@ The graph is not decoration. Every edge that rests on a citation shows its verif
   - diamond: gap;
   - hexagon: hypothesis;
   - rounded rectangle: design and result;
-  - triangle: critique.
+  - critiques: a small triangle with a count on the node they target.
 - All nodes are graphite, apart from the selected node (ochre) and status rings.
 
 ## Spacing, shape and components
@@ -70,8 +70,8 @@ The graph is not decoration. Every edge that rests on a citation shows its verif
 
 ## Data visualisation
 
-- The **network** uses a deterministic force layout seeded by the run id, so the same run always draws the same way. Nodes are placed in loose columns by stage, left to right.
-- **Evaluation** charts follow the portfolio's chart rules: interval dots, a single axis, direct labels and recessive grids.
+- The **network** uses a deterministic layered layout: one column per workflow stage, left to right, with nodes ordered inside each column by the mean position of their neighbours (two barycentre sweeps). The same run always draws the same way. Edges leave a node after its label, so they do not cross text. (A force layout was planned first; see DECISIONS D3.)
+- **Evaluation** shows each experiment's tables as they were written; numbers appear only for experiments that ran.
 
 ## Motion
 
@@ -83,7 +83,7 @@ Loading, empty (no runs yet, or a run stopped before a stage), error (API unreac
 
 ## Responsive behaviour
 
-- Below 760 px, the network becomes a stage-ordered list with expandable nodes, because a force graph is not usable on a phone.
+- Below 760 px, the network becomes a stage-ordered list with expandable nodes, because a dense graph is not usable on a phone. A Graph/List toggle offers the list on desktop too.
 - The inspector becomes a full-width sheet.
 
 ## Accessibility
