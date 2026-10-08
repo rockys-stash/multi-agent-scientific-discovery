@@ -1,0 +1,686 @@
+{
+ "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+ "evidence": [
+  {
+   "evidence_id": "E1",
+   "citation": {
+    "identifier": "doi:10.2139/ssrn.6455598",
+    "normalised": "doi:10.2139/ssrn.6455598",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Improving Loan Default Prediction Using Class Imbalance Techniques: A Comparative Study of SMOTE and Class Weighting Methods",
+    "resolved_first_author": "Md Ahsanul Tarafder",
+    "resolved_year": 2026,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E2",
+   "citation": {
+    "identifier": "doi:10.22146/ijccs.37415",
+    "normalised": "doi:10.22146/ijccs.37415",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Oversampling Method To Handling Imbalanced Datasets Problem In Binary Logistic Regression Algorithm",
+    "resolved_first_author": "Windyaning Ustyannie",
+    "resolved_year": 2020,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E3",
+   "citation": {
+    "identifier": "doi:10.1186/s12874-024-02270-x",
+    "normalised": "doi:10.1186/s12874-024-02270-x",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Binary classification with fuzzy logistic regression under class imbalance and complete separation in clinical studies",
+    "resolved_first_author": "Georgios Charizanos",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E4",
+   "citation": {
+    "identifier": "arxiv:2202.09101",
+    "normalised": "arxiv:2202.09101",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "The harm of class imbalance corrections for risk prediction models: illustration and simulation using logistic regression",
+    "resolved_first_author": "Ruben van den Goorbergh",
+    "resolved_year": 2022,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E5",
+   "citation": {
+    "identifier": "doi:10.1155/acis/1013769",
+    "normalised": "doi:10.1155/acis/1013769",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Addressing Class Imbalance Problem in Health Data Classification: Practical Application From an Oversampling Viewpoint",
+    "resolved_first_author": "Edmund Fosu Agyemang",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E6",
+   "citation": {
+    "identifier": "doi:10.2174/0126662558347788241127051934",
+    "normalised": "doi:10.2174/0126662558347788241127051934",
+    "status": "metadata_mismatch",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": false,
+    "resolved_title": "Comprehensive Analysis of Oversampling Techniques for Addressing Class Imbalance Employing Machine Learning Models",
+    "resolved_first_author": "Shivani Rana",
+    "resolved_year": 2026,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": [
+     "year does not match the source"
+    ]
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": false
+  },
+  {
+   "evidence_id": "E7",
+   "citation": {
+    "identifier": "doi:10.61440/jems.2026.v1.05",
+    "normalised": "doi:10.61440/jems.2026.v1.05",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Predicting Neonatal Mortality Using Demographic and Health Survey Data: Comparing Logistic Regression and Machine Learning under Severe Class Imbalance",
+    "resolved_first_author": "Erick Cheruiyot Kirui",
+    "resolved_year": 2026,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E8",
+   "citation": {
+    "identifier": "doi:10.61173/ym16tb60",
+    "normalised": "doi:10.61173/ym16tb60",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Prioritizing Recall: Recall‑First Machine Learning for Traffic Accident Severity Detection under Class Imbalance",
+    "resolved_first_author": "Geping Cai",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E9",
+   "citation": {
+    "identifier": "arxiv:2602.19663",
+    "normalised": "arxiv:2602.19663",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "The impact of class imbalance in logistic regression models for low-default portfolios in credit risk",
+    "resolved_first_author": "Willem D. Schutte",
+    "resolved_year": 2026,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E10",
+   "citation": {
+    "identifier": "doi:10.58837/chula.the.2022.8",
+    "normalised": "doi:10.58837/chula.the.2022.8",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": null,
+    "resolved_title": "Mass ratio variance majority cleansing and minority oversampling technique for class imbalanced",
+    "resolved_first_author": "Piboon Polvimoltham",
+    "resolved_year": null,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E11",
+   "citation": {
+    "identifier": "doi:10.1007/s42452-025-06827-3",
+    "normalised": "doi:10.1007/s42452-025-06827-3",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Enhancing predictive maintenance in automotive industry: addressing class imbalance using advanced machine learning techniques",
+    "resolved_first_author": "Yashashree Mahale",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E12",
+   "citation": {
+    "identifier": "doi:10.47065/bits.v6i4.6747",
+    "normalised": "doi:10.47065/bits.v6i4.6747",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Penerapan Metode GA-CBU Pada Algoritma Logistic Regression  Untuk Mengatasi Class Imbalance Data Beasiswa KIP-Kuliah",
+    "resolved_first_author": "Ahmad Nugraha Poernamawan",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E13",
+   "citation": {
+    "identifier": "arxiv:2605.14067",
+    "normalised": "arxiv:2605.14067",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Comparative Evaluation of Machine Learning Approaches for Minority-Class Financial Distress Prediction Under Class Imbalance Constraints",
+    "resolved_first_author": "Karan Sehgal",
+    "resolved_year": 2026,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E14",
+   "citation": {
+    "identifier": "doi:10.3390/informatics11020035",
+    "normalised": "doi:10.3390/informatics11020035",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Improving Minority Class Recall through a Novel Cluster-Based Oversampling Technique",
+    "resolved_first_author": "Takorn Prexawanprasut",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E15",
+   "citation": {
+    "identifier": "doi:10.24036/ujsds/vol4-iss3/539",
+    "normalised": "doi:10.24036/ujsds/vol4-iss3/539",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Credit Card Fraud Detection under Extreme Class Imbalance: A Comparison of KNN and Logistic Regression",
+    "resolved_first_author": "Felicia Sword",
+    "resolved_year": 2026,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E16",
+   "citation": {
+    "identifier": "arxiv:2102.08232",
+    "normalised": "arxiv:2102.08232",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "The MELODIC family for simultaneous binary logistic regression in a reduced space",
+    "resolved_first_author": "Mark de Rooij",
+    "resolved_year": 2021,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E17",
+   "citation": {
+    "identifier": "arxiv:2006.13319",
+    "normalised": "arxiv:2006.13319",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Classification Performance Metric for Imbalance Data Based on Recall and Selectivity Normalized in Class Labels",
+    "resolved_first_author": "Robert Burduk",
+    "resolved_year": 2020,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E18",
+   "citation": {
+    "identifier": "doi:10.48550/arxiv.2409.19751",
+    "normalised": "doi:10.48550/arxiv.2409.19751",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Balancing the Scales: A Comprehensive Study on Tackling Class Imbalance in Binary Classification",
+    "resolved_first_author": "Abdelhamid, Mohamed",
+    "resolved_year": 2024,
+    "resolved_by": "openalex",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E19",
+   "citation": {
+    "identifier": "doi:10.48084/etasr.10407",
+    "normalised": "doi:10.48084/etasr.10407",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Optimizing Machine Learning Models for Class Imbalance in Heart Disease Prediction",
+    "resolved_first_author": "Majid Rahardi",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E20",
+   "citation": {
+    "identifier": "doi:10.3390/a18010037",
+    "normalised": "doi:10.3390/a18010037",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "SMOTE vs. SMOTEENN: A Study on the Performance of Resampling Algorithms for Addressing Class Imbalance in Regression Models",
+    "resolved_first_author": "Gazi Husain",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E21",
+   "citation": {
+    "identifier": "arxiv:2008.00235",
+    "normalised": "arxiv:2008.00235",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Two-step penalised logistic regression for multi-omic data with an application to cardiometabolic syndrome",
+    "resolved_first_author": "Alessandra Cabassi",
+    "resolved_year": 2020,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E22",
+   "citation": {
+    "identifier": "doi:10.3390/math13132186",
+    "normalised": "doi:10.3390/math13132186",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Comparative Analysis of Resampling Techniques for Class Imbalance in Financial Distress Prediction Using XGBoost",
+    "resolved_first_author": "Guodong Hou",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E23",
+   "citation": {
+    "identifier": "doi:10.1371/journal.pone.0293607",
+    "normalised": "doi:10.1371/journal.pone.0293607",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Performance analysis of data resampling on class imbalance and classification techniques on multi-omics data for cancer classification",
+    "resolved_first_author": "Yuting Yang",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E24",
+   "citation": {
+    "identifier": "doi:10.1371/journal.pone.0326488",
+    "normalised": "doi:10.1371/journal.pone.0326488",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Comparative investigation of bagging enhanced machine learning for early detection of HCV infections using class imbalance technique with feature selection",
+    "resolved_first_author": "Ekramul Haque Tusher",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E25",
+   "citation": {
+    "identifier": "arxiv:2008.04636",
+    "normalised": "arxiv:2008.04636",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "A Comparison of Synthetic Oversampling Methods for Multi-class Text Classification",
+    "resolved_first_author": "Anna Glazkova",
+    "resolved_year": 2020,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  }
+ ],
+ "citations_emitted": 25
+}

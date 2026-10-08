@@ -15,6 +15,7 @@ from typing import Any
 from discoverylab.experiments.common import Summary, e1_run_dirs, load_run, result_dir, table
 from discoverylab.literature.registry import SourceRegistry
 from discoverylab.models import Evidence
+from discoverylab.text import surname
 from discoverylab.verify import Verifier
 
 DESCRIPTION = "Verifier validity: known corruptions of real citations, and benign variants that must still pass."
@@ -41,10 +42,14 @@ def _wrong_title(e: Evidence, pool: list[Evidence], rng: random.Random) -> Evide
 
 
 def _wrong_author(e: Evidence, pool: list[Evidence], rng: random.Random) -> Evidence | None:
-    o = _other(e, pool, rng)
-    if not o or not o.citation.first_author:
+    # Another paper's first author, but never one with the same surname: in E1 two papers by the
+    # same person turned a "corruption" into the true author (DECISIONS D15).
+    mine = surname(e.citation.first_author or "")
+    others = [o for o in pool if o.citation.identifier != e.citation.identifier
+              and o.citation.first_author and surname(o.citation.first_author) != mine]  # fmt: skip
+    if not others:
         return None
-    return _cit(e, first_author=o.citation.first_author)
+    return _cit(e, first_author=rng.choice(others).citation.first_author)
 
 
 def _wrong_year(e: Evidence, pool: list[Evidence], rng: random.Random) -> Evidence | None:

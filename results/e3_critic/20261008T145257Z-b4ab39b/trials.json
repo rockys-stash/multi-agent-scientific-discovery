@@ -1,0 +1,1241 @@
+[
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E13",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E14",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E2",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E9",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E17",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E19",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E7",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E17",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E5",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E10",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E4",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E24",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E3",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E22",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E11",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "ungrounded_hypothesis",
+  "kind": "structural",
+  "stage": "hypotheses",
+  "target": "H1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "ungrounded_hypothesis"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "dangling_reference",
+  "kind": "structural",
+  "stage": "hypotheses",
+  "target": "H1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "unknown_reference"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "control_also_treatment",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "no_control"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "single_measurement",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "insufficient_repeats"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "primary_metric_mismatch",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "metric_mismatch"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "unknown_dataset",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "unrunnable_design"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "misreported_mean",
+  "kind": "structural",
+  "stage": "analysis",
+  "target": "R1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "arithmetic_error"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "interval_excludes_mean",
+  "kind": "structural",
+  "stage": "analysis",
+  "target": "R1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "arithmetic_error"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "verdict_not_supported_by_statistics",
+  "kind": "structural",
+  "stage": "conclusion",
+  "target": "K1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "overreach"
+  ]
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E18",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E15",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E3",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E11",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E17",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "fault": "hypothesis_direction_flipped",
+  "kind": "semantic",
+  "stage": "hypotheses",
+  "target": "H1",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E20",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E18",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E19",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E10",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E15",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E6",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E7",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E2",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E20",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E22",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E5",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E2",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E3",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E18",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E22",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "ungrounded_hypothesis",
+  "kind": "structural",
+  "stage": "hypotheses",
+  "target": "H1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "ungrounded_hypothesis"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "dangling_reference",
+  "kind": "structural",
+  "stage": "hypotheses",
+  "target": "H1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "unknown_reference"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "control_also_treatment",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "no_control"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "single_measurement",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "insufficient_repeats"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "primary_metric_mismatch",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "metric_mismatch"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "unknown_dataset",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "unrunnable_design"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "misreported_mean",
+  "kind": "structural",
+  "stage": "analysis",
+  "target": "R1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "arithmetic_error"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "interval_excludes_mean",
+  "kind": "structural",
+  "stage": "analysis",
+  "target": "R1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "arithmetic_error"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "verdict_not_supported_by_statistics",
+  "kind": "structural",
+  "stage": "conclusion",
+  "target": "K1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "overreach"
+  ]
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E14",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E2",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E4",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E5",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E8",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "fault": "hypothesis_direction_flipped",
+  "kind": "semantic",
+  "stage": "hypotheses",
+  "target": "H1",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E3",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E12",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E4",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E2",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "citation_to_unretrieved_source",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E20",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "citation_not_retrieved"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E7",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E24",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E2",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E22",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "altered_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E3",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E21",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E10",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E12",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "missing_quote",
+  "kind": "structural",
+  "stage": "evidence",
+  "target": "E14",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "missing_quote",
+   "quote_not_in_source"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "ungrounded_hypothesis",
+  "kind": "structural",
+  "stage": "hypotheses",
+  "target": "H1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "ungrounded_hypothesis"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "dangling_reference",
+  "kind": "structural",
+  "stage": "hypotheses",
+  "target": "H1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "unknown_reference"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "control_also_treatment",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "no_control"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "single_measurement",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "insufficient_repeats"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "primary_metric_mismatch",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "metric_mismatch"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "unknown_dataset",
+  "kind": "structural",
+  "stage": "design",
+  "target": "D1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "unrunnable_design"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "misreported_mean",
+  "kind": "structural",
+  "stage": "analysis",
+  "target": "R1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "arithmetic_error"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "interval_excludes_mean",
+  "kind": "structural",
+  "stage": "analysis",
+  "target": "R1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "arithmetic_error"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "verdict_not_supported_by_statistics",
+  "kind": "structural",
+  "stage": "conclusion",
+  "target": "K1",
+  "applicable": true,
+  "caught": true,
+  "flagged_target": true,
+  "issues": [
+   "overreach"
+  ]
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E19",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E17",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E10",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E21",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "claim_contradicts_quote",
+  "kind": "semantic",
+  "stage": "evidence",
+  "target": "E12",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ },
+ {
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "fault": "hypothesis_direction_flipped",
+  "kind": "semantic",
+  "stage": "hypotheses",
+  "target": "H1",
+  "applicable": true,
+  "caught": false,
+  "flagged_target": false,
+  "issues": []
+ }
+]

@@ -1,0 +1,124 @@
+{
+ "title": "E2 Citation verifier",
+ "question": "Does the verifier reject fabricated, altered and misattributed citations without rejecting real ones?",
+ "findings": [
+  "69 verified evidence items from E1 were varied 755 times.",
+  "Corruptions rejected: 481/482.",
+  "Benign variants wrongly rejected: 0/273."
+ ],
+ "tables": [
+  {
+   "id": "variants",
+   "caption": "Outcome by variant (share of trials)",
+   "columns": [
+    {
+     "key": "variant",
+     "label": "Variant",
+     "align": "l"
+    },
+    {
+     "key": "group",
+     "label": "Should be",
+     "align": "l"
+    },
+    {
+     "key": "trials",
+     "label": "Trials",
+     "align": "r"
+    },
+    {
+     "key": "rejected",
+     "label": "Rejected",
+     "align": "r"
+    },
+    {
+     "key": "accepted",
+     "label": "Accepted",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "variant": "fabricated identifier",
+     "group": "corruption",
+     "trials": 69,
+     "rejected": 1.0,
+     "accepted": 0.0
+    },
+    {
+     "variant": "wrong title",
+     "group": "corruption",
+     "trials": 69,
+     "rejected": 1.0,
+     "accepted": 0.0
+    },
+    {
+     "variant": "wrong first author",
+     "group": "corruption",
+     "trials": 69,
+     "rejected": 0.9855072463768116,
+     "accepted": 0.014492753623188406
+    },
+    {
+     "variant": "wrong year",
+     "group": "corruption",
+     "trials": 68,
+     "rejected": 1.0,
+     "accepted": 0.0
+    },
+    {
+     "variant": "swapped identifier",
+     "group": "corruption",
+     "trials": 69,
+     "rejected": 1.0,
+     "accepted": 0.0
+    },
+    {
+     "variant": "misattributed quote",
+     "group": "corruption",
+     "trials": 69,
+     "rejected": 1.0,
+     "accepted": 0.0
+    },
+    {
+     "variant": "altered quote",
+     "group": "corruption",
+     "trials": 69,
+     "rejected": 1.0,
+     "accepted": 0.0
+    },
+    {
+     "variant": "unchanged",
+     "group": "benign",
+     "trials": 69,
+     "rejected": 0.0,
+     "accepted": 1.0
+    },
+    {
+     "variant": "reformatted title",
+     "group": "benign",
+     "trials": 69,
+     "rejected": 0.0,
+     "accepted": 1.0
+    },
+    {
+     "variant": "preprint year",
+     "group": "benign",
+     "trials": 68,
+     "rejected": 0.0,
+     "accepted": 1.0
+    },
+    {
+     "variant": "shorter quote",
+     "group": "benign",
+     "trials": 67,
+     "rejected": 0.0,
+     "accepted": 1.0
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "A citation with no title, author or year is checked only for resolution and quote; leaving metadata out is not a way past the quote check."
+ ]
+}

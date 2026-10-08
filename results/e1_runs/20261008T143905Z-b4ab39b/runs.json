@@ -1,0 +1,179 @@
+[
+ {
+  "question": "q1_calibration",
+  "reasoner": "rule",
+  "repeat": 0,
+  "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude+mc",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude+mc",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude+mc",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "rule",
+  "repeat": 0,
+  "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude+mc",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude+mc",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude+mc",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "rule",
+  "repeat": 0,
+  "run_id": "20261008T144757Z-q3_imbalance-rule-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude+mc",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude+mc",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude+mc",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ }
+]

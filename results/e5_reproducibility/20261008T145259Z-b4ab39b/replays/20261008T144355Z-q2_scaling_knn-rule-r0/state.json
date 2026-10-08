@@ -1,0 +1,1417 @@
+{
+ "run_id": "20261008T144355Z-q2_scaling_knn-rule-r0",
+ "question": {
+  "id": "q2_scaling_knn",
+  "text": "Does standardising features before k-nearest-neighbour classification improve accuracy on tabular data whose features are on different scales?",
+  "keywords": [
+   "feature scaling",
+   "standardization",
+   "k-nearest neighbors",
+   "classification accuracy"
+  ],
+  "concepts": [
+   "feature scaling",
+   "standardization",
+   "nearest neighbor",
+   "distance",
+   "accuracy"
+  ],
+  "domain_hint": "machine learning"
+ },
+ "reasoner": "rule",
+ "stage": "critique",
+ "status": "complete",
+ "papers": [
+  {
+   "id": "arxiv:1811.05062",
+   "title": "Dynamic Feature Scaling for K-Nearest Neighbor Algorithm",
+   "authors": [
+    "Chandrasekaran Anirudh Bhardwaj",
+    "Megha Mishra",
+    "Kalyani Desikan"
+   ],
+   "year": 2018,
+   "venue": "arXiv",
+   "abstract": "Nearest Neighbors Algorithm is a Lazy Learning Algorithm, in which the algorithm tries to approximate the predictions with the help of similar existing vectors in the training dataset. The predictions made by the K-Nearest Neighbors algorithm is based on averaging the target values of the spatial neighbors. The selection process for neighbors in the Hermitian space is done with the help of distance metrics such as Euclidean distance, Minkowski distance, Mahalanobis distance etc. A majority of the metrics such as Euclidean distance are scale variant, meaning that the results could vary for different range of values used for the features. Standard techniques used for the normalization of scaling factors are feature scaling method such as Z-score normalization technique, Min-Max scaling etc. Scaling methods uniformly assign equal weights to all the features, which might result in a non-ideal situation. This paper proposes a novel method to assign weights to individual feature with the help of out of bag errors obtained from constructing multiple decision tree models.",
+   "url": "http://arxiv.org/abs/1811.05062v1",
+   "source": "arxiv",
+   "cache_key": "3070e4edf6dcb0db18012eb19504c041b52b02e2d3beb16f6e346bfdfd22f893",
+   "query": "feature scaling standardization k-nearest neighbors classification accuracy"
+  },
+  {
+   "id": "arxiv:2501.06078",
+   "title": "Explaining k-Nearest Neighbors: Abductive and Counterfactual Explanations",
+   "authors": [
+    "Pablo Barceló",
+    "Alexander Kozachinskiy",
+    "Miguel Romero Orth",
+    "Bernardo Subercaseaux",
+    "José Verschae"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "abstract": "Despite the wide use of $k$-Nearest Neighbors as classification models, their explainability properties remain poorly understood from a theoretical perspective. While nearest neighbors classifiers offer interpretability from a ``data perspective'', in which the classification of an input vector $\\bar{x}$ is explained by identifying the vectors $\\bar{v}_1, \\ldots, \\bar{v}_k$ in the training set that determine the classification of $\\bar{x}$, we argue that such explanations can be impractical in high-dimensional applications, where each vector has hundreds or thousands of features and it is not clear what their relative importance is. Hence, we focus on understanding nearest neighbor classifications through a ``feature perspective'', in which the goal is to identify how the values of the features in $\\bar{x}$ affect its classification. Concretely, we study abductive explanations such as ``minimum sufficient reasons'', which correspond to sets of features in $\\bar{x}$ that are enough to guarantee its classification, and counterfactual explanations based on the minimum distance feature changes one would have to perform in $\\bar{x}$ to change its classification. We present a detailed landscape of positive and negative complexity results for counterfactual and abductive explanations, distinguishing between discrete and continuous feature spaces, and considering the impact of the choice of distance function involved. Finally, we show that despite some negative complexity results, Integer Quadratic Programming and SAT solving allow for computing explanations in practice.",
+   "url": "http://arxiv.org/abs/2501.06078v2",
+   "source": "arxiv",
+   "cache_key": "3070e4edf6dcb0db18012eb19504c041b52b02e2d3beb16f6e346bfdfd22f893",
+   "query": "feature scaling standardization k-nearest neighbors classification accuracy"
+  },
+  {
+   "id": "arxiv:1303.0095",
+   "title": "Label-dependent Feature Extraction in Social Networks for Node Classification",
+   "authors": [
+    "Tomasz Kajdanowicz",
+    "Przemyslaw Kazienko",
+    "Piotr Doskocz"
+   ],
+   "year": 2013,
+   "venue": "arXiv",
+   "abstract": "A new method of feature extraction in the social network for within-network classification is proposed in the paper. The method provides new features calculated by combination of both: network structure information and class labels assigned to nodes. The influence of various features on classification performance has also been studied. The experiments on real-world data have shown that features created owing to the proposed method can lead to significant improvement of classification accuracy.",
+   "url": "http://arxiv.org/abs/1303.0095v1",
+   "source": "arxiv",
+   "cache_key": "3070e4edf6dcb0db18012eb19504c041b52b02e2d3beb16f6e346bfdfd22f893",
+   "query": "feature scaling standardization k-nearest neighbors classification accuracy"
+  },
+  {
+   "id": "arxiv:1807.04970",
+   "title": "Analysis Acoustic Features for Acoustic Scene Classification and Score fusion of multi-classification systems applied to DCASE 2016 challenge",
+   "authors": [
+    "Sangwook Park",
+    "Seongkyu Mun",
+    "Younglo Lee",
+    "David K. Han",
+    "Hanseok Ko"
+   ],
+   "year": 2018,
+   "venue": "arXiv",
+   "abstract": "This paper describes an acoustic scene classification method which achieved the 4th ranking result in the IEEE AASP challenge of Detection and Classification of Acoustic Scenes and Events 2016. In order to accomplish the ensuing task, several methods are explored in three aspects: feature extraction, feature transformation, and score fusion for final decision. In the part of feature extraction, several features are investigated for effective acoustic scene classification. For resolving the issue that the same sound can be heard in different places, a feature transformation is applied for better separation for classification. From these, several systems based on different feature sets are devised for classification. The final result is determined by fusing the individual systems. The method is demonstrated and validated by the experiment conducted using the Challenge database.",
+   "url": "http://arxiv.org/abs/1807.04970v1",
+   "source": "arxiv",
+   "cache_key": "3070e4edf6dcb0db18012eb19504c041b52b02e2d3beb16f6e346bfdfd22f893",
+   "query": "feature scaling standardization k-nearest neighbors classification accuracy"
+  },
+  {
+   "id": "doi:10.1002/qute.202300221",
+   "title": "Quantum K‐Nearest Neighbor Classification Algorithm via a Divide‐and‐Conquer Strategy",
+   "authors": [
+    "Li-Hua Gong",
+    "W. Ding",
+    "Zi Li",
+    "Yuan‐Zhi Wang",
+    "Nan-Run Zhou"
+   ],
+   "year": 2024,
+   "venue": "Advanced Quantum Technologies",
+   "abstract": "The K‐nearest neighbor algorithm is one of the most frequently applied supervised machine learning algorithms. Similarity computing is considered to be the most crucial and time‐consuming step among the classical K‐nearest neighbor algorithm. A quantum K‐nearest neighbor algorithm is proposed based on the divide‐and‐conquer strategy. A quantum circuit is designed to calculate the fidelity between the test sample and each feature vector of the training dataset. The quantum K‐nearest neighbor algorithm has higher classification efficiency in high‐dimensional data processing. The classification accuracy of the proposed algorithm is equivalent to that of the classical K‐nearest neighbor algorithm under the IRIS dataset. In addition, compared with the typical quantum K‐nearest neighbor algorithms, the proposed classification method possesses higher classification accuracy with less calculation time, which has wide applications in the industrial field.",
+   "url": "https://www.semanticscholar.org/paper/abf2ce76fb21f07f73c95841f0ed715cd4580eb6",
+   "source": "semanticscholar",
+   "cache_key": "55503abe623f125abbf6aad8cb205e96e30cf24d1acffd168352dc067be12000",
+   "query": "nearest neighbor accuracy"
+  },
+  {
+   "id": "arxiv:1610.04322",
+   "title": "Learning and Fusing Multimodal Features from and for Multi-task Facial Computing",
+   "authors": [
+    "Wei Li",
+    "Zhigang Zhu"
+   ],
+   "year": 2016,
+   "venue": "arXiv",
+   "abstract": "We propose a deep learning-based feature fusion approach for facial computing including face recognition as well as gender, race and age detection. Instead of training a single classifier on face images to classify them based on the features of the person whose face appears in the image, we first train four different classifiers for classifying face images based on race, age, gender and identification (ID). Multi-task features are then extracted from the trained models and cross-task-feature training is conducted which shows the value of fusing multimodal features extracted from multi-tasks. We have found that features trained for one task can be used for other related tasks. More interestingly, the features trained for a task with more classes (e.g. ID) and then used in another task with fewer classes (e.g. race) outperforms the features trained for the other task itself. The final feature fusion is performed by combining the four types of features extracted from the images by the four classifiers. The feature fusion approach improves the classifications accuracy by a 7.2%, 20.1%, 22.2%, 21.8% margin, respectively, for ID, age, race and gender recognition, over the results of single classifiers trained only on their individual features. The proposed method can be applied to applications in which different types of data or features can be extracted.",
+   "url": "http://arxiv.org/abs/1610.04322v1",
+   "source": "arxiv",
+   "cache_key": "b3eeda02a98ef3a2bb5b1099272b4c66beffba383592b59d3850cfdba3be7537",
+   "query": "feature scaling accuracy"
+  },
+  {
+   "id": "doi:10.52465/joscex.v1i1.7",
+   "title": "Improving Algorithm Accuracy K-Nearest Neighbor Using Z-Score Normalization and Particle Swarm Optimization to Predict Customer Churn",
+   "authors": [
+    "M. Imron",
+    "B. Prasetyo"
+   ],
+   "year": 2020,
+   "venue": "Journal of Soft Computing Exploration",
+   "abstract": "Due to increased competition in the business world, many companies use data mining techniques to determine the loyalty level of customers. In this business, data mining can be used to determine the loyalty level of customers. Data mining consists of several research models, one of which is classification. One of the most commonly used methods in classification is the K-Nearest Neighbor algorithm. In this study, the data which used are from German Credit Datasets obtained from UCI machine learning repository. The purpose of this study is to find out how Z-Score works to normalize the data and Particle Swarm Optimization to find the most optimal K value parameters, so the performance of the K-Nearest Neighbor algorithm is more optimal during the classification.  The methods which were used to normalize the data are Z-score and Particle Swarm Optimization to determine the most optimal K value. The classification was tested using confusion matrix to determine the generated accuracy. From the finding of this study, the application of Z-score normalization and Particle Swarm Optimization with the K Nearest Neighbor algorithm succeed in increasing the accuracy up to 14%. The initial accuracy was 68.5%, and after applying the normalization of Z-Score and Particle Swarm Optimization, the accuracy became 82.5%.",
+   "url": "https://www.semanticscholar.org/paper/a8ca644cfaae73360d469334e33702fbe34baf1a",
+   "source": "semanticscholar",
+   "cache_key": "55503abe623f125abbf6aad8cb205e96e30cf24d1acffd168352dc067be12000",
+   "query": "nearest neighbor accuracy"
+  },
+  {
+   "id": "doi:10.31219/osf.io/ju8nr",
+   "title": "Text Summarization using Feature Similarity based K Nearest Neighbor",
+   "authors": [
+    "Taeho Jo"
+   ],
+   "year": 2024,
+   "venue": "",
+   "abstract": "This article proposes the modified KNN (K Nearest Neighbor)algorithm which considers the feature similarity and is applied tothe text summarization. The words which are given as features forencoding words into numerical vectors have their own meanings andsemantic relations with others, and the text summarization is ableto be viewed into a binary classification where each paragraph isclassified into summary or non-summary. In the proposed system, atext which is given as the input is partitioned into a list ofparagraphs, each paragraph is classified by the proposed KNNversion, and the paragraphs which are classified into summary areextracted ad the output. The proposed KNN version is empiricallyvalidated as the better approach in deciding whether each paragraphis essential or not in news articles and opinions. The significanceof this research is to improve the classification performance byutilizing the feature similarities.",
+   "url": "https://doi.org/10.31219/osf.io/ju8nr",
+   "source": "crossref",
+   "cache_key": "fd71019966751e2dc8f6760bc45e9708a4051f7483435d686d8a0bea8ecc9aca",
+   "query": "feature scaling nearest neighbor"
+  },
+  {
+   "id": "doi:10.2139/ssrn.4110570",
+   "title": "Feature Scaling for Financial Machine Learning",
+   "authors": [
+    "Jieli Shen"
+   ],
+   "year": 2022,
+   "venue": "",
+   "abstract": "Machine learning have made a large number of novel applications in various domains in finance. Though more complex and advanced models have been proposed and explored in literatures, the input data to the models and how the raw features are preprocessed, remains important. This article provides an overview of feature scaling that is commonly performed during data preprocessing in financial machine learning applications.",
+   "url": "https://doi.org/10.2139/ssrn.4110570",
+   "source": "crossref",
+   "cache_key": "7e75902886401760ea1924c6c712cfdb4cd3790705c2aabb175a27c40870c778",
+   "query": "feature scaling standardization"
+  },
+  {
+   "id": "arxiv:1806.00385",
+   "title": "k-nearest neighbors prediction and classification for spatial data",
+   "authors": [
+    "Mohamed-Salem Ahmed",
+    "Mamadou N'diaye",
+    "Mohammed Kadi Attouch",
+    "Sophie Dabo-Niang"
+   ],
+   "year": 2018,
+   "venue": "arXiv",
+   "abstract": "This paper proposes a spatial k-nearest neighbor method for nonparametric prediction of real-valued spatial data and supervised classification for categorical spatial data. The proposed method is based on a double nearest neighbor rule which combines two kernels to control the distances between observations and locations. It uses a random bandwidth in order to more appropriately fit the distributions of the covariates. The almost complete convergence with rate of the proposed predictor is established and the almost sure convergence of the supervised classification rule was deduced. Finite sample properties are given for two applications of the k-nearest neighbor prediction and classification rule to the soil and the fisheries datasets",
+   "url": "http://arxiv.org/abs/1806.00385v2",
+   "source": "arxiv",
+   "cache_key": "3070e4edf6dcb0db18012eb19504c041b52b02e2d3beb16f6e346bfdfd22f893",
+   "query": "feature scaling standardization k-nearest neighbors classification accuracy"
+  },
+  {
+   "id": "doi:10.1088/1742-6596/978/1/012047",
+   "title": "Improving the accuracy of k-nearest neighbor using local mean based and distance weight",
+   "authors": [
+    "K. U. Syaliman",
+    "E. Nababan",
+    "O. S. Sitompul"
+   ],
+   "year": 2018,
+   "venue": "",
+   "abstract": "In k-nearest neighbor (kNN), the determination of classes for new data is normally performed by a simple majority vote system, which may ignore the similarities among data, as well as allowing the occurrence of a double majority class that can lead to misclassification. In this research, we propose an approach to resolve the majority vote issues by calculating the distance weight using a combination of local mean based k-nearest neighbor (LMKNN) and distance weight k-nearest neighbor (DWKNN). The accuracy of results is compared to the accuracy acquired from the original k-NN method using several datasets from the UCI Machine Learning repository, Kaggle and Keel, such as ionosphare, iris, voice genre, lower back pain, and thyroid. In addition, the proposed method is also tested using real data from a public senior high school in city of Tualang, Indonesia. Results shows that the combination of LMKNN and DWKNN was able to increase the classification accuracy of kNN, whereby the average accuracy on test data is 2.45% with the highest increase in accuracy of 3.71% occurring on the lower back pain symptoms dataset. For the real data, the increase in accuracy is obtained as high as 5.16%.",
+   "url": "https://www.semanticscholar.org/paper/69f8a24355a8f721ef44f042bcc1511c8deac117",
+   "source": "semanticscholar",
+   "cache_key": "55503abe623f125abbf6aad8cb205e96e30cf24d1acffd168352dc067be12000",
+   "query": "nearest neighbor accuracy"
+  },
+  {
+   "id": "arxiv:1407.6748",
+   "title": "Enhancing the Accuracy of Biometric Feature Extraction Fusion Using Gabor Filter and Mahalanobis Distance Algorithm",
+   "authors": [
+    "Ayodeji S. Makinde",
+    "Yaw Nkansah-Gyekye",
+    "Loserian S. Laizer"
+   ],
+   "year": 2014,
+   "venue": "arXiv",
+   "abstract": "Biometric recognition systems have advanced significantly in the last decade and their use in specific applications will increase in the near future. The ability to conduct meaningful comparisons and assessments will be crucial to successful deployment and increasing biometric adoption. The best modality used as unimodal biometric systems are unable to fully address the problem of higher recognition rate. Multimodal biometric systems are able to mitigate some of the limitations encountered in unimodal biometric systems, such as non-universality, distinctiveness, non-acceptability, noisy sensor data, spoof attacks, and performance. More reliable recognition accuracy and performance are achievable as different modalities were being combined together and different algorithms or techniques were being used. The work presented in this paper focuses on a bimodal biometric system using face and fingerprint. An image enhancement technique (histogram equalization) is used to enhance the face and fingerprint images. Salient features of the face and fingerprint were extracted using the Gabor filter technique. A dimensionality reduction technique was carried out on both images extracted features using a principal component analysis technique. A feature level fusion algorithm (Mahalanobis distance technique) is used to combine each unimodal feature together. The performance of the proposed approach is validated and is effective.",
+   "url": "http://arxiv.org/abs/1407.6748v1",
+   "source": "arxiv",
+   "cache_key": "fb0bec4526f515fa6f17334501b87c728acd78e9dbb707cec58ecce7bab8e655",
+   "query": "feature scaling distance"
+  },
+  {
+   "id": "arxiv:1607.01327",
+   "title": "Feature Selection Library (MATLAB Toolbox)",
+   "authors": [
+    "Giorgio Roffo"
+   ],
+   "year": 2016,
+   "venue": "arXiv",
+   "abstract": "The Feature Selection Library (FSLib) introduces a comprehensive suite of feature selection (FS) algorithms for MATLAB, aimed at improving machine learning and data mining tasks. FSLib encompasses filter, embedded, and wrapper methods to cater to diverse FS requirements. Filter methods focus on the inherent characteristics of features, embedded methods incorporate FS within model training, and wrapper methods assess features through model performance metrics. By enabling effective feature selection, FSLib addresses the curse of dimensionality, reduces computational load, and enhances model generalizability. The elimination of redundant features through FSLib streamlines the training process, improving efficiency and scalability. This facilitates faster model development and boosts key performance indicators such as accuracy, precision, and recall by focusing on vital features. Moreover, FSLib contributes to data interpretability by revealing important features, aiding in pattern recognition and understanding. Overall, FSLib provides a versatile framework that not only simplifies feature selection but also significantly benefits the machine learning and data mining ecosystem by offering a wide range of algorithms, reducing dimensionality, accelerating model training, improving model outcomes, and enhancing data insights.",
+   "url": "http://arxiv.org/abs/1607.01327v8",
+   "source": "arxiv",
+   "cache_key": "68561ecb73a0865a4e8d87f3a944650cd638e53d7515d0911ba3904b9a054fa1",
+   "query": "feature scaling standardization"
+  },
+  {
+   "id": "doi:10.31219/osf.io/fecph",
+   "title": "Extracting Keywords from Text by Feature Similarity based K Nearest Neighbor",
+   "authors": [
+    "Taeho Jo"
+   ],
+   "year": 2024,
+   "venue": "",
+   "abstract": "This article proposes the modified KNN (K Nearest Neighbor)algorithm which considers the feature similarity and is applied tothe keyword extraction. The texts which are given as features forencoding words into numerical vectors are semantic related entities,rather than independent ones, and the keyword extraction is able tobe viewed into a binary classification where each word is classifiedinto keyword or non-keyword. In the proposed system, a text which isgiven as the input is indexed into a list of words, each word isclassified by the proposed KNN version, and the words which areclassified into keyword are extracted ad the output. The proposedKNN version is empirically validated as the better approach indeciding whether each word is a keyword or non-keyword in newsarticles and opinions. The significance of this research is toimprove the classification performance by utilizing the featuresimilarities.",
+   "url": "https://doi.org/10.31219/osf.io/fecph",
+   "source": "crossref",
+   "cache_key": "fd71019966751e2dc8f6760bc45e9708a4051f7483435d686d8a0bea8ecc9aca",
+   "query": "feature scaling nearest neighbor"
+  },
+  {
+   "id": "doi:10.31219/osf.io/cv9rg",
+   "title": "Feature Similarity based K Nearest Neighbor for Optimizing of Text Indexes",
+   "authors": [
+    "Taeho Jo"
+   ],
+   "year": 2024,
+   "venue": "",
+   "abstract": "This article proposes the modified KNN (K Nearest Neighbor)algorithm which considers the feature similarity and is applied tothe index optimization. The texts which are given as features forencoding words into numerical vectors are semantic related entities,rather than independent ones, and the index optimization is able tobe viewed into a classification task where each word is classifiedinto expansion, inclusion, and removal. In the proposed system, eachword in the given text is classified into one of the threecategories by the proposed KNN algorithm, associates words are addedto ones which are classified into expansion, and ones which areclassified into inclusion are kept by themselves without adding anyword. The proposed KNN version is empirically validated as thebetter approach in deciding the importance level of words in newsarticles and opinions. The significance of this research is toimprove the classification performance by utilizing the featuresimilarities.",
+   "url": "https://doi.org/10.31219/osf.io/cv9rg",
+   "source": "crossref",
+   "cache_key": "fd71019966751e2dc8f6760bc45e9708a4051f7483435d686d8a0bea8ecc9aca",
+   "query": "feature scaling nearest neighbor"
+  },
+  {
+   "id": "arxiv:1810.13288",
+   "title": "How important is choice of the scaling factor in standardizing citations?",
+   "authors": [
+    "Giovanni Abramo",
+    "Tindaro Cicero",
+    "Ciriaco Andrea D'Angelo"
+   ],
+   "year": 2018,
+   "venue": "arXiv",
+   "abstract": "Because of the variations in citation behavior across research fields, appropriate standardization must be applied as part of any bibliometric analysis of the productivity of individual scientists and research organizations. Such standardization involves scaling by some factor that characterizes the distribution of the citations of articles from the same year and subject category. In this work we conduct an analysis of the sensitivity of researchers' productivity rankings to the scaling factor chosen to standardize their citations. To do this we first prepare the productivity rankings for all researchers (more than 30,000) operating in the hard sciences in Italy, over the period 2004-2008. We then measure the shifts in rankings caused by adopting scaling factors other than the particular factor that seems more effective for comparing the impact of publications in different fields: the citation average of the distribution of cited-only publications.",
+   "url": "http://arxiv.org/abs/1810.13288v1",
+   "source": "arxiv",
+   "cache_key": "68561ecb73a0865a4e8d87f3a944650cd638e53d7515d0911ba3904b9a054fa1",
+   "query": "feature scaling standardization"
+  },
+  {
+   "id": "doi:10.14710/j.gauss.15.1.89-97",
+   "title": "PERBANDINGAN PERFORMA DISTANCE MEASURES PADA  ALGORITMA NEAREST CENTROID NEIGHBOR DAN K-NEAREST NEIGHBOR  DALAM PROSES KLASIFIKASI BINTANG",
+   "authors": [
+    "Dewi Sri Susanti",
+    "Nurul Azizah",
+    "Selvi Annisa"
+   ],
+   "year": 2026,
+   "venue": "Jurnal  Gaussian",
+   "abstract": "Stars are celestial bodies that can be classified based on several characteristics, including temperature, luminosity, radius, magnitude, stellar color, and spectral class. Stars are generally grouped into six categories: brown dwarfs, red dwarfs, white dwarfs, main sequence stars, supergiants, and hypergiants. Stellar classification is important to astronomers because it can help identify new types of stars and improve our understanding of their composition, temperature, and evolutionary stages. This classification process can be done using the Nearest Centroid Neighbor (NCN) and k-Nearest Neighbor (k-NN) algorithms, by applying various distance measures such as Euclidean, Manhattan, Minkowski, Chebyshev, Cosine, Jaccard, and Hamming. This study aims to compare the performance between NCN and k-NN using these seven distance measures. The results show that Euclidean, Manhattan, and Minkowski distances produce a perfect performance of 100% in both algorithms. Chebyshev distance yielded perfect performance in k-NN but slightly lower in NCN with a performance of 92%. Thus, the k-NN algorithm provides superior performance compared to the NCN algorithm in the stellar classification process.",
+   "url": "https://doi.org/10.14710/j.gauss.15.1.89-97",
+   "source": "crossref",
+   "cache_key": "59ec1557ce17e0644b6a527f3ec723197daeff44016935e1298fa75cbe484e7e",
+   "query": "nearest neighbor distance"
+  },
+  {
+   "id": "arxiv:2103.04253",
+   "title": "Quantum K-nearest neighbor classification algorithm based on Hamming distance",
+   "authors": [
+    "Jing Li",
+    "Song Lin",
+    "Yu Kai",
+    "Gongde Guo"
+   ],
+   "year": 2021,
+   "venue": "arXiv",
+   "abstract": "K-nearest neighbor classification algorithm is one of the most basic algorithms in machine learning, which determines the sample's category by the similarity between samples. In this paper, we propose a quantum K-nearest neighbor classification algorithm with Hamming distance. In this algorithm, quantum computation is firstly utilized to obtain Hamming distance in parallel. Then, a core sub-algorithm for searching the minimum of unordered integer sequence is presented to find out the minimum distance. Based on these two sub-algorithms, the whole quantum frame of K-nearest neighbor classification algorithm is presented. At last, it is shown that the proposed algorithm can achieve a quadratical speedup by analyzing its time complexity briefly.",
+   "url": "http://arxiv.org/abs/2103.04253v2",
+   "source": "arxiv",
+   "cache_key": "3070e4edf6dcb0db18012eb19504c041b52b02e2d3beb16f6e346bfdfd22f893",
+   "query": "feature scaling standardization k-nearest neighbors classification accuracy"
+  },
+  {
+   "id": "arxiv:cond-mat/0410059",
+   "title": "Accuracy and Scaling Phenomena in Internet Mapping",
+   "authors": [
+    "Aaron Clauset",
+    "Cristopher Moore"
+   ],
+   "year": 2004,
+   "venue": "arXiv",
+   "abstract": "A great deal of effort has been spent measuring topological features of the Internet. However, it was recently argued that sampling based on taking paths or traceroutes through the network from a small number of sources introduces a fundamental bias in the observed degree distribution. We examine this bias analytically and experimentally. For Erdos-Renyi random graphs with mean degree c, we show analytically that traceroute sampling gives an observed degree distribution P(k) ~ 1/k for k < c, even though the underlying degree distribution is Poisson. For graphs whose degree distributions have power-law tails P(k) ~ k^-alpha, traceroute sampling from a small number of sources can significantly underestimate the value of αwhen the graph has a large excess (i.e., many more edges than vertices). We find that in order to obtain a good estimate of alpha it is necessary to use a number of sources which grows linearly in the average degree of the underlying graph. Based on these observations we comment on the accuracy of the published values of alpha for the Internet.",
+   "url": "http://arxiv.org/abs/cond-mat/0410059v1",
+   "source": "arxiv",
+   "cache_key": "b3eeda02a98ef3a2bb5b1099272b4c66beffba383592b59d3850cfdba3be7537",
+   "query": "feature scaling accuracy"
+  },
+  {
+   "id": "arxiv:1807.02962",
+   "title": "Learning to Index for Nearest Neighbor Search",
+   "authors": [
+    "Chih-Yi Chiu",
+    "Amorntip Prayoonwong",
+    "Yin-Chih Liao"
+   ],
+   "year": 2018,
+   "venue": "arXiv",
+   "abstract": "In this study, we present a novel ranking model based on learning neighborhood relationships embedded in the index space. Given a query point, conventional approximate nearest neighbor search calculates the distances to the cluster centroids, before ranking the clusters from near to far based on the distances. The data indexed in the top-ranked clusters are retrieved and treated as the nearest neighbor candidates for the query. However, the loss of quantization between the data and cluster centroids will inevitably harm the search accuracy. To address this problem, the proposed model ranks clusters based on their nearest neighbor probabilities rather than the query-centroid distances. The nearest neighbor probabilities are estimated by employing neural networks to characterize the neighborhood relationships, i.e., the density function of nearest neighbors with respect to the query. The proposed probability-based ranking can replace the conventional distance-based ranking for finding candidate clusters, and the predicted probability can be used to determine the data quantity to be retrieved from the candidate cluster. Our experimental results demonstrated that the proposed ranking model could boost the search performance effectively in billion-scale datasets.",
+   "url": "http://arxiv.org/abs/1807.02962v3",
+   "source": "arxiv",
+   "cache_key": "2b1001248fb128d3239eba47d0b9dfeecd72ca43e915312147af0424ac1ebb7d",
+   "query": "nearest neighbor accuracy"
+  },
+  {
+   "id": "arxiv:2209.02746",
+   "title": "Handcrafted Feature Selection Techniques for Pattern Recognition: A Survey",
+   "authors": [
+    "Alysson Ribeiro da Silva",
+    "Camila Guedes Silveira"
+   ],
+   "year": 2022,
+   "venue": "arXiv",
+   "abstract": "The accuracy of a classifier, when performing Pattern recognition, is mostly tied to the quality and representativeness of the input feature vector. Feature Selection is a process that allows for representing information properly and may increase the accuracy of a classifier. This process is responsible for finding the best possible features, thus allowing us to identify to which class a pattern belongs. Feature selection methods can be categorized as Filters, Wrappers, and Embed. This paper presents a survey on some Filters and Wrapper methods for handcrafted feature selection. Some discussions, with regard to the data structure, processing time, and ability to well represent a feature vector, are also provided in order to explicitly show how appropriate some methods are in order to perform feature selection. Therefore, the presented feature selection methods can be accurate and efficient if applied considering their positives and negatives, finding which one fits best the problem's domain may be the hardest task.",
+   "url": "http://arxiv.org/abs/2209.02746v1",
+   "source": "arxiv",
+   "cache_key": "b3eeda02a98ef3a2bb5b1099272b4c66beffba383592b59d3850cfdba3be7537",
+   "query": "feature scaling accuracy"
+  },
+  {
+   "id": "arxiv:2011.00577",
+   "title": "FusiformNet: Extracting Discriminative Facial Features on Different Levels",
+   "authors": [
+    "Kyo Takano"
+   ],
+   "year": 2020,
+   "venue": "arXiv",
+   "abstract": "Over the last several years, research on facial recognition based on Deep Neural Network has evolved with approaches like task-specific loss functions, image normalization and augmentation, network architectures, etc. However, there have been few approaches with attention to how human faces differ from person to person. Premising that inter-personal differences are found both generally and locally on the human face, I propose FusiformNet, a novel framework for feature extraction that leverages the nature of discriminative facial features. Tested on Image-Unrestricted setting of Labeled Faces in the Wild benchmark, this method achieved a state-of-the-art accuracy of 96.67% without labeled outside data, image augmentation, normalization, or special loss functions. Likewise, the method also performed on a par with previous state-of-the-arts when pre-trained on CASIA-WebFace dataset. Considering its ability to extract both general and local facial features, the utility of FusiformNet may not be limited to facial recognition but also extend to other DNN-based tasks.",
+   "url": "http://arxiv.org/abs/2011.00577v3",
+   "source": "arxiv",
+   "cache_key": "b3eeda02a98ef3a2bb5b1099272b4c66beffba383592b59d3850cfdba3be7537",
+   "query": "feature scaling accuracy"
+  },
+  {
+   "id": "arxiv:1301.6324",
+   "title": "An improvement to k-nearest neighbor classifier",
+   "authors": [
+    "T. Hitendra Sarma",
+    "P. Viswanath",
+    "D. Sai Koti Reddy",
+    "S. Sri Raghava"
+   ],
+   "year": 2013,
+   "venue": "arXiv",
+   "abstract": "K-Nearest neighbor classifier (k-NNC) is simple to use and has little design time like finding k values in k-nearest neighbor classifier, hence these are suitable to work with dynamically varying data-sets. There exists some fundamental improvements over the basic k-NNC, like weighted k-nearest neighbors classifier (where weights to nearest neighbors are given based on linear interpolation), using artificially generated training set called bootstrapped training set, etc. These improvements are orthogonal to space reduction and classification time reduction techniques, hence can be coupled with any of them. The paper proposes another improvement to the basic k-NNC where the weights to nearest neighbors are given based on Gaussian distribution (instead of linear interpolation as done in weighted k-NNC) which is also independent of any space reduction and classification time reduction technique. We formally show that our proposed method is closely related to non-parametric density estimation using a Gaussian kernel. We experimentally demonstrate using various standard data-sets that the proposed method is better than the existing ones in most cases.",
+   "url": "http://arxiv.org/abs/1301.6324v1",
+   "source": "arxiv",
+   "cache_key": "3070e4edf6dcb0db18012eb19504c041b52b02e2d3beb16f6e346bfdfd22f893",
+   "query": "feature scaling standardization k-nearest neighbors classification accuracy"
+  },
+  {
+   "id": "arxiv:2508.18953",
+   "title": "Novel Approaches to Artificial Intelligence Development Based on the Nearest Neighbor Method",
+   "authors": [
+    "I. I. Priezzhev",
+    "D. A. Danko",
+    "A. V. Shubin"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "abstract": "Modern neural network technologies, including large language models, have achieved remarkable success in various applied artificial intelligence applications, however, they face a range of fundamental limitations. Among them are hallucination effects, high computational complexity of training and inference, costly fine-tuning, and catastrophic forgetting issues. These limitations significantly hinder the use of neural networks in critical areas such as medicine, industrial process management, and scientific research. This article proposes an alternative approach based on the nearest neighbors method with hierarchical clustering structures. Employing the k-nearest neighbors algorithm significantly reduces or completely eliminates hallucination effects while simplifying model expansion and fine-tuning without the need for retraining the entire network. To overcome the high computational load of the k-nearest neighbors method, the paper proposes using tree-like data structures based on Kohonen self-organizing maps, thereby greatly accelerating nearest neighbor searches. Tests conducted on handwritten digit recognition and simple subtitle translation tasks confirmed the effectiveness of the proposed approach. With only a slight reduction in accuracy, the nearest neighbor search time was reduced hundreds of times compared to exhaustive search methods. The proposed method features transparency and interpretability, closely aligns with human cognitive mechanisms, and demonstrates potential for extensive use in tasks requiring high reliability and explainable results.",
+   "url": "http://arxiv.org/abs/2508.18953v1",
+   "source": "arxiv",
+   "cache_key": "3070e4edf6dcb0db18012eb19504c041b52b02e2d3beb16f6e346bfdfd22f893",
+   "query": "feature scaling standardization k-nearest neighbors classification accuracy"
+  },
+  {
+   "id": "arxiv:1402.2062",
+   "title": "A model combining spectrum standardization and dominant factor based partial least square method for carbon analysis in coal by laser-induced breakdown spectroscopy",
+   "authors": [
+    "Xiongwei Li",
+    "Zhe Wang",
+    "Yangting Fu",
+    "Zheng Li",
+    "Weidou Ni"
+   ],
+   "year": 2014,
+   "venue": "arXiv",
+   "abstract": "Successful quantitative measurement of carbon content in coal using laser-induced breakdown spectroscopy (LIBS) is suffered from relatively low precision and accuracy. In the present work, the spectrum standardization method was combined with the dominant factor based partial least square (PLS) method to improve the measurement accuracy of carbon content in coal by LIBS. The combination model employed the spectrum standardization method to convert the carbon line intensity into standard state for more accurately calculating the dominant carbon concentration, and then applied PLS with full spectrum information to correct the residual errors. The combination model was applied to the measurement of carbon content for 24 bituminous coal samples. The results demonstrated that the combination model could further improve the measurement accuracy compared with both our previously established spectrum standardization model and dominant factor based PLS model using spectral area normalized intensity for the dominant factor model. For example, the coefficient of determination (R2), the root-mean-square error of prediction (RMSEP), and the average relative error (ARE) for the combination model were 0.99, 1.75%, and 2.39%, respectively; while those values for the spectrum standardization method were 0.83, 2.71%, and 3.40%, respectively; and those values for the dominant factor based PLS model were 0.99, 2.66%, and 3.64%, respectively.",
+   "url": "http://arxiv.org/abs/1402.2062v1",
+   "source": "arxiv",
+   "cache_key": "68561ecb73a0865a4e8d87f3a944650cd638e53d7515d0911ba3904b9a054fa1",
+   "query": "feature scaling standardization"
+  }
+ ],
+ "evidence": [
+  {
+   "id": "E1",
+   "claim": "Standard techniques used for the normalization of scaling factors are feature scaling method such as Z-score normalization technique, Min-Max scaling etc.",
+   "quote": "Standard techniques used for the normalization of scaling factors are feature scaling method such as Z-score normalization technique, Min-Max scaling etc.",
+   "citation": {
+    "identifier": "arxiv:1811.05062",
+    "title": "Dynamic Feature Scaling for K-Nearest Neighbor Algorithm",
+    "first_author": "Chandrasekaran Anirudh Bhardwaj",
+    "year": 2018
+   },
+   "concepts": [
+    "feature scaling"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E2",
+   "claim": "Hence, we focus on understanding nearest neighbor classifications through a ``feature perspective'', in which the goal is to identify how the values of the features in $\\bar{x}$ affect its classification.",
+   "quote": "Hence, we focus on understanding nearest neighbor classifications through a ``feature perspective'', in which the goal is to identify how the values of the features in $\\bar{x}$ affect its classification.",
+   "citation": {
+    "identifier": "arxiv:2501.06078",
+    "title": "Explaining k-Nearest Neighbors: Abductive and Counterfactual Explanations",
+    "first_author": "Pablo Barceló",
+    "year": 2025
+   },
+   "concepts": [
+    "nearest neighbor"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E3",
+   "claim": "The experiments on real-world data have shown that features created owing to the proposed method can lead to significant improvement of classification accuracy.",
+   "quote": "The experiments on real-world data have shown that features created owing to the proposed method can lead to significant improvement of classification accuracy.",
+   "citation": {
+    "identifier": "arxiv:1303.0095",
+    "title": "Label-dependent Feature Extraction in Social Networks for Node Classification",
+    "first_author": "Tomasz Kajdanowicz",
+    "year": 2013
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E4",
+   "claim": "The classification accuracy of the proposed algorithm is equivalent to that of the classical K‐nearest neighbor algorithm under the IRIS dataset.",
+   "quote": "The classification accuracy of the proposed algorithm is equivalent to that of the classical K‐nearest neighbor algorithm under the IRIS dataset.",
+   "citation": {
+    "identifier": "doi:10.1002/qute.202300221",
+    "title": "Quantum K‐Nearest Neighbor Classification Algorithm via a Divide‐and‐Conquer Strategy",
+    "first_author": "Li-Hua Gong",
+    "year": 2024
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E5",
+   "claim": "The feature fusion approach improves the classifications accuracy by a 7.2%, 20.1%, 22.2%, 21.8% margin, respectively, for ID, age, race and gender recognition, over the results of single classifiers trained only on their individual features.",
+   "quote": "The feature fusion approach improves the classifications accuracy by a 7.2%, 20.1%, 22.2%, 21.8% margin, respectively, for ID, age, race and gender recognition, over the results of single classifiers trained only on their individual features.",
+   "citation": {
+    "identifier": "arxiv:1610.04322",
+    "title": "Learning and Fusing Multimodal Features from and for Multi-task Facial Computing",
+    "first_author": "Wei Li",
+    "year": 2016
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E6",
+   "claim": "The classification was tested using confusion matrix to determine the generated accuracy.",
+   "quote": "The classification was tested using confusion matrix to determine the generated accuracy.",
+   "citation": {
+    "identifier": "doi:10.52465/joscex.v1i1.7",
+    "title": "Improving Algorithm Accuracy K-Nearest Neighbor Using Z-Score Normalization and Particle Swarm Optimization to Predict Customer Churn",
+    "first_author": "M. Imron",
+    "year": 2020
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E7",
+   "claim": "This article proposes the modified KNN (K Nearest Neighbor)algorithm which considers the feature similarity and is applied tothe text summarization.",
+   "quote": "This article proposes the modified KNN (K Nearest Neighbor)algorithm which considers the feature similarity and is applied tothe text summarization.",
+   "citation": {
+    "identifier": "doi:10.31219/osf.io/ju8nr",
+    "title": "Text Summarization using Feature Similarity based K Nearest Neighbor",
+    "first_author": "Taeho Jo",
+    "year": 2024
+   },
+   "concepts": [
+    "nearest neighbor"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E8",
+   "claim": "This article provides an overview of feature scaling that is commonly performed during data preprocessing in financial machine learning applications.",
+   "quote": "This article provides an overview of feature scaling that is commonly performed during data preprocessing in financial machine learning applications.",
+   "citation": {
+    "identifier": "doi:10.2139/ssrn.4110570",
+    "title": "Feature Scaling for Financial Machine Learning",
+    "first_author": "Jieli Shen",
+    "year": 2022
+   },
+   "concepts": [
+    "feature scaling"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E9",
+   "claim": "Results shows that the combination of LMKNN and DWKNN was able to increase the classification accuracy of kNN, whereby the average accuracy on test data is 2.45% with the highest increase in accuracy of 3.71% occurring on the lower back pain symptoms dataset.",
+   "quote": "Results shows that the combination of LMKNN and DWKNN was able to increase the classification accuracy of kNN, whereby the average accuracy on test data is 2.45% with the highest increase in accuracy of 3.71% occurring on the lower back pain symptoms dataset.",
+   "citation": {
+    "identifier": "doi:10.1088/1742-6596/978/1/012047",
+    "title": "Improving the accuracy of k-nearest neighbor using local mean based and distance weight",
+    "first_author": "K. U. Syaliman",
+    "year": 2018
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E10",
+   "claim": "More reliable recognition accuracy and performance are achievable as different modalities were being combined together and different algorithms or techniques were being used.",
+   "quote": "More reliable recognition accuracy and performance are achievable as different modalities were being combined together and different algorithms or techniques were being used.",
+   "citation": {
+    "identifier": "arxiv:1407.6748",
+    "title": "Enhancing the Accuracy of Biometric Feature Extraction Fusion Using Gabor Filter and Mahalanobis Distance Algorithm",
+    "first_author": "Ayodeji S. Makinde",
+    "year": 2014
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E11",
+   "claim": "This facilitates faster model development and boosts key performance indicators such as accuracy, precision, and recall by focusing on vital features.",
+   "quote": "This facilitates faster model development and boosts key performance indicators such as accuracy, precision, and recall by focusing on vital features.",
+   "citation": {
+    "identifier": "arxiv:1607.01327",
+    "title": "Feature Selection Library (MATLAB Toolbox)",
+    "first_author": "Giorgio Roffo",
+    "year": 2016
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E12",
+   "claim": "This article proposes the modified KNN (K Nearest Neighbor)algorithm which considers the feature similarity and is applied tothe keyword extraction.",
+   "quote": "This article proposes the modified KNN (K Nearest Neighbor)algorithm which considers the feature similarity and is applied tothe keyword extraction.",
+   "citation": {
+    "identifier": "doi:10.31219/osf.io/fecph",
+    "title": "Extracting Keywords from Text by Feature Similarity based K Nearest Neighbor",
+    "first_author": "Taeho Jo",
+    "year": 2024
+   },
+   "concepts": [
+    "nearest neighbor"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E13",
+   "claim": "This article proposes the modified KNN (K Nearest Neighbor)algorithm which considers the feature similarity and is applied tothe index optimization.",
+   "quote": "This article proposes the modified KNN (K Nearest Neighbor)algorithm which considers the feature similarity and is applied tothe index optimization.",
+   "citation": {
+    "identifier": "doi:10.31219/osf.io/cv9rg",
+    "title": "Feature Similarity based K Nearest Neighbor for Optimizing of Text Indexes",
+    "first_author": "Taeho Jo",
+    "year": 2024
+   },
+   "concepts": [
+    "nearest neighbor"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E14",
+   "claim": "Such standardization involves scaling by some factor that characterizes the distribution of the citations of articles from the same year and subject category.",
+   "quote": "Such standardization involves scaling by some factor that characterizes the distribution of the citations of articles from the same year and subject category.",
+   "citation": {
+    "identifier": "arxiv:1810.13288",
+    "title": "How important is choice of the scaling factor in standardizing citations?",
+    "first_author": "Giovanni Abramo",
+    "year": 2018
+   },
+   "concepts": [
+    "standardization"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E15",
+   "claim": "This classification process can be done using the Nearest Centroid Neighbor (NCN) and k-Nearest Neighbor (k-NN) algorithms, by applying various distance measures such as Euclidean, Manhattan, Minkowski, Chebyshev, Cosine, Jaccard, and Hamming.",
+   "quote": "This classification process can be done using the Nearest Centroid Neighbor (NCN) and k-Nearest Neighbor (k-NN) algorithms, by applying various distance measures such as Euclidean, Manhattan, Minkowski, Chebyshev, Cosine, Jaccard, and Hamming.",
+   "citation": {
+    "identifier": "doi:10.14710/j.gauss.15.1.89-97",
+    "title": "PERBANDINGAN PERFORMA DISTANCE MEASURES PADA  ALGORITMA NEAREST CENTROID NEIGHBOR DAN K-NEAREST NEIGHBOR  DALAM PROSES KLASIFIKASI BINTANG",
+    "first_author": "Dewi Sri Susanti",
+    "year": 2026
+   },
+   "concepts": [
+    "nearest neighbor",
+    "distance"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E16",
+   "claim": "In this paper, we propose a quantum K-nearest neighbor classification algorithm with Hamming distance.",
+   "quote": "In this paper, we propose a quantum K-nearest neighbor classification algorithm with Hamming distance.",
+   "citation": {
+    "identifier": "arxiv:2103.04253",
+    "title": "Quantum K-nearest neighbor classification algorithm based on Hamming distance",
+    "first_author": "Jing Li",
+    "year": 2021
+   },
+   "concepts": [
+    "distance"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E17",
+   "claim": "Based on these observations we comment on the accuracy of the published values of alpha for the Internet.",
+   "quote": "Based on these observations we comment on the accuracy of the published values of alpha for the Internet.",
+   "citation": {
+    "identifier": "arxiv:cond-mat/0410059",
+    "title": "Accuracy and Scaling Phenomena in Internet Mapping",
+    "first_author": "Aaron Clauset",
+    "year": 2004
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E18",
+   "claim": "However, the loss of quantization between the data and cluster centroids will inevitably harm the search accuracy.",
+   "quote": "However, the loss of quantization between the data and cluster centroids will inevitably harm the search accuracy.",
+   "citation": {
+    "identifier": "arxiv:1807.02962",
+    "title": "Learning to Index for Nearest Neighbor Search",
+    "first_author": "Chih-Yi Chiu",
+    "year": 2018
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E19",
+   "claim": "Feature Selection is a process that allows for representing information properly and may increase the accuracy of a classifier.",
+   "quote": "Feature Selection is a process that allows for representing information properly and may increase the accuracy of a classifier.",
+   "citation": {
+    "identifier": "arxiv:2209.02746",
+    "title": "Handcrafted Feature Selection Techniques for Pattern Recognition: A Survey",
+    "first_author": "Alysson Ribeiro da Silva",
+    "year": 2022
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E20",
+   "claim": "Tested on Image-Unrestricted setting of Labeled Faces in the Wild benchmark, this method achieved a state-of-the-art accuracy of 96.67% without labeled outside data, image augmentation, normalization, or special loss functions.",
+   "quote": "Tested on Image-Unrestricted setting of Labeled Faces in the Wild benchmark, this method achieved a state-of-the-art accuracy of 96.67% without labeled outside data, image augmentation, normalization, or special loss functions.",
+   "citation": {
+    "identifier": "arxiv:2011.00577",
+    "title": "FusiformNet: Extracting Discriminative Facial Features on Different Levels",
+    "first_author": "Kyo Takano",
+    "year": 2020
+   },
+   "concepts": [
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E21",
+   "claim": "With only a slight reduction in accuracy, the nearest neighbor search time was reduced hundreds of times compared to exhaustive search methods.",
+   "quote": "With only a slight reduction in accuracy, the nearest neighbor search time was reduced hundreds of times compared to exhaustive search methods.",
+   "citation": {
+    "identifier": "arxiv:2508.18953",
+    "title": "Novel Approaches to Artificial Intelligence Development Based on the Nearest Neighbor Method",
+    "first_author": "I. I. Priezzhev",
+    "year": 2025
+   },
+   "concepts": [
+    "nearest neighbor",
+    "accuracy"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E22",
+   "claim": "In the present work, the spectrum standardization method was combined with the dominant factor based partial least square (PLS) method to improve the measurement accuracy of carbon content in coal by LIBS.",
+   "quote": "In the present work, the spectrum standardization method was combined with the dominant factor based partial least square (PLS) method to improve the measurement accuracy of carbon content in coal by LIBS.",
+   "citation": {
+    "identifier": "arxiv:1402.2062",
+    "title": "A model combining spectrum standardization and dominant factor based partial least square method for carbon analysis in coal by laser-induced breakdown spectroscopy",
+    "first_author": "Xiongwei Li",
+    "year": 2014
+   },
+   "concepts": [
+    "standardization",
+    "accuracy"
+   ],
+   "stance": "context"
+  }
+ ],
+ "gaps": [
+  {
+   "id": "G1",
+   "description": "No retrieved evidence addresses feature scaling together with standardization.",
+   "concepts": [
+    "feature scaling",
+    "standardization"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E8",
+    "E14",
+    "E22"
+   ],
+   "kind": "uncovered"
+  },
+  {
+   "id": "G2",
+   "description": "No retrieved evidence addresses feature scaling together with nearest neighbor.",
+   "concepts": [
+    "feature scaling",
+    "nearest neighbor"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E7",
+    "E8",
+    "E12",
+    "E13"
+   ],
+   "kind": "uncovered"
+  },
+  {
+   "id": "G3",
+   "description": "No retrieved evidence addresses feature scaling together with distance.",
+   "concepts": [
+    "feature scaling",
+    "distance"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E8",
+    "E15",
+    "E16"
+   ],
+   "kind": "uncovered"
+  },
+  {
+   "id": "G4",
+   "description": "No retrieved evidence addresses feature scaling together with accuracy.",
+   "concepts": [
+    "feature scaling",
+    "accuracy"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E8"
+   ],
+   "kind": "uncovered"
+  },
+  {
+   "id": "G5",
+   "description": "No retrieved evidence addresses standardization together with nearest neighbor.",
+   "concepts": [
+    "standardization",
+    "nearest neighbor"
+   ],
+   "evidence_ids": [
+    "E2",
+    "E7",
+    "E12",
+    "E13",
+    "E14",
+    "E15"
+   ],
+   "kind": "uncovered"
+  },
+  {
+   "id": "G6",
+   "description": "No retrieved evidence addresses standardization together with distance.",
+   "concepts": [
+    "standardization",
+    "distance"
+   ],
+   "evidence_ids": [
+    "E14",
+    "E15",
+    "E16",
+    "E22"
+   ],
+   "kind": "uncovered"
+  },
+  {
+   "id": "G7",
+   "description": "Only one source addresses standardization together with accuracy.",
+   "concepts": [
+    "standardization",
+    "accuracy"
+   ],
+   "evidence_ids": [
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E9",
+    "E10"
+   ],
+   "kind": "narrow_scope"
+  },
+  {
+   "id": "G8",
+   "description": "Only one source addresses nearest neighbor together with distance.",
+   "concepts": [
+    "nearest neighbor",
+    "distance"
+   ],
+   "evidence_ids": [
+    "E2",
+    "E7",
+    "E12",
+    "E13",
+    "E15",
+    "E16"
+   ],
+   "kind": "narrow_scope"
+  },
+  {
+   "id": "G9",
+   "description": "Only one source addresses nearest neighbor together with accuracy.",
+   "concepts": [
+    "nearest neighbor",
+    "accuracy"
+   ],
+   "evidence_ids": [
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E7"
+   ],
+   "kind": "narrow_scope"
+  },
+  {
+   "id": "G10",
+   "description": "No retrieved evidence addresses distance together with accuracy.",
+   "concepts": [
+    "distance",
+    "accuracy"
+   ],
+   "evidence_ids": [
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E9",
+    "E10"
+   ],
+   "kind": "uncovered"
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "H1",
+   "statement": "feature standardisation before k-nearest-neighbour classification increases accuracy relative to knn.",
+   "independent_variable": "feature standardisation before k-nearest-neighbour classification",
+   "dependent_variable": "accuracy",
+   "expected_direction": "increase",
+   "gap_ids": [
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9",
+    "G10"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+   ],
+   "rationale": "Template filled from the question's written operationalisation; linked to every identified gap."
+  }
+ ],
+ "designs": [
+  {
+   "id": "D1",
+   "hypothesis_id": "H1",
+   "datasets": [
+    "breast_cancer",
+    "wine_binary",
+    "digits_binary"
+   ],
+   "model": "knn",
+   "control": "knn",
+   "treatments": [
+    "knn+standardize"
+   ],
+   "metrics": [
+    "accuracy",
+    "balanced_accuracy"
+   ],
+   "test": "paired_wilcoxon",
+   "split": "stratified_kfold",
+   "folds": 5,
+   "seeds": [
+    0,
+    1,
+    2
+   ],
+   "rationale": "Paired 5-fold cross-validation x 3 seeds; Wilcoxon signed-rank on paired fold scores."
+  }
+ ],
+ "results": [
+  {
+   "id": "R1",
+   "design_id": "D1",
+   "conditions": [
+    {
+     "condition": "knn",
+     "dataset": "breast_cancer",
+     "metric": "accuracy",
+     "values": [
+      0.9298245614035088,
+      0.9385964912280702,
+      0.9298245614035088,
+      0.9035087719298246,
+      0.9646017699115044,
+      0.9385964912280702,
+      0.9210526315789473,
+      0.9210526315789473,
+      0.9385964912280702,
+      0.9469026548672567,
+      0.9298245614035088,
+      0.9298245614035088,
+      0.9210526315789473,
+      0.9649122807017544,
+      0.911504424778761
+     ],
+     "mean": 0.932645034414946,
+     "lo": 0.9239139885111008,
+     "hi": 0.9413861719194744
+    },
+    {
+     "condition": "knn",
+     "dataset": "breast_cancer",
+     "metric": "balanced_accuracy",
+     "values": [
+      0.9253193580085162,
+      0.9369472649852604,
+      0.9097222222222223,
+      0.8839285714285714,
+      0.9621059691482227,
+      0.9231903046184081,
+      0.9091057975761545,
+      0.9126984126984127,
+      0.9315476190476191,
+      0.9382964453386988,
+      0.911562397641664,
+      0.9253193580085162,
+      0.8978174603174603,
+      0.9672619047619048,
+      0.9004024144869215
+     ],
+     "mean": 0.9223483666859035,
+     "lo": 0.9109501507321274,
+     "hi": 0.9338738405887519
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "breast_cancer",
+     "metric": "accuracy",
+     "values": [
+      0.9385964912280702,
+      0.9912280701754386,
+      0.956140350877193,
+      0.956140350877193,
+      0.9823008849557522,
+      0.9473684210526315,
+      0.9912280701754386,
+      0.9649122807017544,
+      0.9736842105263158,
+      0.9557522123893806,
+      0.9473684210526315,
+      0.956140350877193,
+      0.9473684210526315,
+      0.9912280701754386,
+      0.9734513274336283
+     ],
+     "mean": 0.9648605289033794,
+     "lo": 0.9566630440407805,
+     "hi": 0.9730735393054908
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "breast_cancer",
+     "metric": "balanced_accuracy",
+     "values": [
+      0.9231903046184081,
+      0.9883720930232558,
+      0.9404761904761905,
+      0.9503968253968254,
+      0.9761904761904762,
+      0.9348182115951523,
+      0.9883720930232558,
+      0.9523809523809523,
+      0.9642857142857143,
+      0.9502012072434608,
+      0.9394038650507697,
+      0.9464461185718964,
+      0.9285714285714286,
+      0.9930555555555556,
+      0.9642857142857143
+     ],
+     "mean": 0.9560297833512704,
+     "lo": 0.9457680059686283,
+     "hi": 0.9666596358946096
+    },
+    {
+     "condition": "knn",
+     "dataset": "wine_binary",
+     "metric": "accuracy",
+     "values": [
+      0.9166666666666666,
+      0.8888888888888888,
+      0.9166666666666666,
+      0.9428571428571428,
+      0.8285714285714286,
+      0.9722222222222222,
+      0.9722222222222222,
+      0.8611111111111112,
+      0.8285714285714286,
+      0.8857142857142857,
+      0.9444444444444444,
+      0.9444444444444444,
+      0.8333333333333334,
+      0.8571428571428571,
+      1.0
+     ],
+     "mean": 0.9061904761904763,
+     "lo": 0.8781481481481481,
+     "hi": 0.9347103174603173
+    },
+    {
+     "condition": "knn",
+     "dataset": "wine_binary",
+     "metric": "balanced_accuracy",
+     "values": [
+      0.9166666666666666,
+      0.875,
+      0.875,
+      0.9565217391304348,
+      0.7765151515151515,
+      0.9583333333333333,
+      0.9791666666666667,
+      0.8125,
+      0.8097826086956521,
+      0.8674242424242424,
+      0.9583333333333333,
+      0.9166666666666667,
+      0.8125,
+      0.8315217391304348,
+      1.0
+     ],
+     "mean": 0.8897288098375056,
+     "lo": 0.8558167270531402,
+     "hi": 0.9260294521299957
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "wine_binary",
+     "metric": "accuracy",
+     "values": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.9142857142857143,
+      1.0,
+      1.0,
+      0.9722222222222222,
+      0.9714285714285714,
+      0.9714285714285714,
+      0.9722222222222222,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 0.9867724867724867,
+     "lo": 0.9734378306878306,
+     "hi": 0.9962962962962962
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "wine_binary",
+     "metric": "balanced_accuracy",
+     "values": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.9375,
+      1.0,
+      1.0,
+      0.9791666666666667,
+      0.9782608695652174,
+      0.9791666666666667,
+      0.9791666666666667,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "mean": 0.9902173913043478,
+     "lo": 0.9804347826086955,
+     "hi": 0.9972222222222222
+    },
+    {
+     "condition": "knn",
+     "dataset": "digits_binary",
+     "metric": "accuracy",
+     "values": [
+      0.9861111111111112,
+      0.9833333333333333,
+      0.9944289693593314,
+      0.9860724233983287,
+      0.9944289693593314,
+      0.9944444444444445,
+      0.9805555555555555,
+      0.9916434540389972,
+      1.0,
+      0.9805013927576601,
+      0.9833333333333333,
+      0.9888888888888889,
+      0.9916434540389972,
+      0.9916434540389972,
+      0.9888579387186629
+     ],
+     "mean": 0.9890591148251313,
+     "lo": 0.9862761786856492,
+     "hi": 0.9916584132879396
+    },
+    {
+     "condition": "knn",
+     "dataset": "digits_binary",
+     "metric": "balanced_accuracy",
+     "values": [
+      0.9861261150035495,
+      0.9833333333333334,
+      0.994413407821229,
+      0.9860800744878957,
+      0.994413407821229,
+      0.994413407821229,
+      0.9805555555555556,
+      0.9916201117318435,
+      1.0,
+      0.9805090006207324,
+      0.983332818914164,
+      0.9888888888888889,
+      0.9916356300434512,
+      0.991651148355059,
+      0.9888423339540657
+     ],
+     "mean": 0.9890543489568151,
+     "lo": 0.986274535508069,
+     "hi": 0.9916531395859269
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "digits_binary",
+     "metric": "accuracy",
+     "values": [
+      0.9805555555555555,
+      0.9777777777777777,
+      0.9972144846796658,
+      0.9832869080779945,
+      0.9916434540389972,
+      0.9833333333333333,
+      0.9805555555555555,
+      0.9832869080779945,
+      0.9972144846796658,
+      0.9805013927576601,
+      0.9722222222222222,
+      0.9888888888888889,
+      0.9888579387186629,
+      0.9888579387186629,
+      0.9832869080779945
+     ],
+     "mean": 0.9851655834107087,
+     "lo": 0.9818327401217374,
+     "hi": 0.9886821417517798
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "digits_binary",
+     "metric": "balanced_accuracy",
+     "values": [
+      0.9805703879749375,
+      0.9777777777777777,
+      0.9972067039106145,
+      0.9833022967101179,
+      0.991651148355059,
+      0.983332818914164,
+      0.9805555555555555,
+      0.9832712600869026,
+      0.9972067039106145,
+      0.9805245189323402,
+      0.972252230007099,
+      0.9888888888888889,
+      0.9888578522656735,
+      0.9888423339540657,
+      0.9832867783985102
+     ],
+     "mean": 0.985168483709488,
+     "lo": 0.9818402184052322,
+     "hi": 0.9886840014495188
+    }
+   ],
+   "comparisons": [
+    {
+     "dataset": "breast_cancer",
+     "metric": "accuracy",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": 0.03221549448843345,
+     "lo": 0.02287416550225119,
+     "hi": 0.04162927599234072,
+     "p": 0.000636992151797346,
+     "effect_size_dz": 1.6234700802755895,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.001910976455392038
+    },
+    {
+     "dataset": "breast_cancer",
+     "metric": "balanced_accuracy",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": 0.03368141666536687,
+     "lo": 0.02316918738962628,
+     "hi": 0.04515216026997472,
+     "p": 0.0001220703125,
+     "effect_size_dz": 1.4734967440202673,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": null
+    },
+    {
+     "dataset": "wine_binary",
+     "metric": "accuracy",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": 0.08058201058201059,
+     "lo": 0.0575410052910053,
+     "hi": 0.1049206349206349,
+     "p": 0.0009674284502477448,
+     "effect_size_dz": 1.6564282721191967,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.0019348569004954896
+    },
+    {
+     "dataset": "wine_binary",
+     "metric": "balanced_accuracy",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": 0.10048858146684235,
+     "lo": 0.06817289745278876,
+     "hi": 0.1304029424681598,
+     "p": 0.000978706525317055,
+     "effect_size_dz": 1.5850410428328965,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": null
+    },
+    {
+     "dataset": "digits_binary",
+     "metric": "accuracy",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": -0.0038935314144227756,
+     "lo": -0.005929046734757022,
+     "hi": -0.0020385845455483343,
+     "p": 0.007463474476521277,
+     "effect_size_dz": -0.9633900715773595,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.007463474476521277
+    },
+    {
+     "dataset": "digits_binary",
+     "metric": "balanced_accuracy",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": -0.0038858652473270213,
+     "lo": -0.005913694752810134,
+     "hi": -0.0020329213978941066,
+     "p": 0.005706106815929257,
+     "effect_size_dz": -0.9630878762705328,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": null
+    }
+   ],
+   "runtime_seconds": 0.493,
+   "summary": ""
+  }
+ ],
+ "critiques": [],
+ "conclusions": [
+  {
+   "id": "K1",
+   "hypothesis_id": "H1",
+   "result_id": "R1",
+   "verdict": "not_supported",
+   "statement": "Hypothesis H1 is not supported on accuracy. knn+standardize vs knn on breast_cancer: +0.0322 [+0.0229, +0.0416], Holm p = 0.00191; knn+standardize vs knn on wine_binary: +0.0806 [+0.0575, +0.1049], Holm p = 0.00193; knn+standardize vs knn on digits_binary: -0.0039 [-0.0059, -0.0020], Holm p = 0.00746.",
+   "evidence_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+   ],
+   "limitations": [
+    "Datasets: breast_cancer, wine_binary, digits_binary only.",
+    "Evidence selection is lexical; quotes were not read for meaning."
+   ]
+  }
+ ],
+ "corrections": [],
+ "completed": [
+  "literature",
+  "evidence",
+  "gaps",
+  "hypotheses",
+  "design",
+  "analysis",
+  "conclusion",
+  "critique"
+ ],
+ "reviewed": {
+  "evidence": "none",
+  "hypotheses": "none",
+  "design": "none",
+  "conclusion": "none"
+ },
+ "error": null
+}

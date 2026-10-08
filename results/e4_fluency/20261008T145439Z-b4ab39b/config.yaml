@@ -1,0 +1,8 @@
+cache_mode: record
+sources:
+- openalex
+- crossref
+- arxiv
+- semanticscholar
+judge: claude
+seed: 0

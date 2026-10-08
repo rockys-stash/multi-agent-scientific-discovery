@@ -1,0 +1,101 @@
+{
+ "title": "E4 Fluency versus process",
+ "question": "When a run's process is corrupted, do its report's fluency scores fall with its process score?",
+ "findings": [
+  "Spearman correlation of readability with process score: 0.04."
+ ],
+ "tables": [
+  {
+   "id": "variants",
+   "caption": "Mean scores by variant",
+   "columns": [
+    {
+     "key": "variant",
+     "label": "Variant",
+     "align": "l"
+    },
+    {
+     "key": "reports",
+     "label": "Reports",
+     "align": "r"
+    },
+    {
+     "key": "readability",
+     "label": "Readability (Flesch)",
+     "align": "r"
+    },
+    {
+     "key": "convincingness",
+     "label": "Convincingness (judge, 1-10)",
+     "align": "r"
+    },
+    {
+     "key": "process",
+     "label": "Process score",
+     "align": "r"
+    },
+    {
+     "key": "evidence_correctness",
+     "label": "Evidence correct",
+     "align": "r"
+    },
+    {
+     "key": "conclusion_validity",
+     "label": "Conclusions valid",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "variant": "original",
+     "reports": 3,
+     "readability": 2.8800000000000003,
+     "convincingness": "pending",
+     "process": 0.9857575757575757,
+     "evidence_correctness": 0.9715151515151516,
+     "conclusion_validity": 1.0
+    },
+    {
+     "variant": "swapped citations",
+     "reports": 3,
+     "readability": 2.8800000000000003,
+     "convincingness": "pending",
+     "process": 0.5,
+     "evidence_correctness": 0.0,
+     "conclusion_validity": 1.0
+    },
+    {
+     "variant": "fabricated citations",
+     "reports": 3,
+     "readability": 4.63,
+     "convincingness": "pending",
+     "process": 0.5,
+     "evidence_correctness": 0.0,
+     "conclusion_validity": 1.0
+    },
+    {
+     "variant": "inflated conclusions",
+     "reports": 3,
+     "readability": 0.4200000000000001,
+     "convincingness": "pending",
+     "process": 0.4857575757575758,
+     "evidence_correctness": 0.9715151515151516,
+     "conclusion_validity": 0.0
+    },
+    {
+     "variant": "all three",
+     "reports": 3,
+     "readability": 2.2133333333333334,
+     "convincingness": "pending",
+     "process": 0.0,
+     "evidence_correctness": 0.0,
+     "conclusion_validity": 0.0
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "Convincingness: Status pending. It needs a language-model judge and no ANTHROPIC_API_KEY was set.",
+  "The process score is the mean of evidence correctness (independent verification) and the share of conclusions whose verdict matches the statistics."
+ ]
+}

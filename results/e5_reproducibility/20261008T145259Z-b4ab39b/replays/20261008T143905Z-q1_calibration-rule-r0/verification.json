@@ -1,0 +1,641 @@
+{
+ "run_id": "20261008T143905Z-q1_calibration-rule-r0",
+ "evidence": [
+  {
+   "evidence_id": "E1",
+   "citation": {
+    "identifier": "arxiv:1808.00111",
+    "normalised": "arxiv:1808.00111",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Probability Calibration Trees",
+    "resolved_first_author": "Tim Leathart",
+    "resolved_year": 2018,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E2",
+   "citation": {
+    "identifier": "doi:10.48550/arxiv.2601.19944",
+    "normalised": "doi:10.48550/arxiv.2601.19944",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Classifier Calibration at Scale: An Empirical Study of Model-Agnostic Post-Hoc Methods",
+    "resolved_first_author": "Valery Manokhin",
+    "resolved_year": 2026,
+    "resolved_by": "openalex",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E3",
+   "citation": {
+    "identifier": "arxiv:1710.08901",
+    "normalised": "arxiv:1710.08901",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Calibration of Machine Learning Classifiers for Probability of Default Modelling",
+    "resolved_first_author": "Pedro G. Fonseca",
+    "resolved_year": 2017,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E4",
+   "citation": {
+    "identifier": "doi:10.30871/jaic.v10i1.11853",
+    "normalised": "doi:10.30871/jaic.v10i1.11853",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Calibration and Applied Statistical Modeling Using Logistic Regression on the UCI Heart Disease Dataset",
+    "resolved_first_author": "Andi Cahyono",
+    "resolved_year": 2026,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E5",
+   "citation": {
+    "identifier": "doi:10.3390/math13132183",
+    "normalised": "doi:10.3390/math13132183",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Mitigating Algorithmic Bias Through Probability Calibration: A Case Study on Lead Generation Data",
+    "resolved_first_author": "Miroslav Nikolić",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E6",
+   "citation": {
+    "identifier": "doi:10.1021/acs.jcim.0c00476",
+    "normalised": "doi:10.1021/acs.jcim.0c00476",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Comparison of Scaling Methods to Obtain Calibrated\nProbabilities of Activity for Protein–Ligand Predictions",
+    "resolved_first_author": "Lewis\nH. Mervin",
+    "resolved_year": 2020,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E7",
+   "citation": {
+    "identifier": "arxiv:2501.16756",
+    "normalised": "arxiv:2501.16756",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Random Forest Calibration",
+    "resolved_first_author": "Mohammad Hossein Shaker",
+    "resolved_year": 2025,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E8",
+   "citation": {
+    "identifier": "doi:10.3390/app15147925",
+    "normalised": "doi:10.3390/app15147925",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Uncertainty-Aware Predictive Process Monitoring in Healthcare: Explainable Insights into Probability Calibration for Conformal Prediction",
+    "resolved_first_author": "Maxim Majlatow",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E9",
+   "citation": {
+    "identifier": "arxiv:1706.04599",
+    "normalised": "arxiv:1706.04599",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "On Calibration of Modern Neural Networks",
+    "resolved_first_author": "Chuan Guo",
+    "resolved_year": 2017,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E10",
+   "citation": {
+    "identifier": "doi:10.1016/j.is.2020.101641",
+    "normalised": "doi:10.1016/j.is.2020.101641",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "On the appropriateness of Platt scaling in classifier calibration",
+    "resolved_first_author": "Björn Böken",
+    "resolved_year": 2021,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E11",
+   "citation": {
+    "identifier": "arxiv:2305.00070",
+    "normalised": "arxiv:2305.00070",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Online Platt Scaling with Calibeating",
+    "resolved_first_author": "Chirag Gupta",
+    "resolved_year": 2023,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E12",
+   "citation": {
+    "identifier": "doi:10.48550/arxiv.2305.00070",
+    "normalised": "doi:10.48550/arxiv.2305.00070",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Online Platt Scaling with Calibeating",
+    "resolved_first_author": "Chirag Gupta",
+    "resolved_year": 2023,
+    "resolved_by": "openalex",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E13",
+   "citation": {
+    "identifier": "arxiv:2409.02446",
+    "normalised": "arxiv:2409.02446",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "ForeCal: Random Forest-based Calibration for DNNs",
+    "resolved_first_author": "Dhruv Nigam",
+    "resolved_year": 2024,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E14",
+   "citation": {
+    "identifier": "arxiv:2410.18144",
+    "normalised": "arxiv:2410.18144",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Using Platt's scaling for calibration after undersampling -- limitations and how to address them",
+    "resolved_first_author": "Nathan Phelps",
+    "resolved_year": 2024,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E15",
+   "citation": {
+    "identifier": "doi:10.48550/arxiv.2410.18144",
+    "normalised": "doi:10.48550/arxiv.2410.18144",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Using Platt's scaling for calibration after undersampling -- limitations and how to address them",
+    "resolved_first_author": "Nathan Phelps",
+    "resolved_year": 2024,
+    "resolved_by": "openalex",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E16",
+   "citation": {
+    "identifier": "arxiv:2603.10452",
+    "normalised": "arxiv:2603.10452",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Brenier Isotonic Regression",
+    "resolved_first_author": "Han Bao",
+    "resolved_year": 2026,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E17",
+   "citation": {
+    "identifier": "doi:10.1007/s42452-025-06587-0",
+    "normalised": "doi:10.1007/s42452-025-06587-0",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Post hoc calibration of medical segmentation models",
+    "resolved_first_author": "Axel-Jan Rousseau",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E18",
+   "citation": {
+    "identifier": "doi:10.1109/icmlcn64995.2025.11140554",
+    "normalised": "doi:10.1109/icmlcn64995.2025.11140554",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Impact of Platt Scaling on Calibration in ML-Based Wireless Resource Allocation",
+    "resolved_first_author": "Rashika Raina",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E19",
+   "citation": {
+    "identifier": "arxiv:2502.19851",
+    "normalised": "arxiv:2502.19851",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Can a calibration metric be both testable and actionable?",
+    "resolved_first_author": "Raphael Rossellini",
+    "resolved_year": 2025,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E20",
+   "citation": {
+    "identifier": "arxiv:1511.05191",
+    "normalised": "arxiv:1511.05191",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Binary Classifier Calibration using an Ensemble of Near Isotonic Regression Models",
+    "resolved_first_author": "Mahdi Pakdaman Naeini",
+    "resolved_year": 2015,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E21",
+   "citation": {
+    "identifier": "doi:10.1145/1143844.1143865",
+    "normalised": "doi:10.1145/1143844.1143865",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "An empirical comparison of supervised learning algorithms",
+    "resolved_first_author": "Rich Caruana",
+    "resolved_year": 2006,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E22",
+   "citation": {
+    "identifier": "arxiv:2311.12436",
+    "normalised": "arxiv:2311.12436",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Classifier Calibration with ROC-Regularized Isotonic Regression",
+    "resolved_first_author": "Eugene Berta",
+    "resolved_year": 2023,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E23",
+   "citation": {
+    "identifier": "arxiv:2607.13423",
+    "normalised": "arxiv:2607.13423",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Temperature Scaling Is Not Enough: Calibration Gaps Under Human Label Distributions",
+    "resolved_first_author": "Wisdom Dogah",
+    "resolved_year": 2026,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E24",
+   "citation": {
+    "identifier": "arxiv:1905.11028",
+    "normalised": "arxiv:1905.11028",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Best-scored Random Forest Classification",
+    "resolved_first_author": "Hanyuan Hang",
+    "resolved_year": 2019,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  }
+ ],
+ "citations_emitted": 24
+}
