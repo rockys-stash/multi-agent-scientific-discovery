@@ -1,0 +1,24 @@
+cache_mode: record
+sources:
+- openalex
+- crossref
+- arxiv
+- semanticscholar
+questions:
+- configs/questions/q1_calibration.yaml
+- configs/questions/q2_scaling_knn.yaml
+- configs/questions/q3_imbalance.yaml
+reasoners:
+- reasoner: rule
+  repeats: 1
+- reasoner: claude
+  repeats: 3
+- reasoner: claude
+  model_critic: claude
+  repeats: 3
+run_config:
+  per_source: 10
+  max_papers: 25
+  max_hypotheses: 2
+  critique_rounds: 2
+judge: claude

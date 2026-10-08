@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+from discoverylab.literature.cache import ResponseCache
 from discoverylab.literature.sources import Source, SourceUnavailableError, normalise_identifier
 from discoverylab.models import Paper
 
@@ -30,6 +31,16 @@ class SourceRegistry:
         self.sources = {s.name: s for s in sources}
         self.resolvers = resolvers or RESOLVERS
         self.unavailable: dict[str, int] = {}  # source -> count of "try later" answers seen
+
+    @property
+    def caches(self) -> list[ResponseCache]:
+        """The distinct response caches behind the sources (usually one, shared)."""
+        out: dict[int, ResponseCache] = {}
+        for src in self.sources.values():
+            cache = getattr(src, "cache", None)
+            if cache is not None:
+                out[id(cache)] = cache
+        return list(out.values())
 
     def search(self, query: str, per_source: int = 10) -> list[Paper]:
         """Union of results from every source, de-duplicated by identifier.

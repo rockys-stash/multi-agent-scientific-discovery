@@ -1,0 +1,74 @@
+{
+ "title": "E5 Reproducibility",
+ "question": "Does replaying a recorded run reproduce every artefact and number?",
+ "findings": [
+  "0/3 runs replayed with every artefact group and the verification identical."
+ ],
+ "tables": [
+  {
+   "id": "replay",
+   "caption": "Replay from the recorded cache and transcript",
+   "columns": [
+    {
+     "key": "run_id",
+     "label": "Run",
+     "align": "l"
+    },
+    {
+     "key": "reasoner",
+     "label": "Reasoner",
+     "align": "l"
+    },
+    {
+     "key": "replayed",
+     "label": "Replayed",
+     "align": "l"
+    },
+    {
+     "key": "identical",
+     "label": "Artefact groups identical",
+     "align": "r"
+    },
+    {
+     "key": "different",
+     "label": "Differences",
+     "align": "l"
+    },
+    {
+     "key": "verification",
+     "label": "Verification",
+     "align": "l"
+    }
+   ],
+   "rows": [
+    {
+     "run_id": "20261008T135637Z-q1_calibration-rule-r0",
+     "reasoner": "rule",
+     "replayed": "yes",
+     "identical": "8/8",
+     "different": "none",
+     "verification": "differs"
+    },
+    {
+     "run_id": "20261008T140549Z-q2_scaling_knn-rule-r0",
+     "reasoner": "rule",
+     "replayed": "yes",
+     "identical": "8/8",
+     "different": "none",
+     "verification": "differs"
+    },
+    {
+     "run_id": "20261008T141258Z-q3_imbalance-rule-r0",
+     "reasoner": "rule",
+     "replayed": "yes",
+     "identical": "8/8",
+     "different": "none",
+     "verification": "differs"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "Live re-run overlap (papers, evidence, verdicts) needs the scholarly APIs and, for model runs, an API key: Status pending until a run with both."
+ ]
+}

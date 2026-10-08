@@ -83,12 +83,19 @@ def execute(
     run_dir.mkdir(parents=True, exist_ok=True)
     log = ProcessLog(run_dir / "log.jsonl")
     director = Director(registry, reasoner, log, human, op, model_critic, cfg)
+    for cache in registry.caches:
+        cache.begin_trace()
     try:
-        state = director.run(state)
+        try:
+            state = director.run(state)
+        finally:
+            _save(run_dir, state, reasoner, model_critic)
+        if state.status == "complete":
+            verify_run(run_dir, state, registry)
     finally:
-        _save(run_dir, state, reasoner, model_critic)
-    if state.status == "complete":
-        verify_run(run_dir, state, registry)
+        # which version of every index response this run (and its verification) consumed
+        trace = [t for cache in registry.caches for t in cache.end_trace()]
+        (run_dir / "retrievals.json").write_text(json.dumps(trace, indent=0), encoding="utf-8")
     return state
 
 

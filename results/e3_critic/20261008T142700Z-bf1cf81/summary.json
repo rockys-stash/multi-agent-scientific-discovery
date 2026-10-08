@@ -1,0 +1,173 @@
+{
+ "title": "E3 Critic",
+ "question": "Which injected process faults does the rule critic catch, and which can it not see?",
+ "findings": [
+  "90 injections into 3 completed runs.",
+  "Structural faults caught: 72/72.",
+  "Semantic faults caught: 0/18.",
+  "Critiques on the unmodified final states: 0."
+ ],
+ "tables": [
+  {
+   "id": "faults",
+   "caption": "Detection by fault (share of trials)",
+   "columns": [
+    {
+     "key": "fault",
+     "label": "Fault",
+     "align": "l"
+    },
+    {
+     "key": "kind",
+     "label": "Kind",
+     "align": "l"
+    },
+    {
+     "key": "stage",
+     "label": "Stage",
+     "align": "l"
+    },
+    {
+     "key": "trials",
+     "label": "Trials",
+     "align": "r"
+    },
+    {
+     "key": "caught",
+     "label": "Caught as the right issue",
+     "align": "r"
+    },
+    {
+     "key": "flagged",
+     "label": "Target flagged at all",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "fault": "citation to unretrieved source",
+     "kind": "structural",
+     "stage": "evidence",
+     "trials": 15,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "altered quote",
+     "kind": "structural",
+     "stage": "evidence",
+     "trials": 15,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "missing quote",
+     "kind": "structural",
+     "stage": "evidence",
+     "trials": 15,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "ungrounded hypothesis",
+     "kind": "structural",
+     "stage": "hypotheses",
+     "trials": 3,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "dangling reference",
+     "kind": "structural",
+     "stage": "hypotheses",
+     "trials": 3,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "control also treatment",
+     "kind": "structural",
+     "stage": "design",
+     "trials": 3,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "single measurement",
+     "kind": "structural",
+     "stage": "design",
+     "trials": 3,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "primary metric mismatch",
+     "kind": "structural",
+     "stage": "design",
+     "trials": 3,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "unknown dataset",
+     "kind": "structural",
+     "stage": "design",
+     "trials": 3,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "misreported mean",
+     "kind": "structural",
+     "stage": "analysis",
+     "trials": 3,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "interval excludes mean",
+     "kind": "structural",
+     "stage": "analysis",
+     "trials": 3,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "verdict not supported by statistics",
+     "kind": "structural",
+     "stage": "conclusion",
+     "trials": 3,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "claim contradicts quote",
+     "kind": "semantic",
+     "stage": "evidence",
+     "trials": 15,
+     "caught": 0.0,
+     "flagged": 0.0
+    },
+    {
+     "fault": "stance flipped",
+     "kind": "semantic",
+     "stage": "evidence",
+     "trials": 0,
+     "caught": null,
+     "flagged": null
+    },
+    {
+     "fault": "hypothesis direction flipped",
+     "kind": "semantic",
+     "stage": "hypotheses",
+     "trials": 3,
+     "caught": 0.0,
+     "flagged": 0.0
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "Semantic faults keep every artefact structurally consistent; catching them needs the model critic or a person (pending without an API key)."
+ ]
+}

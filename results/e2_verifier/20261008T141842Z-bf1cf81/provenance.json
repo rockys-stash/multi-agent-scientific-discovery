@@ -1,0 +1,17 @@
+{
+ "experiment": "e2_verifier",
+ "run_id": "20261008T141842Z-bf1cf81",
+ "commit": "bf1cf8121b968a6a0668246bf8d15ba422853d5b",
+ "dirty": false,
+ "created_at": "2026-10-08T14:26:58+00:00",
+ "runtime_seconds": 496.13,
+ "description": "Verifier validity: known corruptions of real citations, and benign variants that must still pass.",
+ "config_sha256": "fe1164ef1f2ce8befce5b19fcc6a2dfc1291fca16e04bba07e73d42e477a061f",
+ "python": "3.13.16",
+ "packages": {
+  "scikit-learn": "1.9.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "anthropic": "1.12.1"
+ }
+}

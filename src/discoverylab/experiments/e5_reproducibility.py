@@ -90,6 +90,10 @@ def replay(run_dir: Path, out_dir: Path, registry: SourceRegistry, root: Path, r
     critic = (reasoner_factory("claude", ReplayClient([x for x in t if x.get("role") == "critic"]))
               if original.reasoner.endswith("+mc") else None)  # fmt: skip
     fresh = RunState(run_id=original.run_id, question=q, reasoner=original.reasoner)
+    retrievals = run_dir / "retrievals.json"
+    trace = json.loads(retrievals.read_text(encoding="utf-8")) if retrievals.is_file() else []
+    for cache in registry.caches:
+        cache.plan_replay(trace)  # serve the response versions this run consumed, not the latest
     try:
         replayed = execute(out_dir / original.run_id, fresh, registry, reasoner, op, NoReviewer(), critic, rc)
     except Exception as exc:

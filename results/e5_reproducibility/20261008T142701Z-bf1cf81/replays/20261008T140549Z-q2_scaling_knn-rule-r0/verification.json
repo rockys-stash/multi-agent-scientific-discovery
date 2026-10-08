@@ -1,0 +1,547 @@
+{
+ "run_id": "20261008T140549Z-q2_scaling_knn-rule-r0",
+ "evidence": [
+  {
+   "evidence_id": "E1",
+   "citation": {
+    "identifier": "arxiv:1811.05062",
+    "normalised": "arxiv:1811.05062",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Dynamic Feature Scaling for K-Nearest Neighbor Algorithm",
+    "resolved_first_author": "Chandrasekaran Anirudh Bhardwaj",
+    "resolved_year": 2018,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E2",
+   "citation": {
+    "identifier": "arxiv:1303.0095",
+    "normalised": "arxiv:1303.0095",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Label-dependent Feature Extraction in Social Networks for Node Classification",
+    "resolved_first_author": "Tomasz Kajdanowicz",
+    "resolved_year": 2013,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E3",
+   "citation": {
+    "identifier": "arxiv:2501.06078",
+    "normalised": "arxiv:2501.06078",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Explaining k-Nearest Neighbors: Abductive and Counterfactual Explanations",
+    "resolved_first_author": "Pablo Barceló",
+    "resolved_year": 2025,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E4",
+   "citation": {
+    "identifier": "arxiv:1610.04322",
+    "normalised": "arxiv:1610.04322",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Learning and Fusing Multimodal Features from and for Multi-task Facial Computing",
+    "resolved_first_author": "Wei Li",
+    "resolved_year": 2016,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E5",
+   "citation": {
+    "identifier": "doi:10.31219/osf.io/ju8nr",
+    "normalised": "doi:10.31219/osf.io/ju8nr",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Text Summarization using Feature Similarity based K Nearest Neighbor",
+    "resolved_first_author": "Taeho Jo",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E6",
+   "citation": {
+    "identifier": "doi:10.2139/ssrn.4110570",
+    "normalised": "doi:10.2139/ssrn.4110570",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Feature Scaling for Financial Machine Learning",
+    "resolved_first_author": "Jieli Shen",
+    "resolved_year": 2022,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E7",
+   "citation": {
+    "identifier": "arxiv:1407.6748",
+    "normalised": "arxiv:1407.6748",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Enhancing the Accuracy of Biometric Feature Extraction Fusion Using Gabor Filter and Mahalanobis Distance Algorithm",
+    "resolved_first_author": "Ayodeji S. Makinde",
+    "resolved_year": 2014,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E8",
+   "citation": {
+    "identifier": "arxiv:1607.01327",
+    "normalised": "arxiv:1607.01327",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Feature Selection Library (MATLAB Toolbox)",
+    "resolved_first_author": "Giorgio Roffo",
+    "resolved_year": 2016,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E9",
+   "citation": {
+    "identifier": "doi:10.31219/osf.io/fecph",
+    "normalised": "doi:10.31219/osf.io/fecph",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Extracting Keywords from Text by Feature Similarity based K Nearest Neighbor",
+    "resolved_first_author": "Taeho Jo",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E10",
+   "citation": {
+    "identifier": "arxiv:2103.04253",
+    "normalised": "arxiv:2103.04253",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Quantum K-nearest neighbor classification algorithm based on Hamming distance",
+    "resolved_first_author": "Jing Li",
+    "resolved_year": 2021,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E11",
+   "citation": {
+    "identifier": "doi:10.31219/osf.io/cv9rg",
+    "normalised": "doi:10.31219/osf.io/cv9rg",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Feature Similarity based K Nearest Neighbor for Optimizing of Text Indexes",
+    "resolved_first_author": "Taeho Jo",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E12",
+   "citation": {
+    "identifier": "arxiv:1807.02962",
+    "normalised": "arxiv:1807.02962",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Learning to Index for Nearest Neighbor Search",
+    "resolved_first_author": "Chih-Yi Chiu",
+    "resolved_year": 2018,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E13",
+   "citation": {
+    "identifier": "doi:10.14710/j.gauss.15.1.89-97",
+    "normalised": "doi:10.14710/j.gauss.15.1.89-97",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "PERBANDINGAN PERFORMA DISTANCE MEASURES PADA  ALGORITMA NEAREST CENTROID NEIGHBOR DAN K-NEAREST NEIGHBOR  DALAM PROSES KLASIFIKASI BINTANG",
+    "resolved_first_author": "Dewi Sri Susanti",
+    "resolved_year": 2026,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E14",
+   "citation": {
+    "identifier": "arxiv:2209.02746",
+    "normalised": "arxiv:2209.02746",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Handcrafted Feature Selection Techniques for Pattern Recognition: A Survey",
+    "resolved_first_author": "Alysson Ribeiro da Silva",
+    "resolved_year": 2022,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E15",
+   "citation": {
+    "identifier": "arxiv:2508.18953",
+    "normalised": "arxiv:2508.18953",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Novel Approaches to Artificial Intelligence Development Based on the Nearest Neighbor Method",
+    "resolved_first_author": "I. I. Priezzhev",
+    "resolved_year": 2025,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E16",
+   "citation": {
+    "identifier": "arxiv:cond-mat/0410059",
+    "normalised": "arxiv:cond-mat/0410059",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Accuracy and Scaling Phenomena in Internet Mapping",
+    "resolved_first_author": "Aaron Clauset",
+    "resolved_year": 2004,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E17",
+   "citation": {
+    "identifier": "arxiv:1810.13288",
+    "normalised": "arxiv:1810.13288",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "How important is choice of the scaling factor in standardizing citations?",
+    "resolved_first_author": "Giovanni Abramo",
+    "resolved_year": 2018,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E18",
+   "citation": {
+    "identifier": "arxiv:2011.00577",
+    "normalised": "arxiv:2011.00577",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "FusiformNet: Extracting Discriminative Facial Features on Different Levels",
+    "resolved_first_author": "Kyo Takano",
+    "resolved_year": 2020,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E19",
+   "citation": {
+    "identifier": "arxiv:1402.2062",
+    "normalised": "arxiv:1402.2062",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "A model combining spectrum standardization and dominant factor based partial least square method for carbon analysis in coal by laser-induced breakdown spectroscopy",
+    "resolved_first_author": "Xiongwei Li",
+    "resolved_year": 2014,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E20",
+   "citation": {
+    "identifier": "arxiv:1803.01562",
+    "normalised": "arxiv:1803.01562",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Local Distance Metric Learning for Nearest Neighbor Algorithm",
+    "resolved_first_author": "Hossein Rajabzadeh",
+    "resolved_year": 2018,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E21",
+   "citation": {
+    "identifier": "arxiv:2311.09215",
+    "normalised": "arxiv:2311.09215",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "ConvNet vs Transformer, Supervised vs CLIP: Beyond ImageNet Accuracy",
+    "resolved_first_author": "Kirill Vishniakov",
+    "resolved_year": 2023,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  }
+ ],
+ "citations_emitted": 21
+}

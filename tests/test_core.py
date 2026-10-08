@@ -169,3 +169,16 @@ def test_record_mode_refetches_an_earlier_rate_limit(tmp_path: Path) -> None:
     assert cache.get("https://x.test/a").status == 429
     assert cache.get("https://x.test/a").status == 200
     assert ResponseCache(tmp_path, mode="replay").get("https://x.test/a").status == 200
+
+
+def test_replay_serves_the_version_a_run_consumed(tmp_path: Path) -> None:
+    answers = iter([(429, "slow down"), (200, "{}")])
+    cache = ResponseCache(tmp_path, fetch=lambda url, params: next(answers))
+    cache.begin_trace()
+    cache.get("https://x.test/a")  # this run saw the rate limit
+    first_run = cache.end_trace()
+    cache.get("https://x.test/a")  # a later run refetched and got the record
+    replay = ResponseCache(tmp_path, mode="replay")
+    replay.plan_replay(first_run)
+    assert replay.get("https://x.test/a").status == 429
+    assert replay.get("https://x.test/a").status == 200  # plan used up: current version

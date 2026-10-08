@@ -8,6 +8,10 @@ Modes:
 - ``live``: always fetch, store the response;
 - ``record``: use the cache, fetch on a miss;
 - ``replay``: cache only; a miss raises ``CacheMissError`` (offline, reproducible).
+
+A response that is replaced (record mode refetching an earlier "try later") is archived, never
+overwritten, and a run records which version of each response it consumed (``begin_trace``), so
+replaying that run serves exactly those versions (``plan_replay``) even after the cache has moved on.
 """
 
 from __future__ import annotations
@@ -15,6 +19,7 @@ from __future__ import annotations
 import json
 import threading
 import time
+from collections import deque
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
@@ -72,6 +77,33 @@ class ResponseCache:
         self._last: dict[str, float] = {}
         self._lock = threading.Lock()
         self.hits = self.misses = 0
+        self._trace: list[dict[str, Any]] | None = None
+        self._plan: dict[str, deque[str]] = {}
+
+    def begin_trace(self) -> None:
+        """Start recording which response version each request consumed."""
+        self._trace = []
+
+    def end_trace(self) -> list[dict[str, Any]]:
+        trace, self._trace = self._trace or [], None
+        return trace
+
+    def plan_replay(self, trace: list[dict[str, Any]]) -> None:
+        """Serve each key's recorded versions in order; keys not in the plan get the current version."""
+        self._plan = {}
+        for t in trace:
+            self._plan.setdefault(t["key"], deque()).append(t["retrieved_at"])
+
+    def _version_path(self, key: str, retrieved_at: str) -> Path:
+        return self.root / key[:2] / f"{key}@{retrieved_at.replace(':', '')}.json"
+
+    def _load(self, path: Path) -> CachedResponse:
+        return CachedResponse(**json.loads(path.read_text(encoding="utf-8")))
+
+    def _record(self, resp: CachedResponse) -> CachedResponse:
+        if self._trace is not None:
+            self._trace.append({"key": resp.key, "retrieved_at": resp.retrieved_at, "status": resp.status})
+        return resp
 
     def _path(self, key: str) -> Path:
         return self.root / key[:2] / f"{key}.json"
@@ -109,18 +141,33 @@ class ResponseCache:
         params = {k: str(v) for k, v in (params or {}).items()}
         key = request_key(url, params)
         path = self._path(key)
+        planned = self._plan.get(key)
+        if planned:
+            at = planned.popleft()
+            current = self._load(path) if path.exists() else None
+            if current is not None and current.retrieved_at == at:
+                self.hits += 1
+                return self._record(current)
+            archived = self._version_path(key, at)
+            if archived.exists():
+                self.hits += 1
+                return self._record(self._load(archived))
+            raise CacheMissError(f"{url} {params} retrieved at {at} is not in the cache")
         if self.mode != "live" and path.exists():
-            cached = CachedResponse(**json.loads(path.read_text(encoding="utf-8")))
+            cached = self._load(path)
             # replay returns exactly what was recorded; record retries an earlier "try later"
             if self.mode == "replay" or cached.status not in TRANSIENT:
                 self.hits += 1
-                return cached
+                return self._record(cached)
         if self.mode == "replay":
             raise CacheMissError(f"{url} {params} is not in the cache")
         self.misses += 1
         status, body = self._fetch(url, params)
         resp = CachedResponse(key, url, params, status, body,
-                              datetime.now(UTC).isoformat(timespec="seconds"))  # fmt: skip
+                              datetime.now(UTC).isoformat(timespec="microseconds"))  # fmt: skip
         path.parent.mkdir(parents=True, exist_ok=True)
+        if path.exists():  # keep the version earlier runs consumed
+            previous = self._load(path)
+            path.replace(self._version_path(key, previous.retrieved_at))
         path.write_text(json.dumps(resp.__dict__, ensure_ascii=False), encoding="utf-8")
-        return resp
+        return self._record(resp)
