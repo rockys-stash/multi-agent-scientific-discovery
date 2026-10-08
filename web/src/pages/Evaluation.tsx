@@ -130,22 +130,34 @@ function Detail({ exp }: { exp: string }) {
 export function Evaluation() {
   const list = useApi<{ items: ExperimentInfo[] }>(api.experiments);
   const [params, setParams] = useSearchParams();
+  const head = (
+    <PageHead title="Evaluation">
+      The process is judged, not the prose: citations against their sources,
+      designs against a validity checklist, and the critic against faults
+      planted on purpose. An experiment that has not been run is shown as
+      pending, with no numbers.
+    </PageHead>
+  );
   if (list.error)
     return (
-      <ErrorPanel error={list.error} retry={list.retry} what="experiments" />
+      <>
+        {head}
+        <ErrorPanel error={list.error} retry={list.retry} what="experiments" />
+      </>
     );
-  if (!list.data) return <Loading label="Loading experiments" />;
+  if (!list.data)
+    return (
+      <>
+        {head}
+        <Loading label="Loading experiments" />
+      </>
+    );
   const items = list.data.items;
   const done = items.filter((i) => i.status === "complete");
   const chosen = params.get("exp") ?? done[0]?.experiment ?? null;
   return (
     <>
-      <PageHead title="Evaluation">
-        The process is judged, not the prose: citations against their sources,
-        designs against a validity checklist, and the critic against faults
-        planted on purpose. An experiment that has not been run is shown as
-        pending, with no numbers.
-      </PageHead>
+      {head}
       <div className="stack">
         <div className="panel">
           <div

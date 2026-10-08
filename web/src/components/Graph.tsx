@@ -16,11 +16,12 @@ const COLUMN: Partial<Record<NodeKind, number>> = {
   result: 6,
   conclusion: 7,
 };
-const COL_W = 176;
+const COL_W = 196;
 const ROW_H = 34;
 const PAD_X = 24;
 const PAD_Y = 40;
-const LABEL_CHARS = 19;
+const LABEL_CHARS = 22;
+const EDGE_OUT = COL_W - 26; // edges leave a node after its label, so they never cross text
 
 export interface Placed extends GraphNode {
   col: number;
@@ -128,8 +129,8 @@ function Shape({ kind }: { kind: NodeKind }) {
   }
 }
 
-const short = (s: string) =>
-  s.length > LABEL_CHARS ? `${s.slice(0, LABEL_CHARS - 1)}…` : s;
+const short = (s: string, n = LABEL_CHARS) =>
+  s.length > n ? `${s.slice(0, n - 1).trimEnd()}…` : s;
 
 export function nodeName(n: GraphNode): string {
   const status =
@@ -232,7 +233,7 @@ export function Graph({
             const b = placed.get(e.target);
             if (!a || !b) return null;
             const [l, r] = a.x <= b.x ? [a, b] : [b, a];
-            const mx = (l.x + r.x) / 2;
+            const mx = (l.x + EDGE_OUT + r.x) / 2;
             const on =
               selected !== null &&
               (e.source === selected || e.target === selected);
@@ -240,7 +241,7 @@ export function Graph({
             return (
               <path
                 key={i}
-                d={`M${l.x + 10} ${l.y} C${mx} ${l.y} ${mx} ${r.y} ${r.x - 10} ${r.y}`}
+                d={`M${l.x + EDGE_OUT} ${l.y} C${mx} ${l.y} ${mx} ${r.y} ${r.x - 10} ${r.y}`}
                 className={`edge${on ? " on" : ""}${selected && !on ? " dim" : ""}${fail ? " fail" : ""}${e.rel === "quotes" && e.verification === "verified" ? " verified" : ""}`}
               />
             );
@@ -289,7 +290,7 @@ export function Graph({
               <text x={14} y={4} className="node-label">
                 {n.kind === "paper"
                   ? short(n.label)
-                  : `${n.id} · ${short(n.label).slice(0, LABEL_CHARS - n.id.length - 3)}`}
+                  : `${n.id} · ${short(n.label, LABEL_CHARS - n.id.length - 3)}`}
               </text>
               {crit > 0 && (
                 <g

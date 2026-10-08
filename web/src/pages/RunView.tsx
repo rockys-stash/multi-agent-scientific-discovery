@@ -198,10 +198,10 @@ function NetworkTab({ run }: { run: RunDetail }) {
                 if (!items.length) return null;
                 return (
                   <section key={k} aria-label={KIND_LABEL[k]}>
-                    <h3>
+                    <h2 className="list-head">
                       {KIND_LABEL[k]}{" "}
                       <span className="muted">{items.length}</span>
-                    </h3>
+                    </h2>
                     <ul className="node-list">
                       {items.map((n) => (
                         <li key={n.id}>
@@ -567,16 +567,30 @@ export function RunView({ tab }: { tab: Tab }) {
   if (run.error) {
     if (run.error.status === 404)
       return (
-        <div className="panel">
-          <Empty title="Run not found">
-            There is no run <code>{runId}</code>.{" "}
-            <Link to="/runs">Back to runs</Link>.
-          </Empty>
-        </div>
+        <>
+          <h1 className="sr-only">Run not found</h1>
+          <div className="panel">
+            <Empty title="Run not found">
+              There is no run <code>{runId}</code>.{" "}
+              <Link to="/runs">Back to runs</Link>.
+            </Empty>
+          </div>
+        </>
       );
-    return <ErrorPanel error={run.error} retry={run.retry} what="the run" />;
+    return (
+      <>
+        <h1 className="sr-only">Run</h1>
+        <ErrorPanel error={run.error} retry={run.retry} what="the run" />
+      </>
+    );
   }
-  if (!run.data) return <Loading rows={8} label="Loading run" />;
+  if (!run.data)
+    return (
+      <>
+        <h1 className="sr-only">Run</h1>
+        <Loading rows={8} label="Loading run" />
+      </>
+    );
   const s = run.data.state;
   const st = statusOf(s.status);
   return (

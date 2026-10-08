@@ -1309,3 +1309,8 @@ details.table-twin summary {
     gap: 4px;
   }
 }
+
+h2.list-head {
+  font-size: 13px;
+  margin: 0 0 6px;
+}
