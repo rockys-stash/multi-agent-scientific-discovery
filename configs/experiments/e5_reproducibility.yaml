@@ -1,0 +1,4 @@
+# E5: replay every E1 run offline from the cache and transcripts; any network call is an error.
+cache_mode: replay
+sources: [openalex, crossref, arxiv, semanticscholar]
+run_config: {per_source: 10, max_papers: 25, max_hypotheses: 2, critique_rounds: 2}

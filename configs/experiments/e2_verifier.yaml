@@ -1,0 +1,5 @@
+# E2: corrupt every verified citation from E1. Record mode: fabricated identifiers must be looked
+# up for real (and their "not found" answers cached) before a replay can reproduce the result.
+cache_mode: record
+sources: [openalex, crossref, arxiv, semanticscholar]
+seed: 0

@@ -1,4 +1,4 @@
-"""Command line: ``discoverylab run | resume | verify-log | serve``."""
+"""Command line: ``discoverylab run | resume | verify-log | experiment | serve``."""
 
 from __future__ import annotations
 
@@ -33,6 +33,13 @@ def main(argv: list[str] | None = None) -> int:
 
     v = sub.add_parser("verify-log", help="check a run's process log has not been edited")
     v.add_argument("run_dir", type=Path)
+
+    e = sub.add_parser("experiment", help="run one of the experiments E1-E5 from its config")
+    e.add_argument("name", choices=["e1_runs", "e2_verifier", "e3_critic", "e4_fluency", "e5_reproducibility"])
+    e.add_argument("--config", type=Path, help="defaults to configs/experiments/<name>.yaml")
+    e.add_argument("--runs", type=Path, default=Path("runs"))
+    e.add_argument("--cache", type=Path, default=Path("cache"))
+    e.add_argument("--results", type=Path, default=Path("results"))
 
     s = sub.add_parser("serve", help="serve the console and its API")
     s.add_argument("--host", default=os.environ.get("DISCOVERYLAB_HOST", "127.0.0.1"))
@@ -73,6 +80,8 @@ def main(argv: list[str] | None = None) -> int:
         rep = verify(args.run_dir / "log.jsonl")
         print(json.dumps(rep.__dict__))
         return 0 if rep.valid else 1
+    if args.cmd == "experiment":
+        return _experiment(args)
     if args.cmd == "serve":
         if args.host not in LOOPBACK and not os.environ.get("DISCOVERYLAB_API_TOKEN"):
             print(f"refusing to serve on {args.host} without DISCOVERYLAB_API_TOKEN", file=sys.stderr)
@@ -84,6 +93,27 @@ def main(argv: list[str] | None = None) -> int:
         uvicorn.run(create_app(args.runs), host=args.host, port=args.port, log_level="info")
         return 0
     return 1
+
+
+def _experiment(args: argparse.Namespace) -> int:
+    from discoverylab.experiments import e1_runs, e2_verifier, e3_critic, e4_fluency, e5_reproducibility
+    from discoverylab.experiments.common import load_config
+    from discoverylab.run import build_registry
+
+    cfg = load_config(args.config or Path("configs/experiments") / f"{args.name}.yaml")
+    registry = build_registry(args.cache, cfg.get("cache_mode", "replay"), cfg.get("sources"))
+    if args.name == "e1_runs":
+        out = e1_runs.run(cfg, args.runs, registry, results=args.results)
+    elif args.name == "e2_verifier":
+        out = e2_verifier.run(cfg, args.runs, registry, results=args.results)
+    elif args.name == "e3_critic":
+        out = e3_critic.run(cfg, args.runs, results=args.results)
+    elif args.name == "e4_fluency":
+        out = e4_fluency.run(cfg, args.runs, registry, results=args.results)
+    else:
+        out = e5_reproducibility.run(cfg, args.runs, registry, results=args.results)
+    print(json.dumps({"experiment": args.name, "results": str(out)}))
+    return 0
 
 
 if __name__ == "__main__":

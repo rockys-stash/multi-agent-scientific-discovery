@@ -1,0 +1,5 @@
+# E4: corrupted report variants; convincingness needs ANTHROPIC_API_KEY (pending otherwise).
+cache_mode: record
+sources: [openalex, crossref, arxiv, semanticscholar]
+judge: claude
+seed: 0

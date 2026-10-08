@@ -59,14 +59,15 @@ def new_run_id(question_id: str, reasoner: str) -> str:
     return f"{datetime.now(UTC).strftime('%Y%m%dT%H%M%SZ')}-{question_id}-{reasoner}"
 
 
-def _save(run_dir: Path, state: RunState, reasoner: Reasoner) -> None:
+def _save(run_dir: Path, state: RunState, reasoner: Reasoner, critic: Reasoner | None = None) -> None:
     (run_dir / "state.json").write_text(state.model_dump_json(indent=1), encoding="utf-8")
-    transcript = getattr(reasoner, "transcript", None)
-    if transcript:
-        with (run_dir / "transcript.jsonl").open("a", encoding="utf-8") as f:
-            for t in transcript:
-                f.write(json.dumps(t, ensure_ascii=False) + "\n")
-        transcript.clear()
+    for role, agent in (("reasoner", reasoner), ("critic", critic)):
+        transcript = getattr(agent, "transcript", None)
+        if transcript:
+            with (run_dir / "transcript.jsonl").open("a", encoding="utf-8") as f:
+                for t in transcript:
+                    f.write(json.dumps({"role": role, **t}, ensure_ascii=False) + "\n")
+            transcript.clear()
 
 
 def execute(
@@ -85,7 +86,7 @@ def execute(
     try:
         state = director.run(state)
     finally:
-        _save(run_dir, state, reasoner)
+        _save(run_dir, state, reasoner, model_critic)
     if state.status == "complete":
         verify_run(run_dir, state, registry)
     return state
