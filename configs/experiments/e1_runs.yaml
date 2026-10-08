@@ -10,3 +10,4 @@ reasoners:
   - {reasoner: claude, repeats: 3}         # repeated: model output varies between calls
   - {reasoner: claude, model_critic: claude, repeats: 3}
 run_config: {per_source: 10, max_papers: 25, max_hypotheses: 2, critique_rounds: 2}
+judge: claude   # hypothesis rubric and quote support; pending without ANTHROPIC_API_KEY

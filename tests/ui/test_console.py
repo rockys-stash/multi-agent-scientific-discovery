@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Any
 
 import pytest
-from conftest import ALL_FIXTURE, PAPERS, FixtureSource  # type: ignore[import-not-found]
+from conftest import ALL_FIXTURE, PAPERS, FixtureSource
 
 from discoverylab.agents import RunConfig
 from discoverylab.human import CorrectionsFile, NoReviewer

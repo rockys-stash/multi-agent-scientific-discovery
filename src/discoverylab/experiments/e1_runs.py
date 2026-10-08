@@ -7,6 +7,7 @@ that cannot run here (no API key) is recorded as skipped with the reason; it is 
 
 from __future__ import annotations
 
+import json
 import os
 from collections.abc import Callable
 from pathlib import Path
@@ -16,6 +17,7 @@ from discoverylab.agents import RunConfig
 from discoverylab.evaluate import run_metrics
 from discoverylab.experiments.common import Summary, load_run, result_dir, table
 from discoverylab.human import NoReviewer
+from discoverylab.judges import ClaudeJudge, judge_run, load_judgements, summarise_judgements
 from discoverylab.literature.registry import SourceRegistry
 from discoverylab.models import RunState
 from discoverylab.reasoners.base import Reasoner
@@ -41,8 +43,14 @@ def run(
     reasoner_factory: Callable[[str], Reasoner] = make_reasoner,
     results: Path | None = None,
     root: Path = Path("."),
+    judge_factory: Callable[[], ClaudeJudge] | None = None,
 ) -> Path:
     rc = RunConfig(**cfg.get("run_config", {}))
+    judge = (
+        judge_factory()
+        if judge_factory
+        else (ClaudeJudge() if cfg.get("judge") == "claude" and not _missing_key("claude") else None)
+    )
     with result_dir("e1_runs", cfg, DESCRIPTION, results) as (rd, s):
         rows: list[dict[str, Any]] = []
         for qpath in cfg["questions"]:
@@ -73,6 +81,9 @@ def run(
                         rows.append({"question": q.id, "reasoner": label, "repeat": rep, "run_id": state.run_id,
                                      "status": "failed", "reason": f"{type(exc).__name__}: {exc}"})  # fmt: skip
                         continue
+                    if judge is not None and state.status == "complete":
+                        j = judge_run(state, judge)
+                        (runs / state.run_id / "judgements.json").write_text(json.dumps(j, indent=1), encoding="utf-8")
                     usage = getattr(reasoner, "usage", None)
                     rows.append({"question": q.id, "reasoner": label, "repeat": rep, "run_id": state.run_id, "status": state.status,
                                  "reason": state.error or "", "model_calls": getattr(usage, "calls", 0),
@@ -83,7 +94,8 @@ def run(
             if r["status"] != "complete":
                 continue
             state, ver = load_run(runs / r["run_id"])
-            metrics.append({**run_metrics(state, ver), "question": r["question"], "label": r["reasoner"]})
+            judged = summarise_judgements(load_judgements(runs / r["run_id"]))
+            metrics.append({**run_metrics(state, ver), **judged, "question": r["question"], "label": r["reasoner"]})
         rd.write_json("metrics.json", metrics)
         _summarise(s, rows, metrics)
     return rd.path
@@ -106,11 +118,12 @@ def _summarise(s: Summary, rows: list[dict[str, Any]], metrics: list[dict[str, A
             "design_validity": (sum(v["passed"] for v in validity) / sum(v["of"] for v in validity)) if validity else None,
             "critiques": sum(c["n"] for c in m["critiques"]),
             "verdicts": ", ".join(sorted(m["verdicts"].values())) or "none",
+            "hypothesis_quality": m["hypothesis_quality"]["mean_of_10"] if m["hypothesis_quality"] else "pending",
         })  # fmt: skip
     s.tables.append(table("runs", "Per run", [("question", "Question", "l"), ("reasoner", "Reasoner", "l"), ("papers", "Papers", "r"),
         ("evidence", "Evidence", "r"), ("citation_accuracy", "Citations verified", "r"), ("evidence_correctness", "Evidence correct", "r"),
         ("hypotheses", "Hypotheses", "r"), ("design_validity", "Design checks passed", "r"), ("critiques", "Critiques", "r"),
-        ("verdicts", "Verdicts", "l")], per_run))  # fmt: skip
+        ("hypothesis_quality", "Hypothesis rubric (of 10)", "r"), ("verdicts", "Verdicts", "l")], per_run))  # fmt: skip
     not_run = [r for r in rows if r["status"] != "complete"]
     if not_run:
         s.tables.append(table("not_run", "Runs that did not complete", [("question", "Question", "l"), ("reasoner", "Reasoner", "l"),
@@ -126,3 +139,7 @@ def _summarise(s: Summary, rows: list[dict[str, Any]], metrics: list[dict[str, A
         "Citation accuracy counts distinct cited identifiers; evidence correctness counts evidence items whose citation verified and whose quote was found in the source text."
     )
     s.notes.append("Runs had no human reviewer, so no correction count is reported.")
+    if any(m["hypothesis_quality"] is None for m in metrics):
+        s.notes.append(
+            "Hypothesis rubric and quote-supports-claim judgements: Status pending for runs without a language-model judge (no ANTHROPIC_API_KEY)."
+        )

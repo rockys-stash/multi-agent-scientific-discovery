@@ -14,6 +14,7 @@ import yaml
 from discoverylab.agents import RunConfig
 from discoverylab.experiments import e1_runs, e2_verifier, e3_critic, e4_fluency, e5_reproducibility
 from discoverylab.experiments.common import load_run
+from discoverylab.judges import RUBRIC, ClaudeJudge
 from discoverylab.reasoners.rule import RuleReasoner
 from discoverylab.report import flesch_reading_ease, render_report
 
@@ -140,3 +141,35 @@ def test_report_and_readability(e1: Path, lab: Path) -> None:
     )
     assert flesch_reading_ease("") is None
     shutil.rmtree(run_dir)
+
+
+class _StubJudgeClient:
+    """Answers the judge's two prompt types with fixed, schema-valid outputs."""
+
+    class messages:  # noqa: N801 - mirrors the SDK's attribute name
+        @staticmethod
+        def parse(**kw: Any) -> Any:
+            schema = kw["output_format"]
+            if "hypothesis" in kw["messages"][0]["content"]:
+                data: dict[str, Any] = {
+                    "scores": [
+                        {"criterion": c, "score": 2 if c != "grounding" else 1, "reason": "stub"} for c in RUBRIC
+                    ]
+                }
+            else:
+                data = {"verdict": "supports", "reason": "stub"}
+            return type("R", (), {"parsed_output": schema.model_validate(data)})()
+
+
+def test_e1_reports_judged_metrics_when_a_judge_is_available(lab: Path, registry) -> None:  # type: ignore[no-untyped-def]
+    cfg = {
+        "questions": ["configs/questions/qt.yaml"],
+        "reasoners": [{"reasoner": "rule"}],
+        "run_config": {"max_papers": 10},
+    }
+    out = e1_runs.run(cfg, lab / "runs", registry, _rule, results=lab / "results", root=lab,
+                      judge_factory=lambda: ClaudeJudge(client=_StubJudgeClient()))  # fmt: skip
+    [m] = json.loads((out / "metrics.json").read_text())
+    assert m["hypothesis_quality"]["mean_of_10"] == 9 and m["evidence_support"]["supports"] == m["evidence"]
+    [row] = json.loads((out / "summary.json").read_text())["tables"][0]["rows"]
+    assert row["hypothesis_quality"] == 9
