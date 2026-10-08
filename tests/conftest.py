@@ -49,7 +49,7 @@ class FixtureSource:
         return self.papers.get(identifier)
 
 
-ALL_FIXTURE = {"doi": ("fixture",), "arxiv": ("fixture",), "openalex": ("fixture",)}
+ALL_FIXTURE: dict[str, tuple[str, ...]] = {"doi": ("fixture",), "arxiv": ("fixture",), "openalex": ("fixture",)}
 
 
 @pytest.fixture
@@ -80,3 +80,15 @@ def op() -> Operationalisation:
 @pytest.fixture
 def tmp_run(tmp_path: Path) -> Path:
     return tmp_path / "run"
+
+
+@pytest.fixture(autouse=True)
+def _small_forests(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Keep tests fast: 20 trees instead of 200 (the experiments use the toolbox defaults)."""
+    from sklearn.ensemble import RandomForestClassifier
+
+    from discoverylab import toolbox
+
+    monkeypatch.setitem(
+        toolbox.MODELS, "random_forest", lambda s: RandomForestClassifier(n_estimators=20, random_state=s, n_jobs=1)
+    )

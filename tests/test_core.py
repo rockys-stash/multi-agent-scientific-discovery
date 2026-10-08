@@ -76,14 +76,22 @@ def test_source_parsers(tmp_path: Path) -> None:
     c = _cache(tmp_path, {"openalex": json.dumps(OPENALEX), "crossref": json.dumps(CROSSREF),
                           "arxiv": ARXIV, "semanticscholar": json.dumps(S2)})  # fmt: skip
     [oa] = OpenAlex(c).search("x", 5)
-    assert (oa.id, oa.abstract, oa.authors, oa.year, oa.venue) == ("doi:10.5555/x.1", "hello world", ["Ada Example"], 2005, "A venue")
+    assert (oa.id, oa.abstract, oa.authors, oa.year, oa.venue) == (
+        "doi:10.5555/x.1",
+        "hello world",
+        ["Ada Example"],
+        2005,
+        "A venue",
+    )
     [cr] = Crossref(c).search("x", 5)
     assert (cr.id, cr.authors, cr.year, cr.abstract) == ("doi:10.5555/y.2", ["Ben Sample"], 2019, "Some text .")
     [ax] = Arxiv(c).search("x", 5)
     assert (ax.id, ax.title, ax.abstract, ax.year) == ("arxiv:2101.00001", "An arXiv title", "Abstract text.", 2021)
     [s2] = SemanticScholar(c).search("x", 5)
     assert (s2.id, s2.abstract) == ("arxiv:2001.00002", "")
-    assert oa.cache_key and oa.cache_key == c.get("https://api.openalex.org/works", {"search": "x", "per-page": "5"}).key
+    assert (
+        oa.cache_key and oa.cache_key == c.get("https://api.openalex.org/works", {"search": "x", "per-page": "5"}).key
+    )
 
 
 def test_cache_replay_is_offline_and_exact(tmp_path: Path) -> None:
@@ -97,7 +105,12 @@ def test_cache_replay_is_offline_and_exact(tmp_path: Path) -> None:
 
 
 def _ev(identifier: str, title: str, author: str, year: int | None, quote: str) -> Evidence:
-    return Evidence(id="E1", claim="c", quote=quote, citation=Citation(identifier=identifier, title=title, first_author=author, year=year))
+    return Evidence(
+        id="E1",
+        claim="c",
+        quote=quote,
+        citation=Citation(identifier=identifier, title=title, first_author=author, year=year),
+    )
 
 
 def test_verifier_statuses(registry) -> None:  # type: ignore[no-untyped-def]
@@ -106,14 +119,19 @@ def test_verifier_statuses(registry) -> None:  # type: ignore[no-untyped-def]
     quote = "isotonic regression reduces the Brier score of random forest classifiers"
     ok = v.check_evidence(_ev("https://doi.org/10.5555/TEST.1", title, "A. Example", 2015, quote))
     assert ok.correct and ok.citation.status == "verified" and ok.quote == "found"
-    assert v.check_citation(Citation(identifier="10.5555/test.1", title=title, first_author="Example", year=2016)).status == "verified"
+    assert (
+        v.check_citation(Citation(identifier="10.5555/test.1", title=title, first_author="Example", year=2016)).status
+        == "verified"
+    )
     for bad in (Citation(identifier="10.5555/test.1", title="Deep residual learning", first_author="Example", year=2015),
                 Citation(identifier="10.5555/test.1", title=title, first_author="Someone Else", year=2015),
                 Citation(identifier="10.5555/test.1", title=title, first_author="Example", year=2009)):  # fmt: skip
         assert v.check_citation(bad).status == "metadata_mismatch"
     assert v.check_citation(Citation(identifier="10.5555/does.not.exist")).status == "unresolvable"
     assert v.check_citation(Citation(identifier="Example et al. (2015)")).status == "malformed"
-    altered = v.check_evidence(_ev("10.5555/test.1", title, "Example", 2015, "isotonic regression increases the Brier score"))
+    altered = v.check_evidence(
+        _ev("10.5555/test.1", title, "Example", 2015, "isotonic regression increases the Brier score")
+    )
     assert altered.quote == "not_found" and not altered.correct
 
 

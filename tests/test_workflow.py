@@ -30,14 +30,17 @@ def _design(**kw: Any) -> ExperimentDesign:
 
 def test_toolbox_runs_designs_and_reports_consistent_numbers() -> None:
     r = toolbox.run_design(_design(), "R1")
-    assert {(c.condition, c.metric) for c in r.conditions} >= {("random_forest", "brier"), ("random_forest+isotonic", "roc_auc")}
+    assert {(c.condition, c.metric) for c in r.conditions} >= {
+        ("random_forest", "brier"),
+        ("random_forest+isotonic", "roc_auc"),
+    }
     for c in r.conditions:
         assert len(c.values) == 6 and c.lo <= c.mean <= c.hi
     [primary] = [c for c in r.comparisons if c["metric"] == "brier"]
     assert primary["p_holm"] is not None and primary["n"] == 6
     assert toolbox.run_design(_design(), "R1").comparisons == r.comparisons  # seeded: reproducible
     assert toolbox.validate(_design(datasets=["mnist"], treatments=["svm"], test="anova"))
-    X, y = toolbox.DATASETS["digits_binary_imb10"].loader()
+    _X, y = toolbox.DATASETS["digits_binary_imb10"].loader()
     counts = sorted(int(n) for n in __import__("numpy").bincount(y))
     assert counts[0] <= 0.11 * counts[1]
 
@@ -69,7 +72,9 @@ def test_checkpoint_pauses_then_resumes_with_real_corrections(registry, question
     state, log = _run(registry, question, op, tmp_path, CorrectionsFile(path))
     assert state.status == "awaiting_review" and state.stage == Stage.EVIDENCE
     first = state.evidence[0].id
-    path.write_text(json.dumps({"evidence": [{"target_id": first, "action": "reject", "reason": "off topic", "actor": "tester"}]}))
+    path.write_text(
+        json.dumps({"evidence": [{"target_id": first, "action": "reject", "reason": "off topic", "actor": "tester"}]})
+    )
     d = Director(registry, RuleReasoner(min_score=0.5), log, CorrectionsFile(path), op, cfg=RunConfig(max_papers=10))
     state = d.run(state)
     assert state.status == "awaiting_review" and state.stage == Stage.HYPOTHESES
@@ -79,7 +84,9 @@ def test_checkpoint_pauses_then_resumes_with_real_corrections(registry, question
     data.update({"hypotheses": [], "design": [], "conclusion": []})
     path.write_text(json.dumps(data))
     state = d.run(state)
-    assert state.status == "complete" and state.reviewed == {s: "file" for s in ("evidence", "hypotheses", "design", "conclusion")}
+    assert state.status == "complete" and state.reviewed == {
+        s: "file" for s in ("evidence", "hypotheses", "design", "conclusion")
+    }
     assert sum(e.kind == "correction" for e in log.events()) == 1 and verify(log.path).valid
 
 
@@ -91,10 +98,14 @@ def test_rule_critic_catches_each_injected_fault(registry, question, op, tmp_pat
     def faults(state: RunState) -> dict[str, tuple[Stage, RunState]]:
         out = {}
         s = state.model_copy(deep=True)
-        s.evidence.append(Evidence(id="E99", claim="x", quote="anything", citation=Citation(identifier="10.5555/never.retrieved")))
+        s.evidence.append(
+            Evidence(id="E99", claim="x", quote="anything", citation=Citation(identifier="10.5555/never.retrieved"))
+        )
         out["citation_not_retrieved"] = (Stage.EVIDENCE, s)
         s = state.model_copy(deep=True)
-        s.evidence[0].quote = s.evidence[0].quote.replace("reduces", "increases").replace("improved", "worsened") + " always"
+        s.evidence[0].quote = (
+            s.evidence[0].quote.replace("reduces", "increases").replace("improved", "worsened") + " always"
+        )
         out["quote_not_in_source"] = (Stage.EVIDENCE, s)
         s = state.model_copy(deep=True)
         s.hypotheses[0].gap_ids = []
@@ -121,7 +132,8 @@ class _StubMessages:
     """Answers ``messages.parse`` from canned outputs keyed by schema name."""
 
     def __init__(self, answers: dict[str, Any]) -> None:
-        self.answers, self.calls = answers, []
+        self.answers = answers
+        self.calls: list[str] = []
 
     def parse(self, **kw: Any) -> Any:
         schema = kw["output_format"]
@@ -160,7 +172,9 @@ def test_execute_writes_state_log_and_verification(registry, tmp_path: Path) -> 
     q, op = load_question(Path("configs/questions/q1_calibration.yaml"))
     op.datasets = ["wine_binary"]  # type: ignore[union-attr]
     state = RunState(run_id="x", question=q, reasoner="rule")
-    out = execute(tmp_path / "x", state, registry, RuleReasoner(min_score=0.5), op, NoReviewer(), cfg=RunConfig(max_papers=10))
+    out = execute(
+        tmp_path / "x", state, registry, RuleReasoner(min_score=0.5), op, NoReviewer(), cfg=RunConfig(max_papers=10)
+    )
     assert out.status == "complete"
     ver = json.loads((tmp_path / "x" / "verification.json").read_text())
     assert ver["evidence"] and all(c["correct"] for c in ver["evidence"])
