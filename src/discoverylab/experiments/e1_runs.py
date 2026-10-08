@@ -89,6 +89,7 @@ def run(
                                  "reason": state.error or "", "model_calls": getattr(usage, "calls", 0),
                                  "input_tokens": getattr(usage, "input_tokens", 0), "output_tokens": getattr(usage, "output_tokens", 0)})  # fmt: skip
         rd.write_json("runs.json", rows)
+        rd.write_json("source_unavailable.json", registry.unavailable)
         metrics = []
         for r in rows:
             if r["status"] != "complete":
@@ -98,6 +99,10 @@ def run(
             metrics.append({**run_metrics(state, ver), **judged, "question": r["question"], "label": r["reasoner"]})
         rd.write_json("metrics.json", metrics)
         _summarise(s, rows, metrics)
+        if registry.unavailable:
+            s.notes.append("Index requests answered 'try later' after retries (rate limit or quota), by source: "
+                           + ", ".join(f"{k} {v}" for k, v in sorted(registry.unavailable.items()))
+                           + ". Their citations are reported as 'could not check', not as failures.")  # fmt: skip
     return rd.path
 
 

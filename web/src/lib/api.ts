@@ -199,7 +199,7 @@ export interface RunState {
 export interface CitationCheck {
   identifier: string;
   normalised: string | null;
-  status: "verified" | "metadata_mismatch" | "unresolvable" | "malformed";
+  status: "verified" | "metadata_mismatch" | "unresolvable" | "unverifiable" | "malformed";
   title_similarity: number | null;
   author_match: boolean | null;
   year_match: boolean | null;

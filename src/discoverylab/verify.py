@@ -18,7 +18,9 @@ from discoverylab.text import contains_quote, surname, title_similarity
 TITLE_MIN = 0.85  # token-sequence similarity; tolerates punctuation and subtitle formatting
 YEAR_TOLERANCE = 1  # preprint vs. published year
 
-CitationStatus = Literal["verified", "metadata_mismatch", "unresolvable", "malformed"]
+# "unverifiable": no record, and at least one authoritative source was rate-limited or down, so
+# absence is not evidence of fabrication. It is neither counted as verified nor as fabricated.
+CitationStatus = Literal["verified", "metadata_mismatch", "unresolvable", "unverifiable", "malformed"]
 QuoteStatus = Literal["found", "not_found", "no_source_text"]
 
 
@@ -71,6 +73,9 @@ class Verifier:
         if normalise_identifier(c.identifier) is None:
             return CitationCheck(c.identifier, None, "malformed", problems=["not a DOI, arXiv or OpenAlex identifier"])
         r = self._resolve(c.identifier)
+        if r.record is None and r.unavailable:
+            return CitationCheck(c.identifier, r.identifier, "unverifiable", tried=r.tried,
+                                 problems=[f"no record; unavailable: {', '.join(r.unavailable)}"])  # fmt: skip
         if r.record is None:
             return CitationCheck(c.identifier, r.identifier, "unresolvable", tried=r.tried,
                                  problems=["no source returned a record"])  # fmt: skip
@@ -99,7 +104,7 @@ class Verifier:
 
     def check_evidence(self, e: Evidence) -> EvidenceCheck:
         cit = self.check_citation(e.citation)
-        if cit.status in ("malformed", "unresolvable"):
+        if cit.status in ("malformed", "unresolvable", "unverifiable"):
             return EvidenceCheck(e.id, cit, "no_source_text")
         texts = self._resolve(e.citation.identifier).texts
         if not any(t.strip() for t in texts.values()):

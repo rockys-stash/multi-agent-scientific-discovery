@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from discoverylab.literature.sources import Source, normalise_identifier
+from discoverylab.literature.sources import Source, SourceUnavailableError, normalise_identifier
 from discoverylab.models import Paper
 
 # Which sources are authoritative for each identifier scheme, in order. The first answer
@@ -22,12 +22,14 @@ class Resolved:
     record: Paper | None
     texts: dict[str, str] = field(default_factory=dict)  # source name -> title + abstract
     tried: list[str] = field(default_factory=list)
+    unavailable: list[str] = field(default_factory=list)  # tried, but answered "try later"
 
 
 class SourceRegistry:
     def __init__(self, sources: list[Source], resolvers: dict[str, tuple[str, ...]] | None = None) -> None:
         self.sources = {s.name: s for s in sources}
         self.resolvers = resolvers or RESOLVERS
+        self.unavailable: dict[str, int] = {}  # source -> count of "try later" answers seen
 
     def search(self, query: str, per_source: int = 10) -> list[Paper]:
         """Union of results from every source, de-duplicated by identifier.
@@ -37,7 +39,12 @@ class SourceRegistry:
         """
         merged: dict[str, Paper] = {}
         for src in self.sources.values():
-            for p in src.search(query, per_source):
+            try:
+                found = src.search(query, per_source)
+            except SourceUnavailableError:
+                self.unavailable[src.name] = self.unavailable.get(src.name, 0) + 1
+                continue
+            for p in found:
                 if p.id in merged:
                     if not merged[p.id].abstract and p.abstract:
                         merged[p.id] = merged[p.id].model_copy(update={"abstract": p.abstract})
@@ -55,7 +62,12 @@ class SourceRegistry:
             if src is None:
                 continue
             out.tried.append(name)
-            rec = src.resolve(ident)
+            try:
+                rec = src.resolve(ident)
+            except SourceUnavailableError:
+                self.unavailable[name] = self.unavailable.get(name, 0) + 1
+                out.unavailable.append(name)
+                continue
             if rec is None:
                 continue
             if out.record is None:

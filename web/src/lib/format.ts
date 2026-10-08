@@ -97,6 +97,13 @@ export function verificationMark(v: string | null | undefined): {
         word: "Does not resolve",
         help: "No index returned a record for this identifier.",
       };
+    case "unverifiable":
+      return {
+        tone: "attest",
+        glyph: "◐",
+        word: "Could not check",
+        help: "No record, but an index was rate-limited or down, so this is not evidence of fabrication.",
+      };
     case "malformed":
       return {
         tone: "bad",

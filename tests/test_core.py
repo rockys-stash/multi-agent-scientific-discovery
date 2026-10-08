@@ -151,3 +151,21 @@ def test_process_log_chain_detects_edits(tmp_path: Path) -> None:
     log.path.write_text("\n".join(lines) + "\n")
     deleted = verify(log.path)
     assert deleted.first_bad_seq == 3 and "seq" in (deleted.problem or "")
+
+
+def test_rate_limited_source_is_unverifiable_not_unresolvable(tmp_path: Path) -> None:
+    from discoverylab.literature.registry import SourceRegistry
+
+    cache = ResponseCache(tmp_path, fetch=lambda url, params: (429, "Too Many Requests"))
+    reg = SourceRegistry([Crossref(cache, "test@example.org")])
+    chk = Verifier(reg).check_citation(Citation(identifier="10.5555/real.but.throttled"))
+    assert chk.status == "unverifiable"
+    assert reg.search("anything") == [] and reg.unavailable["crossref"] == 2
+
+
+def test_record_mode_refetches_an_earlier_rate_limit(tmp_path: Path) -> None:
+    answers = iter([(429, "slow down"), (200, "{}")])
+    cache = ResponseCache(tmp_path, fetch=lambda url, params: next(answers))
+    assert cache.get("https://x.test/a").status == 429
+    assert cache.get("https://x.test/a").status == 200
+    assert ResponseCache(tmp_path, mode="replay").get("https://x.test/a").status == 200

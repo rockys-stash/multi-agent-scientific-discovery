@@ -74,7 +74,9 @@ def run_metrics(state: RunState, verification: dict[str, Any] | None) -> dict[st
         "papers": len(state.papers),
         "papers_with_abstract": len(abstracts),
         "evidence": len(state.evidence),
-        "citation_accuracy": _rate(cit_status.get("verified", 0), len(by_id)),
+        # Over citations that could be checked: an index outage is neither a pass nor a fabrication.
+        "citation_accuracy": _rate(cit_status.get("verified", 0), len(by_id) - cit_status.get("unverifiable", 0)),
+        "citations_unverifiable": cit_status.get("unverifiable", 0),
         "citation_status": dict(cit_status),
         "evidence_correctness": _rate(sum(c["correct"] for c in checks), len(checks)),
         "quote_status": dict(quote_status),

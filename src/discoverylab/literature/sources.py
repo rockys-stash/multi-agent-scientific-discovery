@@ -10,7 +10,7 @@ import re
 import xml.etree.ElementTree as ET
 from typing import Any, Protocol
 
-from discoverylab.literature.cache import CachedResponse, ResponseCache
+from discoverylab.literature.cache import TRANSIENT, CachedResponse, ResponseCache
 from discoverylab.models import Paper
 
 DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$", re.IGNORECASE)
@@ -52,7 +52,17 @@ class Source(Protocol):
     def resolve(self, identifier: str) -> Paper | None: ...
 
 
+class SourceUnavailableError(RuntimeError):
+    """The source answered "try later" (rate limit, quota, outage): absence of evidence only."""
+
+    def __init__(self, source: str, status: int) -> None:
+        super().__init__(f"{source} unavailable (HTTP {status})")
+        self.source, self.status = source, status
+
+
 def _ok(resp: CachedResponse) -> bool:
+    if resp.status in TRANSIENT:
+        raise SourceUnavailableError(resp.url, resp.status)
     return 200 <= resp.status < 300
 
 

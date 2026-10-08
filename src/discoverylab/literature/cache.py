@@ -33,6 +33,13 @@ class CacheMissError(LookupError):
     pass
 
 
+# Statuses that say "try later", not "no such record". They are retried with backoff and, if they
+# persist, surface as SourceUnavailable so a rate limit is never read as a missing paper.
+TRANSIENT = frozenset({408, 429, 500, 502, 503, 504})
+MAX_TRIES = 4
+MAX_WAIT_S = 60.0
+
+
 @dataclass(frozen=True)
 class CachedResponse:
     key: str
@@ -69,24 +76,45 @@ class ResponseCache:
     def _path(self, key: str) -> Path:
         return self.root / key[:2] / f"{key}.json"
 
-    def _http_get(self, url: str, params: dict[str, str]) -> tuple[int, str]:
-        host = httpx.URL(url).host
+    def _throttle(self, host: str) -> None:
         with self._lock:  # polite: at most one request per host per interval
             wait = self._last.get(host, 0.0) + self.min_interval_s - time.monotonic()
             if wait > 0:
                 time.sleep(wait)
             self._last[host] = time.monotonic()
-        r = httpx.get(url, params=params, headers={"User-Agent": USER_AGENT}, timeout=30.0,
-                      follow_redirects=True)  # fmt: skip
-        return r.status_code, r.text
+
+    def _http_get(self, url: str, params: dict[str, str]) -> tuple[int, str]:
+        host = httpx.URL(url).host
+        status, body = 0, ""
+        for attempt in range(MAX_TRIES):
+            self._throttle(host)
+            try:
+                r = httpx.get(url, params=params, headers={"User-Agent": USER_AGENT}, timeout=30.0,
+                              follow_redirects=True)  # fmt: skip
+                status, body = r.status_code, r.text
+                retry_after = r.headers.get("retry-after", "")
+            except httpx.TransportError as exc:  # recorded as a gateway failure, not a missing record
+                status, body, retry_after = 504, f"transport error: {exc}", ""
+            if status not in TRANSIENT or attempt == MAX_TRIES - 1:
+                break
+            backoff = 2.0 * 2**attempt
+            if retry_after.isdigit():
+                backoff = max(backoff, float(retry_after))
+            if backoff > MAX_WAIT_S:  # e.g. a daily quota: waiting will not help this run
+                break
+            time.sleep(backoff)
+        return status, body
 
     def get(self, url: str, params: dict[str, str] | None = None) -> CachedResponse:
         params = {k: str(v) for k, v in (params or {}).items()}
         key = request_key(url, params)
         path = self._path(key)
         if self.mode != "live" and path.exists():
-            self.hits += 1
-            return CachedResponse(**json.loads(path.read_text(encoding="utf-8")))
+            cached = CachedResponse(**json.loads(path.read_text(encoding="utf-8")))
+            # replay returns exactly what was recorded; record retries an earlier "try later"
+            if self.mode == "replay" or cached.status not in TRANSIENT:
+                self.hits += 1
+                return cached
         if self.mode == "replay":
             raise CacheMissError(f"{url} {params} is not in the cache")
         self.misses += 1
