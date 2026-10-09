@@ -11,8 +11,11 @@
 
 Every response is cached under `cache/` by a content hash of the request, with the URL, status
 and retrieval time, so runs replay offline. The cache is not committed: abstracts belong to
-their publishers. Retrieval status in this environment: **blocked by the network policy as of
-2026-10-08**, so no literature has been retrieved yet (Status: pending).
+their publishers. Literature was first retrieved on 2026-10-08 (E1, `results/e1_runs/`). That day OpenAlex's
+anonymous daily credit was exhausted and Semantic Scholar rate-limited the shared address, so
+those two indexes contributed fewer records; such answers are recorded as "could not check",
+never as missing papers (docs/DECISIONS.md D12). Requests are spaced at least 1 s per host, 3 s
+for arXiv.
 
 Known biases: the indexes over-represent English-language, recent and open-access work;
 abstracts are the only text, so evidence from a paper's body cannot be quoted or checked.

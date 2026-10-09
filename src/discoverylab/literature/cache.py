@@ -43,6 +43,8 @@ class CacheMissError(LookupError):
 TRANSIENT = frozenset({408, 429, 500, 502, 503, 504})
 MAX_TRIES = 4
 MAX_WAIT_S = 60.0
+# Hosts whose terms ask for more than the default spacing (arXiv API: one request every 3 s).
+HOST_INTERVAL_S = {"export.arxiv.org": 3.0}
 
 
 @dataclass(frozen=True)
@@ -110,7 +112,8 @@ class ResponseCache:
 
     def _throttle(self, host: str) -> None:
         with self._lock:  # polite: at most one request per host per interval
-            wait = self._last.get(host, 0.0) + self.min_interval_s - time.monotonic()
+            interval = max(self.min_interval_s, HOST_INTERVAL_S.get(host, 0.0))
+            wait = self._last.get(host, 0.0) + interval - time.monotonic()
             if wait > 0:
                 time.sleep(wait)
             self._last[host] = time.monotonic()
