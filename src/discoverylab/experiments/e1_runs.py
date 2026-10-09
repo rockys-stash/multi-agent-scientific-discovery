@@ -99,6 +99,7 @@ def run(
                     except Exception as exc:  # recorded, not hidden: a failed run is a result too
                         rows.append({"question": q.id, "reasoner": label, "repeat": rep, "run_id": state.run_id,
                                      "status": "failed", "reason": f"{type(exc).__name__}: {exc}"})  # fmt: skip
+                        rd.write_json("runs.json", rows)
                         continue
                     if judge is not None and state.status == "complete":
                         try:
@@ -114,6 +115,8 @@ def run(
                     rows.append({"question": q.id, "reasoner": label, "repeat": rep, "run_id": state.run_id, "status": state.status,
                                  "reason": state.error or "", "model_calls": getattr(usage, "calls", 0),
                                  "input_tokens": getattr(usage, "input_tokens", 0), "output_tokens": getattr(usage, "output_tokens", 0)})  # fmt: skip
+                    # checkpoint: an interrupted E1 can be resumed with reuse_from: <this result id> (D18)
+                    rd.write_json("runs.json", rows)
         rd.write_json("runs.json", rows)
         if judge_errors:
             rd.write_json("judge_errors.json", judge_errors)
