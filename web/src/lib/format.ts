@@ -166,6 +166,9 @@ export const REASONER: Record<string, string> = {
   rule: "Rule baseline (no language model)",
   claude: "Claude",
   "claude+mc": "Claude with model critic",
+  local: "Local model (Qwen3-4B)",
+  "local+mc": "Local model with model critic",
+  "local-b5": "Local model, 5 abstracts per read",
 };
 
 export const verdictOf = (v: string) =>

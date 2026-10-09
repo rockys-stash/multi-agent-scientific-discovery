@@ -1,0 +1,19 @@
+{
+ "experiment": "e1_compare",
+ "run_id": "20261009T184012Z-d5c5d22",
+ "commit": "d5c5d225bb01fbec01d6ae937fdaa7696f6d92b3",
+ "dirty": false,
+ "created_at": "2026-10-09T18:40:12+00:00",
+ "runtime_seconds": 0.22,
+ "description": "E1 arm comparison: process metrics per reasoner, mean and spread over repeats.",
+ "config_sha256": "c287daf60a3c9a19071355bf8a957d6bb3a3676b159ae28251dc686922469fe4",
+ "python": "3.13.16",
+ "packages": {
+  "scikit-learn": "1.9.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "anthropic": "1.12.1",
+  "llama-cpp-python": "0.3.36"
+ },
+ "local_models": {}
+}

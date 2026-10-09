@@ -12,6 +12,8 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 from discoverylab.agents import RunConfig
 from discoverylab.evaluate import run_metrics
 from discoverylab.experiments.common import Summary, load_run, result_dir, table
@@ -27,6 +29,23 @@ DESCRIPTION = "End-to-end runs: every question with every reasoner, verified ind
 
 def _rate(r: dict[str, Any]) -> float | None:
     return r["rate"]
+
+
+SAME = ("run_config", "sources", "judge", "cache_mode")  # what must match for an earlier run to count
+
+
+def _reusable(cfg: dict[str, Any], results: Path) -> dict[tuple[str, str, int], dict[str, Any]]:
+    """Completed runs of an earlier E1 that this E1 may adopt instead of rerunning (``reuse_from``)."""
+    result_id = cfg.get("reuse_from")
+    if not result_id:
+        return {}
+    prior = results / "e1_runs" / result_id
+    old = yaml.safe_load((prior / "config.yaml").read_text(encoding="utf-8"))
+    differ = [k for k in SAME if old.get(k) != cfg.get(k)]
+    if differ:
+        raise ValueError(f"reuse_from {result_id}: configuration differs in {', '.join(differ)}")
+    rows = json.loads((prior / "runs.json").read_text(encoding="utf-8"))
+    return {(r["question"], r["reasoner"], r["repeat"]): r for r in rows if r["status"] == "complete"}
 
 
 def run(
@@ -47,6 +66,7 @@ def run(
     )
     with result_dir("e1_runs", cfg, DESCRIPTION, results) as (rd, s):
         rows: list[dict[str, Any]] = []
+        reused = _reusable(cfg, results or root / "results")
         judge_errors: list[dict[str, Any]] = []
         for qpath in cfg["questions"]:
             q, op = load_question(root / qpath)
@@ -54,6 +74,10 @@ def run(
                 name, critic_name = spec["reasoner"], spec.get("model_critic")
                 label = name + ("+mc" if critic_name else "")
                 for rep in range(int(spec.get("repeats", 1))):
+                    prior = reused.get((q.id, label, rep))
+                    if prior is not None:  # an identical arm already ran under this config; not rerun (logged)
+                        rows.append({**prior, "reused_from": cfg["reuse_from"]})
+                        continue
                     why = unavailable(name) or (unavailable(critic_name) if critic_name else None)
                     if why:
                         rows.append(

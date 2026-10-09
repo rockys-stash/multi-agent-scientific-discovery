@@ -17,7 +17,9 @@ def main(argv: list[str] | None = None) -> int:
 
     r = sub.add_parser("run", help="run the research workflow on a question")
     r.add_argument("question", type=Path)
-    r.add_argument("--reasoner", choices=["rule", "claude", "local"], default="rule")
+    r.add_argument(
+        "--reasoner", default="rule", help="rule, claude or local; '<model>-b5' reads 5 records per evidence call"
+    )
     r.add_argument("--model-critic", choices=["claude", "local"], help="add a language-model critic to the rule critic")
     r.add_argument("--cache-mode", choices=["live", "record", "replay"], default="record")
     r.add_argument("--sources", default="openalex,crossref,arxiv,semanticscholar")

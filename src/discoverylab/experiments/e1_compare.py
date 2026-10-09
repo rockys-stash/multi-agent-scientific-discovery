@@ -22,6 +22,7 @@ from discoverylab.models import RunState, Stage
 DESCRIPTION = "E1 arm comparison: process metrics per reasoner, mean and spread over repeats."
 
 LABELS = {"rule": "Rule baseline", "local": "Local model", "local+mc": "Local model + model critic",
+          "local-b5": "Local model, 5 records per read",
           "claude": "Claude", "claude+mc": "Claude + model critic"}  # fmt: skip
 
 METRICS: list[tuple[str, str]] = [

@@ -126,3 +126,32 @@ def _question() -> Any:
     from discoverylab.models import Question
 
     return Question(id="q", text="Does X improve Y?", keywords=["x"], concepts=["x", "y"])
+
+
+def test_batched_evidence_extraction_splits_records_and_numbers_continuously(
+    weights: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from conftest import PAPERS
+
+    from discoverylab.run import split_name
+
+    assert split_name("local-b5") == ("local", 5) and split_name("local") == ("local", None)
+    papers = [p for p in PAPERS if p.abstract][:3]
+    item = {"paper_id": papers[0].id, "title": papers[0].title, "first_author": "A", "year": 2020, "quote": "q",
+            "claim": "c", "concepts": [], "stance": "context"}  # fmt: skip
+    client, fake = _client(weights, monkeypatch, [(json.dumps({"items": [item]}), "stop")] * 2)
+    r = make_reasoner("local-b2", client)
+    ev = r.extract_evidence(_question(), papers, 1)
+    assert r.name == "local-b2" and len(fake.calls) == 2 and [e.id for e in ev] == ["E1", "E2"]
+
+
+def test_e1_reuse_refuses_a_changed_configuration(tmp_path: Path) -> None:
+    prior = tmp_path / "results" / "e1_runs" / "old"
+    prior.mkdir(parents=True)
+    (prior / "config.yaml").write_text(yaml.safe_dump({"run_config": {"max_papers": 25}}))
+    (prior / "runs.json").write_text(
+        json.dumps([{"question": "q", "reasoner": "rule", "repeat": 0, "status": "complete"}])
+    )
+    assert e1_runs._reusable({"reuse_from": "old", "run_config": {"max_papers": 25}}, tmp_path / "results")
+    with pytest.raises(ValueError, match="run_config"):
+        e1_runs._reusable({"reuse_from": "old", "run_config": {"max_papers": 10}}, tmp_path / "results")

@@ -1,0 +1,377 @@
+[
+ {
+  "question": "q1_calibration",
+  "reasoner": "rule",
+  "repeat": 0,
+  "run_id": "20261009T125639Z-q1_calibration-rule-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local",
+  "repeat": 0,
+  "run_id": "20261009T130654Z-q1_calibration-local-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 20126,
+  "output_tokens": 4295
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local",
+  "repeat": 1,
+  "run_id": "20261009T133458Z-q1_calibration-local-r1",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 18968,
+  "output_tokens": 4581
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local",
+  "repeat": 2,
+  "run_id": "20261009T140325Z-q1_calibration-local-r2",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 22419,
+  "output_tokens": 4954
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local+mc",
+  "repeat": 0,
+  "run_id": "20261009T143523Z-q1_calibration-local+mc-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 17874,
+  "output_tokens": 2841
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local+mc",
+  "repeat": 1,
+  "run_id": "20261009T145800Z-q1_calibration-local+mc-r1",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 18012,
+  "output_tokens": 2998
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local+mc",
+  "repeat": 2,
+  "run_id": "20261009T152656Z-q1_calibration-local+mc-r2",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 7,
+  "input_tokens": 15492,
+  "output_tokens": 3926
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude+mc",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude+mc",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "claude+mc",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "rule",
+  "repeat": 0,
+  "run_id": "20261009T155618Z-q2_scaling_knn-rule-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "local",
+  "repeat": 0,
+  "run_id": "20261009T160535Z-q2_scaling_knn-local-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 7,
+  "input_tokens": 12762,
+  "output_tokens": 2287
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "local",
+  "repeat": 1,
+  "run_id": "20261009T162107Z-q2_scaling_knn-local-r1",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 4,
+  "input_tokens": 9024,
+  "output_tokens": 67
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "local",
+  "repeat": 2,
+  "run_id": "20261009T162657Z-q2_scaling_knn-local-r2",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 4,
+  "input_tokens": 9142,
+  "output_tokens": 64
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "local+mc",
+  "repeat": 0,
+  "run_id": "20261009T163307Z-q2_scaling_knn-local+mc-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 4,
+  "input_tokens": 9284,
+  "output_tokens": 63
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "local+mc",
+  "repeat": 1,
+  "run_id": "20261009T164142Z-q2_scaling_knn-local+mc-r1",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 6,
+  "input_tokens": 11164,
+  "output_tokens": 1862
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "local+mc",
+  "repeat": 2,
+  "run_id": "20261009T165618Z-q2_scaling_knn-local+mc-r2",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 7,
+  "input_tokens": 14614,
+  "output_tokens": 2598
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude+mc",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude+mc",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q2_scaling_knn",
+  "reasoner": "claude+mc",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "rule",
+  "repeat": 0,
+  "run_id": "20261009T171446Z-q3_imbalance-rule-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "local",
+  "repeat": 0,
+  "run_id": "20261009T172244Z-q3_imbalance-local-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 4,
+  "input_tokens": 8709,
+  "output_tokens": 68
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "local",
+  "repeat": 1,
+  "run_id": "20261009T172823Z-q3_imbalance-local-r1",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 4,
+  "input_tokens": 9229,
+  "output_tokens": 67
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "local",
+  "repeat": 2,
+  "run_id": "20261009T173359Z-q3_imbalance-local-r2",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 7,
+  "input_tokens": 12518,
+  "output_tokens": 2294
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "local+mc",
+  "repeat": 0,
+  "run_id": "20261009T174849Z-q3_imbalance-local+mc-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 4,
+  "input_tokens": 8410,
+  "output_tokens": 65
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "local+mc",
+  "repeat": 1,
+  "run_id": "20261009T175433Z-q3_imbalance-local+mc-r1",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 14822,
+  "output_tokens": 2923
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "local+mc",
+  "repeat": 2,
+  "run_id": "20261009T181615Z-q3_imbalance-local+mc-r2",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 14267,
+  "output_tokens": 2657
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude+mc",
+  "repeat": 0,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude+mc",
+  "repeat": 1,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ },
+ {
+  "question": "q3_imbalance",
+  "reasoner": "claude+mc",
+  "repeat": 2,
+  "run_id": null,
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY is not set"
+ }
+]

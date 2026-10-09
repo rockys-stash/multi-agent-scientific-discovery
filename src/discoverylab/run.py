@@ -43,14 +43,18 @@ def build_registry(cache_dir: Path, mode: Mode, sources: list[str] | None = None
     return SourceRegistry([available[s] for s in (sources or list(available))])
 
 
-REASONERS = ("rule", "claude", "local")
+def split_name(name: str) -> tuple[str, int | None]:
+    """``local-b5`` is the local reasoner reading 5 records per evidence call (D18)."""
+    base, sep, batch = name.partition("-b")
+    return (base, int(batch)) if sep and batch.isdigit() else (name, None)
 
 
 def unavailable(name: str) -> str | None:
-    """Why a reasoner (or judge, ``role="judge"``) cannot run in this environment, or None."""
-    if name == "claude":
+    """Why a reasoner cannot run in this environment, or None."""
+    base, _ = split_name(name)
+    if base == "claude":
         return None if os.environ.get("ANTHROPIC_API_KEY") else "ANTHROPIC_API_KEY is not set"
-    if name == "local":
+    if base == "local":
         from discoverylab.reasoners.local import missing
 
         return missing("reasoner")
@@ -58,15 +62,16 @@ def unavailable(name: str) -> str | None:
 
 
 def make_reasoner(name: str, client: Any = None) -> Reasoner:
-    if name == "rule":
+    base, batch = split_name(name)
+    if base == "rule":
         from discoverylab.reasoners.rule import RuleReasoner
 
         return RuleReasoner()
-    if name == "claude":
+    if base == "claude":
         from discoverylab.reasoners.model import ModelReasoner
 
-        return ModelReasoner(client=client)
-    if name == "local":
+        return ModelReasoner(client=client, name=name, evidence_batch=batch)
+    if base == "local":
         from discoverylab.reasoners.local import LocalClient, model_id, model_path
         from discoverylab.reasoners.model import ModelReasoner
 
@@ -75,7 +80,7 @@ def make_reasoner(name: str, client: Any = None) -> Reasoner:
             if path is None:
                 raise ValueError("DISCOVERYLAB_LOCAL_MODEL is not set to a GGUF file")
             client = LocalClient(path)
-        return ModelReasoner(client=client, model=model_id(path) if path else "local", name="local")
+        return ModelReasoner(client=client, model=model_id(path) if path else "local", name=name, evidence_batch=batch)
     raise ValueError(f"unknown reasoner {name!r}")
 
 

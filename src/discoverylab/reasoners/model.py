@@ -127,8 +127,17 @@ def _dump(x: Any) -> str:
 
 
 class ModelReasoner:
-    def __init__(self, client: Any = None, model: str = MODEL, max_tokens: int = 16000, name: str = "claude") -> None:
+    def __init__(
+        self,
+        client: Any = None,
+        model: str = MODEL,
+        max_tokens: int = 16000,
+        name: str = "claude",
+        evidence_batch: int | None = None,
+    ) -> None:
         self.name = name
+        # None: every record in one call (the design). An integer: that many records per call (ablation, D18).
+        self.evidence_batch = evidence_batch
         if client is None:
             import anthropic
 
@@ -178,6 +187,17 @@ class ModelReasoner:
     def extract_evidence(self, q: Question, papers: list[Paper], start: int) -> list[Evidence]:
         records = [{"paper_id": p.id, "title": p.title, "authors": p.authors[:3], "year": p.year, "abstract": p.abstract}
                    for p in papers if p.abstract]  # fmt: skip
+        size = self.evidence_batch or max(1, len(records))
+        items: list[_EvidenceItem] = []
+        for i in range(0, len(records), size):
+            items += self._extract(q, records[i : i + size])
+        return [Evidence(
+            id=f"E{start + i}", claim=it.claim, quote=it.quote,
+            citation=Citation(identifier=it.paper_id, title=it.title, first_author=it.first_author, year=it.year),
+            concepts=it.concepts, stance=it.stance,
+        ) for i, it in enumerate(items)]  # fmt: skip
+
+    def _extract(self, q: Question, records: list[dict[str, Any]]) -> list[_EvidenceItem]:
         out = self._ask("extract_evidence", (
             f"Research question: {q.text}\nConcepts: {', '.join(q.concepts)}\n\nRecords:\n{_dump(records)}\n\n"
             "Extract the evidence relevant to the question: at most 2 items per record, only where the "
@@ -186,11 +206,7 @@ class ModelReasoner:
             "sentence or less), the claim the quote supports in your own words, the question concepts it "
             "concerns, and whether it supports, contradicts or only gives context for the idea that the "
             "question's intervention helps."), _EvidenceList)  # fmt: skip
-        return [Evidence(
-            id=f"E{start + i}", claim=it.claim, quote=it.quote,
-            citation=Citation(identifier=it.paper_id, title=it.title, first_author=it.first_author, year=it.year),
-            concepts=it.concepts, stance=it.stance,
-        ) for i, it in enumerate(out.items)]  # fmt: skip
+        return out.items
 
     def identify_gaps(self, q: Question, evidence: list[Evidence], papers: list[Paper]) -> list[Gap]:
         out = self._ask("identify_gaps", (

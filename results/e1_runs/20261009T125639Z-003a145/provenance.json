@@ -1,0 +1,30 @@
+{
+ "experiment": "e1_runs",
+ "run_id": "20261009T125639Z-003a145",
+ "commit": "003a145d48b7b74908acb5b1dbcbb8244053c177",
+ "dirty": false,
+ "created_at": "2026-10-09T18:39:39+00:00",
+ "runtime_seconds": 20579.81,
+ "description": "End-to-end runs: every question with every reasoner, verified independently.",
+ "config_sha256": "06d681fcd988639a3379687cbc8203fc4820382bb0775a48a8c4406cdb0b2375",
+ "python": "3.13.16",
+ "packages": {
+  "scikit-learn": "1.9.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "anthropic": "1.12.1",
+  "llama-cpp-python": "0.3.36"
+ },
+ "local_models": {
+  "DISCOVERYLAB_LOCAL_MODEL": {
+   "file": "qwen3-4b-instruct-2507-q4_0.gguf",
+   "bytes": 2375773280,
+   "sha256": "e0ba675d86ab277c61701c6793659b2ae801d95e3be791464c321e6fbf613be2"
+  },
+  "DISCOVERYLAB_LOCAL_JUDGE": {
+   "file": "phi-4-mini-instruct-q4_k_m.gguf",
+   "bytes": 2491874272,
+   "sha256": "88c00229914083cd112853aab84ed51b87bdf6b9ce42f532d8c85c7c63b1730a"
+  }
+ }
+}
