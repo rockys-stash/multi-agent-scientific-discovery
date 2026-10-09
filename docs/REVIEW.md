@@ -51,11 +51,11 @@ Completion Gate's "model/condition comparisons executed" item fails.
 
 *Does it actually work, end to end?*
 
-- 43 unit, workflow, harness and API tests and 27 browser tests pass; CI runs lint and tests on
+- 44 unit, workflow, harness and API tests and 27 browser tests pass; CI runs lint and tests on
   every push.
-- Fresh clone of the repository → `make setup` → `make test` passed, then E1–E5 were reproduced
-  from scratch against the live indexes (results in that clone's `results/`, summarised in the
-  registry). Replay from the recorded cache reproduced every artefact.
+- Fresh clone at e3319b4 → `make setup` → `make test` (41 passed) → E1–E5 from an empty cache
+  against the live indexes: all qualitative findings reproduced (REPORT §3). The run exposed one
+  metric defect (D16), fixed with a regression test.
 - The console was driven against the real runs to capture docs/screenshots (desktop light and
   dark, mobile); loading, empty, error and not-found states are covered by the browser tests.
 

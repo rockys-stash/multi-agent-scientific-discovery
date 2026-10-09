@@ -182,3 +182,21 @@ def test_replay_serves_the_version_a_run_consumed(tmp_path: Path) -> None:
     replay.plan_replay(first_run)
     assert replay.get("https://x.test/a").status == 429
     assert replay.get("https://x.test/a").status == 200  # plan used up: current version
+
+
+def test_quote_from_an_unavailable_source_is_unchecked_not_wrong(tmp_path: Path) -> None:
+    from discoverylab.literature.registry import SourceRegistry
+
+    def fetch(url: str, params: dict[str, str]) -> tuple[int, str]:
+        if "export.arxiv.org" in url:
+            return 429, "slow down"
+        body = {"title": "A paper", "authors": [{"name": "Ada Lovelace"}], "year": 2020, "abstract": "Other text.",
+                "venue": "", "externalIds": {"ArXiv": "2101.00001"}, "url": "", "paperId": "x"}  # fmt: skip
+        return 200, json.dumps(body)
+
+    cache = ResponseCache(tmp_path, fetch=fetch)
+    v = Verifier(SourceRegistry([Arxiv(cache), SemanticScholar(cache)]))
+    ev = Evidence(id="E1", claim="c", quote="a sentence only arXiv has", stance="supports",
+                  citation=Citation(identifier="arxiv:2101.00001"))  # fmt: skip
+    chk = v.check_evidence(ev)
+    assert chk.citation.status == "verified" and chk.quote == "unchecked" and not chk.correct

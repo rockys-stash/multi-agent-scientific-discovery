@@ -76,6 +76,13 @@ export function verificationMark(v: string | null | undefined): {
         word: "Quote not in source",
         help: "The source exists but the quoted text is not in it.",
       };
+    case "quote_unchecked":
+      return {
+        tone: "attest",
+        glyph: "◐",
+        word: "Quote not checked",
+        help: "Not in the text of the sources that answered, but a source was unavailable, so this is not evidence of a wrong quote.",
+      };
     case "quote_no_source_text":
       return {
         tone: "attest",

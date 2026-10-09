@@ -21,7 +21,8 @@ YEAR_TOLERANCE = 1  # preprint vs. published year
 # "unverifiable": no record, and at least one authoritative source was rate-limited or down, so
 # absence is not evidence of fabrication. It is neither counted as verified nor as fabricated.
 CitationStatus = Literal["verified", "metadata_mismatch", "unresolvable", "unverifiable", "malformed"]
-QuoteStatus = Literal["found", "not_found", "no_source_text"]
+# "unchecked": not in the text of the sources that answered, but a source was unavailable
+QuoteStatus = Literal["found", "not_found", "no_source_text", "unchecked"]
 
 
 @dataclass
@@ -110,4 +111,6 @@ class Verifier:
         if not any(t.strip() for t in texts.values()):
             return EvidenceCheck(e.id, cit, "no_source_text")
         found = [name for name, t in texts.items() if contains_quote(t, e.quote)]
+        if not found and self._resolve(e.citation.identifier).unavailable:
+            return EvidenceCheck(e.id, cit, "unchecked")  # the quote's own source may be the one that was down
         return EvidenceCheck(e.id, cit, "found" if found else "not_found", found)

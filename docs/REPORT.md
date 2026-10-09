@@ -169,6 +169,29 @@ That failure is the reason E5 exists: "replayable" was assumed by the design and
 false under real rate limits until measured. Live re-run overlap and replay of model transcripts
 are pending.
 
+### Reproduction from a fresh clone
+
+On 2026-10-09 a fresh clone at commit e3319b4 ran `make setup`, `make test` and E1–E5 from an
+empty cache against the live indexes (that clone's results are not committed; this section
+summarises them).
+
+| | Committed (2026-10-08) | Fresh clone (2026-10-09) |
+|---|---|---|
+| E1 citations verified | 24/24, 21/22, 24/25 | 23/23, 15/15 (+6 could not check), 23/25 |
+| E1 verdicts | inconclusive, not supported, inconclusive | same |
+| E2 corruptions rejected / benign rejected | 482/482, 0/273 | 412/412, 0/232 |
+| E3 structural / semantic caught | 72/72, 0/18 | 72/72, 0/18 |
+| E4 Spearman (readability, process) | 0.04 | 0.19 |
+| E5 replay identical | 3/3 | 3/3 |
+
+Every qualitative finding reproduced: the verdicts, perfect separation by the verifier, the
+critic's structural/semantic split, a weak readability–process correlation, and exact replay.
+The literature did not: evidence counts and which papers were cited changed with what the
+indexes answered on the day. The fresh run found a third real metadata disagreement (DOI
+10.47738/jdmdc.v2i2.34: Semantic Scholar gives Shuang Li as first author, Crossref Agung Budi
+Prasetio), and exposed a metric defect: quotes from a rate-limited arXiv were counted as wrong
+(D16, fixed; it did not affect the committed results).
+
 ## 4. Threats to validity
 
 - **One reasoner, three questions.** All findings about agent behaviour are about a deterministic
@@ -193,8 +216,8 @@ make results           # regenerates docs/generated/results.md
 make screenshots       # regenerates docs/screenshots from the latest E1 runs
 ```
 
-E2, E3 and E5 are offline once E1's cache exists. A fresh clone at the commit that added this
-report reproduced E1–E5 (docs/REVIEW.md, QA).
+E2, E3 and E5 are offline once E1's cache exists. A fresh clone reproduced E1–E5 (§3,
+"Reproduction from a fresh clone").
 
 ## 6. Pending
 

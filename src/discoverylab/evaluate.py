@@ -54,6 +54,7 @@ def run_metrics(state: RunState, verification: dict[str, Any] | None) -> dict[st
         by_id.setdefault(c["citation"]["identifier"], c["citation"])
     cit_status = Counter(c["status"] for c in by_id.values())
     quote_status = Counter(c["quote"] for c in checks)
+    unchecked = [c for c in checks if c["citation"]["status"] == "unverifiable" or c["quote"] == "unchecked"]
     hyp = {h.id: h for h in state.hypotheses}
     validity = {d.id: design_validity(d, hyp[d.hypothesis_id].dependent_variable if d.hypothesis_id in hyp else None)
                 for d in state.designs}  # fmt: skip
@@ -78,7 +79,9 @@ def run_metrics(state: RunState, verification: dict[str, Any] | None) -> dict[st
         "citation_accuracy": _rate(cit_status.get("verified", 0), len(by_id) - cit_status.get("unverifiable", 0)),
         "citations_unverifiable": cit_status.get("unverifiable", 0),
         "citation_status": dict(cit_status),
-        "evidence_correctness": _rate(sum(c["correct"] for c in checks), len(checks)),
+        # Likewise over evidence that could be checked (citation and quote not blocked by an outage).
+        "evidence_correctness": _rate(sum(c["correct"] for c in checks), len(checks) - len(unchecked)),
+        "evidence_unchecked": len(unchecked),
         "quote_status": dict(quote_status),
         "gaps": len(state.gaps),
         "hypotheses": len(state.hypotheses),

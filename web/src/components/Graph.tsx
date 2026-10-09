@@ -237,7 +237,12 @@ export function Graph({
             const on =
               selected !== null &&
               (e.source === selected || e.target === selected);
-            const fail = e.verification && e.verification !== "verified";
+            // an outage ("could not check") is not a failed check
+            const fail =
+              e.verification &&
+              !["verified", "unverifiable", "quote_unchecked"].includes(
+                e.verification,
+              );
             return (
               <path
                 key={i}

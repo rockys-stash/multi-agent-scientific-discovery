@@ -97,7 +97,9 @@ function VerificationDetail({ chk }: { chk: EvidenceCheck }) {
           ? `found in ${chk.found_in.join(", ")}`
           : chk.quote === "not_found"
             ? "not found in the source text"
-            : "no source text to check"}
+            : chk.quote === "unchecked"
+              ? "not checked: a source was unavailable"
+              : "no source text to check"}
       </Row>
     </dl>
   );

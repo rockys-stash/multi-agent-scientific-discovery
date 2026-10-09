@@ -57,7 +57,7 @@ Requires Python 3.13 with [uv](https://docs.astral.sh/uv/) and Node 22.
 
 ```bash
 make setup          # uv sync --locked; npm ci
-make test           # 43 offline tests
+make test           # 44 offline tests
 make test-ui        # 27 browser and accessibility tests (needs Chromium)
 cp .env.example .env
 make serve          # console and API on http://127.0.0.1:8000

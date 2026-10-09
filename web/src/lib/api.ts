@@ -214,7 +214,7 @@ export interface CitationCheck {
 export interface EvidenceCheck {
   evidence_id: string;
   citation: CitationCheck;
-  quote: "found" | "not_found" | "no_source_text";
+  quote: "found" | "not_found" | "no_source_text" | "unchecked";
   found_in: string[];
   correct: boolean;
 }
