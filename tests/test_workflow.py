@@ -16,7 +16,7 @@ from discoverylab.critic import rule_critique
 from discoverylab.human import CorrectionsFile, NoReviewer
 from discoverylab.log import ProcessLog, verify
 from discoverylab.models import Citation, Evidence, ExperimentDesign, RunState, Stage
-from discoverylab.reasoners.claude import ClaudeReasoner
+from discoverylab.reasoners.model import ModelReasoner
 from discoverylab.reasoners.rule import RuleReasoner
 from discoverylab.run import execute, load_question
 
@@ -155,7 +155,7 @@ def test_claude_reasoner_maps_schema_outputs_and_the_verifier_catches_a_bad_copy
              "concepts": ["platt scaling"], "stance": "supports"}]},
     }  # fmt: skip
     stub = _StubMessages(answers)
-    r = ClaudeReasoner(client=SimpleNamespace(messages=stub))
+    r = ModelReasoner(client=SimpleNamespace(messages=stub))
     assert r.plan_queries(question) == ["random forest calibration", "isotonic regression brier"]
     papers = registry.search("calibration", 10)
     ev = r.extract_evidence(question, papers, 1)

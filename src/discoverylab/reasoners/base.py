@@ -6,7 +6,7 @@ supplies the judgement at each step. Two implementations exist:
 - ``RuleReasoner``: transparent, deterministic, no language model. It extracts quotes
   verbatim, finds gaps by concept coverage and fills hypothesis templates from the question's
   operationalisation. It is the baseline and the test double.
-- ``ClaudeReasoner``: a language model with schema-constrained outputs.
+- ``ModelReasoner``: a language model with schema-constrained outputs.
 """
 
 from __future__ import annotations

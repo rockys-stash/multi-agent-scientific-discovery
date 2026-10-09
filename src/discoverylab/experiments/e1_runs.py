@@ -8,7 +8,6 @@ that cannot run here (no API key) is recorded as skipped with the reason; it is 
 from __future__ import annotations
 
 import json
-import os
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
@@ -17,23 +16,17 @@ from discoverylab.agents import RunConfig
 from discoverylab.evaluate import run_metrics
 from discoverylab.experiments.common import Summary, load_run, result_dir, table
 from discoverylab.human import NoReviewer
-from discoverylab.judges import ClaudeJudge, judge_run, load_judgements, summarise_judgements
+from discoverylab.judges import ModelJudge, judge_run, judge_unavailable, load_judgements, summarise_judgements
 from discoverylab.literature.registry import SourceRegistry
 from discoverylab.models import RunState
 from discoverylab.reasoners.base import Reasoner
-from discoverylab.run import execute, load_question, make_reasoner, new_run_id
+from discoverylab.run import execute, load_question, make_reasoner, new_run_id, unavailable
 
 DESCRIPTION = "End-to-end runs: every question with every reasoner, verified independently."
 
 
 def _rate(r: dict[str, Any]) -> float | None:
     return r["rate"]
-
-
-def _missing_key(reasoner: str) -> str | None:
-    if reasoner.startswith("claude") and not os.environ.get("ANTHROPIC_API_KEY"):
-        return "ANTHROPIC_API_KEY is not set"
-    return None
 
 
 def run(
@@ -43,23 +36,25 @@ def run(
     reasoner_factory: Callable[[str], Reasoner] = make_reasoner,
     results: Path | None = None,
     root: Path = Path("."),
-    judge_factory: Callable[[], ClaudeJudge] | None = None,
+    judge_factory: Callable[[], ModelJudge] | None = None,
 ) -> Path:
     rc = RunConfig(**cfg.get("run_config", {}))
+    judge_why = None if judge_factory else judge_unavailable(cfg.get("judge"))
     judge = (
         judge_factory()
         if judge_factory
-        else (ClaudeJudge() if cfg.get("judge") == "claude" and not _missing_key("claude") else None)
+        else (ModelJudge(name=cfg["judge"]) if cfg.get("judge") and judge_why is None else None)
     )
     with result_dir("e1_runs", cfg, DESCRIPTION, results) as (rd, s):
         rows: list[dict[str, Any]] = []
+        judge_errors: list[dict[str, Any]] = []
         for qpath in cfg["questions"]:
             q, op = load_question(root / qpath)
             for spec in cfg["reasoners"]:
                 name, critic_name = spec["reasoner"], spec.get("model_critic")
                 label = name + ("+mc" if critic_name else "")
                 for rep in range(int(spec.get("repeats", 1))):
-                    why = _missing_key(name) or (_missing_key(critic_name) if critic_name else None)
+                    why = unavailable(name) or (unavailable(critic_name) if critic_name else None)
                     if why:
                         rows.append(
                             {
@@ -82,13 +77,23 @@ def run(
                                      "status": "failed", "reason": f"{type(exc).__name__}: {exc}"})  # fmt: skip
                         continue
                     if judge is not None and state.status == "complete":
-                        j = judge_run(state, judge)
-                        (runs / state.run_id / "judgements.json").write_text(json.dumps(j, indent=1), encoding="utf-8")
+                        try:
+                            j = judge_run(state, judge)
+                        except Exception as exc:  # a judge failure leaves the run unjudged, recorded
+                            j = None
+                            judge_errors.append({"run_id": state.run_id, "reason": f"{type(exc).__name__}: {exc}"})
+                        if j is not None:
+                            (runs / state.run_id / "judgements.json").write_text(
+                                json.dumps(j, indent=1), encoding="utf-8"
+                            )
                     usage = getattr(reasoner, "usage", None)
                     rows.append({"question": q.id, "reasoner": label, "repeat": rep, "run_id": state.run_id, "status": state.status,
                                  "reason": state.error or "", "model_calls": getattr(usage, "calls", 0),
                                  "input_tokens": getattr(usage, "input_tokens", 0), "output_tokens": getattr(usage, "output_tokens", 0)})  # fmt: skip
         rd.write_json("runs.json", rows)
+        if judge_errors:
+            rd.write_json("judge_errors.json", judge_errors)
+            s.notes.append(f"Judge failed on {len(judge_errors)} run(s); those runs are unjudged (judge_errors.json).")
         rd.write_json("source_unavailable.json", registry.unavailable)
         metrics = []
         for r in rows:
@@ -99,6 +104,12 @@ def run(
             metrics.append({**run_metrics(state, ver), **judged, "question": r["question"], "label": r["reasoner"]})
         rd.write_json("metrics.json", metrics)
         _summarise(s, rows, metrics)
+        if judge is not None:
+            s.notes.append(
+                f"Judge: {judge.name} ({judge.model}), a different model from the reasoners where configured so (D17)."
+            )
+        elif judge_why:
+            s.notes.append(f"Judge not run: {judge_why}.")
         if registry.unavailable:
             s.notes.append("Index requests answered 'try later' after retries (rate limit or quota), by source: "
                            + ", ".join(f"{k} {v}" for k, v in sorted(registry.unavailable.items()))
@@ -146,5 +157,5 @@ def _summarise(s: Summary, rows: list[dict[str, Any]], metrics: list[dict[str, A
     s.notes.append("Runs had no human reviewer, so no correction count is reported.")
     if any(m["hypothesis_quality"] is None for m in metrics):
         s.notes.append(
-            "Hypothesis rubric and quote-supports-claim judgements: Status pending for runs without a language-model judge (no ANTHROPIC_API_KEY)."
+            "Hypothesis rubric and quote-supports-claim judgements: Status pending for runs without a language-model judge."
         )

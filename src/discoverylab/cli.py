@@ -17,8 +17,8 @@ def main(argv: list[str] | None = None) -> int:
 
     r = sub.add_parser("run", help="run the research workflow on a question")
     r.add_argument("question", type=Path)
-    r.add_argument("--reasoner", choices=["rule", "claude"], default="rule")
-    r.add_argument("--model-critic", action="store_true", help="add the language-model critic to the rule critic")
+    r.add_argument("--reasoner", choices=["rule", "claude", "local"], default="rule")
+    r.add_argument("--model-critic", choices=["claude", "local"], help="add a language-model critic to the rule critic")
     r.add_argument("--cache-mode", choices=["live", "record", "replay"], default="record")
     r.add_argument("--sources", default="openalex,crossref,arxiv,semanticscholar")
     r.add_argument("--human", default="none", help="'none' or a corrections JSON file written by the reviewer")
@@ -64,7 +64,7 @@ def main(argv: list[str] | None = None) -> int:
 
         q, op = load_question(args.question)
         reasoner = make_reasoner(args.reasoner)
-        critic = make_reasoner("claude") if args.model_critic else None
+        critic = make_reasoner(args.model_critic) if args.model_critic else None
         registry = build_registry(args.cache, args.cache_mode, args.sources.split(","))
         state = RunState(
             run_id=new_run_id(q.id, reasoner.name + ("+mc" if critic else "")), question=q, reasoner=reasoner.name
@@ -81,7 +81,9 @@ def main(argv: list[str] | None = None) -> int:
         qfile = next(Path("configs/questions").glob(f"{state.question.id}.yaml"), None)
         op = load_question(qfile)[1] if qfile else None
         registry = build_registry(args.cache, args.cache_mode)
-        state = execute(args.run_dir, state, registry, make_reasoner(state.reasoner), op, human_gate(args.human))
+        base = state.reasoner.removesuffix("+mc")
+        critic = make_reasoner(base) if state.reasoner.endswith("+mc") else None
+        state = execute(args.run_dir, state, registry, make_reasoner(base), op, human_gate(args.human), critic)
         print(json.dumps({"run_id": state.run_id, "status": state.status, "stage": state.stage.value}))
         return 0
     if args.cmd == "verify-log":

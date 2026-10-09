@@ -1,5 +1,5 @@
-# E4: corrupted report variants; convincingness needs ANTHROPIC_API_KEY (pending otherwise).
+# E4: corrupted report variants; convincingness by a language-model judge (local by default, D17).
 cache_mode: record
 sources: [openalex, crossref, arxiv, semanticscholar]
-judge: claude
+judge: local
 seed: 0

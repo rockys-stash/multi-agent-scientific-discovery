@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import platform
 import subprocess
 import time
@@ -96,11 +97,33 @@ def result_dir(
         "description": description,
         "config_sha256": hashlib.sha256((path / "config.yaml").read_bytes()).hexdigest(),
         "python": platform.python_version(),
-        "packages": {p: metadata.version(p) for p in ("scikit-learn", "numpy", "scipy", "anthropic")},
+        "packages": {p: _version(p) for p in ("scikit-learn", "numpy", "scipy", "anthropic", "llama-cpp-python")},
+        "local_models": _local_models(),
     }
     rd.write_json("provenance.json", prov)
     rd.write_json("summary.json", summary.__dict__)
     (results / experiment / "LATEST").write_text(run_id + "\n", encoding="utf-8")
+
+
+def _version(package: str) -> str | None:
+    try:
+        return metadata.version(package)
+    except metadata.PackageNotFoundError:
+        return None
+
+
+def _local_models() -> dict[str, dict[str, Any]]:
+    """Which open-weights files were configured, identified by content hash (D17)."""
+    out: dict[str, dict[str, Any]] = {}
+    for var in ("DISCOVERYLAB_LOCAL_MODEL", "DISCOVERYLAB_LOCAL_JUDGE"):
+        p = Path(os.environ.get(var, ""))
+        if os.environ.get(var) and p.is_file():
+            h = hashlib.sha256()
+            with p.open("rb") as f:
+                for block in iter(lambda: f.read(1 << 24), b""):
+                    h.update(block)
+            out[var] = {"file": p.name, "bytes": p.stat().st_size, "sha256": h.hexdigest()}
+    return out
 
 
 def load_config(path: Path) -> dict[str, Any]:

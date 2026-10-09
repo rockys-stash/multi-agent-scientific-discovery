@@ -7,7 +7,9 @@ questions:
   - configs/questions/q3_imbalance.yaml
 reasoners:
   - {reasoner: rule, repeats: 1}           # deterministic baseline; one run is the run
-  - {reasoner: claude, repeats: 3}         # repeated: model output varies between calls
+  - {reasoner: local, repeats: 3}          # open-weights model on the CPU (D17); output varies by seed
+  - {reasoner: local, model_critic: local, repeats: 3}
+  - {reasoner: claude, repeats: 3}         # needs ANTHROPIC_API_KEY; recorded as skipped without it
   - {reasoner: claude, model_critic: claude, repeats: 3}
 run_config: {per_source: 10, max_papers: 25, max_hypotheses: 2, critique_rounds: 2}
-judge: claude   # hypothesis rubric and quote support; pending without ANTHROPIC_API_KEY
+judge: local    # hypothesis rubric and quote support, by a different model family (DISCOVERYLAB_LOCAL_JUDGE)

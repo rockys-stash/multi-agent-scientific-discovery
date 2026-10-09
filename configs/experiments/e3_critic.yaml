@@ -1,3 +1,5 @@
 # E3: inject faults into copies of E1's final states; the rule critic reviews the faulted stage.
 seed: 0
 max_targets_per_fault: 5
+model_critic: local          # also review a sample of the same faulted states with the model critic
+model_trials_per_fault: 6

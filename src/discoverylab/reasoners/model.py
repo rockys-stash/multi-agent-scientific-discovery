@@ -1,10 +1,12 @@
-"""A language-model reasoner (Claude) with schema-constrained outputs.
+"""A language-model reasoner with schema-constrained outputs.
 
 Every call returns a validated pydantic object, so a malformed answer fails loudly instead of
 flowing into the next stage. Prompts ask for verbatim quotes and identifiers copied from the
 supplied records; the verifier then checks that this is what happened.
 
-Needs ``ANTHROPIC_API_KEY``. Tests use a stub client with the same ``messages.parse`` shape.
+The client is anything with the Anthropic ``messages.parse`` shape: the Anthropic client (Claude,
+needs ``ANTHROPIC_API_KEY``), ``reasoners.local.LocalClient`` (an open-weights model on the CPU),
+the E5 replay client, or a test stub. The prompts are the same for every model.
 """
 
 from __future__ import annotations
@@ -124,10 +126,9 @@ def _dump(x: Any) -> str:
     return json.dumps(x, ensure_ascii=False, default=str)
 
 
-class ClaudeReasoner:
-    name = "claude"
-
-    def __init__(self, client: Any = None, model: str = MODEL, max_tokens: int = 16000) -> None:
+class ModelReasoner:
+    def __init__(self, client: Any = None, model: str = MODEL, max_tokens: int = 16000, name: str = "claude") -> None:
+        self.name = name
         if client is None:
             import anthropic
 
@@ -136,28 +137,35 @@ class ClaudeReasoner:
         self.usage = Usage()
         self.transcript: list[dict[str, Any]] = []  # prompts and parsed outputs, for the process log
 
-    def _ask(self, step: str, prompt: str, schema: type[T]) -> T:
-        resp = self.client.messages.parse(
-            model=self.model,
-            max_tokens=self.max_tokens,
-            system=SYSTEM,
-            messages=[{"role": "user", "content": prompt}],
-            output_format=schema,
-        )
-        if getattr(resp, "stop_reason", None) in ("refusal", "max_tokens"):
-            raise RuntimeError(f"{step}: model stopped with {resp.stop_reason}")
-        out = resp.parsed_output
-        if out is None:
-            raise RuntimeError(f"{step}: no parsed output")
-        u = getattr(resp, "usage", None)
-        self.usage.calls += 1
-        self.usage.by_step[step] = self.usage.by_step.get(step, 0) + 1
-        if u is not None:
-            self.usage.input_tokens += int(getattr(u, "input_tokens", 0) or 0)
-            self.usage.output_tokens += int(getattr(u, "output_tokens", 0) or 0)
-        self.transcript.append(
-            {"step": step, "model": self.model, "prompt": prompt, "output": out.model_dump(mode="json")}
-        )
+    def _ask(self, step: str, prompt: str, schema: type[T], attempts: int = 2) -> T:
+        """One schema-constrained call; an unusable answer is retried once, then fails the step."""
+        for attempt in range(attempts):
+            resp = self.client.messages.parse(
+                model=self.model,
+                max_tokens=self.max_tokens,
+                system=SYSTEM,
+                messages=[{"role": "user", "content": prompt}],
+                output_format=schema,
+            )
+            u = getattr(resp, "usage", None)
+            self.usage.calls += 1
+            self.usage.by_step[step] = self.usage.by_step.get(step, 0) + 1
+            if u is not None:
+                self.usage.input_tokens += int(getattr(u, "input_tokens", 0) or 0)
+                self.usage.output_tokens += int(getattr(u, "output_tokens", 0) or 0)
+            stop = getattr(resp, "stop_reason", None)
+            if stop == "refusal":
+                raise RuntimeError(f"{step}: model refused")
+            out = resp.parsed_output
+            if stop != "max_tokens" and out is not None:
+                break
+            self.usage.by_step[f"retry:{step}"] = self.usage.by_step.get(f"retry:{step}", 0) + 1
+            if attempt == attempts - 1:
+                raise RuntimeError(f"{step}: no usable output ({stop or 'unparsed'}) after {attempts} attempts")
+        rec = {"step": step, "model": self.model, "prompt": prompt, "output": out.model_dump(mode="json")}
+        if getattr(resp, "seed", None) is not None:
+            rec["seed"] = resp.seed  # local models: the sampling seed of this call
+        self.transcript.append(rec)
         return out
 
     def plan_queries(self, q: Question) -> list[str]:

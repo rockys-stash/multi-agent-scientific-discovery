@@ -14,7 +14,7 @@ import yaml
 from discoverylab.agents import RunConfig
 from discoverylab.experiments import e1_runs, e2_verifier, e3_critic, e4_fluency, e5_reproducibility
 from discoverylab.experiments.common import load_run
-from discoverylab.judges import RUBRIC, ClaudeJudge
+from discoverylab.judges import RUBRIC, ModelJudge
 from discoverylab.reasoners.rule import RuleReasoner
 from discoverylab.report import flesch_reading_ease, render_report
 
@@ -113,7 +113,7 @@ def test_e5_detects_a_run_that_does_not_reproduce(e1: Path, lab: Path, registry)
 
 
 def test_replay_client_serves_the_transcript_and_refuses_a_changed_prompt() -> None:
-    from discoverylab.reasoners.claude import _Queries
+    from discoverylab.reasoners.model import _Queries
 
     client = e5_reproducibility.ReplayClient([{"step": "plan_queries", "prompt": "p1", "output": {"queries": ["a"]}}])
     resp = client.messages.parse(
@@ -168,7 +168,7 @@ def test_e1_reports_judged_metrics_when_a_judge_is_available(lab: Path, registry
         "run_config": {"max_papers": 10},
     }
     out = e1_runs.run(cfg, lab / "runs", registry, _rule, results=lab / "results", root=lab,
-                      judge_factory=lambda: ClaudeJudge(client=_StubJudgeClient()))  # fmt: skip
+                      judge_factory=lambda: ModelJudge(client=_StubJudgeClient(), model="stub"))  # fmt: skip
     [m] = json.loads((out / "metrics.json").read_text())
     assert m["hypothesis_quality"]["mean_of_10"] == 9 and m["evidence_support"]["supports"] == m["evidence"]
     [row] = json.loads((out / "summary.json").read_text())["tables"][0]["rows"]

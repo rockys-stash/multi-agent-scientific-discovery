@@ -41,14 +41,44 @@ class _Support(BaseModel):
     reason: str
 
 
-class ClaudeJudge:
-    name = "claude"
+def judge_client(name: str) -> tuple[Any, str]:
+    """The client and model id for a judge named in a config: ``claude`` or ``local``."""
+    if name == "claude":
+        import anthropic
 
-    def __init__(self, client: Any = None, model: str | None = None) -> None:
+        return anthropic.Anthropic(), os.environ.get("DISCOVERYLAB_MODEL", "claude-opus-5-5")
+    if name == "local":
+        from discoverylab.reasoners.local import LocalClient, model_id, model_path
+
+        path = model_path("judge")
+        if path is None:
+            raise ValueError("DISCOVERYLAB_LOCAL_JUDGE is not set to a GGUF file")
+        # judging is scoring, not generation: sample near-greedily so a re-judge agrees with itself
+        return LocalClient(path, seed=0, temperature=0.0), model_id(path)
+    raise ValueError(f"unknown judge {name!r}")
+
+
+def judge_unavailable(name: str | None) -> str | None:
+    """Why the configured judge cannot run here (None when it can, or when no judge is configured)."""
+    if not name:
+        return None
+    if name == "claude":
+        return None if os.environ.get("ANTHROPIC_API_KEY") else "ANTHROPIC_API_KEY is not set"
+    if name == "local":
+        from discoverylab.reasoners.local import missing
+
+        return missing("judge")
+    return f"unknown judge {name!r}"
+
+
+class ModelJudge:
+    """A language-model judge; ``name`` records which family judged (claude or local)."""
+
+    def __init__(self, client: Any = None, model: str | None = None, name: str = "claude") -> None:
+        self.name = name
         if client is None:
-            import anthropic
-
-            client = anthropic.Anthropic()
+            client, default = judge_client(name)
+            model = model or default
         self.client = client
         self.model = model or os.environ.get("DISCOVERYLAB_MODEL", "claude-opus-5-5")
 
@@ -85,10 +115,11 @@ class ClaudeJudge:
         return str(out.verdict)
 
 
-def judge_run(state: RunState, judge: ClaudeJudge) -> dict[str, Any]:
+def judge_run(state: RunState, judge: ModelJudge) -> dict[str, Any]:
     """Judgements for every hypothesis and evidence item, written as ``judgements.json``."""
     return {
         "judge": judge.name,
+        "judge_model": judge.model,
         "hypotheses": {h.id: judge.hypothesis(h, state) for h in state.hypotheses},
         "support": {e.id: judge.support(e) for e in state.evidence},
     }
@@ -101,11 +132,12 @@ def load_judgements(run_dir: Path) -> dict[str, Any] | None:
 
 def summarise_judgements(j: dict[str, Any] | None) -> dict[str, Any]:
     if not j:
-        return {"hypothesis_quality": None, "evidence_support": None, "judge": None}
+        return {"hypothesis_quality": None, "evidence_support": None, "judge": None, "judge_model": None}
     totals = {h: sum(s.values()) for h, s in j["hypotheses"].items()}
     sup = list(j["support"].values())
     return {
         "judge": j["judge"],
+        "judge_model": j.get("judge_model"),
         "hypothesis_quality": {
             "per_hypothesis": totals,
             "mean_of_10": sum(totals.values()) / len(totals) if totals else None,

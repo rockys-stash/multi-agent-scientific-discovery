@@ -20,6 +20,7 @@ from scipy.stats import spearmanr
 
 from discoverylab.critic import expected_verdict
 from discoverylab.experiments.common import Summary, e1_run_dirs, load_run, result_dir, table
+from discoverylab.judges import judge_client, judge_unavailable
 from discoverylab.literature.registry import SourceRegistry
 from discoverylab.models import RunState
 from discoverylab.report import flesch_reading_ease, render_report
@@ -46,16 +47,14 @@ PROMPT = (
 )
 
 
-class ClaudeJudge:
+class FluencyJudge:
     """Rates a report as a busy reader would: from the text alone, with no access to sources."""
 
-    name = "claude"
-
-    def __init__(self, client: Any = None, model: str | None = None) -> None:
+    def __init__(self, client: Any = None, model: str | None = None, name: str = "claude") -> None:
+        self.name = name
         if client is None:
-            import anthropic
-
-            client = anthropic.Anthropic()
+            client, default = judge_client(name)
+            model = model or default
         self.client = client
         self.model = model or os.environ.get("DISCOVERYLAB_MODEL", "claude-opus-5-5")
 
@@ -186,9 +185,7 @@ def summarise(s: Summary, rows: list[dict[str, Any]], judged: bool) -> None:
         s.findings.append(f"Spearman correlation of judged convincingness with process score: {rj:.2f}." if rj is not None
                           else "Too few distinct judged scores for a correlation.")  # fmt: skip
     else:
-        s.notes.append(
-            "Convincingness: Status pending. It needs a language-model judge and no ANTHROPIC_API_KEY was set."
-        )
+        s.notes.append("Convincingness: Status pending. It needs a language-model judge, and none could run.")
     s.notes.append(
         "The process score is the mean of evidence correctness (independent verification) and the share of conclusions whose verdict matches the statistics."
     )
@@ -198,10 +195,15 @@ def run(
     cfg: dict[str, Any], runs: Path, registry: SourceRegistry, judge: Judge | None = None, results: Path | None = None
 ) -> Path:
     states = [load_run(d)[0] for d in e1_run_dirs(runs, results)]
-    if judge is None and cfg.get("judge") == "claude" and os.environ.get("ANTHROPIC_API_KEY"):
-        judge = ClaudeJudge()
+    why = judge_unavailable(cfg.get("judge"))
+    if judge is None and cfg.get("judge") and why is None:
+        judge = FluencyJudge(name=cfg["judge"])
     with result_dir("e4_fluency", cfg, DESCRIPTION, results) as (rd, s):
         rows = evaluate(states, Verifier(registry), judge, int(cfg.get("seed", 0)))
         rd.write_json("variants.json", rows)
         summarise(s, rows, judge is not None)
+        if judge is not None:
+            s.notes.append(f"Convincingness judge: {judge.name} ({getattr(judge, 'model', 'unknown')}).")
+        elif why:
+            s.notes.append(f"Judge not run: {why}.")
     return rd.path

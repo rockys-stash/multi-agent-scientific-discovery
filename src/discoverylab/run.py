@@ -43,15 +43,39 @@ def build_registry(cache_dir: Path, mode: Mode, sources: list[str] | None = None
     return SourceRegistry([available[s] for s in (sources or list(available))])
 
 
+REASONERS = ("rule", "claude", "local")
+
+
+def unavailable(name: str) -> str | None:
+    """Why a reasoner (or judge, ``role="judge"``) cannot run in this environment, or None."""
+    if name == "claude":
+        return None if os.environ.get("ANTHROPIC_API_KEY") else "ANTHROPIC_API_KEY is not set"
+    if name == "local":
+        from discoverylab.reasoners.local import missing
+
+        return missing("reasoner")
+    return None
+
+
 def make_reasoner(name: str, client: Any = None) -> Reasoner:
     if name == "rule":
         from discoverylab.reasoners.rule import RuleReasoner
 
         return RuleReasoner()
     if name == "claude":
-        from discoverylab.reasoners.claude import ClaudeReasoner
+        from discoverylab.reasoners.model import ModelReasoner
 
-        return ClaudeReasoner(client=client)
+        return ModelReasoner(client=client)
+    if name == "local":
+        from discoverylab.reasoners.local import LocalClient, model_id, model_path
+        from discoverylab.reasoners.model import ModelReasoner
+
+        path = model_path("reasoner")
+        if client is None:
+            if path is None:
+                raise ValueError("DISCOVERYLAB_LOCAL_MODEL is not set to a GGUF file")
+            client = LocalClient(path)
+        return ModelReasoner(client=client, model=model_id(path) if path else "local", name="local")
     raise ValueError(f"unknown reasoner {name!r}")
 
 

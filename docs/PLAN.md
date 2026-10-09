@@ -14,7 +14,7 @@ The evaluation principle is also fixed: **judge the process, not how fluent the 
 Deliverables:
 
 1. **Agent runtime** (`discoverylab.agents`). The Director and four specialist agents. Each one reads typed inputs and writes typed artefacts (`Paper`, `Evidence`, `Gap`, `Hypothesis`, `ExperimentDesign`, `AnalysisResult`, `Critique`). Model calls go through one `Reasoner` interface with two implementations:
-   - `ClaudeReasoner`: a language model with structured outputs (Anthropic SDK);
+   - `ModelReasoner`: a language model with structured outputs (Anthropic SDK);
    - `RuleReasoner`: a transparent, non-LLM baseline (retrieval ranking, verbatim sentence extraction, concept-coverage gaps, templated hypotheses, a rule-based critic).
    
    The baseline is not the system under study. It exists so that every stage, the evaluation and the console can be tested deterministically, and it gives the language-model agents a floor to beat.
@@ -79,7 +79,7 @@ Seeds and configurations are in YAML. Results go to `results/<exp>/<UTC time>-<c
 ## 6. Risks and dependencies
 
 - **Network.** The scholarly APIs are blocked by the current environment's network policy, as of 2026-10-08. Until they are allowed, the literature layer, the verifier and the console are built and tested against small recorded fixtures that are labelled as fixtures. No end-to-end result is reported. *Status of E1–E5: pending.*
-- **Language model.** No API key is available in the environment. The `ClaudeReasoner` is implemented and unit-tested with a stubbed client. Every language-model result is *Status: pending* until a key is configured. Rule-baseline results are always labelled as such.
+- **Language model.** No API key is available in the environment. The `ModelReasoner` is implemented and unit-tested with a stubbed client. Every language-model result is *Status: pending* until a key is configured. Rule-baseline results are always labelled as such.
 - **Human researcher.** Correction counts come only from real use of the console. A pilot run by the project owner is the minimum. Simulated corrections are never reported as human ones.
 - **API terms.** Requests are polite: an identifying `User-Agent`, rate limits per source, and caching.
 

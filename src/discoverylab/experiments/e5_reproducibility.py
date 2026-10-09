@@ -58,7 +58,7 @@ class _Messages:
 
 
 class ReplayClient:
-    """Stands in for the Anthropic client and answers from a run's transcript, in order."""
+    """Stands in for the model client (Anthropic or local) and answers from a run's transcript, in order."""
 
     def __init__(self, transcript: list[dict[str, Any]]) -> None:
         self.messages = _Messages(transcript)
@@ -87,7 +87,7 @@ def replay(run_dir: Path, out_dir: Path, registry: SourceRegistry, root: Path, r
     reasoner = reasoner_factory(
         base, ReplayClient([x for x in t if x.get("role", "reasoner") == "reasoner"]) if base != "rule" else None
     )
-    critic = (reasoner_factory("claude", ReplayClient([x for x in t if x.get("role") == "critic"]))
+    critic = (reasoner_factory(base, ReplayClient([x for x in t if x.get("role") == "critic"]))
               if original.reasoner.endswith("+mc") else None)  # fmt: skip
     fresh = RunState(run_id=original.run_id, question=q, reasoner=original.reasoner)
     retrievals = run_dir / "retrievals.json"

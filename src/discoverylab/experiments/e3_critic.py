@@ -17,6 +17,8 @@ from typing import Any
 from discoverylab.critic import rule_critique
 from discoverylab.experiments.common import Summary, e1_run_dirs, load_run, result_dir, table
 from discoverylab.models import RunState, Stage
+from discoverylab.reasoners.base import Reasoner
+from discoverylab.run import make_reasoner, unavailable
 
 DESCRIPTION = "Fault injection: which planted process faults the critic catches, by stage."
 
@@ -150,18 +152,29 @@ FAULTS: list[Fault] = [
 ]  # fmt: skip
 
 
-def inject_and_review(state: RunState, fault: Fault, target: str, seed: int) -> dict[str, Any]:
+MODEL_STAGES = (Stage.EVIDENCE, Stage.GAPS, Stage.HYPOTHESES, Stage.DESIGN, Stage.CONCLUSION)
+
+
+def inject_and_review(
+    state: RunState, fault: Fault, target: str, seed: int, model_critic: Reasoner | None = None
+) -> dict[str, Any]:
     s = state.model_copy(deep=True)
     if not fault.inject(s, target, random.Random(seed)):
         return {"applicable": False}
     found = rule_critique(s, fault.stage, 1, 1)
     on_target = [c for c in found if c.target_id == target]
-    return {
+    out: dict[str, Any] = {
         "applicable": True,
         "caught": any(c.issue in fault.expected for c in on_target),
         "flagged_target": bool(on_target),
         "issues": sorted({c.issue for c in found}),
     }
+    if model_critic is not None and fault.stage in MODEL_STAGES:
+        # The model names issues in its own words, so only "flagged the faulted artefact" is scored.
+        mc = model_critic.critique(s, fault.stage, 1, 1)
+        out["model_flagged_target"] = any(c.target_id == target for c in mc)
+        out["model_critiques"] = [{"target_id": c.target_id, "severity": c.severity, "issue": c.issue} for c in mc]
+    return out
 
 
 def clean_false_alarms(state: RunState) -> dict[str, list[str]]:
@@ -172,7 +185,18 @@ def clean_false_alarms(state: RunState) -> dict[str, list[str]]:
     return out
 
 
-def evaluate(states: list[RunState], seed: int, max_targets: int) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+def model_clean_critiques(state: RunState, critic: Reasoner) -> dict[str, list[str]]:
+    """Critiques the model critic raises on the unmodified final state, per stage it reviews."""
+    return {st.value: [f"{c.target_id}:{c.severity}" for c in critic.critique(state, st, 1, 1)] for st in MODEL_STAGES}
+
+
+def evaluate(
+    states: list[RunState],
+    seed: int,
+    max_targets: int,
+    model_critic: Reasoner | None = None,
+    model_trials_per_fault: int = 0,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     rng = random.Random(seed)
     trials: list[dict[str, Any]] = []
     clean: list[dict[str, Any]] = []
@@ -181,10 +205,25 @@ def evaluate(states: list[RunState], seed: int, max_targets: int) -> tuple[list[
         for f in FAULTS:
             targets = f.targets(st)
             for t in rng.sample(targets, min(max_targets, len(targets))):
-                res = inject_and_review(st, f, t, rng.randrange(2**31))
+                sd = rng.randrange(2**31)
+                res = inject_and_review(st, f, t, sd)
                 if res["applicable"]:
                     trials.append({"run_id": st.run_id, "reasoner": st.reasoner, "fault": f.name, "kind": f.kind,
-                                   "stage": f.stage.value, "target": t, **res})  # fmt: skip
+                                   "stage": f.stage.value, "target": t, "seed": sd, **res})  # fmt: skip
+    if model_critic is not None:
+        # A separate stream, so adding the model critic leaves the rule critic's trials unchanged.
+        mrng = random.Random(seed + 1)
+        by_state = {st.run_id: st for st in states}
+        for f in FAULTS:
+            mine = [t for t in trials if t["fault"] == f.name]
+            for tr in mrng.sample(mine, min(model_trials_per_fault, len(mine))):
+                # same injection seed as the rule trial, so both critics review the identical faulted state
+                res = inject_and_review(by_state[tr["run_id"]], f, tr["target"], tr["seed"], model_critic)
+                if "model_flagged_target" in res:
+                    tr["model_flagged_target"] = res["model_flagged_target"]
+                    tr["model_critiques"] = res["model_critiques"]
+        for c in clean:
+            c["model_critiques"] = model_clean_critiques(by_state[c["run_id"]], model_critic)
     return trials, clean
 
 
@@ -219,15 +258,48 @@ def summarise(s: Summary, trials: list[dict[str, Any]], clean: list[dict[str, An
         if mine:
             s.findings.append(f"{kind.capitalize()} faults caught: {sum(t['caught'] for t in mine)}/{len(mine)}.")
     s.findings.append(f"Critiques on the unmodified final states: {fa}.")
-    s.notes.append(
-        "Semantic faults keep every artefact structurally consistent; catching them needs the model critic or a person (pending without an API key)."
-    )
+    judged = [t for t in trials if "model_flagged_target" in t]
+    if judged:
+        mrows = []
+        for f in FAULTS:
+            mine = [t for t in judged if t["fault"] == f.name]
+            if mine:
+                mrows.append({"fault": f.name.replace("_", " "), "kind": f.kind, "trials": len(mine),
+                              "rule": sum(t["caught"] for t in mine) / len(mine),
+                              "model": sum(t["model_flagged_target"] for t in mine) / len(mine)})  # fmt: skip
+        s.tables.append(table("model_critic", "Model critic on a sample of the same trials (faulted artefact flagged)",
+            [("fault", "Fault", "l"), ("kind", "Kind", "l"), ("trials", "Trials", "r"),
+             ("rule", "Rule critic caught", "r"), ("model", "Model critic flagged", "r")], mrows))  # fmt: skip
+        for kind in ("structural", "semantic"):
+            mine = [t for t in judged if t["kind"] == kind]
+            if mine:
+                s.findings.append(f"Model critic flagged the faulted artefact in {sum(t['model_flagged_target'] for t in mine)}/{len(mine)} "
+                                  f"sampled {kind} trials (rule critic on the same trials: {sum(t['caught'] for t in mine)}/{len(mine)}).")  # fmt: skip
+        mc = [v for c in clean if "model_critiques" in c for v in c["model_critiques"].values()]
+        n_clean = sum(1 for c in clean if "model_critiques" in c)
+        s.findings.append(f"Model critic critiques on the {n_clean} unmodified final states: {sum(len(v) for v in mc)} "
+                          f"({sum(1 for v in mc for x in v if x.endswith(':blocking'))} blocking).")  # fmt: skip
+        s.notes.append("The model critic names issues in its own words, so it is scored on whether it flagged the faulted artefact, not on the issue label; "
+                       "a critique of an unmodified state is not necessarily wrong (the model may find a real problem).")  # fmt: skip
+    else:
+        s.notes.append(
+            "Semantic faults keep every artefact structurally consistent; catching them needs a model critic or a person (not run here)."
+        )
 
 
-def run(cfg: dict[str, Any], runs: Path, results: Path | None = None) -> Path:
+def run(cfg: dict[str, Any], runs: Path, results: Path | None = None, model_critic: Reasoner | None = None) -> Path:
     states = [load_run(d)[0] for d in e1_run_dirs(runs, results)]
+    name = cfg.get("model_critic")
+    why = unavailable(name) if name else None
+    if model_critic is None and name and why is None:
+        model_critic = make_reasoner(name)
     with result_dir("e3_critic", cfg, DESCRIPTION, results) as (rd, s):
-        trials, clean = evaluate(states, int(cfg.get("seed", 0)), int(cfg.get("max_targets_per_fault", 5)))
+        trials, clean = evaluate(states, int(cfg.get("seed", 0)), int(cfg.get("max_targets_per_fault", 5)),
+                                 model_critic, int(cfg.get("model_trials_per_fault", 6)))  # fmt: skip
+        if why:
+            s.notes.append(f"Model critic not run: {why}.")
+        elif model_critic is not None:
+            s.notes.append(f"Model critic: {model_critic.name} ({getattr(model_critic, 'model', 'unknown')}).")
         rd.write_json("trials.json", trials)
         rd.write_json("clean.json", clean)
         summarise(s, trials, clean, len(states))
