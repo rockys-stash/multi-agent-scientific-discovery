@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-EXPERIMENTS = ("e1_runs", "e2_verifier", "e3_critic", "e4_fluency", "e5_reproducibility")
+EXPERIMENTS = ("e1_runs", "e1_compare", "e2_verifier", "e3_critic", "e4_fluency", "e5_reproducibility")
 
 
 def _cell(v: Any) -> str:

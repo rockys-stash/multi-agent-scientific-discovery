@@ -1,4 +1,4 @@
-.PHONY: help setup setup-local models test test-ui lint format web serve e1 e2 e3 e4 e5 experiments results screenshots clean
+.PHONY: help setup setup-local models test test-ui lint format web serve e1 e1-compare e2 e3 e4 e5 experiments results screenshots clean
 
 help: ## List targets
 	@grep -E '^[a-z0-9-]+:.*##' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-12s %s\n", $$1, $$2}'
@@ -44,6 +44,8 @@ serve: web ## Serve the console and API on http://127.0.0.1:8000 (reads .env if 
 
 e1: ## E1 end-to-end runs (needs the scholarly APIs; local model runs need `make setup-local models`)
 	set -a; [ -f .env ] && . ./.env; set +a; uv run discoverylab experiment e1_runs
+e1-compare: ## E1 arm comparison (offline, from E1's runs, verification and judgements)
+	uv run discoverylab experiment e1_compare
 e2: ## E2 verifier validity (on E1's verified citations)
 	uv run discoverylab experiment e2_verifier
 e3: ## E3 critic fault injection (offline, on E1's runs; model critic needs the local model)
@@ -53,7 +55,7 @@ e4: ## E4 fluency against process (judge needs the local judge model)
 e5: ## E5 reproducibility (offline replay of E1's runs)
 	set -a; [ -f .env ] && . ./.env; set +a; uv run discoverylab experiment e5_reproducibility
 
-experiments: e1 e2 e3 e4 e5 results ## Run E1-E5 in order, then render docs/generated/results.md
+experiments: e1 e1-compare e2 e3 e4 e5 results ## Run E1-E5 in order, then render docs/generated/results.md
 
 screenshots: web ## Capture console screenshots from the real runs into docs/screenshots
 	uv run python scripts/screenshots.py

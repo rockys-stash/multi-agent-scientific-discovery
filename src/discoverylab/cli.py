@@ -35,7 +35,9 @@ def main(argv: list[str] | None = None) -> int:
     v.add_argument("run_dir", type=Path)
 
     e = sub.add_parser("experiment", help="run one of the experiments E1-E5 from its config")
-    e.add_argument("name", choices=["e1_runs", "e2_verifier", "e3_critic", "e4_fluency", "e5_reproducibility"])
+    e.add_argument(
+        "name", choices=["e1_runs", "e1_compare", "e2_verifier", "e3_critic", "e4_fluency", "e5_reproducibility"]
+    )
     e.add_argument("--config", type=Path, help="defaults to configs/experiments/<name>.yaml")
     e.add_argument("--runs", type=Path, default=Path("runs"))
     e.add_argument("--cache", type=Path, default=Path("cache"))
@@ -108,7 +110,7 @@ def main(argv: list[str] | None = None) -> int:
 
 
 def _experiment(args: argparse.Namespace) -> int:
-    from discoverylab.experiments import e1_runs, e2_verifier, e3_critic, e4_fluency, e5_reproducibility
+    from discoverylab.experiments import e1_compare, e1_runs, e2_verifier, e3_critic, e4_fluency, e5_reproducibility
     from discoverylab.experiments.common import load_config
     from discoverylab.run import build_registry
 
@@ -116,6 +118,8 @@ def _experiment(args: argparse.Namespace) -> int:
     registry = build_registry(args.cache, cfg.get("cache_mode", "replay"), cfg.get("sources"))
     if args.name == "e1_runs":
         out = e1_runs.run(cfg, args.runs, registry, results=args.results)
+    elif args.name == "e1_compare":
+        out = e1_compare.run(cfg, args.runs, results=args.results)
     elif args.name == "e2_verifier":
         out = e2_verifier.run(cfg, args.runs, registry, results=args.results)
     elif args.name == "e3_critic":

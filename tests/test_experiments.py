@@ -192,3 +192,15 @@ def test_results_markdown_renders_latest_and_marks_missing(tmp_path: Path) -> No
     md = render(tmp_path)
     assert "| a\\|b | 1.000 |" in md and "Corruptions rejected: 3/3." in md and "commit `abc1234`" in md
     assert "## e1_runs" in md and "Status: pending" in md
+
+
+def test_e1_compare_reports_each_arm_and_skipped_ones(e1: Path, lab: Path) -> None:
+    from discoverylab.experiments import e1_compare
+
+    out = e1_compare.run({}, lab / "runs", results=lab / "results")
+    [row] = json.loads((out / "per_run.json").read_text())
+    assert row["arm"] == "rule" and row["citation_accuracy"] == 1.0 and row["verdict_valid"] == 1.0
+    assert row["minutes"] is not None and row["quote_supports"] is None  # no judge in this fixture
+    summary = json.loads((out / "summary.json").read_text())
+    assert summary["tables"][0]["rows"][1]["rule"] == "100%"  # one run: no spread shown
+    assert any("claude" in n and "ANTHROPIC_API_KEY" in n for n in summary["notes"])

@@ -29,7 +29,7 @@ from discoverylab.human import CHECKPOINTS
 from discoverylab.log import ProcessLog, verify
 from discoverylab.models import Correction, RunState
 
-EXPERIMENTS = ("e1_runs", "e2_verifier", "e3_critic", "e4_fluency", "e5_reproducibility")
+EXPERIMENTS = ("e1_runs", "e1_compare", "e2_verifier", "e3_critic", "e4_fluency", "e5_reproducibility")
 _ID = re.compile(r"^[A-Za-z0-9_.:\-]{1,120}$")
 
 

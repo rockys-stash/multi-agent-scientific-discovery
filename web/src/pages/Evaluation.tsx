@@ -20,6 +20,10 @@ const LABEL: Record<string, { title: string; asks: string }> = {
     title: "E1 End-to-end runs",
     asks: "Do runs on real questions cite real sources, quote them correctly and design valid experiments?",
   },
+  e1_compare: {
+    title: "E1 Arm comparison",
+    asks: "How do the reasoners compare on the same questions when only the process is judged?",
+  },
   e2_verifier: {
     title: "E2 Citation verifier",
     asks: "Does the verifier catch fabricated, altered and misattributed citations without rejecting real ones?",
