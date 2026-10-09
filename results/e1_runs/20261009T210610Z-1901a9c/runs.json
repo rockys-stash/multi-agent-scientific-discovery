@@ -1,0 +1,119 @@
+[
+ {
+  "question": "q1_calibration",
+  "reasoner": "rule",
+  "repeat": 0,
+  "run_id": "20261009T125639Z-q1_calibration-rule-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "reused_from": "20261009T125639Z-003a145"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local",
+  "repeat": 0,
+  "run_id": "20261009T130654Z-q1_calibration-local-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 20126,
+  "output_tokens": 4295,
+  "reused_from": "20261009T125639Z-003a145"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local",
+  "repeat": 1,
+  "run_id": "20261009T133458Z-q1_calibration-local-r1",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 18968,
+  "output_tokens": 4581,
+  "reused_from": "20261009T125639Z-003a145"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local",
+  "repeat": 2,
+  "run_id": "20261009T140325Z-q1_calibration-local-r2",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 22419,
+  "output_tokens": 4954,
+  "reused_from": "20261009T125639Z-003a145"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local+mc",
+  "repeat": 0,
+  "run_id": "20261009T143523Z-q1_calibration-local+mc-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 17874,
+  "output_tokens": 2841,
+  "reused_from": "20261009T125639Z-003a145"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local+mc",
+  "repeat": 1,
+  "run_id": "20261009T145800Z-q1_calibration-local+mc-r1",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 8,
+  "input_tokens": 18012,
+  "output_tokens": 2998,
+  "reused_from": "20261009T125639Z-003a145"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local+mc",
+  "repeat": 2,
+  "run_id": "20261009T152656Z-q1_calibration-local+mc-r2",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 7,
+  "input_tokens": 15492,
+  "output_tokens": 3926,
+  "reused_from": "20261009T125639Z-003a145"
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local-b5",
+  "repeat": 0,
+  "run_id": "20261009T210610Z-q1_calibration-local-b5-r0",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 10,
+  "input_tokens": 17152,
+  "output_tokens": 4910
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local-b5",
+  "repeat": 1,
+  "run_id": "20261009T213348Z-q1_calibration-local-b5-r1",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 10,
+  "input_tokens": 17504,
+  "output_tokens": 4845
+ },
+ {
+  "question": "q1_calibration",
+  "reasoner": "local-b5",
+  "repeat": 2,
+  "run_id": "20261009T215512Z-q1_calibration-local-b5-r2",
+  "status": "complete",
+  "reason": "",
+  "model_calls": 12,
+  "input_tokens": 26541,
+  "output_tokens": 5078
+ }
+]

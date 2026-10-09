@@ -76,7 +76,7 @@ def run(
                 for rep in range(int(spec.get("repeats", 1))):
                     prior = reused.get((q.id, label, rep))
                     if prior is not None:  # an identical arm already ran under this config; not rerun (logged)
-                        rows.append({**prior, "reused_from": cfg["reuse_from"]})
+                        rows.append({**prior, "reused_from": prior.get("reused_from") or cfg["reuse_from"]})
                         continue
                     why = unavailable(name) or (unavailable(critic_name) if critic_name else None)
                     if why:
