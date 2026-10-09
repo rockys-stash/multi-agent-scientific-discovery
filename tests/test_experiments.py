@@ -173,3 +173,22 @@ def test_e1_reports_judged_metrics_when_a_judge_is_available(lab: Path, registry
     assert m["hypothesis_quality"]["mean_of_10"] == 9 and m["evidence_support"]["supports"] == m["evidence"]
     [row] = json.loads((out / "summary.json").read_text())["tables"][0]["rows"]
     assert row["hypothesis_quality"] == 9
+
+
+def test_results_markdown_renders_latest_and_marks_missing(tmp_path: Path) -> None:
+    from discoverylab.experiments.results_md import render
+
+    d = tmp_path / "e2_verifier" / "20260101T000000Z-abc1234"
+    d.mkdir(parents=True)
+    (tmp_path / "e2_verifier" / "LATEST").write_text(d.name + "\n")
+    summary = {"title": "E2 Citation verifier", "question": "Q?", "findings": ["Corruptions rejected: 3/3."],
+               "tables": [{"id": "v", "caption": "By variant", "columns": [{"key": "variant", "label": "Variant", "align": "l"},
+                          {"key": "rejected", "label": "Rejected", "align": "r"}], "rows": [{"variant": "a|b", "rejected": 1.0}]}],
+               "notes": []}  # fmt: skip
+    (d / "summary.json").write_text(json.dumps(summary))
+    (d / "provenance.json").write_text(
+        json.dumps({"commit": "abc1234def", "dirty": False, "created_at": "t", "runtime_seconds": 1})
+    )
+    md = render(tmp_path)
+    assert "| a\\|b | 1.000 |" in md and "Corruptions rejected: 3/3." in md and "commit `abc1234`" in md
+    assert "## e1_runs" in md and "Status: pending" in md

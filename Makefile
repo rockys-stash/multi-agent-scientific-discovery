@@ -1,4 +1,4 @@
-.PHONY: help setup test test-ui lint format web serve e1 e2 e3 e4 e5 experiments clean
+.PHONY: help setup test test-ui lint format web serve e1 e2 e3 e4 e5 experiments results screenshots clean
 
 help: ## List targets
 	@grep -E '^[a-z0-9-]+:.*##' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-12s %s\n", $$1, $$2}'
@@ -16,7 +16,7 @@ test-ui: web ## Browser, keyboard and axe accessibility tests (needs Chromium)
 lint: ## Ruff, mypy, ESLint and TypeScript checks
 	uv run ruff check .
 	uv run ruff format --check .
-	uv run mypy src tests
+	uv run mypy src tests scripts
 	npm --prefix web run lint
 	npm --prefix web run typecheck
 
@@ -41,7 +41,13 @@ e4: ## E4 fluency against process (judge needs ANTHROPIC_API_KEY)
 e5: ## E5 reproducibility (offline replay of E1's runs)
 	uv run discoverylab experiment e5_reproducibility
 
-experiments: e1 e2 e3 e4 e5 ## Run E1-E5 in order
+experiments: e1 e2 e3 e4 e5 results ## Run E1-E5 in order, then render docs/generated/results.md
+
+screenshots: web ## Capture console screenshots from the real runs into docs/screenshots
+	uv run python scripts/screenshots.py
+
+results: ## Render the latest result of every experiment to docs/generated/results.md
+	uv run discoverylab results
 
 clean: ## Remove build output and caches (keeps runs/, cache/ and results/)
 	rm -rf web/dist .pytest_cache .mypy_cache .ruff_cache

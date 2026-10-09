@@ -91,3 +91,16 @@ def test_serve_refuses_a_public_host_without_a_token(
     monkeypatch.delenv("DISCOVERYLAB_API_TOKEN", raising=False)
     assert main(["serve", "--host", "0.0.0.0"]) == 2
     assert "DISCOVERYLAB_API_TOKEN" in capsys.readouterr().err
+
+
+def test_experiment_with_a_pending_part_is_partial(runs: Path, tmp_path: Path) -> None:
+    for exp, notes in (("e2_verifier", []), ("e4_fluency", ["Convincingness: Status pending."])):
+        d = tmp_path / "results" / exp / "r1"
+        d.mkdir(parents=True)
+        (tmp_path / "results" / exp / "LATEST").write_text("r1\n")
+        (d / "provenance.json").write_text(json.dumps({"commit": "abc", "dirty": False}))
+        (d / "summary.json").write_text(
+            json.dumps({"title": exp, "question": "", "findings": [], "tables": [], "notes": notes})
+        )
+    items = {i["experiment"]: i["status"] for i in _client(runs, tmp_path).get("/api/experiments").json()["items"]}
+    assert items["e2_verifier"] == "complete" and items["e4_fluency"] == "partial" and items["e1_runs"] == "pending"

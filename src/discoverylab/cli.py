@@ -41,12 +41,22 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--cache", type=Path, default=Path("cache"))
     e.add_argument("--results", type=Path, default=Path("results"))
 
+    rm = sub.add_parser("results", help="render the latest result of every experiment as Markdown")
+    rm.add_argument("--results", type=Path, default=Path("results"))
+    rm.add_argument("--out", type=Path, default=Path("docs/generated/results.md"))
+
     s = sub.add_parser("serve", help="serve the console and its API")
     s.add_argument("--host", default=os.environ.get("DISCOVERYLAB_HOST", "127.0.0.1"))
     s.add_argument("--port", type=int, default=int(os.environ.get("DISCOVERYLAB_PORT", "8000")))
     s.add_argument("--runs", type=Path, default=Path("runs"))
 
     args = ap.parse_args(argv)
+
+    if args.cmd == "results":
+        from discoverylab.experiments.results_md import write
+
+        print(write(args.results, args.out))
+        return 0
 
     if args.cmd == "run":
         from discoverylab.models import RunState

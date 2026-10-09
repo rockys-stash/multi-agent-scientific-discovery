@@ -170,8 +170,12 @@ def create_app(runs: Path, results: Path | None = None, static_dir: Path | None 
         for exp in EXPERIMENTS:
             latest = results / exp / "LATEST"
             if latest.is_file():
-                prov = json.loads((results / exp / latest.read_text().strip() / "provenance.json").read_text())
-                out.append({"experiment": exp, "status": "complete", **prov})
+                run = results / exp / latest.read_text().strip()
+                prov = json.loads((run / "provenance.json").read_text())
+                notes = json.loads((run / "summary.json").read_text()).get("notes", [])
+                # a result with any part still pending (e.g. no API key for the model arms) is partial
+                partial = any(re.search(r"\bpending\b", n, re.IGNORECASE) for n in notes)
+                out.append({"experiment": exp, "status": "partial" if partial else "complete", **prov})
             else:
                 out.append({"experiment": exp, "status": "pending"})
         return {"items": out}

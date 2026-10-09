@@ -153,7 +153,7 @@ export function Evaluation() {
       </>
     );
   const items = list.data.items;
-  const done = items.filter((i) => i.status === "complete");
+  const done = items.filter((i) => i.status !== "pending");
   const chosen = params.get("exp") ?? done[0]?.experiment ?? null;
   return (
     <>
@@ -188,7 +188,7 @@ export function Evaluation() {
                       }
                     >
                       <th scope="row">
-                        {i.status === "complete" ? (
+                        {i.status !== "pending" ? (
                           <button
                             type="button"
                             className="link-btn"
@@ -206,6 +206,10 @@ export function Evaluation() {
                         {i.status === "complete" ? (
                           <Mark tone="ok" glyph="✓">
                             Complete
+                          </Mark>
+                        ) : i.status === "partial" ? (
+                          <Mark tone="attest" glyph="◐">
+                            Partial: part pending
                           </Mark>
                         ) : (
                           <Mark tone="neutral" glyph="○">

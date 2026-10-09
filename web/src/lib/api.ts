@@ -283,7 +283,7 @@ export interface LogEvent {
 
 export interface ExperimentInfo {
   experiment: string;
-  status: "pending" | "complete";
+  status: "pending" | "partial" | "complete";
   run_id?: string;
   commit?: string;
   created_at?: string;
