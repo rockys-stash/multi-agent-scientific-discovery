@@ -200,15 +200,15 @@ Notes:
 
 *Which injected process faults does the rule critic catch, and which can it not see?*
 
-Result `results/e3_critic/20261010T021158Z-45b8eb4` · commit `45b8eb4` · 2026-10-10T03:04:55+00:00 · 3176.8 s
+Result `results/e3_critic/20261010T050154Z-e7fd0b8` · commit `e7fd0b8` · 2026-10-10T05:45:10+00:00 · 2596.04 s
 
 - 779 injections into 29 completed runs.
-- Structural faults caught: 576/578.
+- Structural faults caught: 578/578.
 - Semantic faults caught: 0/201.
 - Critiques on the unmodified final states: 80.
-- Model critic flagged the faulted artefact in 10/40 sampled structural trials (rule critic on the same trials: 39/40).
-- Model critic flagged the faulted artefact in 3/12 sampled semantic trials (rule critic on the same trials: 0/12).
-- Model critic critiques on the 6 unmodified final states: 18 (0 blocking).
+- Model critic flagged the faulted artefact in 8/40 sampled structural trials (rule critic on the same trials: 40/40).
+- Model critic flagged the faulted artefact in 2/12 sampled semantic trials (rule critic on the same trials: 0/12).
+- Model critic critiques on the 6 unmodified final states: 12 (0 blocking).
 
 **Detection by fault (share of trials)**
 
@@ -225,7 +225,7 @@ Result `results/e3_critic/20261010T021158Z-45b8eb4` · commit `45b8eb4` · 2026-
 | unknown dataset | structural | design | 43 | 1.000 | 1.000 |
 | misreported mean | structural | analysis | 29 | 1.000 | 1.000 |
 | interval excludes mean | structural | analysis | 29 | 1.000 | 1.000 |
-| verdict not supported by statistics | structural | conclusion | 29 | 0.931 | 0.931 |
+| verdict not supported by statistics | structural | conclusion | 29 | 1.000 | 1.000 |
 | claim contradicts quote | semantic | evidence | 88 | 0.000 | 0.000 |
 | stance flipped | semantic | evidence | 70 | 0.000 | 0.000 |
 | hypothesis direction flipped | semantic | hypotheses | 43 | 0.000 | 0.000 |
@@ -236,17 +236,17 @@ Result `results/e3_critic/20261010T021158Z-45b8eb4` · commit `45b8eb4` · 2026-
 |---|---|---:|---:|---:|
 | citation to unretrieved source | structural | 4 | 1.000 | 0.000 |
 | altered quote | structural | 4 | 1.000 | 0.000 |
-| missing quote | structural | 4 | 1.000 | 0.250 |
+| missing quote | structural | 4 | 1.000 | 0.000 |
 | ungrounded hypothesis | structural | 4 | 1.000 | 0.250 |
 | dangling reference | structural | 4 | 1.000 | 0.000 |
 | control also treatment | structural | 4 | 1.000 | 0.500 |
 | single measurement | structural | 4 | 1.000 | 0.500 |
 | primary metric mismatch | structural | 4 | 1.000 | 0.000 |
 | unknown dataset | structural | 4 | 1.000 | 0.750 |
-| verdict not supported by statistics | structural | 4 | 0.750 | 0.250 |
+| verdict not supported by statistics | structural | 4 | 1.000 | 0.000 |
 | claim contradicts quote | semantic | 4 | 0.000 | 0.000 |
 | stance flipped | semantic | 4 | 0.000 | 0.000 |
-| hypothesis direction flipped | semantic | 4 | 0.000 | 0.750 |
+| hypothesis direction flipped | semantic | 4 | 0.000 | 0.500 |
 
 Notes:
 
@@ -257,30 +257,32 @@ Notes:
 
 *When a run's process is corrupted, do its report's fluency scores fall with its process score?*
 
-Result `results/e4_fluency/20261008T145439Z-b4ab39b` · commit `b4ab39b` · 2026-10-08T14:55:17+00:00 · 37.71 s
+Result `results/e4_fluency/20261010T033512Z-e7fd0b8` · commit `e7fd0b8` · 2026-10-10T05:01:48+00:00 · 5196.06 s
 
-- Spearman correlation of readability with process score: 0.04.
+- Spearman correlation of readability with process score: 0.08.
+- Spearman correlation of judged convincingness with process score: -0.37.
 
 **Mean scores by variant**
 
 | Variant | Reports | Readability (Flesch) | Convincingness (judge, 1-10) | Process score | Evidence correct | Conclusions valid |
 |---|---:|---:|---:|---:|---:|---:|
-| original | 3 | 2.880 | pending | 0.986 | 0.972 | 1.000 |
-| swapped citations | 3 | 2.880 | pending | 0.500 | 0.000 | 1.000 |
-| fabricated citations | 3 | 4.630 | pending | 0.500 | 0.000 | 1.000 |
-| inflated conclusions | 3 | 0.420 | pending | 0.486 | 0.972 | 0.000 |
-| all three | 3 | 2.213 | pending | 0.000 | 0.000 | 0.000 |
+| original | 29 | 1.967 | 5.179 | 0.900 | 0.996 | 0.763 |
+| swapped citations | 21 | 0.660 | 6.048 | 0.321 | 0.000 | 0.794 |
+| fabricated citations | 23 | 2.017 | 6.045 | 0.315 | 0.000 | 0.763 |
+| inflated conclusions | 19 | -2.792 | 7.000 | 0.537 | 0.996 | 0.079 |
+| all three | 17 | -2.859 | 7.133 | 0.044 | 0.000 | 0.088 |
 
 Notes:
 
-- Convincingness: Status pending. It needs a language-model judge and no ANTHROPIC_API_KEY was set.
+- The judge gave no usable rating for 6 of 109 reports (reasons in variants.json); they are left out of the convincingness means and correlation, not imputed.
 - The process score is the mean of evidence correctness (independent verification) and the share of conclusions whose verdict matches the statistics.
+- Convincingness judge: local (phi-4-mini-instruct-q4_k_m).
 
 ## E5 Reproducibility
 
 *Does replaying a recorded run reproduce every artefact and number?*
 
-Result `results/e5_reproducibility/20261010T030501Z-45b8eb4` · commit `45b8eb4` · 2026-10-10T03:23:06+00:00 · 1085.14 s
+Result `results/e5_reproducibility/20261010T054515Z-e7fd0b8` · commit `e7fd0b8` · 2026-10-10T06:03:20+00:00 · 1084.23 s
 
 - 29/29 runs replayed with every artefact group and the verification identical.
 
@@ -320,4 +322,4 @@ Result `results/e5_reproducibility/20261010T030501Z-45b8eb4` · commit `45b8eb4`
 
 Notes:
 
-- Live re-run overlap (papers, evidence, verdicts) needs the scholarly APIs and, for model runs, an API key: Status pending until a run with both.
+- Model runs replay from their recorded transcripts, so replay checks the process code, not the model's determinism; how much a live re-run differs is shown by the repeats in E1 and the fresh-clone reproduction in the report.

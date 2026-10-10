@@ -1,0 +1,103 @@
+{
+ "title": "E4 Fluency versus process",
+ "question": "When a run's process is corrupted, do its report's fluency scores fall with its process score?",
+ "findings": [
+  "Spearman correlation of readability with process score: 0.08.",
+  "Spearman correlation of judged convincingness with process score: -0.37."
+ ],
+ "tables": [
+  {
+   "id": "variants",
+   "caption": "Mean scores by variant",
+   "columns": [
+    {
+     "key": "variant",
+     "label": "Variant",
+     "align": "l"
+    },
+    {
+     "key": "reports",
+     "label": "Reports",
+     "align": "r"
+    },
+    {
+     "key": "readability",
+     "label": "Readability (Flesch)",
+     "align": "r"
+    },
+    {
+     "key": "convincingness",
+     "label": "Convincingness (judge, 1-10)",
+     "align": "r"
+    },
+    {
+     "key": "process",
+     "label": "Process score",
+     "align": "r"
+    },
+    {
+     "key": "evidence_correctness",
+     "label": "Evidence correct",
+     "align": "r"
+    },
+    {
+     "key": "conclusion_validity",
+     "label": "Conclusions valid",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "variant": "original",
+     "reports": 29,
+     "readability": 1.9665517241379311,
+     "convincingness": 5.178571428571429,
+     "process": 0.900359168241966,
+     "evidence_correctness": 0.9963705103969754,
+     "conclusion_validity": 0.7631578947368421
+    },
+    {
+     "variant": "swapped citations",
+     "reports": 21,
+     "readability": 0.6595238095238094,
+     "convincingness": 6.0476190476190474,
+     "process": 0.32142857142857145,
+     "evidence_correctness": 0.0,
+     "conclusion_validity": 0.7941176470588235
+    },
+    {
+     "variant": "fabricated citations",
+     "reports": 23,
+     "readability": 2.017391304347826,
+     "convincingness": 6.045454545454546,
+     "process": 0.31521739130434784,
+     "evidence_correctness": 0.0,
+     "conclusion_validity": 0.7631578947368421
+    },
+    {
+     "variant": "inflated conclusions",
+     "reports": 19,
+     "readability": -2.7921052631578944,
+     "convincingness": 7.0,
+     "process": 0.5372768878718536,
+     "evidence_correctness": 0.9956064073226545,
+     "conclusion_validity": 0.07894736842105263
+    },
+    {
+     "variant": "all three",
+     "reports": 17,
+     "readability": -2.8588235294117648,
+     "convincingness": 7.133333333333334,
+     "process": 0.04411764705882353,
+     "evidence_correctness": 0.0,
+     "conclusion_validity": 0.08823529411764706
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "The judge gave no usable rating for 6 of 109 reports (reasons in variants.json); they are left out of the convincingness means and correlation, not imputed.",
+  "The process score is the mean of evidence correctness (independent verification) and the share of conclusions whose verdict matches the statistics.",
+  "Convincingness judge: local (phi-4-mini-instruct-q4_k_m)."
+ ]
+}

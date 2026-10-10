@@ -1,0 +1,625 @@
+{
+ "run_id": "20261009T155618Z-q2_scaling_knn-rule-r0",
+ "evidence": [
+  {
+   "evidence_id": "E1",
+   "citation": {
+    "identifier": "arxiv:1811.05062",
+    "normalised": "arxiv:1811.05062",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Dynamic Feature Scaling for K-Nearest Neighbor Algorithm",
+    "resolved_first_author": "Chandrasekaran Anirudh Bhardwaj",
+    "resolved_year": 2018,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E2",
+   "citation": {
+    "identifier": "doi:10.1109/iscmi59957.2023.10458496",
+    "normalised": "doi:10.1109/iscmi59957.2023.10458496",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Inverse-Distance Weighted K- Nearest Neighbor for Raw and Scaled Data set in Human Detection using Odour",
+    "resolved_first_author": "Ahmed Qusay Sabri",
+    "resolved_year": 2023,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E3",
+   "citation": {
+    "identifier": "doi:10.30871/jaic.v8i2.8158",
+    "normalised": "doi:10.30871/jaic.v8i2.8158",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Bagging Nearest Neighbor and its Enhancement for Machinery Predictive Maintenance",
+    "resolved_first_author": "Muhammad Irfan Arisani",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E4",
+   "citation": {
+    "identifier": "arxiv:2501.06078",
+    "normalised": "arxiv:2501.06078",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Explaining k-Nearest Neighbors: Abductive and Counterfactual Explanations",
+    "resolved_first_author": "Pablo Barceló",
+    "resolved_year": 2025,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E5",
+   "citation": {
+    "identifier": "arxiv:1303.0095",
+    "normalised": "arxiv:1303.0095",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Label-dependent Feature Extraction in Social Networks for Node Classification",
+    "resolved_first_author": "Tomasz Kajdanowicz",
+    "resolved_year": 2013,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E6",
+   "citation": {
+    "identifier": "arxiv:1610.04322",
+    "normalised": "arxiv:1610.04322",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Learning and Fusing Multimodal Features from and for Multi-task Facial Computing",
+    "resolved_first_author": "Wei Li",
+    "resolved_year": 2016,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E7",
+   "citation": {
+    "identifier": "doi:10.2139/ssrn.4110570",
+    "normalised": "doi:10.2139/ssrn.4110570",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Feature Scaling for Financial Machine Learning",
+    "resolved_first_author": "Jieli Shen",
+    "resolved_year": 2022,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E8",
+   "citation": {
+    "identifier": "doi:10.31219/osf.io/ju8nr",
+    "normalised": "doi:10.31219/osf.io/ju8nr",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Text Summarization using Feature Similarity based K Nearest Neighbor",
+    "resolved_first_author": "Taeho Jo",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E9",
+   "citation": {
+    "identifier": "doi:10.1002/qute.202300221",
+    "normalised": "doi:10.1002/qute.202300221",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Quantum K‐Nearest Neighbor Classification Algorithm via a Divide‐and‐Conquer Strategy",
+    "resolved_first_author": "Li‐Hua Gong",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E10",
+   "citation": {
+    "identifier": "doi:10.1109/icodsa62899.2024.10652228",
+    "normalised": "doi:10.1109/icodsa62899.2024.10652228",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Waiting Period Prediction of Telkom University Student Alumni Using K-Nearest Neighbor and Naïve Bayes",
+    "resolved_first_author": "Nadia Khairunissa",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E11",
+   "citation": {
+    "identifier": "doi:10.20535/radap.2024.95.39-46",
+    "normalised": "doi:10.20535/radap.2024.95.39-46",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Algorithm for Increasing Accuracy of Solar Power Forecasting When Applying Nearest Neighbor Method",
+    "resolved_first_author": "Ye. V. Sedlіarov",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E12",
+   "citation": {
+    "identifier": "doi:10.52465/joscex.v1i1.7",
+    "normalised": "doi:10.52465/joscex.v1i1.7",
+    "status": "metadata_mismatch",
+    "title_similarity": 1.0,
+    "author_match": false,
+    "year_match": true,
+    "resolved_title": "Improving Algorithm Accuracy K-Nearest Neighbor Using Z-Score Normalization and Particle Swarm Optimization to Predict Customer Churn",
+    "resolved_first_author": "",
+    "resolved_year": 2020,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": [
+     "first author does not match the source"
+    ]
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": false
+  },
+  {
+   "evidence_id": "E13",
+   "citation": {
+    "identifier": "arxiv:1407.6748",
+    "normalised": "arxiv:1407.6748",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Enhancing the Accuracy of Biometric Feature Extraction Fusion Using Gabor Filter and Mahalanobis Distance Algorithm",
+    "resolved_first_author": "Ayodeji S. Makinde",
+    "resolved_year": 2014,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E14",
+   "citation": {
+    "identifier": "doi:10.3390/e25010127",
+    "normalised": "doi:10.3390/e25010127",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "An Enhanced Quantum K-Nearest Neighbor Classification Algorithm Based on Polar Distance",
+    "resolved_first_author": "Congcong Feng",
+    "resolved_year": 2023,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E15",
+   "citation": {
+    "identifier": "arxiv:1607.01327",
+    "normalised": "arxiv:1607.01327",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Feature Selection Library (MATLAB Toolbox)",
+    "resolved_first_author": "Giorgio Roffo",
+    "resolved_year": 2016,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E16",
+   "citation": {
+    "identifier": "doi:10.1088/1742-6596/978/1/012047",
+    "normalised": "doi:10.1088/1742-6596/978/1/012047",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Improving the accuracy of k-nearest neighbor using local mean based and distance weight",
+    "resolved_first_author": "K U Syaliman",
+    "resolved_year": 2018,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E17",
+   "citation": {
+    "identifier": "doi:10.60005/coreid.v3i3.139",
+    "normalised": "doi:10.60005/coreid.v3i3.139",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Performance Comparison of K-Nearest Neighbor, Decision Tree, and Support Vector Machine Algorithms for Diabetes Classification",
+    "resolved_first_author": "Aria Octavian Hamza Aria",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E18",
+   "citation": {
+    "identifier": "doi:10.1088/1742-6596/2161/1/012004",
+    "normalised": "doi:10.1088/1742-6596/2161/1/012004",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Study of distance metrics on k - nearest neighbor algorithm for star categorization",
+    "resolved_first_author": "Swathi Nayak",
+    "resolved_year": 2022,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E19",
+   "citation": {
+    "identifier": "doi:10.31219/osf.io/fecph",
+    "normalised": "doi:10.31219/osf.io/fecph",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Extracting Keywords from Text by Feature Similarity based K Nearest Neighbor",
+    "resolved_first_author": "Taeho Jo",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E20",
+   "citation": {
+    "identifier": "doi:10.1109/ispds62779.2024.10667477",
+    "normalised": "doi:10.1109/ispds62779.2024.10667477",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Research on Near-Infrared Spectroscopy Calibration Transfer Algorithm Based on Piecewise Direct Standardization and K-Nearest Neighbor",
+    "resolved_first_author": "Haoran Zhu",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E21",
+   "citation": {
+    "identifier": "doi:10.52436/1.jutif.2023.4.2.740",
+    "normalised": "doi:10.52436/1.jutif.2023.4.2.740",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "LECTURERS ADMISSIONS SELECTIONS MODEL USING FUZZY K-NEAREST NEIGHBOR METHOD",
+    "resolved_first_author": "Lely Meilina",
+    "resolved_year": 2023,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E22",
+   "citation": {
+    "identifier": "arxiv:cond-mat/0410059",
+    "normalised": "arxiv:cond-mat/0410059",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Accuracy and Scaling Phenomena in Internet Mapping",
+    "resolved_first_author": "Aaron Clauset",
+    "resolved_year": 2004,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E23",
+   "citation": {
+    "identifier": "doi:10.31219/osf.io/cv9rg",
+    "normalised": "doi:10.31219/osf.io/cv9rg",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Feature Similarity based K Nearest Neighbor for Optimizing of Text Indexes",
+    "resolved_first_author": "Taeho Jo",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex"
+   ],
+   "correct": true
+  }
+ ],
+ "citations_emitted": 23
+}

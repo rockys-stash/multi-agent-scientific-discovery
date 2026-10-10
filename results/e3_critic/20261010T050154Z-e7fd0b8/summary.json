@@ -1,0 +1,301 @@
+{
+ "title": "E3 Critic",
+ "question": "Which injected process faults does the rule critic catch, and which can it not see?",
+ "findings": [
+  "779 injections into 29 completed runs.",
+  "Structural faults caught: 578/578.",
+  "Semantic faults caught: 0/201.",
+  "Critiques on the unmodified final states: 80.",
+  "Model critic flagged the faulted artefact in 8/40 sampled structural trials (rule critic on the same trials: 40/40).",
+  "Model critic flagged the faulted artefact in 2/12 sampled semantic trials (rule critic on the same trials: 0/12).",
+  "Model critic critiques on the 6 unmodified final states: 12 (0 blocking)."
+ ],
+ "tables": [
+  {
+   "id": "faults",
+   "caption": "Detection by fault (share of trials)",
+   "columns": [
+    {
+     "key": "fault",
+     "label": "Fault",
+     "align": "l"
+    },
+    {
+     "key": "kind",
+     "label": "Kind",
+     "align": "l"
+    },
+    {
+     "key": "stage",
+     "label": "Stage",
+     "align": "l"
+    },
+    {
+     "key": "trials",
+     "label": "Trials",
+     "align": "r"
+    },
+    {
+     "key": "caught",
+     "label": "Caught as the right issue",
+     "align": "r"
+    },
+    {
+     "key": "flagged",
+     "label": "Target flagged at all",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "fault": "citation to unretrieved source",
+     "kind": "structural",
+     "stage": "evidence",
+     "trials": 88,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "altered quote",
+     "kind": "structural",
+     "stage": "evidence",
+     "trials": 88,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "missing quote",
+     "kind": "structural",
+     "stage": "evidence",
+     "trials": 88,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "ungrounded hypothesis",
+     "kind": "structural",
+     "stage": "hypotheses",
+     "trials": 43,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "dangling reference",
+     "kind": "structural",
+     "stage": "hypotheses",
+     "trials": 43,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "control also treatment",
+     "kind": "structural",
+     "stage": "design",
+     "trials": 43,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "single measurement",
+     "kind": "structural",
+     "stage": "design",
+     "trials": 43,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "primary metric mismatch",
+     "kind": "structural",
+     "stage": "design",
+     "trials": 12,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "unknown dataset",
+     "kind": "structural",
+     "stage": "design",
+     "trials": 43,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "misreported mean",
+     "kind": "structural",
+     "stage": "analysis",
+     "trials": 29,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "interval excludes mean",
+     "kind": "structural",
+     "stage": "analysis",
+     "trials": 29,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "verdict not supported by statistics",
+     "kind": "structural",
+     "stage": "conclusion",
+     "trials": 29,
+     "caught": 1.0,
+     "flagged": 1.0
+    },
+    {
+     "fault": "claim contradicts quote",
+     "kind": "semantic",
+     "stage": "evidence",
+     "trials": 88,
+     "caught": 0.0,
+     "flagged": 0.0
+    },
+    {
+     "fault": "stance flipped",
+     "kind": "semantic",
+     "stage": "evidence",
+     "trials": 70,
+     "caught": 0.0,
+     "flagged": 0.0
+    },
+    {
+     "fault": "hypothesis direction flipped",
+     "kind": "semantic",
+     "stage": "hypotheses",
+     "trials": 43,
+     "caught": 0.0,
+     "flagged": 0.0
+    }
+   ]
+  },
+  {
+   "id": "model_critic",
+   "caption": "Model critic on a sample of the same trials (faulted artefact flagged)",
+   "columns": [
+    {
+     "key": "fault",
+     "label": "Fault",
+     "align": "l"
+    },
+    {
+     "key": "kind",
+     "label": "Kind",
+     "align": "l"
+    },
+    {
+     "key": "trials",
+     "label": "Trials",
+     "align": "r"
+    },
+    {
+     "key": "rule",
+     "label": "Rule critic caught",
+     "align": "r"
+    },
+    {
+     "key": "model",
+     "label": "Model critic flagged",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "fault": "citation to unretrieved source",
+     "kind": "structural",
+     "trials": 4,
+     "rule": 1.0,
+     "model": 0.0
+    },
+    {
+     "fault": "altered quote",
+     "kind": "structural",
+     "trials": 4,
+     "rule": 1.0,
+     "model": 0.0
+    },
+    {
+     "fault": "missing quote",
+     "kind": "structural",
+     "trials": 4,
+     "rule": 1.0,
+     "model": 0.0
+    },
+    {
+     "fault": "ungrounded hypothesis",
+     "kind": "structural",
+     "trials": 4,
+     "rule": 1.0,
+     "model": 0.25
+    },
+    {
+     "fault": "dangling reference",
+     "kind": "structural",
+     "trials": 4,
+     "rule": 1.0,
+     "model": 0.0
+    },
+    {
+     "fault": "control also treatment",
+     "kind": "structural",
+     "trials": 4,
+     "rule": 1.0,
+     "model": 0.5
+    },
+    {
+     "fault": "single measurement",
+     "kind": "structural",
+     "trials": 4,
+     "rule": 1.0,
+     "model": 0.5
+    },
+    {
+     "fault": "primary metric mismatch",
+     "kind": "structural",
+     "trials": 4,
+     "rule": 1.0,
+     "model": 0.0
+    },
+    {
+     "fault": "unknown dataset",
+     "kind": "structural",
+     "trials": 4,
+     "rule": 1.0,
+     "model": 0.75
+    },
+    {
+     "fault": "verdict not supported by statistics",
+     "kind": "structural",
+     "trials": 4,
+     "rule": 1.0,
+     "model": 0.0
+    },
+    {
+     "fault": "claim contradicts quote",
+     "kind": "semantic",
+     "trials": 4,
+     "rule": 0.0,
+     "model": 0.0
+    },
+    {
+     "fault": "stance flipped",
+     "kind": "semantic",
+     "trials": 4,
+     "rule": 0.0,
+     "model": 0.0
+    },
+    {
+     "fault": "hypothesis direction flipped",
+     "kind": "semantic",
+     "trials": 4,
+     "rule": 0.0,
+     "model": 0.5
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "Model critic: local (qwen3-4b-instruct-2507-q4_0).",
+  "The model critic names issues in its own words, so it is scored on whether it flagged the faulted artefact, not on the issue label; a critique of an unmodified state is not necessarily wrong (the model may find a real problem)."
+ ]
+}

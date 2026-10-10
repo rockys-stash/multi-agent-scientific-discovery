@@ -1,0 +1,953 @@
+{
+ "run_id": "20261009T160535Z-q2_scaling_knn-local-r0",
+ "question": {
+  "id": "q2_scaling_knn",
+  "text": "Does standardising features before k-nearest-neighbour classification improve accuracy on tabular data whose features are on different scales?",
+  "keywords": [
+   "feature scaling",
+   "standardization",
+   "k-nearest neighbors",
+   "classification accuracy"
+  ],
+  "concepts": [
+   "feature scaling",
+   "standardization",
+   "nearest neighbor",
+   "distance",
+   "accuracy"
+  ],
+  "domain_hint": "machine learning"
+ },
+ "reasoner": "local",
+ "stage": "critique",
+ "status": "complete",
+ "papers": [
+  {
+   "id": "doi:10.30871/jaic.v9i3.9353",
+   "title": "Comparison of Data Normalization Techniques on KNN Classification Performance for Pima Indians Diabetes Dataset",
+   "authors": [
+    "Yohanes Dimas Pratama",
+    "Abu Salam"
+   ],
+   "year": 2025,
+   "venue": "Journal of Applied Informatics and Computing",
+   "abstract": "This study analyzes the comparison of data normalization techniques in the K-Nearest Neighbors (KNN) model for diabetes classification using the Pima Indians Diabetes dataset. The three normalization techniques evaluated are Min-Max Scaling, Z-Score Scaling, and Decimal Scaling. After preprocessing, such as handling missing values and removing duplicates, as well as feature selection using the Random Forest method, the features removed include SkinThickness, Insulin, Pregnancies, and BloodPressure. The evaluation was carried out using accuracy, precision, recall, F1-Score, specificity, and ROC AUC metrics. The results show that Min-Max Scaling provides a significant improvement in all metrics, with the highest accuracy of 0.8117 and ROC AUC of 0.8050. Z-Score Scaling provides good results, but not as good as Min-Max Scaling. Decimal Scaling shows the lowest performance. Statistical tests using Paired T-Test show significant differences between Min-Max Scaling and without normalization on all metrics (P-Value &lt;0.05), while Z-Score Scaling and Decimal Scaling are only significant on some metrics, with P-Values of 0.08363 and 0.43839 respectively for accuracy and ROC AUC. Overall, Min-Max Scaling proved to be the best normalization method for improving KNN performance in diabetes classification.",
+   "url": "https://doi.org/10.30871/jaic.v9i3.9353",
+   "source": "crossref",
+   "cache_key": "616076ebe6c9f04d94a8f13c3caf9d7171a1290235b92651aac85207f68c5e01",
+   "query": "feature normalization kNN results"
+  },
+  {
+   "id": "arxiv:1303.0095",
+   "title": "Label-dependent Feature Extraction in Social Networks for Node Classification",
+   "authors": [
+    "Tomasz Kajdanowicz",
+    "Przemyslaw Kazienko",
+    "Piotr Doskocz"
+   ],
+   "year": 2013,
+   "venue": "arXiv",
+   "abstract": "A new method of feature extraction in the social network for within-network classification is proposed in the paper. The method provides new features calculated by combination of both: network structure information and class labels assigned to nodes. The influence of various features on classification performance has also been studied. The experiments on real-world data have shown that features created owing to the proposed method can lead to significant improvement of classification accuracy.",
+   "url": "http://arxiv.org/abs/1303.0095v1",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:1307.4717",
+   "title": "Content Based Image Retrieval System using Feature Classification with Modified KNN Algorithm",
+   "authors": [
+    "T. Dharani",
+    "I. Laurence Aroquiaraj"
+   ],
+   "year": 2013,
+   "venue": "arXiv",
+   "abstract": "Feature means countenance, remote sensing scene objects with similar characteristics, associated to interesting scene elements in the image formation process. They are classified into three types in image processing, that is low, middle and high. Low level features are color, texture and middle level feature is shape and high level feature is semantic gap of objects. An image retrieval system is a computer system for browsing, searching and retrieving images from a large image database. Content Based Image Retrieval is a technique which uses visual features of image such as color, shape, texture to search user required image from large image database according to user requests in the form of a query. MKNN is an enhancing method of KNN. The proposed KNN classification is called MKNN. MKNN contains two parts for processing, they are validity of the train samples and applying weighted KNN. The validity of each point is computed according to its neighbors. In our proposal, Modified K-Nearest Neighbor can be considered a kind of weighted KNN so that the query label is approximated by weighting the neighbors of the query.",
+   "url": "http://arxiv.org/abs/1307.4717v1",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:1801.01453",
+   "title": "Adaptive kNN using Expected Accuracy for Classification of Geo-Spatial Data",
+   "authors": [
+    "Mark Kibanov",
+    "Martin Becker",
+    "Juergen Mueller",
+    "Martin Atzmueller",
+    "Andreas Hotho",
+    "Gerd Stumme"
+   ],
+   "year": 2017,
+   "venue": "arXiv",
+   "abstract": "The k-Nearest Neighbor (kNN) classification approach is conceptually simple - yet widely applied since it often performs well in practical applications. However, using a global constant k does not always provide an optimal solution, e.g., for datasets with an irregular density distribution of data points. This paper proposes an adaptive kNN classifier where k is chosen dynamically for each instance (point) to be classified, such that the expected accuracy of classification is maximized. We define the expected accuracy as the accuracy of a set of structurally similar observations. An arbitrary similarity function can be used to find these observations. We introduce and evaluate different similarity functions. For the evaluation, we use five different classification tasks based on geo-spatial data. Each classification task consists of (tens of) thousands of items. We demonstrate, that the presented expected accuracy measures can be a good estimator for kNN performance, and the proposed adaptive kNN classifier outperforms common kNN and previously introduced adaptive kNN algorithms. Also, we show that the range of considered k can be significantly reduced to speed up the algorithm without negative influence on classification accuracy.",
+   "url": "http://arxiv.org/abs/1801.01453v1",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:1807.04970",
+   "title": "Analysis Acoustic Features for Acoustic Scene Classification and Score fusion of multi-classification systems applied to DCASE 2016 challenge",
+   "authors": [
+    "Sangwook Park",
+    "Seongkyu Mun",
+    "Younglo Lee",
+    "David K. Han",
+    "Hanseok Ko"
+   ],
+   "year": 2018,
+   "venue": "arXiv",
+   "abstract": "This paper describes an acoustic scene classification method which achieved the 4th ranking result in the IEEE AASP challenge of Detection and Classification of Acoustic Scenes and Events 2016. In order to accomplish the ensuing task, several methods are explored in three aspects: feature extraction, feature transformation, and score fusion for final decision. In the part of feature extraction, several features are investigated for effective acoustic scene classification. For resolving the issue that the same sound can be heard in different places, a feature transformation is applied for better separation for classification. From these, several systems based on different feature sets are devised for classification. The final result is determined by fusing the individual systems. The method is demonstrated and validated by the experiment conducted using the Challenge database.",
+   "url": "http://arxiv.org/abs/1807.04970v1",
+   "source": "arxiv",
+   "cache_key": "f16a05b747a85f6304381aa063b34492b97cbf504519882738962e8bcad6dd5a",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "arxiv:cond-mat/0410059",
+   "title": "Accuracy and Scaling Phenomena in Internet Mapping",
+   "authors": [
+    "Aaron Clauset",
+    "Cristopher Moore"
+   ],
+   "year": 2004,
+   "venue": "arXiv",
+   "abstract": "A great deal of effort has been spent measuring topological features of the Internet. However, it was recently argued that sampling based on taking paths or traceroutes through the network from a small number of sources introduces a fundamental bias in the observed degree distribution. We examine this bias analytically and experimentally. For Erdos-Renyi random graphs with mean degree c, we show analytically that traceroute sampling gives an observed degree distribution P(k) ~ 1/k for k < c, even though the underlying degree distribution is Poisson. For graphs whose degree distributions have power-law tails P(k) ~ k^-alpha, traceroute sampling from a small number of sources can significantly underestimate the value of αwhen the graph has a large excess (i.e., many more edges than vertices). We find that in order to obtain a good estimate of alpha it is necessary to use a number of sources which grows linearly in the average degree of the underlying graph. Based on these observations we comment on the accuracy of the published values of alpha for the Internet.",
+   "url": "http://arxiv.org/abs/cond-mat/0410059v1",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:2508.18953",
+   "title": "Novel Approaches to Artificial Intelligence Development Based on the Nearest Neighbor Method",
+   "authors": [
+    "I. I. Priezzhev",
+    "D. A. Danko",
+    "A. V. Shubin"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "abstract": "Modern neural network technologies, including large language models, have achieved remarkable success in various applied artificial intelligence applications, however, they face a range of fundamental limitations. Among them are hallucination effects, high computational complexity of training and inference, costly fine-tuning, and catastrophic forgetting issues. These limitations significantly hinder the use of neural networks in critical areas such as medicine, industrial process management, and scientific research. This article proposes an alternative approach based on the nearest neighbors method with hierarchical clustering structures. Employing the k-nearest neighbors algorithm significantly reduces or completely eliminates hallucination effects while simplifying model expansion and fine-tuning without the need for retraining the entire network. To overcome the high computational load of the k-nearest neighbors method, the paper proposes using tree-like data structures based on Kohonen self-organizing maps, thereby greatly accelerating nearest neighbor searches. Tests conducted on handwritten digit recognition and simple subtitle translation tasks confirmed the effectiveness of the proposed approach. With only a slight reduction in accuracy, the nearest neighbor search time was reduced hundreds of times compared to exhaustive search methods. The proposed method features transparency and interpretability, closely aligns with human cognitive mechanisms, and demonstrates potential for extensive use in tasks requiring high reliability and explainable results.",
+   "url": "http://arxiv.org/abs/2508.18953v1",
+   "source": "arxiv",
+   "cache_key": "545fd4fb903eb5dbcdaab161699b65c58aea74a9e2673c3c0e6d89c47d035180",
+   "query": "standardization nearest neighbor performance"
+  },
+  {
+   "id": "arxiv:0906.1814",
+   "title": "Large-Margin kNN Classification Using a Deep Encoder Network",
+   "authors": [
+    "Martin Renqiang Min",
+    "David A. Stanley",
+    "Zineng Yuan",
+    "Anthony Bonner",
+    "Zhaolei Zhang"
+   ],
+   "year": 2009,
+   "venue": "arXiv",
+   "abstract": "KNN is one of the most popular classification methods, but it often fails to work well with inappropriate choice of distance metric or due to the presence of numerous class-irrelevant features. Linear feature transformation methods have been widely applied to extract class-relevant information to improve kNN classification, which is very limited in many applications. Kernels have been used to learn powerful non-linear feature transformations, but these methods fail to scale to large datasets. In this paper, we present a scalable non-linear feature mapping method based on a deep neural network pretrained with restricted boltzmann machines for improving kNN classification in a large-margin framework, which we call DNet-kNN. DNet-kNN can be used for both classification and for supervised dimensionality reduction. The experimental results on two benchmark handwritten digit datasets show that DNet-kNN has much better performance than large-margin kNN using a linear mapping and kNN based on a deep autoencoder pretrained with retricted boltzmann machines.",
+   "url": "http://arxiv.org/abs/0906.1814v1",
+   "source": "arxiv",
+   "cache_key": "f16a05b747a85f6304381aa063b34492b97cbf504519882738962e8bcad6dd5a",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "arxiv:2112.15085",
+   "title": "Feature Extraction, Classification and Prediction for Hand Hygiene Gestures with KNN Algorithm",
+   "authors": [
+    "Rashmi Bakshi"
+   ],
+   "year": 2021,
+   "venue": "arXiv",
+   "abstract": "There are six, well-structured hand gestures for washing hands as provided by World Health Organisation guidelines. In this paper, hand features such as contours of the hands, the centroid of the hands, and extreme hand points along the largest contour are extracted for specific hand-washing gestures with the use of a computer vision library, OpenCV. For this project, a robust dataset of hand hygiene video recordings is built with the help of 30 research participants. In this work, a subset of the dataset was used as a pilot study to demonstrate the effectiveness of the KNN algorithm. Extracted hand features saved in a CSV file are passed to a KNN model with a cross-fold validation technique for the classification and prediction of the unlabelled data. A mean accuracy score of >95% is achieved and proves that the KNN algorithm with an appropriate input value of K=3 is efficient for hand hygiene gestures classification.",
+   "url": "http://arxiv.org/abs/2112.15085v2",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.24963/ijcai.2024/670",
+   "title": "MediTab: Scaling Medical Tabular Data Predictors via Data Consolidation, Enrichment, and Refinement",
+   "authors": [
+    "Zifeng Wang",
+    "Chufan Gao",
+    "Cao Xiao",
+    "Jimeng Sun"
+   ],
+   "year": 2024,
+   "venue": "Proceedings of the Thirty-ThirdInternational Joint Conference on Artificial Intelligence",
+   "abstract": "Tabular data prediction has been employed in medical applications such as patient health risk prediction. However, existing methods usually revolve around the algorithm design while overlooking the significance of data engineering. Medical tabular datasets frequently exhibit significant heterogeneity across different sources, with limited sample sizes per source. As such, previous predictors are often trained on manually curated small datasets that struggle to generalize across different tabular datasets during inference. This paper proposes to scale medical tabular data predictors (MediTab) to various tabular inputs with varying features. The method uses a data engine that leverages large language models (LLMs) to consolidate tabular samples to overcome the barrier across tables with distinct schema. It also aligns out-domain data with the target task using a \"learn, annotate, and refinement'' pipeline. The expanded training data then enables the pre-trained MediTab to infer for arbitrary tabular input in the domain without fine-tuning, resulting in significant improvements over supervised baselines: it reaches an average ranking of 1.57 and 1.00 on 7 patient outcome prediction datasets and 3 trial outcome prediction datasets, respectively. In addition, MediTab exhibits impressive zero-shot performances: it outperforms supervised XGBoost models by 8.9% and 17.2% on average in two prediction tasks, respectively.",
+   "url": "https://doi.org/10.24963/ijcai.2024/670",
+   "source": "crossref",
+   "cache_key": "11cedd91e3470c470d32191d1568043de9cf0435ef57e8437a639e38dbabbe33",
+   "query": "tabular data scaling distance accuracy"
+  },
+  {
+   "id": "arxiv:1904.03391",
+   "title": "KNN and ANN-based Recognition of Handwritten Pashto Letters using Zoning Features",
+   "authors": [
+    "Sulaiman Khan",
+    "Hazrat Ali",
+    "Zahid Ullah",
+    "Nasru Minallah",
+    "Shahid Maqsood",
+    "Abdul Hafeez"
+   ],
+   "year": 2019,
+   "venue": "arXiv",
+   "abstract": "This paper presents a recognition system for handwritten Pashto letters. However, handwritten character recognition is a challenging task. These letters not only differ in shape and style but also vary among individuals. The recognition becomes further daunting due to the lack of standard datasets for inscribed Pashto letters. In this work, we have designed a database of moderate size, which encompasses a total of 4488 images, stemming from 102 distinguishing samples for each of the 44 letters in Pashto. The recognition framework uses zoning feature extractor followed by K-Nearest Neighbour (KNN) and Neural Network (NN) classifiers for classifying individual letter. Based on the evaluation of the proposed system, an overall classification accuracy of approximately 70.05% is achieved by using KNN while 72% is achieved by using NN.",
+   "url": "http://arxiv.org/abs/1904.03391v2",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.35671/telematika.v18i1.3055",
+   "title": "Improving Alzheimer's Disease Prediction Accuracy using Feature Selection, K Fold Cross Validation, and KNN Imputer Techniques",
+   "authors": [
+    "Kirso Kirso"
+   ],
+   "year": 2025,
+   "venue": "Telematika",
+   "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative disorder characterized by cognitive decline and memory loss; it accounts for 60–70% of dementia cases. Early diagnosis remains challenging due to the subtlety of its symptoms. This study explores the effectiveness of ensemble methods, feature selection techniques, and imputation strategies in enhancing the accuracy of AD diagnosis. We applied an ensemble method with Chi-Square feature selection, achieving a high accuracy of 95.733% with 7 optimal features. The combination of classifiers, including Gradient Boosting (GB), Support Vector Machine (SVM), and Logistic Regression (LR), contributed to the high performance. Additionally, the use of KNN Imputer and K-Fold Cross Validation significantly improved accuracy, regardless of whether feature selection was employed. Notably, feature selection slightly reduced model complexity but resulted in a marginal decrease in accuracy. The study highlights the importance of these methods in achieving reliable AD predictions, though dataset dependency and potential biases from methodological choices are acknowledged. Future work may involve exploring alternative classifiers and validating findings across diverse datasets to enhance generalizability and address these limitations.",
+   "url": "https://doi.org/10.35671/telematika.v18i1.3055",
+   "source": "crossref",
+   "cache_key": "0f5712a561512460b4c8bd1ab8f73c06ace6a40d8dd8343c9f4499e2201ad4be",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:1712.10152",
+   "title": "Exploring the significance of using perceptually relevant image decolorization method for scene classification",
+   "authors": [
+    "V. Sowmya",
+    "D. Govind",
+    "K. P. Soman"
+   ],
+   "year": 2017,
+   "venue": "arXiv",
+   "abstract": "A color image contains luminance and chrominance components representing the intensity and color information respectively. The objective of the work presented in this paper is to show the significance of incorporating the chrominance information for the task of scene classification. An improved color-to-grayscale image conversion algorithm by effectively incorporating the chrominance information is proposed using color-to-gay structure similarity index (C2G-SSIM) and singular value decomposition (SVD) to improve the perceptual quality of the converted grayscale images. The experimental result analysis based on the image quality assessment for image decolorization called C2G-SSIM and success rate (Cadik and COLOR250 datasets) shows that the proposed image decolorization technique performs better than 8 existing benchmark algorithms for image decolorization. In the second part of the paper, the effectiveness of incorporating the chrominance component in scene classification task is demonstrated using the deep belief network (DBN) based image classification system developed using dense scale invariant feature transform (SIFT) as features. The levels of chrominance information incorporated by the proposed image decolorization technique is confirmed by the improvement in the overall scene classification accuracy . Also, the overall scene classification performance is improved by the combination of models obtained using the proposed and the conventional decolorization methods.",
+   "url": "http://arxiv.org/abs/1712.10152v1",
+   "source": "arxiv",
+   "cache_key": "f16a05b747a85f6304381aa063b34492b97cbf504519882738962e8bcad6dd5a",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "doi:10.36227/techrxiv.21350820.v1",
+   "title": "KeySight: Mathematical Analysis to Increase Speed and Accuracy of Computer Stereo Vision Systems Using Multiple Cameras with Keypoint Feature Detection and KNN Matching",
+   "authors": [
+    "Satvik Mahendra"
+   ],
+   "year": 2022,
+   "venue": "",
+   "abstract": "In this paper, a mathematical approach was used to improve stereo vision. The speed at which objects in multiple stereo images could be matched was improved using keypoints, and the use of multiple stereo images helped to improve the accuracy of the system. A three camera stereo vision system was built as a testbed to validate the approaches proposed in this paper. The research in this project can be applied as a fast and less costly method to optimize stereo vision systems with many uses such as in household robotics and autonomous vehicles. Stereo vision is the process of passively recovering object depth from camera images by comparing two images from different cameras of the same scene. Distance to the object is computed by comparing the shift of an object between the two images. The objects that are closer in the scene will have a larger shift between the images, while objects that are further away will have a smaller shift. This shift of the objects in the image is known as the disparity. The larger the disparity, the closer the object. Sensitivity analysis was conducted on the stereo vision calculation formula to analyze how the separation between two stereo cameras affected the system’s ability to accurately compute the distance to objects. The results showed that as the separation between two stereo cameras is increased, the accuracy and range for distance calculation also increases. A three camera system was built with cameras 3, 4 and 7 inches apart. Current approaches for calculating object distance compares the stereo images by matching a block of pixels in one image to a corresponding block in the other image to identify the same object in both images. This method, known as “block matching”, is time consuming, preventing usability on autonomous vehicles that rely on real-time information. SIFT keypoint feature detection along with k-Nearest Neighbor (knn) matching were studied and used to match the objects between two images. Keypoints are points in an image with unique features that can be identified on a corresponding stereo image such as corners or edges. Each keypoint has its own descriptor, which is a mathematical array and can be compared to other keypoints in the corresponding stereo image in order to match them. This approach is faster because it only requires matching of important regions of the image. Using the 3 camera test bed, data was collected in two environments. First in a noisy environment with a lot of background objects. Second, with the same objects and a plain background.The use of keypoints was faster and provided real-time data that was used to filter out the matches between these keypoints led to more accurate results. Furthermore, cameras with higher separation between them (7 inches) were able to more accurately detect the distances to objects further away while cameras with 3 inches and 4 inches of separation could only find the distances to nearby objects accurately. Results showed that in the more noisy environments, the 3in and 4in camera separation system exceeded an error of ±5in when an object was 85in away, while the 7in camera separation system exceeded an error of ±5in when an object was 165in away. In less noisy environments, the 3in camera separation system exceeded an error of ±5in when object was 90in away, the 4in camera separation system exceeded an error of ±5in when object was 100in away, and the 7in camera separation system exceeded an error of ±5in when object was 200in away.",
+   "url": "https://doi.org/10.36227/techrxiv.21350820.v1",
+   "source": "crossref",
+   "cache_key": "0f5712a561512460b4c8bd1ab8f73c06ace6a40d8dd8343c9f4499e2201ad4be",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:2012.06047",
+   "title": "KNN Classification with One-step Computation",
+   "authors": [
+    "Shichao Zhang",
+    "Jiaye Li"
+   ],
+   "year": 2020,
+   "venue": "arXiv",
+   "abstract": "KNN classification is an improvisational learning mode, in which they are carried out only when a test data is predicted that set a suitable K value and search the K nearest neighbors from the whole training sample space, referred them to the lazy part of KNN classification. This lazy part has been the bottleneck problem of applying KNN classification due to the complete search of K nearest neighbors. In this paper, a one-step computation is proposed to replace the lazy part of KNN classification. The one-step computation actually transforms the lazy part to a matrix computation as follows. Given a test data, training samples are first applied to fit the test data with the least squares loss function. And then, a relationship matrix is generated by weighting all training samples according to their influence on the test data. Finally, a group lasso is employed to perform sparse learning of the relationship matrix. In this way, setting K value and searching K nearest neighbors are both integrated to a unified computation. In addition, a new classification rule is proposed for improving the performance of one-step KNN classification. The proposed approach is experimentally evaluated, and demonstrated that the one-step KNN classification is efficient and promising",
+   "url": "http://arxiv.org/abs/2012.06047v2",
+   "source": "arxiv",
+   "cache_key": "f16a05b747a85f6304381aa063b34492b97cbf504519882738962e8bcad6dd5a",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "arxiv:2311.18718",
+   "title": "The Feature Speed Formula: a flexible approach to scale hyper-parameters of deep neural networks",
+   "authors": [
+    "Lénaïc Chizat",
+    "Praneeth Netrapalli"
+   ],
+   "year": 2023,
+   "venue": "arXiv",
+   "abstract": "Deep learning succeeds by doing hierarchical feature learning, yet tuning hyper-parameters (HP) such as initialization scales, learning rates etc., only give indirect control over this behavior. In this paper, we introduce a key notion to predict and control feature learning: the angle $θ_\\ell$ between the feature updates and the backward pass (at layer index $\\ell$). We show that the magnitude of feature updates after one GD step, at any training time, can be expressed via a simple and general \\emph{feature speed formula} in terms of this angle $θ_\\ell$, the loss decay, and the magnitude of the backward pass. This angle $θ_\\ell$ is controlled by the conditioning of the layer-to-layer Jacobians and at random initialization, it is determined by the spectrum of a certain kernel, which coincides with the Neural Tangent Kernel when $\\ell=\\text{depth}$. Given $θ_\\ell$, the feature speed formula provides us with rules to adjust HPs (scales and learning rates) so as to satisfy certain dynamical properties, such as feature learning and loss decay. We investigate the implications of our approach for ReLU MLPs and ResNets in the large width-then-depth limit. Relying on prior work, we show that in ReLU MLPs with iid initialization, the angle degenerates with depth as $\\cos(θ_\\ell)=Θ(1/\\sqrt{\\ell})$. In contrast, ResNets with branch scale $O(1/\\sqrt{\\text{depth}})$ maintain a non-degenerate angle $\\cos(θ_\\ell)=Θ(1)$. We use these insights to recover key properties of known HP scalings and also to introduce a new HP scaling for large depth ReLU MLPs with favorable theoretical properties.",
+   "url": "http://arxiv.org/abs/2311.18718v4",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.70609/g-tech.v10i3.10315",
+   "title": "Application of the K-Nearest Neighbor Algorithm for Performance Classification Based on Students' Academic Performance and Lifestyle",
+   "authors": [
+    "Zaehol Fatah"
+   ],
+   "year": 2026,
+   "venue": "G-Tech: Jurnal Teknologi Terapan",
+   "abstract": "Conventional student performance evaluation mechanisms often fail to detect a decline in performance in a timely manner because they overlook non-academic factors. This study aims to build a comprehensive student performance classification model by simultaneously integrating academic performance and lifestyle patterns using the k-Nearest Neighbor (k-NN) algorithm. The research method utilizes 1,000 student datasets from Kaggle, which were divided using the Stratified Split method into 80% training data and 20% test data. Simulations were run using RapidMiner Studio software with the Euclidean Distance metric and varying k values of 3, 5, and 7. Experimental results show the model achieved a peak global accuracy of 97% at the optimal k value of 5, where the model successfully classified 194 out of 200 test data samples correctly. Lifestyle attributes independently influence students’ academic performance, with the number of study hours per day being the most significant predictor (47.94%). Sensitivity analysis confirms that k=5 is the optimal value to avoid data noise at k=3 (94.50%) and oversmoothing at k=7. In conclusion, this k-NN-based model is highly suitable for application as an early warning system for schools to provide proactive and personalized pedagogical interventions.",
+   "url": "https://doi.org/10.70609/g-tech.v10i3.10315",
+   "source": "crossref",
+   "cache_key": "155ccdba55616733aaa8fc4ccffb5618aa4e21b348583765585906b3ccc68ed0",
+   "query": "standardization nearest neighbor performance"
+  },
+  {
+   "id": "doi:10.36227/techrxiv.21350820",
+   "title": "KeySight: Mathematical Analysis to Increase Speed and Accuracy of Computer Stereo Vision Systems Using Multiple Cameras with Keypoint Feature Detection and KNN Matching",
+   "authors": [
+    "Satvik Mahendra"
+   ],
+   "year": 2022,
+   "venue": "",
+   "abstract": "&lt;p&gt;In this paper, a mathematical approach was used to improve stereo vision. The speed at which objects in multiple stereo images could be matched was improved using keypoints, and the use of multiple stereo images helped to improve the accuracy of the system. A three camera stereo vision system was built as a testbed to validate the approaches proposed in this paper. The research in this project can be applied as a fast and less costly method to optimize stereo vision systems with many uses such as in household robotics and autonomous vehicles.&lt;/p&gt; &lt;p&gt;Stereo vision is the process of passively recovering object depth from camera images by comparing two images from different cameras of the same scene. Distance to the object is computed by comparing the shift of an object between the two images. The objects that are closer in the scene will have a larger shift between the images, while objects that are further away will have a smaller shift. This shift of the objects in the image is known as the disparity. The larger the disparity, the closer the object.&lt;/p&gt; &lt;p&gt;Sensitivity analysis was conducted on the stereo vision calculation formula to analyze how the separation between two stereo cameras affected the system's ability to accurately compute the distance to objects. The results showed that as the separation between two stereo cameras is increased, the accuracy and range for distance calculation also increases. A three camera system was built with cameras 3, 4 and 7 inches apart.&lt;/p&gt; &lt;p&gt;Current approaches for calculating object distance compares the stereo images by matching a block of pixels in one image to a corresponding block in the other image to identify the same object in both images. This method, known as “block matching”, is time consuming, preventing usability on autonomous vehicles that rely on real-time information. SIFT keypoint feature detection along with k-Nearest Neighbor (knn) matching were studied and used to match the objects between two images. Keypoints are points in an image with unique features that can be identified on a corresponding stereo image such as corners or edges. Each keypoint has its own descriptor, which is a mathematical array and can be compared to other keypoints in the corresponding stereo image in order to match them. This approach is faster because it only requires matching of important regions of the image. Using the 3 camera test bed, data was collected in two environments. First in a noisy environment with a lot of background objects. Second, with the same objects and a plain background.The use of keypoints was faster and provided real-time data that was used to filter out the matches between these keypoints led to more accurate results. Furthermore, cameras with higher separation between them (7 inches) were able to more accurately detect the distances to objects further away while cameras with 3 inches and 4 inches of separation could only find the distances to nearby objects accurately. &lt;/p&gt; &lt;p&gt;Results showed that in the more noisy environments, the 3in and 4in camera separation system exceeded an error of ±5in when an object was 85in away, while the 7in camera separation system exceeded an error of ±5in when an object was 165in away. In less noisy environments, the 3in camera separation system exceeded an error of ±5in when object was 90in away, the 4in camera separation system exceeded an error of ±5in when object was 100in away, and the 7in camera separation system exceeded an error of ±5in when object was 200in away.&lt;/p&gt;",
+   "url": "https://doi.org/10.36227/techrxiv.21350820",
+   "source": "crossref",
+   "cache_key": "0f5712a561512460b4c8bd1ab8f73c06ace6a40d8dd8343c9f4499e2201ad4be",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:2103.09704",
+   "title": "Reachable Distance Function for KNN Classification",
+   "authors": [
+    "Shichao Zhang",
+    "Jiaye Li",
+    "Yangding Li"
+   ],
+   "year": 2021,
+   "venue": "arXiv",
+   "abstract": "Distance function is a main metrics of measuring the affinity between two data points in machine learning. Extant distance functions often provide unreachable distance values in real applications. This can lead to incorrect measure of the affinity between data points. This paper proposes a reachable distance function for KNN classification. The reachable distance function is not a geometric direct-line distance between two data points. It gives a consideration to the class attribute of a training dataset when measuring the affinity between data points. Concretely speaking, the reachable distance between data points includes their class center distance and real distance. Its shape looks like \"Z\", and we also call it a Z distance function. In this way, the affinity between data points in the same class is always stronger than that in different classes. Or, the intraclass data points are always closer than those interclass data points. We evaluated the reachable distance with experiments, and demonstrated that the proposed distance function achieved better performance in KNN classification.",
+   "url": "http://arxiv.org/abs/2103.09704v2",
+   "source": "arxiv",
+   "cache_key": "f16a05b747a85f6304381aa063b34492b97cbf504519882738962e8bcad6dd5a",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "arxiv:2105.01713",
+   "title": "A Fast Partial Video Copy Detection Using KNN and Global Feature Database",
+   "authors": [
+    "Weijun Tan",
+    "Hongwei Guo",
+    "Rushuai Liu"
+   ],
+   "year": 2021,
+   "venue": "arXiv",
+   "abstract": "We propose a fast partial video copy detection framework in this paper. In this framework all frame features of the reference videos are organized in a KNN searchable database. Instead of scanning all reference videos, the query video segment does a fast KNN search in the global feature database. The returned results are used to generate a short list of candidate videos. A modified temporal network is then used to localize the copy segment in the candidate videos. We evaluate different choice of CNN features on the VCDB dataset. Our benchmark F1 score exceeds the state of the art by a big margin.",
+   "url": "http://arxiv.org/abs/2105.01713v2",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.3390/math14122183",
+   "title": "A Robust Few-Shot Metric Learning Framework for Enterprise Financial Risk Prediction on Imbalanced Tabular Data",
+   "authors": [
+    "Dawei Ma",
+    "Zhengliang Ren",
+    "Xueying Tan",
+    "Peng Nie"
+   ],
+   "year": 2026,
+   "venue": "Mathematics",
+   "abstract": "Enterprise financial risk prediction is a fundamental task in financial risk management, yet its performance is often hindered by severe class imbalance, cross-enterprise heterogeneity, and the limited availability of labeled risky samples. These challenges are particularly pronounced in few-shot settings, where conventional machine learning and deep classification models tend to suffer from unstable representation learning, feature collapse, and weak decision boundaries. To address this issue, this study proposes a hierarchical metric learning framework for few-shot enterprise financial risk prediction on imbalanced tabular data. The framework integrates a state-space feature embedding network, an Adaptive Spectral Decomposition and Multi-Scale State Embedding module, and a Hierarchical Metric Manifold Alignment mechanism to enhance risk-sensitive representation learning, preserve geometric consistency across embedding levels, and improve prototype-based discrimination in the metric space. Experiments are conducted on three public datasets, namely American Bankruptcy, Corporate Financial Risk Assessment, and Enterprise Financial Network, under a unified 2-way 20-shot setting. The proposed method consistently achieves the best overall performance across Precision, Recall, Accuracy, F1-score, and AUC, with AUC values of 0.9526, 0.9687, and 0.9716 on the three datasets, respectively. Ablation studies and visual analyses further show that the proposed framework improves intra-class compactness, inter-class separability, and classification robustness under highly imbalanced conditions. These findings indicate that the proposed method provides an effective and robust machine learning solution for enterprise financial risk prediction and early warning in data-scarce financial scenarios.",
+   "url": "https://doi.org/10.3390/math14122183",
+   "source": "crossref",
+   "cache_key": "97516c5e7082322a2db9d6a4aca7a053cfdc778b469bc9b02561f49e149b06e3",
+   "query": "distance metric tabular data accuracy"
+  },
+  {
+   "id": "arxiv:2502.17119",
+   "title": "Diffusion and Flow Matching Models for Tabular Data: A Survey",
+   "authors": [
+    "Zhong Li",
+    "Qi Huang",
+    "Lincen Yang",
+    "Jiayang Shi",
+    "Zhao Yang",
+    "Niki van Stein",
+    "Thomas Bäck",
+    "Matthijs van Leeuwen"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "abstract": "Deep generative models have made rapid progress in image, text, audio, and video generation, and are increasingly being applied to structured records. For tabular data, however, generative modeling remains difficult: a dataset may contain numerical and categorical attributes, missing values, sensitive fields, imbalanced categories, complex feature dependencies, and domain constraints. Earlier tabular data modeling methods based on GANs or VAEs have achieved useful results, but they can suffer from unstable training, mode collapse, weak modeling of multimodal distributions, and fragile handling of mixed-type features. Diffusion models have therefore attracted growing interest because their noising-and-denoising formulation provides a flexible and stable way to model complex data distributions, and has been adapted to tabular synthesis, missing-value imputation, trustworthy data generation, and anomaly detection. Flow matching offers a closely related route by learning transport vector fields along probability paths, often with more direct control over path design and sampling efficiency. Despite this progress, the literature on diffusion and flow matching models for tabular data remains difficult to compare because methods target different tasks and rely on different representations, objectives, evaluation protocols, and domain assumptions. To the best of our knowledge, this is the first survey dedicated specifically to diffusion and flow matching models for tabular data. We review work from June 2015 to May 2026, organize it around data-engineering challenges, tasks, design choices, and evaluation dimensions, and discuss open problems in scalability, feature dependency modeling, privacy, fairness, benchmarking, and constraint-aware generation. We maintain updates in a GitHub repository.",
+   "url": "http://arxiv.org/abs/2502.17119v2",
+   "source": "arxiv",
+   "cache_key": "4873105738b68d1115b10fe1655c75c5f328093ef234fad69b5500a68e296d4b",
+   "query": "distance metric tabular data accuracy"
+  },
+  {
+   "id": "arxiv:2605.11313",
+   "title": "Performance bounds for nearest neighbor search with k-d trees",
+   "authors": [
+    "Marco Bazzani",
+    "Sanjoy Dasgupta"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "abstract": "The $k$-d tree is one of the oldest and most widely used data structures for nearest neighbor search. It partitions Euclidean space into axis-aligned rectangular cells. There are two standard ways to find the nearest neighbor to a query in a $k$-d tree. Defeatist search returns the closest data point in the query's cell, while comprehensive search also searches other cells as needed to guarantee it finds the nearest neighbor. Both strategies are commonly believed to perform poorly in high dimensions, but there have been few theoretical results explaining this. We prove non-asymptotic bounds on the runtime of comprehensive search and the accuracy of defeatist search. Under mild distributional assumptions, when the dimension $d$ is at least polylogarithmic in the number of data points, defeatist search is no more likely to return the nearest neighbor than random guessing, and comprehensive search visits every cell with high probability. We also show that on uniform data, with high probability, comprehensive search visits at most $2^{\\mathcal{O}(d)}$ cells when each cell contains at least logarithmically many data points, and defeatist search returns the nearest neighbor when each cell additionally contains at least $2^{\\mathcal{O}(d \\log d)}$ data points. Finally, for arbitrary absolutely continuous distributions, we upper bound the expected distance between the query and the point returned by defeatist search.",
+   "url": "http://arxiv.org/abs/2605.11313v1",
+   "source": "arxiv",
+   "cache_key": "545fd4fb903eb5dbcdaab161699b65c58aea74a9e2673c3c0e6d89c47d035180",
+   "query": "standardization nearest neighbor performance"
+  },
+  {
+   "id": "arxiv:1711.07568",
+   "title": "On Nearest Neighbors in Non Local Means Denoising",
+   "authors": [
+    "Iuri Frosio",
+    "Jan Kautz"
+   ],
+   "year": 2017,
+   "venue": "arXiv",
+   "abstract": "To denoise a reference patch, the Non-Local-Means denoising filter processes a set of neighbor patches. Few Nearest Neighbors (NN) are used to limit the computational burden of the algorithm. Here here we show analytically that the NN approach introduces a bias in the denoised patch, and we propose a different neighbors' collection criterion, named Statistical NN (SNN), to alleviate this issue. Our approach outperforms the traditional one in case of both white and colored noise: fewer SNNs generate images of higher quality, at a lower computational cost.",
+   "url": "http://arxiv.org/abs/1711.07568v1",
+   "source": "arxiv",
+   "cache_key": "545fd4fb903eb5dbcdaab161699b65c58aea74a9e2673c3c0e6d89c47d035180",
+   "query": "standardization nearest neighbor performance"
+  },
+  {
+   "id": "arxiv:1108.2054",
+   "title": "Uncertain Nearest Neighbor Classification",
+   "authors": [
+    "Fabrizio Angiulli",
+    "Fabio Fassetti"
+   ],
+   "year": 2011,
+   "venue": "arXiv",
+   "abstract": "This work deals with the problem of classifying uncertain data. With this aim the Uncertain Nearest Neighbor (UNN) rule is here introduced, which represents the generalization of the deterministic nearest neighbor rule to the case in which uncertain objects are available. The UNN rule relies on the concept of nearest neighbor class, rather than on that of nearest neighbor object. The nearest neighbor class of a test object is the class that maximizes the probability of providing its nearest neighbor. It is provided evidence that the former concept is much more powerful than the latter one in the presence of uncertainty, in that it correctly models the right semantics of the nearest neighbor decision rule when applied to the uncertain scenario. An effective and efficient algorithm to perform uncertain nearest neighbor classification of a generic (un)certain test object is designed, based on properties that greatly reduce the temporal cost associated with nearest neighbor class probability computation. Experimental results are presented, showing that the UNN rule is effective and efficient in classifying uncertain data.",
+   "url": "http://arxiv.org/abs/1108.2054v1",
+   "source": "arxiv",
+   "cache_key": "545fd4fb903eb5dbcdaab161699b65c58aea74a9e2673c3c0e6d89c47d035180",
+   "query": "standardization nearest neighbor performance"
+  }
+ ],
+ "evidence": [
+  {
+   "id": "E2",
+   "claim": "The use of keypoints in KNN matching with stereo vision improves both the speed and accuracy of distance estimation, indicating that feature representation and selection can enhance KNN performance in spatial data, though this is in a specific application context.",
+   "quote": "The use of keypoints was faster and provided real-time data that was used to filter out the matches between these keypoints led to more accurate results. Furthermore, cameras with higher separation between them (7 inches) were able to more accurately detect the distances to objects further away while cameras with 3 inches and 4 inches of separation could only find the distances to nearby objects accurately.",
+   "citation": {
+    "identifier": "doi:10.36227/techrxiv.21350820.v1",
+    "title": "KeySight: Mathematical Analysis to Increase Speed and Accuracy of Computer Stereo Vision Systems Using Multiple Cameras with Keypoint Feature Detection and KNN Matching",
+    "first_author": "Satvik Mahendra",
+    "year": 2022
+   },
+   "concepts": [
+    "k-nearest-neighbour",
+    "accuracy",
+    "feature scaling"
+   ],
+   "stance": "context"
+  }
+ ],
+ "gaps": [
+  {
+   "id": "G1",
+   "description": "The evidence from E2 focuses on the use of keypoints in stereo vision for KNN matching in spatial data, highlighting improvements in speed and accuracy of distance estimation. However, it does not address feature scaling (e.g., standardisation) of tabular data features prior to KNN classification. The context is specific to stereo vision and spatial distance estimation, not to tabular data with features on different scales. Thus, the claim about standardising features before KNN in tabular data is not tested or supported by this evidence.",
+   "concepts": [
+    "feature scaling",
+    "tabular data",
+    "k-nearest-neighbour",
+    "accuracy"
+   ],
+   "evidence_ids": [
+    "E2"
+   ],
+   "kind": "uncovered"
+  },
+  {
+   "id": "G2",
+   "description": "The evidence from E2 does not evaluate or compare KNN performance with and without feature standardisation in any dataset involving tabular data. The study does not explore how feature scale differences affect KNN accuracy in classification tasks on structured, non-spatial data. Therefore, the potential impact of standardisation on classification accuracy in tabular datasets remains untested.",
+   "concepts": [
+    "feature scaling",
+    "log scale",
+    "k-nearest-neighbour",
+    "classification accuracy",
+    "tabular data"
+   ],
+   "evidence_ids": [
+    "E2"
+   ],
+   "kind": "uncovered"
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "H1",
+   "statement": "Standardising features prior to k-nearest-neighbour classification improves classification accuracy on tabular datasets with features on different scales.",
+   "independent_variable": "feature standardisation (i.e., scaling features to unit variance)",
+   "dependent_variable": "classification accuracy (e.g., F1-score or accuracy on a held-out test set)",
+   "expected_direction": "increase",
+   "gap_ids": [
+    "G1",
+    "G2"
+   ],
+   "evidence_ids": [
+    "E2"
+   ],
+   "rationale": "This hypothesis directly addresses the gap in evidence regarding the impact of feature scaling on KNN classification in tabular data. Although E2 discusses KNN performance in stereo vision, it does not test or evaluate feature scaling in tabular data. The hypothesis is falsifiable because if a tabular dataset with features on different scales shows no improvement or a decrease in classification accuracy after standardisation, the hypothesis is refuted. The expected direction (increase) is based on the general understanding in machine learning that feature scaling prevents features with large ranges from dominating distance calculations in KNN, thereby improving the geometric representation of data in feature space."
+  },
+  {
+   "id": "H2",
+   "statement": "Feature scaling prior to k-nearest-neighbour classification reduces the influence of features with high magnitude on distance calculations, leading to more balanced neighborhood definitions in high-dimensional tabular data.",
+   "independent_variable": "feature scaling (standardisation)",
+   "dependent_variable": "feature influence on distance metrics (e.g., mean absolute difference in feature contributions to Euclidean distance)",
+   "expected_direction": "decrease",
+   "gap_ids": [
+    "G1",
+    "G2"
+   ],
+   "evidence_ids": [
+    "E2"
+   ],
+   "rationale": "This hypothesis focuses on a mechanistic aspect of KNN performance—how feature scaling affects the relative contribution of each feature to distance computation. While E2 does not evaluate this, it establishes that KNN performance in a spatial context is sensitive to feature representation. This hypothesis can be tested by computing the contribution of each feature to pairwise distances before and after standardisation in a public tabular dataset (e.g., from UCI or Kaggle). If the influence of high-magnitude features decreases after scaling, the hypothesis is supported; otherwise, it is falsified."
+  }
+ ],
+ "designs": [
+  {
+   "id": "D1",
+   "hypothesis_id": "H1",
+   "datasets": [
+    "breast_cancer",
+    "wine_binary",
+    "digits_binary"
+   ],
+   "model": "knn",
+   "control": "knn",
+   "treatments": [
+    "knn+standardize"
+   ],
+   "metrics": [
+    "f1"
+   ],
+   "test": "paired_wilcoxon",
+   "split": "stratified_kfold",
+   "folds": 5,
+   "seeds": [
+    123,
+    456,
+    789
+   ],
+   "rationale": "The experiment tests the hypothesis that standardising features improves classification accuracy in KNN on tabular datasets with features on different scales. The control condition (knn) evaluates performance without any feature scaling, while the treatment condition (knn+standardize) applies feature standardisation. The F1-score is used as the dependent variable because it directly measures classification performance in imbalanced or multi-class settings, which are common in tabular data. The three datasets represent diverse feature dimensions and sample sizes: breast_cancer (30 features, 569 samples), wine_binary (13 features, 178 samples), and digits_binary (64 features, 1797 samples), ensuring a range of scale and complexity. A paired Wilcoxon test is used because it assesses differences in F1 scores between the control and treatment conditions, accounting for the same model and dataset instances. Five-fold cross-validation ensures robust performance estimation, and three random seeds ensure reproducibility and reduce variance due to stochasticity. The choice of these datasets and conditions directly addresses the gap (G1, G2) by testing feature scaling in real tabular data, unlike E2 which focuses on stereo vision."
+  },
+  {
+   "id": "D2",
+   "hypothesis_id": "H2",
+   "datasets": [
+    "digits_binary"
+   ],
+   "model": "knn",
+   "control": "knn",
+   "treatments": [
+    "knn+standardize"
+   ],
+   "metrics": [
+    "mean_absolute_difference_in_feature_contributions_to_euclidean_distance"
+   ],
+   "test": "paired_wilcoxon",
+   "split": "stratified_kfold",
+   "folds": 5,
+   "seeds": [
+    123,
+    456
+   ],
+   "rationale": "The hypothesis concerns the influence of feature magnitude on distance metrics in KNN, specifically how feature scaling (standardisation) affects the relative contribution of each feature to Euclidean distance. To test this, we select 'digits_binary' (1797 x 64) as the dataset because it has high dimensionality and a large number of features, which amplifies the potential for high-magnitude features to dominate distance calculations. The control condition uses unstandardised KNN, while the treatment condition applies standardisation to the features before distance computation. We compute the mean absolute difference in feature contributions to Euclidean distance across all pairs of samples, both before and after standardisation. This metric directly reflects the hypothesis’s dependent variable. A paired Wilcoxon test is used to compare the distributions of these differences, as it is appropriate for non-normal, paired observations. Five-fold cross-validation ensures robustness, and two random seeds (123, 456) are used to ensure reproducibility and reduce variance due to randomness in data splits. The choice of 'digits_binary' ensures a high-dimensional, tabular context where feature scaling effects are most pronounced."
+  }
+ ],
+ "results": [
+  {
+   "id": "R1",
+   "design_id": "D1",
+   "conditions": [
+    {
+     "condition": "knn",
+     "dataset": "breast_cancer",
+     "metric": "f1",
+     "values": [
+      0.9444444444444444,
+      0.9444444444444444,
+      0.9517241379310345,
+      0.9655172413793104,
+      0.951048951048951,
+      0.9583333333333334,
+      0.9583333333333334,
+      0.9517241379310345,
+      0.9139072847682119,
+      0.9517241379310345,
+      0.9295774647887324,
+      0.9523809523809523,
+      0.96,
+      0.9517241379310345,
+      0.9370629370629371
+     ],
+     "mean": 0.9481297959139191,
+     "lo": 0.9411543689736225,
+     "hi": 0.9538483151784267
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "breast_cancer",
+     "metric": "f1",
+     "values": [
+      0.9530201342281879,
+      0.9523809523809523,
+      0.9793103448275862,
+      1.0,
+      0.9929078014184397,
+      0.9722222222222222,
+      0.9857142857142858,
+      0.9659863945578231,
+      0.96,
+      0.9790209790209791,
+      0.9722222222222222,
+      0.9655172413793104,
+      0.96,
+      1.0,
+      0.965034965034965
+     ],
+     "mean": 0.9735558362004647,
+     "lo": 0.9663803708621342,
+     "hi": 0.9811891023699113
+    },
+    {
+     "condition": "knn",
+     "dataset": "wine_binary",
+     "metric": "f1",
+     "values": [
+      0.8888888888888888,
+      0.9166666666666666,
+      0.8333333333333334,
+      0.7619047619047619,
+      0.7058823529411765,
+      0.8181818181818182,
+      0.8695652173913043,
+      0.8,
+      0.88,
+      0.8333333333333334,
+      0.9565217391304348,
+      0.9166666666666666,
+      0.8571428571428571,
+      0.7272727272727273,
+      0.8461538461538461
+     ],
+     "mean": 0.8407676139338544,
+     "lo": 0.8068525678167623,
+     "hi": 0.8732961587905322
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "wine_binary",
+     "metric": "f1",
+     "values": [
+      1.0,
+      0.9230769230769231,
+      0.8888888888888888,
+      0.96,
+      1.0,
+      0.9230769230769231,
+      1.0,
+      1.0,
+      0.9230769230769231,
+      0.9565217391304348,
+      1.0,
+      1.0,
+      0.96,
+      0.96,
+      0.9565217391304348
+     ],
+     "mean": 0.9634108757587021,
+     "lo": 0.9452323299888519,
+     "hi": 0.9810486064659979
+    },
+    {
+     "condition": "knn",
+     "dataset": "digits_binary",
+     "metric": "f1",
+     "values": [
+      0.9832402234636871,
+      0.9888268156424581,
+      1.0,
+      0.9859154929577465,
+      0.9859943977591037,
+      0.9915492957746479,
+      0.9917355371900827,
+      0.9887640449438202,
+      0.988950276243094,
+      0.9915492957746479,
+      0.9831460674157303,
+      0.994475138121547,
+      0.9943820224719101,
+      0.9747899159663865,
+      0.9943820224719101
+     ],
+     "mean": 0.9891800364131182,
+     "lo": 0.9860246082770605,
+     "hi": 0.9921751590485718
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "digits_binary",
+     "metric": "f1",
+     "values": [
+      0.9833333333333333,
+      0.9888268156424581,
+      0.9862258953168044,
+      0.9746478873239437,
+      0.9832402234636871,
+      0.9915966386554622,
+      0.9806094182825484,
+      0.9747899159663865,
+      0.988950276243094,
+      0.9801699716713881,
+      0.9723756906077348,
+      0.9860724233983287,
+      0.9859943977591037,
+      0.9775280898876404,
+      0.9888268156424581
+     ],
+     "mean": 0.982879186212958,
+     "lo": 0.9799155019732934,
+     "hi": 0.9858340652630987
+    }
+   ],
+   "comparisons": [
+    {
+     "dataset": "breast_cancer",
+     "metric": "f1",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": 0.02542604028654567,
+     "lo": 0.017699722715962977,
+     "hi": 0.033202965780986714,
+     "p": 0.0009815397525216685,
+     "effect_size_dz": 1.6658897282344627,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.001963079505043337
+    },
+    {
+     "dataset": "wine_binary",
+     "metric": "f1",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": 0.12264326182484749,
+     "lo": 0.08622213628939975,
+     "hi": 0.1623320224201298,
+     "p": 0.00006103515625,
+     "effect_size_dz": 1.5611340961606297,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.00018310546875
+    },
+    {
+     "dataset": "digits_binary",
+     "metric": "f1",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": -0.006300850200160039,
+     "lo": -0.009190693342922357,
+     "hi": -0.003375880828351464,
+     "p": 0.0057715890441035304,
+     "effect_size_dz": -1.0844173661700058,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.0057715890441035304
+    }
+   ],
+   "runtime_seconds": 0.562,
+   "summary": ""
+  }
+ ],
+ "critiques": [
+  {
+   "id": "C1",
+   "round": 1,
+   "target_id": "E1",
+   "stage": "evidence",
+   "issue": "quote_not_in_source",
+   "severity": "blocking",
+   "message": "The quoted text does not appear in the cited paper's record.",
+   "reviewer": "rule",
+   "resolution": "fixed",
+   "resolution_note": "E1 removed."
+  },
+  {
+   "id": "C2",
+   "round": 1,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'f1' is not the hypothesis's dependent variable 'classification accuracy (e.g., F1-score or accuracy on a held-out test set)'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C3",
+   "round": 1,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown metric 'mean_absolute_difference_in_feature_contributions_to_euclidean_distance'",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C4",
+   "round": 1,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'mean_absolute_difference_in_feature_contributions_to_euclidean_distance' is not the hypothesis's dependent variable 'feature influence on distance metrics (e.g., mean absolute difference in feature contributions to Euclidean distance)'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C5",
+   "round": 2,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'f1' is not the hypothesis's dependent variable 'classification accuracy (e.g., F1-score or accuracy on a held-out test set)'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C6",
+   "round": 2,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown metric 'mean_absolute_difference_in_feature_contributions_to_euclidean_distance'",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C7",
+   "round": 2,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'mean_absolute_difference_in_feature_contributions_to_euclidean_distance' is not the hypothesis's dependent variable 'feature influence on distance metrics (e.g., mean absolute difference in feature contributions to Euclidean distance)'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C8",
+   "round": 1,
+   "target_id": "K1",
+   "stage": "conclusion",
+   "issue": "verdict_mismatch",
+   "severity": "blocking",
+   "message": "The statistics support 'not_supported', not 'inconclusive'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C9",
+   "round": 2,
+   "target_id": "K1",
+   "stage": "conclusion",
+   "issue": "verdict_mismatch",
+   "severity": "blocking",
+   "message": "The statistics support 'not_supported', not 'inconclusive'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C10",
+   "round": 99,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'f1' is not the hypothesis's dependent variable 'classification accuracy (e.g., F1-score or accuracy on a held-out test set)'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C11",
+   "round": 99,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown metric 'mean_absolute_difference_in_feature_contributions_to_euclidean_distance'",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C12",
+   "round": 99,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'mean_absolute_difference_in_feature_contributions_to_euclidean_distance' is not the hypothesis's dependent variable 'feature influence on distance metrics (e.g., mean absolute difference in feature contributions to Euclidean distance)'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C13",
+   "round": 99,
+   "target_id": "K1",
+   "stage": "conclusion",
+   "issue": "verdict_mismatch",
+   "severity": "blocking",
+   "message": "The statistics support 'not_supported', not 'inconclusive'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  }
+ ],
+ "conclusions": [
+  {
+   "id": "K1",
+   "hypothesis_id": "H1",
+   "result_id": "R1",
+   "verdict": "inconclusive",
+   "statement": "The hypothesis is inconclusive at alpha = 0.05 because while the breast_cancer and wine_binary datasets show significant improvements in F1-score with standardization (mean_diff = 0.025 and 0.123, p_holm < 0.002), the digits_binary dataset shows a slight decrease (mean_diff = -0.006, p_holm = 0.0058), indicating inconsistent results across datasets. The Holm-adjusted p-values for the primary metric (F1) are below 0.05 for breast_cancer and wine_binary, but the negative effect in digits_binary introduces variability that contradicts a uniform increase.",
+   "evidence_ids": [
+    "E2"
+   ],
+   "limitations": [
+    "The study only evaluates three tabular datasets (breast_cancer, wine_binary, digits_binary) and does not generalize to other data types or scales; the digits_binary result shows a drop in F1-score, which contradicts the expected direction; the comparison in E2 is in stereo vision, not tabular data, so it does not directly support or refute the hypothesis; the effect sizes vary, and the negative result in digits_binary suggests the impact of standardization may depend on feature distribution and sample size."
+   ]
+  }
+ ],
+ "corrections": [],
+ "completed": [
+  "literature",
+  "evidence",
+  "gaps",
+  "hypotheses",
+  "design",
+  "analysis",
+  "conclusion",
+  "critique"
+ ],
+ "reviewed": {
+  "evidence": "none",
+  "hypotheses": "none",
+  "design": "none",
+  "conclusion": "none"
+ },
+ "error": null
+}

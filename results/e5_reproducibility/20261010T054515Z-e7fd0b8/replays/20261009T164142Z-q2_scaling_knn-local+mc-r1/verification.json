@@ -1,0 +1,61 @@
+{
+ "run_id": "20261009T164142Z-q2_scaling_knn-local+mc-r1",
+ "evidence": [
+  {
+   "evidence_id": "E1",
+   "citation": {
+    "identifier": "doi:10.30871/jaic.v9i3.9353",
+    "normalised": "doi:10.30871/jaic.v9i3.9353",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Comparison of Data Normalization Techniques on KNN Classification Performance for Pima Indians Diabetes Dataset",
+    "resolved_first_author": "Yohanes Dimas Pratama",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E2",
+   "citation": {
+    "identifier": "doi:10.1109/icfts62006.2025.11031668",
+    "normalised": "doi:10.1109/icfts62006.2025.11031668",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Optimizing Diabetic Retinopathy Screening with Machine Learning: A Data-Driven Approach",
+    "resolved_first_author": "Preethi. V",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  }
+ ],
+ "citations_emitted": 2
+}
