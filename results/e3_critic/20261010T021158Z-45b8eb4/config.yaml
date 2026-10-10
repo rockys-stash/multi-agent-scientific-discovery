@@ -1,0 +1,5 @@
+seed: 0
+max_targets_per_fault: 5
+model_critic: local
+model_trials_per_fault: 4
+model_clean_runs: 6

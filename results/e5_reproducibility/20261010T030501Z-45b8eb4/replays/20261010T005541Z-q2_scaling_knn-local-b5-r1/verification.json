@@ -1,0 +1,195 @@
+{
+ "run_id": "20261010T005541Z-q2_scaling_knn-local-b5-r1",
+ "evidence": [
+  {
+   "evidence_id": "E1",
+   "citation": {
+    "identifier": "doi:10.64479/iarci.v1i2.61",
+    "normalised": "doi:10.64479/iarci.v1i2.61",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Impact of Data Normalization on K-Nearest Neighbor Classification Performance: A Case Study on Date Fruit Dataset",
+    "resolved_first_author": "Muhammad Jauhar Vikri",
+    "resolved_year": 2026,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E2",
+   "citation": {
+    "identifier": "doi:10.35335/mandiri.v14i2.466",
+    "normalised": "doi:10.35335/mandiri.v14i2.466",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Optimizing the performance of the K-Nearest Neighbors algorithm using grid search and feature scaling to improve data classification accuracy",
+    "resolved_first_author": "Jonson Manurung",
+    "resolved_year": 2025,
+    "resolved_by": "openalex",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E3",
+   "citation": {
+    "identifier": "doi:10.1109/iceei52609.2021.9611110",
+    "normalised": "doi:10.1109/iceei52609.2021.9611110",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Heart Disease Prediction Using K-Nearest Neighbor",
+    "resolved_first_author": "Dadi Rahmat",
+    "resolved_year": 2021,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E4",
+   "citation": {
+    "identifier": "doi:10.1109/smc42975.2020.9282834",
+    "normalised": "doi:10.1109/smc42975.2020.9282834",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Evolutionary Feature Scaling in K-Nearest Neighbors Based on Label Dispersion Minimization",
+    "resolved_first_author": "Suryoday Basak",
+    "resolved_year": 2020,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E5",
+   "citation": {
+    "identifier": "doi:10.1109/glocom.2014.7036847",
+    "normalised": "doi:10.1109/glocom.2014.7036847",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "A feature scaling based k-nearest neighbor algorithm for indoor positioning system",
+    "resolved_first_author": "Dong Li",
+    "resolved_year": 2014,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E7",
+   "citation": {
+    "identifier": "doi:10.52783/jes.7419",
+    "normalised": "doi:10.52783/jes.7419",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Enhanced Credit Scoring Prediction Using KNN-Z-Score Based Logistic Regression (KZ-LR) Algorithm",
+    "resolved_first_author": "K. Rizwana Parveen",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E8",
+   "citation": {
+    "identifier": "doi:10.1109/icctdc64446.2025.11158881",
+    "normalised": "doi:10.1109/icctdc64446.2025.11158881",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Comparing SVM and KNN Algorithm for High Accuracy in Brain Tumor Prediction",
+    "resolved_first_author": "J. K. Kanimozhi",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  }
+ ],
+ "citations_emitted": 7
+}

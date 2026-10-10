@@ -1,0 +1,118 @@
+{
+ "run_id": "20261010T013639Z-q3_imbalance-local-b5-r1",
+ "evidence": [
+  {
+   "evidence_id": "E1",
+   "citation": {
+    "identifier": "doi:10.29313/statistika.v25i2.8126",
+    "normalised": "doi:10.29313/statistika.v25i2.8126",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "LASSO-Regularized Binary Logistic Regression on Imbalanced Mode Choice Data",
+    "resolved_first_author": "Eko Primadi Hendri",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E2",
+   "citation": {
+    "identifier": "doi:10.58837/chula.the.2022.8",
+    "normalised": "doi:10.58837/chula.the.2022.8",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": null,
+    "resolved_title": "Mass ratio variance majority cleansing and minority oversampling technique for class imbalanced",
+    "resolved_first_author": "Piboon Polvimoltham",
+    "resolved_year": null,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E3",
+   "citation": {
+    "identifier": "doi:10.3390/informatics11020035",
+    "normalised": "doi:10.3390/informatics11020035",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Improving Minority Class Recall through a Novel Cluster-Based Oversampling Technique",
+    "resolved_first_author": "Takorn Prexawanprasut",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E4",
+   "citation": {
+    "identifier": "doi:10.3390/math14173238",
+    "normalised": "doi:10.3390/math14173238",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Adaptive Weighting–Synthetic Minority Oversampling Technique",
+    "resolved_first_author": "Shen Yan",
+    "resolved_year": 2026,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  }
+ ],
+ "citations_emitted": 4
+}

@@ -1,0 +1,947 @@
+{
+ "run_id": "20261009T173359Z-q3_imbalance-local-r2",
+ "question": {
+  "id": "q3_imbalance",
+  "text": "For imbalanced binary classification, does random oversampling of the minority class recover more minority-class recall than class weighting in logistic regression?",
+  "keywords": [
+   "class imbalance",
+   "oversampling",
+   "class weighting",
+   "logistic regression",
+   "recall"
+  ],
+  "concepts": [
+   "class imbalance",
+   "oversampling",
+   "class weight",
+   "logistic regression",
+   "recall"
+  ],
+  "domain_hint": "machine learning"
+ },
+ "reasoner": "local",
+ "stage": "critique",
+ "status": "complete",
+ "papers": [
+  {
+   "id": "doi:10.2139/ssrn.6455598",
+   "title": "Improving Loan Default Prediction Using Class Imbalance Techniques: A Comparative Study of SMOTE and Class Weighting Methods",
+   "authors": [
+    "Md Ahsanul Tarafder"
+   ],
+   "year": 2026,
+   "venue": "",
+   "abstract": "Accurate prediction of loan default risk is critical for financial institutions to minimize losses and improve credit decision-making. However, class imbalance in financial datasets often leads to biased model performance, where minority class instances such as default cases are poorly detected. This study investigates the effectiveness of class imbalance handling techniques, including Synthetic Minority Over-sampling Technique (SMOTE) and class weighting, in improving loan default prediction. Three machine learning models were evaluated: a baseline Gradient Boosting model, Gradient Boosting with SMOTE, and Logistic Regression with class weighting. The results show that while the baseline model achieved high overall accuracy (88.7%), it exhibited poor recall for default cases (0.05). The application of SMOTE improved recall to 0.17, while the class-weighted Logistic Regression model significantly increased recall to 0.66. These findings demonstrate that addressing class imbalance is essential for improving the detection of high-risk borrowers. The study highlights that class weighting techniques can outperform synthetic sampling methods in certain scenarios, providing valuable insights for credit risk modeling.",
+   "url": "https://doi.org/10.2139/ssrn.6455598",
+   "source": "crossref",
+   "cache_key": "7a0128a88c10998d459ac27321732fb5bec0120debb48704ebd3fe72f1040d1b",
+   "query": "logistic regression class weighting imbalance"
+  },
+  {
+   "id": "doi:10.4038/sljas.v27i1.8255",
+   "title": "Imbalance-Aware Bayesian Multinomial Logistic Regression Via Adaptive Entropy-Based Observation Weighting",
+   "authors": [
+    "F. M. Taiwo",
+    "C. Akcora",
+    "S. Muthukumarana"
+   ],
+   "year": 2026,
+   "venue": "Sri Lankan Journal of Applied Statistics",
+   "abstract": "Class imbalance poses a fundamental challenge in multi-class classification, where standard maximum-likelihood methods systematically favor the majority classes. We develop an Imbalance-Aware Bayesian Multinomial Logistic Regression (IA-BMLR) model that adapts a weighted loss framework, originally developed for variational autoencoders, to Bayesian discriminative classification. The weighting approach combines inverse-frequency class weights with entropy-based weights derived from a Local Entropy Score (LES) that emphasizes observations in ambiguous, high-entropy regions. We treat the entropy weight parameter as a learnable variable with a half-normal prior, rather than a fixed parameter, thereby enabling data-driven calibration via Bayesian inference. We evaluate IA-BMLR on nine benchmark datasets that span severe to mild class imbalance. On the Yeast (ten classes, imbalance ratio = 92.6) and the Lymphography (four classes, imbalance ratio = 40.5) datasets, IA-BMLR achieves a G-Mean of 0.302 and 0.456, respectively. In contrast, all baseline methods, including XGBoost, Random Forest, SVC, Multinomial logistic regression, and unweighted Bayesian Multinomial logistic regression, achieve an exact zero, indicating prediction failure for at least one minority class. IA-BMLR achieves the highest G-Mean across three of nine datasets, demonstrating its reliability in minority-class prediction while maintaining competitive performance on standard metrics.",
+   "url": "https://doi.org/10.4038/sljas.v27i1.8255",
+   "source": "crossref",
+   "cache_key": "7a0128a88c10998d459ac27321732fb5bec0120debb48704ebd3fe72f1040d1b",
+   "query": "logistic regression class weighting imbalance"
+  },
+  {
+   "id": "doi:10.1186/s12874-024-02270-x",
+   "title": "Binary classification with fuzzy logistic regression under class imbalance and complete separation in clinical studies",
+   "authors": [
+    "Georgios Charizanos",
+    "Haydar Demirhan",
+    "Duygu İçen"
+   ],
+   "year": 2024,
+   "venue": "BMC Medical Research Methodology",
+   "abstract": "Abstract Background In binary classification for clinical studies, an imbalanced distribution of cases to classes and an extreme association level between the binary dependent variable and a subset of independent variables can create significant classification problems. These crucial issues, namely class imbalance and complete separation, lead to classification inaccuracy and biased results in clinical studies. Method To deal with class imbalance and complete separation problems, we propose using a fuzzy logistic regression framework for binary classification. Fuzzy logistic regression incorporates combinations of triangular fuzzy numbers for the coefficients, inputs, and outputs and produces crisp classification results. The fuzzy logistic regression framework shows strong classification performance due to fuzzy logic’s better handling of imbalance and separation issues. Hence, classification accuracy is improved, mitigating the risk of misclassified conditions and biased insights for clinical study patients. Results The performance of the fuzzy logistic regression model is assessed on twelve binary classification problems with clinical datasets. The model has consistently high sensitivity, specificity, F1, precision, and Mathew’s correlation coefficient scores across all clinical datasets. There is no evidence of impact from the imbalance or separation that exists in the datasets. Furthermore, we compare the fuzzy logistic regression classification performance against two versions of classical logistic regression and six different benchmark sources in the literature. These six sources provide a total of ten different proposed methodologies, and the comparison occurs by calculating the same set of classification performance scores for each method. Either imbalance or separation impacts seven out of ten methodologies. The remaining three produce better classification performance in their respective clinical studies. However, these are all outperformed by the fuzzy logistic regression framework. Conclusion Fuzzy logistic regression showcases strong performance against imbalance and separation, providing accurate predictions and, hence, informative insights for classifying patients in clinical studies.",
+   "url": "https://doi.org/10.1186/s12874-024-02270-x",
+   "source": "crossref",
+   "cache_key": "7a0128a88c10998d459ac27321732fb5bec0120debb48704ebd3fe72f1040d1b",
+   "query": "logistic regression class weighting imbalance"
+  },
+  {
+   "id": "doi:10.58837/chula.the.2022.8",
+   "title": "Mass ratio variance majority cleansing and minority oversampling technique for class imbalanced",
+   "authors": [
+    "Piboon Polvimoltham"
+   ],
+   "year": null,
+   "venue": "",
+   "abstract": "A sampling method is one of the basic methods to deal with an imbalance problem appearing in machine learning. A dataset having an imbalance problem has a noticeably skewed distribution among different classes. There are three types of sampling techniques to solve this problem by balancing class distributions, undersampling technique, over-sampling technique, and combined sampling technique. In this research, the mass ratio variance scores of each data point of the same class are computed and used to remove noise from a majority class and synthesise instances from a minority class. The results of this proposed sampling technique improve recall over standard classifiers: a decision tree, a random forest, Linear SVM, and MLP on all synthesised datasets. Performances are reported on synthesised datasets and UCI datasets via three measures: Precision, Recall, and F1-score. Moreover, Wilcoxon signed-rank tests are used to confirm the improved performance.",
+   "url": "https://doi.org/10.58837/chula.the.2022.8",
+   "source": "crossref",
+   "cache_key": "db30ca823c0aa5d6b66c6bd7c6ef9e21cd79049582bc94b2f22bbac5872c3af3",
+   "query": "minority class oversampling recall"
+  },
+  {
+   "id": "doi:10.61440/jems.2026.v1.05",
+   "title": "Predicting Neonatal Mortality Using Demographic and Health Survey Data: Comparing Logistic Regression and Machine Learning under Severe Class Imbalance",
+   "authors": [
+    "Erick Cheruiyot Kirui",
+    "Stephen Muthii Wanjohi"
+   ],
+   "year": 2026,
+   "venue": "Journal of Epidemiology and Medical Statistics",
+   "abstract": "Neonatal mortality continues to be a significant public health problem, especially in low and middle-income countries, where improvements in neonatal mortality have been slower than progress in overall child survival. Logistic regression has been applied in the past to determine the factors associated with neonatal mortality from the Demographic and Health Survey (DHS) data, but machine learning techniques have been gaining popularity as alternative methods for predictive modelling. Evidence comparing these approaches based on nationally representative household survey data, however, is limited, especially when considering the case of severe class imbalance. This study evaluated alternative strategies to address class imbalance and examined the effect of outcome-endogenous predictors to compare the predictive performance of logistic regression, random forest and gradient boosting classifiers with respect to the prediction of neonatal mortality. Secondary analysis was performed with data from 18,978 live births with 422 neonatal deaths (2.22%) and 27 predictors related to the mother, household, and child. The data were split with stratified sampling into training set (75%) and testing set (25%). Three strategies of handling imbalanced data were used in this study: baseline (no adjustment), class weighting, and Synthetic Minority Oversampling Technique (SMOTE). The area under the receiver operating characteristic curve (ROC-AUC), the area under the precision-recall curve (PR-AUC), the sensitivity, the specificity, the precision, the F1 score, the calibration curve and the permutation feature importance were used to assess model performance. Class-weighted gradient boosting had the best overall predictive performance (ROC-AUC = 0.921, PR-AUC = 0.311, sensitivity = 83.0%) and logistic regression had similar discrimination ability but was easier to interpret (ROCAUC = 0.920). Explicitly dealing with class imbalance significantly outperformed unadjusted models for sensitivity across all of the algorithms. The number of living children under five years, number of births in the last five years and gestation length were the most important variables identified by the feature importance analysis. When the mechanically outcome-related predictor, \"number of living children under 5 years,\" was removed, the ROC-AUC dropped from 0.921 to 0.700, suggesting that a significant amount of the apparent predictive performance was due to information leakage and not to the predictor itself. These results show that the solution for class imbalance problem is more important than using different classification methods, and emphasize the importance of selecting predictors for temporal and definitional relationship with the outcome. The study gives methodological directions for creating accurate predictions to neonatal mortality and other rare health phenomena based on survey data nationally representative.",
+   "url": "https://doi.org/10.61440/jems.2026.v1.05",
+   "source": "crossref",
+   "cache_key": "7a0128a88c10998d459ac27321732fb5bec0120debb48704ebd3fe72f1040d1b",
+   "query": "logistic regression class weighting imbalance"
+  },
+  {
+   "id": "doi:10.24036/ujsds/vol4-iss3/539",
+   "title": "Credit Card Fraud Detection under Extreme Class Imbalance: A Comparison of KNN and Logistic Regression",
+   "authors": [
+    "Felicia Sword",
+    "Christopher Andreas"
+   ],
+   "year": 2026,
+   "venue": "UNP Journal of Statistics and Data Science",
+   "abstract": "Credit card fraud is a serious threat in the digital financial ecosystem and is characterised by extreme class imbalance, with fraudulent transactions typically below 1%. This study compares two standard classification algorithms, K-Nearest Neighbor (KNN) and Logistic Regression (LR), for detecting fraudulent transactions on the Sparkov dataset (1.85 million transactions; a stratified subsample of 100,000 rows; 0.52% fraud rate), and analyses the effect of the Synthetic Minority Over-sampling Technique (SMOTE). Preprocessing includes temporal feature engineering, haversine distance, leak-free per-card behavioural features, one-hot and label encoding, and z-score standardisation. Models are evaluated on a stratified 80:20 split using the confusion matrix, accuracy, precision, recall, F1-score, ROC-AUC, and PR-AUC, complemented by decision-threshold tuning, confidence intervals over five repetitions, and the McNemar test. No single model dominates across all metrics. At the default threshold, KNN baseline achieves the highest F1 (0.407) and precision (0.540), while LR baseline achieves the highest PR-AUC (0.246); LR+SMOTE leads on recall (0.712) and ROC-AUC (0.861) but with very low precision (0.025). Threshold tuning lets LR baseline reach the best F1 (0.422 at a 0.071 cut-off). McNemar shows the KNN–LR difference is not significant at baseline (p = 0.282) but significant under SMOTE (p &lt; 0.001). The main finding is that under severe imbalance ROC-AUC can be misleading and PR-AUC is more informative; KNN baseline is a balanced detector without tuning, threshold-tuned LR baseline gives the best single operating point, and LR+SMOTE suits cases where recall is the priority.",
+   "url": "https://doi.org/10.24036/ujsds/vol4-iss3/539",
+   "source": "crossref",
+   "cache_key": "7a0128a88c10998d459ac27321732fb5bec0120debb48704ebd3fe72f1040d1b",
+   "query": "logistic regression class weighting imbalance"
+  },
+  {
+   "id": "doi:10.2139/ssrn.4167821",
+   "title": "An Ensemble Credit Scoring Model Based on Logistic Regression with Heterogeneous Balancing and Weighting Effects",
+   "authors": [
+    "Runchi Zhang",
+    "Xue Liguo",
+    "Wang Qin"
+   ],
+   "year": 2022,
+   "venue": "",
+   "abstract": "The logistic regression model is widely used in credit evaluation practice due to its strong interpretability of results, but its recognition performance for default samples which are minority in real-world imbalanced data sets need to be improved. This paper designs a novel ensemble model based on logistic regression as the logistic-BWE model. It first carries out data preprocessing, then applying sample balancing algorithm to generate several training sub data sets with different imbalance ratios and constructing sub models respectively, finally according to the performance of each sub model in the validation stage, the weight of different class of predicted results of each sub model is dynamically calculated. The empirical results indicate that compared with ten representative credit scoring models on six public data sets, the logistic-BWE model has the strongest ability to recognize default samples, and has the best generalization ability on most data sets while maintaining the interpretability of prediction results. Further tests demonstrate that the performance superiority of the logistic-BWE model is statistically significant, and it also has excellent robustness when it contains a sufficient number of sub models.",
+   "url": "https://doi.org/10.2139/ssrn.4167821",
+   "source": "crossref",
+   "cache_key": "31e11b1c3fdecc594770d1fee9794d36a5926a4e7b3964fb74fd5c38ddc3b962",
+   "query": "oversampling vs weighting logistic regression"
+  },
+  {
+   "id": "doi:10.3390/informatics11020035",
+   "title": "Improving Minority Class Recall through a Novel Cluster-Based Oversampling Technique",
+   "authors": [
+    "Takorn Prexawanprasut",
+    "Thepparit Banditwattanawong"
+   ],
+   "year": 2024,
+   "venue": "Informatics",
+   "abstract": "In this study, we propose an approach to address the pressing issue of false negative errors by enhancing minority class recall within imbalanced data sets commonly encountered in machine learning applications. Through the utilization of a cluster-based oversampling technique in conjunction with an information entropy evaluation, our approach effectively targets areas of ambiguity inherent in the data set. An extensive evaluation across a diverse range of real-world data sets characterized by inter-cluster complexity demonstrates the superior performance of our method compared to that of existing oversampling techniques. Particularly noteworthy is its significant improvement within the Delinquency Telecom data set, where it achieves a remarkable increase of up to 30.54 percent in minority class recall compared to the original data set. This notable reduction in false negative errors underscores the importance of our methodology in accurately identifying and classifying instances from underrepresented classes, thereby enhancing model performance in imbalanced data scenarios.",
+   "url": "https://doi.org/10.3390/informatics11020035",
+   "source": "crossref",
+   "cache_key": "db30ca823c0aa5d6b66c6bd7c6ef9e21cd79049582bc94b2f22bbac5872c3af3",
+   "query": "minority class oversampling recall"
+  },
+  {
+   "id": "arxiv:2006.13319",
+   "title": "Classification Performance Metric for Imbalance Data Based on Recall and Selectivity Normalized in Class Labels",
+   "authors": [
+    "Robert Burduk"
+   ],
+   "year": 2020,
+   "venue": "arXiv",
+   "abstract": "In the classification of a class imbalance dataset, the performance measure used for the model selection and comparison to competing methods is a major issue. In order to overcome this problem several performance measures are defined and analyzed in several perspectives regarding in particular the imbalance ratio. There is still no clear indication which metric is universal and can be used for any skewed data problem. In this paper we introduced a new performance measure based on the harmonic mean of Recall and Selectivity normalized in class labels. This paper shows that the proposed performance measure has the right properties for the imbalanced dataset. In particular, in the space defined by the majority class examples and imbalance ratio it is less sensitive to changes in the majority class and more sensitive to changes in the minority class compared with other existing single-value performance measures. Additionally, the identity of the other performance measures has been proven analytically.",
+   "url": "http://arxiv.org/abs/2006.13319v1",
+   "source": "arxiv",
+   "cache_key": "5b5e59c756cb28cd8e6bb33284cd09f55860f4f648c98cc7a12e7b1480bf4a86",
+   "query": "recall imbalance binary classification"
+  },
+  {
+   "id": "arxiv:2602.19663",
+   "title": "The impact of class imbalance in logistic regression models for low-default portfolios in credit risk",
+   "authors": [
+    "Willem D. Schutte",
+    "Charl Pretorius",
+    "Neill Smit",
+    "Leandra van der Merwe",
+    "Robert Maxwell"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "abstract": "In this paper, we study how class imbalance, typical of low-default credit portfolios, affects the performance of logistic regression models. Using a simulation study with controlled data-generating mechanisms, we vary (i) the level of class imbalance and (ii) the strength of association between the predictors and the response. The results show that, for a given strength of association, achievable classification accuracy deteriorates markedly as the event rate decreases, and the optimal classification cut-off shifts with the level of imbalance. In contrast, the Gini coefficient is comparatively stable with respect to class imbalance once sample sizes are sufficiently large, even when classification accuracy is strongly affected. As a practical guideline, we summarise attainable classification performance as a function of the event rate and strength of association between the predictors and the response.",
+   "url": "http://arxiv.org/abs/2602.19663v1",
+   "source": "arxiv",
+   "cache_key": "4f40a5b8030ef8ccc09d342e1c9e0f6384295d1d1eac790bfd43f9f2b7dd37a7",
+   "query": "logistic regression class weighting imbalance"
+  },
+  {
+   "id": "doi:10.14419/ijet.v7i4.35.22738",
+   "title": "Term Weighting Vs. Logistic Regression Performance on  E-Commerce Data",
+   "authors": [
+    "Sajjad Salehi",
+    "Maryam Ghasdimanghootai"
+   ],
+   "year": 2018,
+   "venue": "International Journal of Engineering and Technology",
+   "abstract": "Text categorization can become a very difficult problem to solve in many cases. However many text categorization algorithms have been developed in the history of computer science, they are not always as accurate as we expect. Some of them are highly accurate in special cases while others perform well in different cases. In this work, we are comparing two famous methods in text categorization; the first one is the well-known term weighting algorithm and the second one is the logistic regression algorithm. All the dataset is got from our previous start-up named “Ume Market Network” which was an online peer-to-peer e-commerce system, and was synchronized with Facebook sales groups. Every offer in this dataset should be categorized as a sale/purchase offer; therefore, the problem is a classical binary categorization on a text dataset of formal as well as colloquial expressions in English, Italian, and German languages. After overcoming all the ambiguities the logistic regression algorithm outperformed the term weighting algorithm by around 25% in acuracy.",
+   "url": "https://doi.org/10.14419/ijet.v7i4.35.22738",
+   "source": "crossref",
+   "cache_key": "31e11b1c3fdecc594770d1fee9794d36a5926a4e7b3964fb74fd5c38ddc3b962",
+   "query": "oversampling vs weighting logistic regression"
+  },
+  {
+   "id": "doi:10.3390/math14173238",
+   "title": "Adaptive Weighting–Synthetic Minority Oversampling Technique",
+   "authors": [
+    "Shen Yan",
+    "Haifeng Guo",
+    "Xiaoming Su"
+   ],
+   "year": 2026,
+   "venue": "Mathematics",
+   "abstract": "Class imbalance is prevalent in real-world datasets. Minority samples are far fewer than majority samples. Traditional classifier design typically assumes balanced data, which causes classifiers to favor the majority class when faced with imbalanced datasets. Thus, there are high misclassification costs for minority classes in critical fields like healthcare and finance. Most existing oversampling methods for handling imbalance problems, such as SMOTE (the synthetic minority oversampling technique), suffer from limitations like noise sensitivity, failure to consider minority-class sub-cluster structures, and poor adaptability to the heterogeneity of sample distributions. This article addresses these issues by proposing a novel oversampling algorithm: the adaptive weighting–synthetic minority oversampling technique (AW-SMOTE). It consists of three progressive stages. In the first stage, DBSCAN (Density-Based Spatial Clustering of Applications with Noise) clustering identifies the distribution structure of the minority samples. It identifies potential sub-clusters while removing noise interference. A clear data foundation for subsequent sampling is established. In the second stage, the most representative boundary sample in each cluster is used to evaluate the weight of each cluster. The total number of synthetic samples is allocated to different clusters according to their weights. This provides global sample enhancement support. In the third stage, adaptive sample generation is performed within each cluster. It combines the two perspectives of boundary tightness and local density. The sigmoid function is used to dynamically adjust the weight ratio. Finally, new samples are synthesized in key regions to both preserve distribution characteristics and enhance discriminability in classification. Through experiments on standard datasets from the KEEL repository, the feasibility and effectiveness of this algorithm are demonstrated.",
+   "url": "https://doi.org/10.3390/math14173238",
+   "source": "crossref",
+   "cache_key": "1246d4e53e3e09cf64fe66ed375cee9794bf04411e8478684cda6e641712e5d8",
+   "query": "class weighting vs oversampling recall"
+  },
+  {
+   "id": "doi:10.20944/preprints202607.2182.v1",
+   "title": "Adaptive Weighting-Synthetic Minority Oversampling Technology",
+   "authors": [
+    "Shen Yan",
+    "Haifeng Guo",
+    "Xiaoming Su"
+   ],
+   "year": 2026,
+   "venue": "",
+   "abstract": "Class imbalance is prevalent in real-world datasets. Minority samples are far fewer than majority samples. Traditional classifier design typically assumes balanced data, which causes classifiers to favor the majority class when faced with imbalanced datasets. Thus, there are high misclassification costs for minority classes in critical fields like healthcare and finance. Most existing oversampling methods for handling imbalance problems, such as SMOTE (The Synthetic Minority Oversampling Technique), suffer from limitations like noise sensitivity, ignorance of minority class sub-cluster structures, and poor adaptability to the heterogeneity of sample distributions. This article focuses on addressing these issues by proposing a novel oversampling algorithm, which named Adaptive Weighting-Synthetic Minority Oversampling Technology (AW-SMOTE). It consists of three progressive stages. In the first stage, DBSCAN (Density-Based Spatial Clustering of Applications with Noise) clustering identifies the distribution structure of the minority samples. It divides potential sub-clusters while removing noise interference. A clear data foundation for subsequent sampling is established. In the second stage, the most representative boundary sample in each cluster is used to evaluate the weight of each cluster. The total number of synthetic samples is allocated to different clusters according to the weight. It provides global sample enhancement support. In the third stage, adaptive sample generation is performed within each cluster. It combines the two perspectives of boundary tightness and local density. The Sigmoid function is used to dynamically adjust the weight ratio. Finally, new samples are synthesized in key regions that both preserve distribution characteristics and enhance discriminability in classification. Through experiments on standard datasets from KEEL repositories, the feasibility and effectiveness of this algorithm are demonstrated.",
+   "url": "https://doi.org/10.20944/preprints202607.2182.v1",
+   "source": "crossref",
+   "cache_key": "1246d4e53e3e09cf64fe66ed375cee9794bf04411e8478684cda6e641712e5d8",
+   "query": "class weighting vs oversampling recall"
+  },
+  {
+   "id": "doi:10.2139/ssrn.6722446",
+   "title": "WG-SMOTE: A Graph-Aware Safe-Seed Oversampling Framework for Imbalanced Data Classification",
+   "authors": [
+    "Wawan Gunawan",
+    "Hindriyanto Purnomo",
+    "Christine Dewi"
+   ],
+   "year": 2026,
+   "venue": "",
+   "abstract": "Indonesia is facing a dual burden of communicable and non-communicable diseases, class imbalance is a persistent barrier to reliable clinical prediction in Indonesian healthcare, where HIV (Imbalance Ratio (IR) = 3.11), Diabetes (IR = 2.53), and Stroke (IR = 19.52) datasets all exhibit severe distributional pathology, with pre-balancing Safe percentages of 0-30% and intrinsic overlap of 85-100%. Existing oversampling methods share three structural failure modes: Euclidean interpolation disregards relational sample structure, binary clinical variables (e.g., hypertension ∈ {0,1}) receive semantically invalid decimal values after interpolation, and density adaptive methods such as Adaptive Synthetic Sampling (ADASYN) paradoxically amplify overlap in high-overlap regions. This paper proposes WG-SMOTE (Weighted Graph-guided Safe-seed Minority Over-sampling Technique Enhanced), a four-stage pipeline comprising: (1) a two-layer Graph Convolutional Network (GCN) that embeds all training samples into a class-discriminative latent space Z via K-Nearest Neighbors (KNN)-graph message passing (k = 8), (2) safe-seed selection retaining only minority samples with minority ratio ri ≥ 0.5 in Z, (3) Synthetic minority oversampling technique for nominal and continuous (SMOTENC) on validated seeds, and (4) Edited Nearest Neighbors (ENN) cleaning combined with dtype-restoration. Across 3 datasets × 7 balancing methods × 8 classifiers, WG-SMOTE achieves Grand Average Macro-F1 = 0.9472, the highest among all methods and is the only method satisfying all seven balancing quality thresholds across all datasets (7/7). Random Forest trained on WG-SMOTE data reaches F1 = 99.21% (HIV), 99.87% (Stroke), and 99.24% (Diabetic), with 100% Recall on Stroke achieved by four independent classifiers and zero missed stroke cases.",
+   "url": "https://doi.org/10.2139/ssrn.6722446",
+   "source": "crossref",
+   "cache_key": "1bb0514b6aeebacf029147d3dec890467535799ac1c638de3ba215599cd1b32a",
+   "query": "oversampling recall imbalanced data"
+  },
+  {
+   "id": "arxiv:1908.08346",
+   "title": "LoRAS: An oversampling approach for imbalanced datasets",
+   "authors": [
+    "Saptarshi Bej",
+    "Narek Davtyan",
+    "Markus Wolfien",
+    "Mariam Nassar",
+    "Olaf Wolkenhauer"
+   ],
+   "year": 2019,
+   "venue": "arXiv",
+   "abstract": "The Synthetic Minority Oversampling TEchnique (SMOTE) is widely-used for the analysis of imbalanced datasets. It is known that SMOTE frequently over-generalizes the minority class, leading to misclassifications for the majority class, and effecting the overall balance of the model. In this article, we present an approach that overcomes this limitation of SMOTE, employing Localized Random Affine Shadowsampling (LoRAS) to oversample from an approximated data manifold of the minority class. We benchmarked our algorithm with 14 publicly available imbalanced datasets using three different Machine Learning (ML) algorithms and compared the performance of LoRAS, SMOTE and several SMOTE extensions that share the concept of using convex combinations of minority class data points for oversampling with LoRAS. We observed that LoRAS, on average generates better ML models in terms of F1-Score and Balanced accuracy. Another key observation is that while most of the extensions of SMOTE we have tested, improve the F1-Score with respect to SMOTE on an average, they compromise on the Balanced accuracy of a classification model. LoRAS on the contrary, improves both F1 Score and the Balanced accuracy thus produces better classification models. Moreover, to explain the success of the algorithm, we have constructed a mathematical framework to prove that LoRAS oversampling technique provides a better estimate for the mean of the underlying local data distribution of the minority class data space.",
+   "url": "http://arxiv.org/abs/1908.08346v4",
+   "source": "arxiv",
+   "cache_key": "c1495a54797acb148940eea49d6296572100ce1b2c7e9f86e46af0c2e8a51f36",
+   "query": "oversampling recall imbalanced data"
+  },
+  {
+   "id": "arxiv:2102.08232",
+   "title": "The MELODIC family for simultaneous binary logistic regression in a reduced space",
+   "authors": [
+    "Mark de Rooij",
+    "Patrick J. F. Groenen"
+   ],
+   "year": 2021,
+   "venue": "arXiv",
+   "abstract": "Logistic regression is a commonly used method for binary classification. Researchers often have more than a single binary response variable and simultaneous analysis is beneficial because it provides insight into the dependencies among response variables as well as between the predictor variables and the responses. Moreover, in such a simultaneous analysis the equations can lend each other strength, which might increase predictive accuracy. In this paper, we propose the MELODIC family for simultaneous binary logistic regression modeling. In this family, the regression models are defined in a Euclidean space of reduced dimension, based on a distance rule. The model may be interpreted in terms of logistic regression coefficients or in terms of a biplot. We discuss a fast iterative majorization (or MM) algorithm for parameter estimation. Two applications are shown in detail: one relating personality characteristics to drug consumption profiles and one relating personality characteristics to depressive and anxiety disorders. We present a thorough comparison of our MELODIC family with alternative approaches for multivariate binary data.",
+   "url": "http://arxiv.org/abs/2102.08232v2",
+   "source": "arxiv",
+   "cache_key": "00dd640bcd064b65f5b040bfa65050d9205cdd95d31a51408565130f4442544a",
+   "query": "oversampling vs weighting logistic regression"
+  },
+  {
+   "id": "doi:10.17798/bitlisfen.939733",
+   "title": "Combination of PCA with SMOTE Oversampling for Classification of High-Dimensional Imbalanced Data",
+   "authors": [
+    "Guhdar A. A. MULLA",
+    "Yıldırım DEMİR",
+    "Masoud HASSAN"
+   ],
+   "year": 2021,
+   "venue": "Bitlis Eren Üniversitesi Fen Bilimleri Dergisi",
+   "abstract": "Imbalanced data classification is a common issue in data mining where the classifiers are skewed towards the larger data class. Classification of high-dimensional skewed (imbalanced) data is of great interest to decision-makers as it is more difficult to. The dimension reduction method, a process in which variables are reduced, allows high dimensional datasets to be interpreted more easily with a certain loss. This study, a method combining SMOTE oversampling with principal component analysis is proposed to solve the imbalance problem in high dimensional data. Three classification algorithms consisting of Logistic Regression, K-Nearest Neighbor, Decision Tree methods and two separate datasets were utilized to evaluate the suggested method's efficacy and determine the classifiers' performance. Respectively, raw datasets, converted datasets by PCA, SMOTE and SMOTE+PCA (SMOTE and PCA) methods, were analyzed with the given algorithms. Analyzes were made using WEKA. Analysis results suggest that almost all classification algorithms improve their classification performance using PCA, SOMTE, and SMOTE+PCA methods. However, the SMOTE method gave more efficient results than PCA and PCA+SMOTE methods for data rebalancing. Experimental results also suggest that K-Nearest Neighbor classifier provided higher classification performance compared to other algorithms.",
+   "url": "https://doi.org/10.17798/bitlisfen.939733",
+   "source": "crossref",
+   "cache_key": "1bb0514b6aeebacf029147d3dec890467535799ac1c638de3ba215599cd1b32a",
+   "query": "oversampling recall imbalanced data"
+  },
+  {
+   "id": "doi:10.47134/ppm.v2i4.1990",
+   "title": "A Comparative Study of Resampling Techniques for Handling Class Imbalance in Binary Classification",
+   "authors": [
+    "Hussein Kareem Habash"
+   ],
+   "year": 2025,
+   "venue": "Jurnal Pendidikan Matematika",
+   "abstract": "Class-imbalance skews most binary classifiers toward the majority class, hiding the very events that matter (e.g., fraud and malignancy). We present a clear, quick-to-replicate comparison of four representative resampling families—Random Over-Sampling (ROS), SMOTE, the hybrid SMOTE-ENN cleaner, and the ensemble balancer EasyEnsemble—paired with two widely used learners (Logistic Regression and Random Forest). Experiments run on two public tabular benchmarks that span extreme (0.17 % fraud) and moderate (2.3 % cancer) skew. A simple two-fold stratified split replaces heavy cross-validation, and each model is evaluated on the two metrics that matter most under imbalance: AUROC and PR-AUC. Results finish in under ten minutes on any laptop yet reproduce the qualitative hierarchy seen in much larger studies: SMOTE-ENN attains the best PR-AUC on both datasets, EasyEnsemble leads AUROC, and naïve ROS trails in every case. Three visuals—(i) an end-to-end pipeline schematic, (ii) a one-glance bar chart of class ratios, and (iii) a radar plot of mean PR-AUC scores—make the findings transparent at first sight. All code and figures come in a single Jupyter notebook (supplementary ZIP); running one command installs dependencies, and a second command reproduces every number and image. This streamlined study offers practitioners an evidence-based starting point while remaining fully reproducible for reviewers and students alike.",
+   "url": "https://doi.org/10.47134/ppm.v2i4.1990",
+   "source": "crossref",
+   "cache_key": "35891fec05a4b96dd82c53320b05b6207856106a96072fa8e0b8beacef4b7123",
+   "query": "recall imbalance binary classification"
+  },
+  {
+   "id": "arxiv:2008.04636",
+   "title": "A Comparison of Synthetic Oversampling Methods for Multi-class Text Classification",
+   "authors": [
+    "Anna Glazkova"
+   ],
+   "year": 2020,
+   "venue": "arXiv",
+   "abstract": "The authors compared oversampling methods for the problem of multi-class topic classification. The SMOTE algorithm underlies one of the most popular oversampling methods. It consists in choosing two examples of a minority class and generating a new example based on them. In the paper, the authors compared the basic SMOTE method with its two modifications (Borderline SMOTE and ADASYN) and random oversampling technique on the example of one of text classification tasks. The paper discusses the k-nearest neighbor algorithm, the support vector machine algorithm and three types of neural networks (feedforward network, long short-term memory (LSTM) and bidirectional LSTM). The authors combine these machine learning algorithms with different text representations and compared synthetic oversampling methods. In most cases, the use of oversampling techniques can significantly improve the quality of classification. The authors conclude that for this task, the quality of the KNN and SVM algorithms is more influenced by class imbalance than neural networks.",
+   "url": "http://arxiv.org/abs/2008.04636v1",
+   "source": "arxiv",
+   "cache_key": "f481b1f7359ea3ae0bd583cb9420d0f8f9162e40f4e836bbc6cb59d65733293c",
+   "query": "class weighting vs oversampling recall"
+  },
+  {
+   "id": "arxiv:2008.00235",
+   "title": "Two-step penalised logistic regression for multi-omic data with an application to cardiometabolic syndrome",
+   "authors": [
+    "Alessandra Cabassi",
+    "Denis Seyres",
+    "Mattia Frontini",
+    "Paul D. W. Kirk"
+   ],
+   "year": 2020,
+   "venue": "arXiv",
+   "abstract": "Building classification models that predict a binary class label on the basis of high dimensional multi-omics datasets poses several challenges, due to the typically widely differing characteristics of the data layers in terms of number of predictors, type of data, and levels of noise. Previous research has shown that applying classical logistic regression with elastic-net penalty to these datasets can lead to poor results (Liu et al., 2018). We implement a two-step approach to multi-omic logistic regression in which variable selection is performed on each layer separately and a predictive model is then built using the variables selected in the first step. Here, our approach is compared to other methods that have been developed for the same purpose, and we adapt existing software for multi-omic linear regression (Zhao and Zucknick, 2020) to the logistic regression setting. Extensive simulation studies show that our approach should be preferred if the goal is to select as many relevant predictors as possible, as well as achieving prediction performances comparable to those of the best competitors. Our motivating example is a cardiometabolic syndrome dataset comprising eight 'omic data types for 2 extreme phenotype groups (10 obese and 10 lipodystrophy individuals) and 185 blood donors. Our proposed approach allows us to identify features that characterise cardiometabolic syndrome at the molecular level. R code is available at https://github.com/acabassi/logistic-regression-for-multi-omic-data.",
+   "url": "http://arxiv.org/abs/2008.00235v1",
+   "source": "arxiv",
+   "cache_key": "00dd640bcd064b65f5b040bfa65050d9205cdd95d31a51408565130f4442544a",
+   "query": "oversampling vs weighting logistic regression"
+  },
+  {
+   "id": "arxiv:1811.07674",
+   "title": "An Adaptive Oversampling Learning Method for Class-Imbalanced Fault Diagnostics and Prognostics",
+   "authors": [
+    "Wenfang Lin",
+    "Zhenyu Wu",
+    "Yang Ji"
+   ],
+   "year": 2018,
+   "venue": "arXiv",
+   "abstract": "Data-driven fault diagnostics and prognostics suffers from class-imbalance problem in industrial systems and it raises challenges to common machine learning algorithms as it becomes difficult to learn the features of the minority class samples. Synthetic oversampling methods are commonly used to tackle these problems by generating the minority class samples to balance the distributions between majority and minority classes. However, many of oversampling methods are inappropriate that they cannot generate effective and useful minority class samples according to different distributions of data, which further complicate the process of learning samples. Thus, this paper proposes a novel adaptive oversampling technique: EM-based Weighted Minority Oversampling TEchnique (EWMOTE) for industrial fault diagnostics and prognostics. The methods comprises a weighted minority sampling strategy to identify hard-to-learn informative minority fault samples and Expectation Maximization (EM) based imputation algorithm to generate fault samples. To validate the performance of the proposed methods, experiments are conducted in two real datasets. The results show that the method could achieve better performance on not only binary class, but multi-class imbalance learning task in different imbalance ratios than other oversampling-based baseline models.",
+   "url": "http://arxiv.org/abs/1811.07674v1",
+   "source": "arxiv",
+   "cache_key": "f481b1f7359ea3ae0bd583cb9420d0f8f9162e40f4e836bbc6cb59d65733293c",
+   "query": "class weighting vs oversampling recall"
+  },
+  {
+   "id": "arxiv:2504.09486",
+   "title": "Adaptive Cluster-Based Synthetic Minority Oversampling Technique for Traffic Mode Choice Prediction with Imbalanced Dataset",
+   "authors": [
+    "Guang An Ooi",
+    "Shehab Ahmed"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "abstract": "Urban datasets such as citizen transportation modes often contain disproportionately distributed classes, posing significant challenges to the classification of under-represented samples using data-driven models. In the literature, various resampling methods have been developed to create synthetic data for minority classes (oversampling) or remove samples from majority classes (undersampling) to alleviate class imbalance. However, oversampling approaches tend to overgeneralize minor classes that are closely clustered and neglect sparse regions which may contain crucial information. Conversely, undersampling methods potentially remove useful information on certain subgroups. Hence, a resampling approach that takes the inherent distribution of data into consideration is required to ensure appropriate synthetic data creation. This study proposes an adaptive cluster-based synthetic minority oversampling technique. Density-based spatial clustering is applied on minority classes to identify subgroups based on their input features. The classes in each of these subgroups are then oversampled according to the ratio of data points of their local cluster to the largest majority class. When used in conjunction with machine learning models such as random forest and extreme gradient boosting, this oversampling method results in significantly higher F1 scores for the minority classes compared to other resampling techniques. These improved models provide accurate classification of transportation modes.",
+   "url": "http://arxiv.org/abs/2504.09486v1",
+   "source": "arxiv",
+   "cache_key": "a9528d9e376f6b24975e42a2cb4987b5769a8ba5bcb8ef2c25cd07a95ba21f92",
+   "query": "minority class oversampling recall"
+  },
+  {
+   "id": "arxiv:2202.03579",
+   "title": "Stop Oversampling for Class Imbalance Learning: A Critical Review",
+   "authors": [
+    "Ahmad B. Hassanat",
+    "Ahmad S. Tarawneh",
+    "Ghada A. Altarawneh",
+    "Abdullah Almuhaimeed"
+   ],
+   "year": 2022,
+   "venue": "arXiv",
+   "abstract": "For the last two decades, oversampling has been employed to overcome the challenge of learning from imbalanced datasets. Many approaches to solving this challenge have been offered in the literature. Oversampling, on the other hand, is a concern. That is, models trained on fictitious data may fail spectacularly when put to real-world problems. The fundamental difficulty with oversampling approaches is that, given a real-life population, the synthesized samples may not truly belong to the minority class. As a result, training a classifier on these samples while pretending they represent minority may result in incorrect predictions when the model is used in the real world. We analyzed a large number of oversampling methods in this paper and devised a new oversampling evaluation system based on hiding a number of majority examples and comparing them to those generated by the oversampling process. Based on our evaluation system, we ranked all these methods based on their incorrectly generated examples for comparison. Our experiments using more than 70 oversampling methods and three imbalanced real-world datasets reveal that all oversampling methods studied generate minority samples that are most likely to be majority. Given data and methods in hand, we argue that oversampling in its current forms and methodologies is unreliable for learning from class imbalanced data and should be avoided in real-world applications.",
+   "url": "http://arxiv.org/abs/2202.03579v2",
+   "source": "arxiv",
+   "cache_key": "00dd640bcd064b65f5b040bfa65050d9205cdd95d31a51408565130f4442544a",
+   "query": "oversampling vs weighting logistic regression"
+  },
+  {
+   "id": "arxiv:1903.09730",
+   "title": "Generative Adversarial Minority Oversampling",
+   "authors": [
+    "Sankha Subhra Mullick",
+    "Shounak Datta",
+    "Swagatam Das"
+   ],
+   "year": 2019,
+   "venue": "arXiv",
+   "abstract": "Class imbalance is a long-standing problem relevant to a number of real-world applications of deep learning. Oversampling techniques, which are effective for handling class imbalance in classical learning systems, can not be directly applied to end-to-end deep learning systems. We propose a three-player adversarial game between a convex generator, a multi-class classifier network, and a real/fake discriminator to perform oversampling in deep learning systems. The convex generator generates new samples from the minority classes as convex combinations of existing instances, aiming to fool both the discriminator as well as the classifier into misclassifying the generated samples. Consequently, the artificial samples are generated at critical locations near the peripheries of the classes. This, in turn, adjusts the classifier induced boundaries in a way which is more likely to reduce misclassification from the minority classes. Extensive experiments on multiple class imbalanced image datasets establish the efficacy of our proposal.",
+   "url": "http://arxiv.org/abs/1903.09730v3",
+   "source": "arxiv",
+   "cache_key": "a9528d9e376f6b24975e42a2cb4987b5769a8ba5bcb8ef2c25cd07a95ba21f92",
+   "query": "minority class oversampling recall"
+  },
+  {
+   "id": "arxiv:2005.03773",
+   "title": "Minority Class Oversampling for Tabular Data with Deep Generative Models",
+   "authors": [
+    "Ramiro Camino",
+    "Christian Hammerschmidt",
+    "Radu State"
+   ],
+   "year": 2020,
+   "venue": "arXiv",
+   "abstract": "In practice, machine learning experts are often confronted with imbalanced data. Without accounting for the imbalance, common classifiers perform poorly and standard evaluation metrics mislead the practitioners on the model's performance. A common method to treat imbalanced datasets is under- and oversampling. In this process, samples are either removed from the majority class or synthetic samples are added to the minority class. In this paper, we follow up on recent developments in deep learning. We take proposals of deep generative models, including our own, and study the ability of these approaches to provide realistic samples that improve performance on imbalanced classification tasks via oversampling. Across 160K+ experiments, we show that all of the new methods tend to perform better than simple baseline methods such as SMOTE, but require different under- and oversampling ratios to do so. Our experiments show that the way the method of sampling does not affect quality, but runtime varies widely. We also observe that the improvements in terms of performance metric, while shown to be significant when ranking the methods, often are minor in absolute terms, especially compared to the required effort. Furthermore, we notice that a large part of the improvement is due to undersampling, not oversampling. We make our code and testing framework available.",
+   "url": "http://arxiv.org/abs/2005.03773v2",
+   "source": "arxiv",
+   "cache_key": "a9528d9e376f6b24975e42a2cb4987b5769a8ba5bcb8ef2c25cd07a95ba21f92",
+   "query": "minority class oversampling recall"
+  }
+ ],
+ "evidence": [
+  {
+   "id": "E1",
+   "claim": "Class weighting in logistic regression achieved a significantly higher recall (0.66) compared to SMOTE (0.17) in a loan default prediction scenario.",
+   "quote": "The application of SMOTE improved recall to 0.17, while the class-weighted Logistic Regression model significantly increased recall to 0.66.",
+   "citation": {
+    "identifier": "doi:10.2139/ssrn.6455598",
+    "title": "Improving Loan Default Prediction Using Class Imbalance Techniques: A Comparative Study of SMOTE and Class Weighting Methods",
+    "first_author": "Md Ahsanul Tarafder",
+    "year": 2026
+   },
+   "concepts": [
+    "class imbalance",
+    "oversampling",
+    "class weight",
+    "logistic regression",
+    "recall"
+   ],
+   "stance": "supports"
+  }
+ ],
+ "gaps": [
+  {
+   "id": "G1",
+   "description": "The evidence only compares SMOTE (random oversampling) and class weighting in logistic regression within a single dataset and specific use case—loan default prediction. This limits generalizability to other imbalanced binary classification problems or different model families.",
+   "concepts": [
+    "generalizability",
+    "model family",
+    "dataset scope"
+   ],
+   "evidence_ids": [
+    "E1"
+   ],
+   "kind": "narrow_scope"
+  },
+  {
+   "id": "G2",
+   "description": "The study does not evaluate other oversampling techniques (e.g., ADASYN, borderline SMOTE) or alternative classifiers (e.g., XGBoost, random forests) that may perform better with oversampling, so the comparison is restricted to only logistic regression and class weighting.",
+   "concepts": [
+    "alternative_oversampling_methods",
+    "alternative_models"
+   ],
+   "evidence_ids": [
+    "E1"
+   ],
+   "kind": "narrow_scope"
+  },
+  {
+   "id": "G3",
+   "description": "The evidence does not provide information on precision, F1-score, or computational cost, which are important metrics in imbalanced classification beyond recall.",
+   "concepts": [
+    "precision",
+    "F1-score",
+    "computational_cost"
+   ],
+   "evidence_ids": [
+    "E1"
+   ],
+   "kind": "uncovered"
+  },
+  {
+   "id": "G4",
+   "description": "The claim that class weighting achieved a recall of 0.66 versus SMOTE's 0.17 is presented without statistical significance testing (e.g., p-values, confidence intervals), leaving open questions about the robustness of the result.",
+   "concepts": [
+    "statistical_significance",
+    "robustness"
+   ],
+   "evidence_ids": [
+    "E1"
+   ],
+   "kind": "uncovered"
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "H1",
+   "statement": "In imbalanced binary classification tasks on public tabular datasets, random oversampling (e.g., SMOTE) will achieve a higher minority-class recall than class weighting in logistic regression.",
+   "independent_variable": "oversampling method (SMOTE vs. class weighting)",
+   "dependent_variable": "minority-class recall",
+   "expected_direction": "increase",
+   "gap_ids": [
+    "G1",
+    "G2",
+    "G3",
+    "G4"
+   ],
+   "evidence_ids": [
+    "E1"
+   ],
+   "rationale": "This hypothesis directly challenges the claim in E1 that class weighting achieves significantly higher recall (0.66 vs. 0.17), and aims to test generalizability across datasets and model contexts. It addresses G1 (narrow scope), G2 (limited methods), and G4 (lack of statistical validation) by proposing a falsifiable outcome under broader conditions."
+  },
+  {
+   "id": "H2",
+   "statement": "In imbalanced binary classification, the use of alternative oversampling methods (e.g., ADASYN, borderline SMOTE) in combination with logistic regression leads to higher F1-score than class weighting or standard SMOTE.",
+   "independent_variable": "oversampling method (ADASYN, borderline SMOTE, SMOTE, class weighting)",
+   "dependent_variable": "F1-score",
+   "expected_direction": "increase",
+   "gap_ids": [
+    "G2",
+    "G3"
+   ],
+   "evidence_ids": [
+    "E1"
+   ],
+   "rationale": "This hypothesis targets G2 (lack of alternative methods) and G3 (missing F1-score evaluation). It introduces a more comprehensive comparison across methods and metrics, enabling evaluation of performance beyond recall and improving the practical utility of the findings."
+  }
+ ],
+ "designs": [
+  {
+   "id": "D1",
+   "hypothesis_id": "H1",
+   "datasets": [
+    "breast_cancer_imb10",
+    "digits_binary_imb10"
+   ],
+   "model": "logistic_regression",
+   "control": "logistic_regression+class_weight",
+   "treatments": [
+    "logistic_regression+oversample"
+   ],
+   "metrics": [
+    "minority_recall"
+   ],
+   "test": "paired_wilcoxon",
+   "split": "stratified_kfold",
+   "folds": 5,
+   "seeds": [
+    123,
+    456,
+    789
+   ],
+   "rationale": "The hypothesis focuses on comparing oversampling (SMOTE) versus class weighting in logistic regression for minority-class recall in imbalanced tabular datasets. To ensure generalizability beyond single datasets and model types, we select two publicly available, imbalanced datasets—breast_cancer_imb10 and digits_binary_imb10—both with a minority class reduced to 10% of the majority, matching the imbalanced condition in the gap G4. The control condition uses class weighting (as in E1), which is claimed to yield higher recall (0.66 vs. 0.17), while the treatment applies oversampling (via SMOTE) to the same logistic regression model. This design directly tests the hypothesis under a broader scope (G1), includes a single model and method comparison (G2), and allows for statistical validation via paired Wilcoxon test (G4). Five-fold cross-validation ensures robustness, and three random seeds ensure reproducibility and variance estimation. The choice of metrics is limited to 'minority_recall' as the dependent variable, aligning with the hypothesis. The paired Wilcoxon test is appropriate because it compares two related samples (same model, different conditions) under non-normality assumptions, which is common in imbalanced classification."
+  },
+  {
+   "id": "D2",
+   "hypothesis_id": "H2",
+   "datasets": [
+    "breast_cancer_imb10",
+    "digits_binary_imb10"
+   ],
+   "model": "logistic_regression",
+   "control": "logistic_regression+class_weight",
+   "treatments": [
+    "logistic_regression+smote",
+    "logistic_regression+adasyn",
+    "logistic_regression+borderline_smote"
+   ],
+   "metrics": [
+    "f1"
+   ],
+   "test": "paired_wilcoxon",
+   "split": "stratified_kfold",
+   "folds": 5,
+   "seeds": [
+    123,
+    456,
+    789
+   ],
+   "rationale": "The hypothesis focuses on comparing F1-score performance across oversampling methods in imbalanced binary classification. To ensure robustness and generalizability, we select two imbalanced datasets—breast_cancer_imb10 and digits_binary_imb10—that reflect real-world class imbalance. The control condition (logistic_regression+class_weight) represents a standard, commonly used approach for handling imbalance, allowing us to benchmark against alternative oversampling methods. The treatment conditions test ADASYN, SMOTE, and borderline SMOTE, as specified in the hypothesis. F1-score is the primary metric (dependent variable) to evaluate performance, as per the hypothesis. A paired Wilcoxon test is used to compare the F1-scores between the control and each treatment, as it is appropriate for non-parametric comparisons of paired observations. Five-fold cross-validation ensures stability and reduces variance, and three random seeds are used to ensure reproducibility and to assess the consistency of results across different data splits."
+  }
+ ],
+ "results": [
+  {
+   "id": "R1",
+   "design_id": "D1",
+   "conditions": [
+    {
+     "condition": "logistic_regression+class_weight",
+     "dataset": "breast_cancer_imb10",
+     "metric": "minority_recall",
+     "values": [
+      0.875,
+      1.0,
+      0.7142857142857143,
+      1.0,
+      0.8571428571428571,
+      0.875,
+      0.8571428571428571,
+      0.7142857142857143,
+      0.7142857142857143,
+      1.0,
+      1.0,
+      1.0,
+      0.8571428571428571,
+      0.8571428571428571,
+      0.7142857142857143
+     ],
+     "mean": 0.8690476190476191,
+     "lo": 0.8130952380952382,
+     "hi": 0.925
+    },
+    {
+     "condition": "logistic_regression+oversample",
+     "dataset": "breast_cancer_imb10",
+     "metric": "minority_recall",
+     "values": [
+      0.875,
+      1.0,
+      0.8571428571428571,
+      1.0,
+      0.8571428571428571,
+      0.75,
+      0.8571428571428571,
+      0.7142857142857143,
+      0.7142857142857143,
+      1.0,
+      1.0,
+      1.0,
+      0.8571428571428571,
+      0.8571428571428571,
+      0.7142857142857143
+     ],
+     "mean": 0.8702380952380953,
+     "lo": 0.8178571428571428,
+     "hi": 0.9250000000000002
+    },
+    {
+     "condition": "logistic_regression+class_weight",
+     "dataset": "digits_binary_imb10",
+     "metric": "minority_recall",
+     "values": [
+      0.8333333333333334,
+      0.8333333333333334,
+      0.7222222222222222,
+      0.7222222222222222,
+      0.8333333333333334,
+      0.8333333333333334,
+      0.8333333333333334,
+      0.7222222222222222,
+      0.7222222222222222,
+      0.8333333333333334,
+      0.7777777777777778,
+      0.8333333333333334,
+      0.8888888888888888,
+      0.7777777777777778,
+      0.8333333333333334
+     ],
+     "mean": 0.8000000000000003,
+     "lo": 0.7739814814814813,
+     "hi": 0.8259259259259262
+    },
+    {
+     "condition": "logistic_regression+oversample",
+     "dataset": "digits_binary_imb10",
+     "metric": "minority_recall",
+     "values": [
+      0.8333333333333334,
+      0.8333333333333334,
+      0.7222222222222222,
+      0.7222222222222222,
+      0.7777777777777778,
+      0.7777777777777778,
+      0.7777777777777778,
+      0.7222222222222222,
+      0.6666666666666666,
+      0.7777777777777778,
+      0.7777777777777778,
+      0.8333333333333334,
+      0.8888888888888888,
+      0.7777777777777778,
+      0.8333333333333334
+     ],
+     "mean": 0.7814814814814817,
+     "lo": 0.751851851851852,
+     "hi": 0.8111111111111112
+    }
+   ],
+   "comparisons": [
+    {
+     "dataset": "breast_cancer_imb10",
+     "metric": "minority_recall",
+     "treatment": "logistic_regression+oversample",
+     "control": "logistic_regression+class_weight",
+     "mean_diff": 0.0011904761904761862,
+     "lo": -0.025,
+     "hi": 0.02857142857142856,
+     "p": 0.6547208460185769,
+     "effect_size_dz": 0.023472626340650928,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.6547208460185769
+    },
+    {
+     "dataset": "digits_binary_imb10",
+     "metric": "minority_recall",
+     "treatment": "logistic_regression+oversample",
+     "control": "logistic_regression+class_weight",
+     "mean_diff": -0.018518518518518528,
+     "lo": -0.03333333333333335,
+     "hi": -0.00740740740740741,
+     "p": 0.025347318677468252,
+     "effect_size_dz": -0.6831300510639734,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.050694637354936505
+    }
+   ],
+   "runtime_seconds": 0.503,
+   "summary": ""
+  }
+ ],
+ "critiques": [
+  {
+   "id": "C1",
+   "round": 1,
+   "target_id": "E2",
+   "stage": "evidence",
+   "issue": "quote_not_in_source",
+   "severity": "blocking",
+   "message": "The quoted text does not appear in the cited paper's record.",
+   "reviewer": "rule",
+   "resolution": "fixed",
+   "resolution_note": "E2 removed."
+  },
+  {
+   "id": "C2",
+   "round": 1,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'minority_recall' is not the hypothesis's dependent variable 'minority-class recall'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C3",
+   "round": 1,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'smote'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C4",
+   "round": 1,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'adasyn'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C5",
+   "round": 1,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'borderline_smote'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C6",
+   "round": 1,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'f1' is not the hypothesis's dependent variable 'F1-score'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C7",
+   "round": 2,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'minority_recall' is not the hypothesis's dependent variable 'minority-class recall'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C8",
+   "round": 2,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'smote'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C9",
+   "round": 2,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'adasyn'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C10",
+   "round": 2,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'borderline_smote'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C11",
+   "round": 2,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'f1' is not the hypothesis's dependent variable 'F1-score'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C12",
+   "round": 99,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'minority_recall' is not the hypothesis's dependent variable 'minority-class recall'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C13",
+   "round": 99,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'smote'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C14",
+   "round": 99,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'adasyn'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C15",
+   "round": 99,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'borderline_smote'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C16",
+   "round": 99,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'f1' is not the hypothesis's dependent variable 'F1-score'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  }
+ ],
+ "conclusions": [
+  {
+   "id": "K1",
+   "hypothesis_id": "H1",
+   "result_id": "R1",
+   "verdict": "inconclusive",
+   "statement": "In the breast_cancer_imb10 dataset, the minority recall difference between oversampling (0.026) and class weighting (0.025) is negligible (mean_diff = 0.0012, p = 0.6547), while in digits_binary_imb10, oversampling yields a lower recall (0.024) than class weighting (0.042) (mean_diff = -0.0185, p = 0.0253). The Holm-adjusted p-value for the primary metric remains above 0.05 (p_holm = 0.0507), failing to establish a statistically significant difference under the hypothesis's expected direction.",
+   "evidence_ids": [
+    "E1"
+   ],
+   "limitations": [
+    "The comparison is limited to two datasets and one model (logistic regression), restricting generalizability beyond these specific conditions.",
+    "The effect size in breast_cancer_imb10 is minimal (dz = 0.023), while in digits_binary_imb10 it is large but in the opposite direction (dz = -0.683), indicating inconsistent outcomes.",
+    "The control condition in E1 (0.66 vs. 0.17) is not directly replicable here, as the actual recall values in the experiments are much lower, suggesting a potential mismatch in experimental setup or dataset conditions."
+   ]
+  }
+ ],
+ "corrections": [],
+ "completed": [
+  "literature",
+  "evidence",
+  "gaps",
+  "hypotheses",
+  "design",
+  "analysis",
+  "conclusion",
+  "critique"
+ ],
+ "reviewed": {
+  "evidence": "none",
+  "hypotheses": "none",
+  "design": "none",
+  "conclusion": "none"
+ },
+ "error": null
+}

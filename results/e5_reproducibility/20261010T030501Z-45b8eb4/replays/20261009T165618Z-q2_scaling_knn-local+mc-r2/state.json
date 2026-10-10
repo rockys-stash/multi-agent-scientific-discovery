@@ -1,0 +1,1175 @@
+{
+ "run_id": "20261009T165618Z-q2_scaling_knn-local+mc-r2",
+ "question": {
+  "id": "q2_scaling_knn",
+  "text": "Does standardising features before k-nearest-neighbour classification improve accuracy on tabular data whose features are on different scales?",
+  "keywords": [
+   "feature scaling",
+   "standardization",
+   "k-nearest neighbors",
+   "classification accuracy"
+  ],
+  "concepts": [
+   "feature scaling",
+   "standardization",
+   "nearest neighbor",
+   "distance",
+   "accuracy"
+  ],
+  "domain_hint": "machine learning"
+ },
+ "reasoner": "local+mc",
+ "stage": "critique",
+ "status": "complete",
+ "papers": [
+  {
+   "id": "doi:10.26877/asset.v6i1.17685",
+   "title": "Stroke Classification Comparison with KNN through Standardization and Normalization Techniques",
+   "authors": [
+    "Muhammad Firmansyah"
+   ],
+   "year": 2024,
+   "venue": "Advance Sustainable Science, Engineering and Technology",
+   "abstract": "This study explores the impact of z-score standardization and min-max normalization on K-Nearest Neighbors (KNN) classification for strokes. Focused on managing diverse scales in health attributes within the stroke dataset, the research aims to improve classification model accuracy and reliability. Preprocessing involves z-score standardization, min-max normalization, and no data scaling. The KNN model is trained and evaluated using various methods. Results reveal comparable performance between z-score standardization and min-max normalization, with slight variations across data split ratios. Demonstrating the importance of data scaling, both z-score and min-max achieve 95.07% accuracy. Notably, normalization averages a higher accuracy (94.25%) than standardization (94.21%), highlighting the critical role of data scaling for robust machine learning performance and informed health decisions.",
+   "url": "https://www.semanticscholar.org/paper/c9fc88a96a002e604d3d466d2b654ea4f750dee8",
+   "source": "semanticscholar",
+   "cache_key": "7a4aa8b18fd2c69f0f1f1b65dcfe2faef5235e8540c60d1d894cc8a5d34bc1fc",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "doi:10.30871/jaic.v9i3.9353",
+   "title": "Comparison of Data Normalization Techniques on KNN Classification Performance for Pima Indians Diabetes Dataset",
+   "authors": [
+    "Yohanes Dimas Pratama",
+    "Abu Salam"
+   ],
+   "year": 2025,
+   "venue": "JOURNAL OF APPLIED INFORMATICS AND COMPUTING",
+   "abstract": "This study analyzes the comparison of data normalization techniques in the K-Nearest Neighbors (KNN) model for diabetes classification using the Pima Indians Diabetes dataset. The three normalization techniques evaluated are Min-Max Scaling, Z-Score Scaling, and Decimal Scaling. After preprocessing, such as handling missing values and removing duplicates, as well as feature selection using the Random Forest method, the features removed include SkinThickness, Insulin, Pregnancies, and BloodPressure. The evaluation was carried out using accuracy, precision, recall, F1-Score, specificity, and ROC AUC metrics. The results show that Min-Max Scaling provides a significant improvement in all metrics, with the highest accuracy of 0.8117 and ROC AUC of 0.8050. Z-Score Scaling provides good results, but not as good as Min-Max Scaling. Decimal Scaling shows the lowest performance. Statistical tests using Paired T-Test show significant differences between Min-Max Scaling and without normalization on all metrics (P-Value <0.05), while Z-Score Scaling and Decimal Scaling are only significant on some metrics, with P-Values of 0.08363 and 0.43839 respectively for accuracy and ROC AUC. Overall, Min-Max Scaling proved to be the best normalization method for improving KNN performance in diabetes classification.",
+   "url": "https://www.semanticscholar.org/paper/e9e817e9269d9c5e6974c7da1cbd34c05b9404cd",
+   "source": "semanticscholar",
+   "cache_key": "bbba882fe5f8ec3d102cf4eb4122197cf17430a76f8c78e7b9ca52d78837f5dd",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.12962/j20882033.v35i3.2889",
+   "title": "Comparison Of KNN, Random Forest, And F-PSO Algorithms On Simple Feature Scaling For Agility Level Classification",
+   "authors": [
+    "T. Nugroho",
+    "Umi Laili Yuhana",
+    "D. Siahaan"
+   ],
+   "year": 2025,
+   "venue": "IPTEK: The Journal for Technology and Science",
+   "abstract": "Classifying agility levels presents challenges due to variations in team members’ personalities, roles, and undesirable behaviors. This study aims to enhance classification accuracy by comparing the performance of three algorithms: K-Nearest Neighbors (KNN), Random Forest, and Fuzzy-Particle Swarm Optimization (F-PSO) in classifying agility levels using simple feature scaling as part of the data preprocessing. Simple feature scaling is employed to ensure that all parameters are on the same scale, thereby improving the model’s effectiveness in learning classification patterns. F-PSO was selected for its ability to perform adaptive global search optimization within a fuzzy environment, while KNN and Random Forest serve as benchmarks. The study involved 160 participants from various Scrum teams to evaluate the effectiveness of these algorithms. The parameters considered included team members’ personalities (based on the Keirsey model), roles within the team, and the identification of negative behavior patterns (antipatterns). The results indicated that the F-PSO algorithm significantly outperformed KNN and Random Forest in terms of accuracy, improving from an average accuracy of 25% before optimization to 93.75% after applying F-PSO. This approach enables Scrum teams to identify and address obstacles affecting agility, facilitating earlier problem prediction and resolution, leading to more adaptive and effective teams.",
+   "url": "https://www.semanticscholar.org/paper/c68a64ac29655c5f3d297d3355e1bdda3889361d",
+   "source": "semanticscholar",
+   "cache_key": "bbba882fe5f8ec3d102cf4eb4122197cf17430a76f8c78e7b9ca52d78837f5dd",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.35882/f2140043",
+   "title": "Enhancing Software Defect Prediction: HHO-Based Wrapper Feature Selection with Ensemble Methods",
+   "authors": [
+    "Achmad Fauzan Luthfi",
+    "R. Herteno",
+    "Friska Abadi",
+    "Radityo Adi Nugroho",
+    "Muhammad Itqan Mazdadi",
+    "Dr. Vijay Anant Athavale"
+   ],
+   "year": 2025,
+   "venue": "Indonesian Journal of Electronics Electromedical Engineering and Medical Informatics",
+   "abstract": "The growing complexity of data across domains highlights the need for effective classification models capable of addressing issues such as class imbalance and feature redundancy. The NASA MDP dataset poses such challenges due to its diverse characteristics and highly imbalanced classes, which can significantly affect model accuracy. This study proposes a robust classification framework integrating advanced preprocessing, optimization-based feature selection, and ensemble learning techniques to enhance predictive performance. The preprocessing phase involved z-score standardization and robust scaling to normalize data while reducing the impact of outliers. To address class imbalance, the ADASYN technique was employed. Feature selection was performed using Binary Harris Hawk Optimization (BHHO), with K-Nearest Neighbor (KNN) used as an evaluator to determine the most relevant features. Classification models including Random Forest (RF), Support Vector Machine (SVM), and Stacking were evaluated using performance metrics such as accuracy, AUC, precision, recall, and F1-measure. Experimental results indicated that the Stacking model achieved superior performance in several datasets, with the MC1 dataset yielding an accuracy of 0.998 and an AUC of 1.000. However, statistical significance testing revealed that not all observed improvements were meaningful; for example, Stacking significantly outperformed SVM but did not show a significant difference when compared to RF in terms of AUC. This underlines the importance of aligning model choice with dataset characteristics. In conclusion, the integration of advanced preprocessing and metaheuristic optimization contributes positively to software defect prediction. Future research should consider more diverse datasets, alternative optimization techniques, and explainable AI to further enhance model reliability and interpretability.",
+   "url": "https://www.semanticscholar.org/paper/6a27990b9c7e8e68805bbd5c2061619528544260",
+   "source": "semanticscholar",
+   "cache_key": "7a4aa8b18fd2c69f0f1f1b65dcfe2faef5235e8540c60d1d894cc8a5d34bc1fc",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "doi:10.1109/smc42975.2020.9282834",
+   "title": "Evolutionary Feature Scaling in K-Nearest Neighbors Based on Label Dispersion Minimization",
+   "authors": [
+    "S. Basak",
+    "M. Huber"
+   ],
+   "year": 2020,
+   "venue": "IEEE International Conference on Systems, Man and Cybernetics",
+   "abstract": "K-Nearest Neighbors (KNN) has remained one of the most popular methods for supervised machine learning tasks. However, its performance often depends on the characteristics of the dataset and on appropriate feature scaling. In this paper, we explore characteristics of a dataset that make it suitable for being used within KNN. As part of this, two new measures for dataset dispersion, called mean neighborhood target standard deviation (MNTSD), and mean neighborhood target entropy (MNTE) are formulated to determine the expeced performance while using KNN regressors and classifiers, respectively. It is empirically demonstrated that these measures of dispersion can be indicative of the performance of KNN regression and classification. This idea is further used to learn feature weights that help improve the accuracy of KNN classification and regression. For this, it is argued that the MNTSD and MNTE, when used to learn feature weights, cannot be optimized using gradient-based optimization methods and we develop optimization strategies based on metaheuristic methods, namely genetic algorithms and particle swarm optimization. The feature-weighting method is tried in both regression and classification contexts on publicly available datasets, and the performance is compared to KNN without feature weighting. The results indicate that the performance of KNN with appropriate feature weighting leads to better performance.",
+   "url": "https://www.semanticscholar.org/paper/8686c29a2331327c1dabc75cb4ef7b4f62ee9468",
+   "source": "semanticscholar",
+   "cache_key": "bbba882fe5f8ec3d102cf4eb4122197cf17430a76f8c78e7b9ca52d78837f5dd",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.52436/1.jutif.2025.6.3.4692",
+   "title": "Comparative Analysis Of Ant Lion Optimization And Jaya Algorithm For Feature Selection In K-Nearest Neighbor (Knn) Based Electricity Consumption Prediction",
+   "authors": [
+    "Retno Wahyusari",
+    "S. Sunardi",
+    "A. Fadlil"
+   ],
+   "year": 2025,
+   "venue": "Jurnal Teknik Informatika (Jutif)",
+   "abstract": "The increase in demand for electrical energy is in line with increasing population, urbanization, industrial deployment, and technology. Accurate prediction of electrical energy consumption plays an important role in planning, analyzing, and managing electricity systems to ensure sustainable, safe, and economical electricity supply. K-Nearest Neighbors (KNN) is a simple and fast prediction algorithm based on the quality and relevance of the features used. This research proposes to improve the accuracy of energy consumption prediction through feature selection based on metaheuristic algorithms, namely Genetic Algorithm (GA), Ant Lion Optimization (ALO), Teaching Learning Based Optimization (TLBO), and Jaya Algorithm (JA). The dataset used is Tetouan City Power Consumption, with a preprocessing process of time feature extraction, min-max scaling normalization, and feature selection. The ALO+KNN and JA+KNN combinations delivered the best and most stable prediction performance, while TLBO+KNN performed poorly. GA+KNN showed the worst overall results among all combinations. The evaluation of model performance was based on RMSE, MAPE, and R² metrics. These findings highlight the importance of selecting a feature selection algorithm that aligns well with the characteristics of the model and dataset to enhance prediction accuracy.",
+   "url": "https://www.semanticscholar.org/paper/ad6e5b8c997a112fa9187df4cc0041e07b8ce963",
+   "source": "semanticscholar",
+   "cache_key": "bbba882fe5f8ec3d102cf4eb4122197cf17430a76f8c78e7b9ca52d78837f5dd",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.32664/icobits.v1.136",
+   "title": "A Comparative Study of Text Classification Performance Using NBC and KNN with N-Gram Features in E-Government Services",
+   "authors": [
+    "Istiadi Istiadi",
+    "Aviv Yuniar Rahman",
+    "Kuncahyo Setyo Nugroho"
+   ],
+   "year": 2026,
+   "venue": "ICoBITS",
+   "abstract": "The Sambat Online service is a promising platform developed by the Malang City Government to collect feedback and suggestions from the public as part of efforts to enhance government service quality. To ensure that citizen feedback is effectively categorized and delivered to the relevant departments, a highly accurate text classification method is required. This study investigates the application of N-Gram features in two popular text classification algorithms: Naïve Bayes Classification (NBC) and K-Nearest Neighbor (KNN). The research aims to analyze and compare the performance of different N-Gram models (unigram, bigram, and trigram), both individually and in combination, for classifying textual data obtained from the Sambat Online system. Experimental results demonstrate that incorporating N-Gram features significantly improves the accuracy of both NBC and KNN classifiers. Among the evaluated methods, NBC achieved consistently higher performance across multiple feature combinations. The highest classification accuracy was obtained when all three N-Gram types were combined, yielding an accuracy of 98.67% for NBC and 97.17% for KNN. These findings indicate that the integration of N-Gram features can effectively enhance text classification performance in e-government applications, particularly when implemented using NBC.",
+   "url": "https://doi.org/10.32664/icobits.v1.136",
+   "source": "crossref",
+   "cache_key": "1cf12c3a98b57333729981fbb6a6d3b5b6a458c8e06e00efd1d1f2578a80cc0b",
+   "query": "kNN performance scaled features"
+  },
+  {
+   "id": "doi:10.52783/jes.7419",
+   "title": "Enhanced Credit Scoring Prediction Using KNN-Z-Score Based Logistic Regression (KZ-LR) Algorithm",
+   "authors": [
+    "K. Parveen"
+   ],
+   "year": 2024,
+   "venue": "Journal of Electrical Systems",
+   "abstract": "Credit scoring is a critical tool in the financial sector, enabling lenders to assess borrower risk and make informed decisions. Building an accurate credit scoring model requires extensive data preprocessing to address challenges such as missing values, feature scaling, and data normalization. This study utilizes the [8]dataset to develop a credit scoring model using logistic regression. The preprocessing phase incorporates advanced techniques like KNN imputation, Z-score standardization, and min-max normalization to ensure data integrity and uniformity. Comparative analysis of imputation methods demonstrates the superiority of KNN imputation in preserving feature relationships and improving model performance. Logistic regression, chosen for its simplicity and interpretability, is assessed utilizing metrics encompassing accuracy as well as ROC-AUC. Results highlight critical role of preprocessing in enhancing predictive accuracy, providing a robust framework for credit scoring and risk assessment.",
+   "url": "https://www.semanticscholar.org/paper/a85a724f16ff3651512343807680dd32f902605a",
+   "source": "semanticscholar",
+   "cache_key": "bbba882fe5f8ec3d102cf4eb4122197cf17430a76f8c78e7b9ca52d78837f5dd",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:1303.0095",
+   "title": "Label-dependent Feature Extraction in Social Networks for Node Classification",
+   "authors": [
+    "Tomasz Kajdanowicz",
+    "Przemyslaw Kazienko",
+    "Piotr Doskocz"
+   ],
+   "year": 2013,
+   "venue": "arXiv",
+   "abstract": "A new method of feature extraction in the social network for within-network classification is proposed in the paper. The method provides new features calculated by combination of both: network structure information and class labels assigned to nodes. The influence of various features on classification performance has also been studied. The experiments on real-world data have shown that features created owing to the proposed method can lead to significant improvement of classification accuracy.",
+   "url": "http://arxiv.org/abs/1303.0095v1",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.23887/janapati.v13i2.82174",
+   "title": "A Comparative Study on the Impact of Feature Selection and Dataset Resampling on the Performance of the K-Nearest Neighbors (KNN) Classification Algorithm",
+   "authors": [
+    "I. Gunadi",
+    "D. Rachmawati"
+   ],
+   "year": 2024,
+   "venue": "Jurnal Nasional Pendidikan Teknik Informatika (JANAPATI)",
+   "abstract": "This study aims to evaluate the impact of dataset balancing and feature selection on the performance of the K-Nearest Neighbors (KNN) classification algorithm. The primary objective is to determine the effect of different training data balance ratios on classification performance. Additionally, the study analyzes the contribution of feature selection methods and data balancing to the overall performance of the classification algorithm. Three datasets (Titanic, Wine Quality, and Heart Diseases) sourced from Kaggle, were utilized in this research. Following the preprocessing stage, the datasets were subjected to three resampling scenarios with balance ratios of 0.3, 0.6, and 0.9. Feature selection was performed by combining correlation test values and information gain values, each weighted at 50%. The selected features were those with positive combined values of summation, correlation, and information gain. The KNN classification algorithm was then applied to datasets with and without feature selection. The results indicate that achieving a perfectly balanced ratio (ratio = 1) is not essential for improving classification performance. A balance ratio of 0.6 yielded results comparable to those of a perfect balance ratio. Furthermore, the findings demonstrate that feature selection has a more significant impact on classification performance than data balancing. Specifically, data with a balance ratio of 0.3 and feature selection outperformed data with a balance ratio of 0.6 but without feature selection.",
+   "url": "https://www.semanticscholar.org/paper/2fa2e2e924ea0321a29b9ad6da978a2ecc98813c",
+   "source": "semanticscholar",
+   "cache_key": "7a4aa8b18fd2c69f0f1f1b65dcfe2faef5235e8540c60d1d894cc8a5d34bc1fc",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "doi:10.1109/mi-sta52233.2021.9464361",
+   "title": "Investigating the Impact of Different Data Representation with Several Classification Models on Magnetic Resonance Imaging (MRI)",
+   "authors": [
+    "Sokena Elfallah",
+    "Ehab A. Omer A. Omer",
+    "Mohamed Abdalla",
+    "Bilal Aljabour"
+   ],
+   "year": 2021,
+   "venue": "2021 IEEE 1st International Maghreb Meeting of the Conference on Sciences and Techniques of Automatic Control and Computer Engineering MI-STA",
+   "abstract": "Alzheimer is one of the dementia diseases. It often infects elderly people who are beyond 65 years old. Alzheimer diagnosis (AD) relies on the analysis of the magnetic resonance imaging (MRI) and the scale of the clinical dementia rating (CDR). The automatic AD has widely been carried out adopting different methods. The investigation of the digital MRI samples with CDR scale has been the cornerstone of the automatic studies of AD. Those studies have resulted in various accuracy rates when they applied diverse techniques. This paper presents and compares several techniques of image normalization and classification models for improving the accuracy rates of AD. Four normalizations techniques, which is Z-score, Min-Max, Decimal Scaling and Standard deviation are examined. Whilst, the classifiers are Naïve Bayes, Logistic regression, decision tree (DT), k-nearest neighbors (kNN), Artificial Neural Network (ANN), and support vector machine (SVM). The analyzed dataset involves MRI from 150 individuals and its CDR scales. The experiments of this paper has been implemented using Orange software. Although the overall accuracy rates are quite good, the best findings are 91.2% from logistic regression when it analyzed the normalized dataset using Z-score. Comparing with other studies, the results of this study have shown significant improvement based on utilizing the normalization techniques.",
+   "url": "https://www.semanticscholar.org/paper/4e16d2fe5062f6bd318524ed6dcecf620a809943",
+   "source": "semanticscholar",
+   "cache_key": "7a4aa8b18fd2c69f0f1f1b65dcfe2faef5235e8540c60d1d894cc8a5d34bc1fc",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "doi:10.1109/icctdc64446.2025.11158881",
+   "title": "Comparing SVM and KNN Algorithm for High Accuracy in Brain Tumor Prediction",
+   "authors": [
+    "J. Kanimozhi",
+    "G. Kalasurya",
+    "P. Anitha",
+    "R. Geetha",
+    "E. Loganathan",
+    "C. Kandasamy"
+   ],
+   "year": 2025,
+   "venue": "2025 International Conference on Computing Technologies & Data Communication (ICCTDC)",
+   "abstract": "The main aim of this research is to compare the efficacy of Support Vector Machine (SVM) and k-Nearest Neighbors (kNN) algorithms in high-precision brain tumor prediction, solving for the issue of low precision of current methods. Two approaches were tested in this study Group 1 that uses the KNN algorithm with its hyperparameters optimized and kernel functions, and Group 2 using the SVM algorithm with distance measures and feature scaling. 95% confidence level was utilised to establish statistical significance in the analysis of 1,000 brain MRI scans. Group 1, which utilised the KNN algorithm, performed much better than Group 2, which utilized the SVM algorithm, with an accuracy of 94.56%. In comparison between the two approaches, the performance difference was statistically significant (p < 0.05), indicating that the SVM algorithm proved to be more effective in predicting brain tumors with high accuracy. The prediction of brain tumor was made more accurate and reliable by the SVM algorithm as opposed to the KNN approach, especially in situations that demand accurate and efficient classification.",
+   "url": "https://www.semanticscholar.org/paper/f56b227ded2a6190464aa7bb7b1b6e46fa7127de",
+   "source": "semanticscholar",
+   "cache_key": "bbba882fe5f8ec3d102cf4eb4122197cf17430a76f8c78e7b9ca52d78837f5dd",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.1109/access.2025.3635541",
+   "title": "The Impact of Feature Scaling in Machine Learning: Effects on Regression and Classification Tasks",
+   "authors": [
+    "J. M. Pinheiro",
+    "Suzana Vilas Boas de Oliveira",
+    "T. H. S. Silva",
+    "Pedro Antonio Rabelo Saraiva",
+    "Enzo Ferreira de Souza",
+    "Ricardo V. Godoy",
+    "L. Ambrosio",
+    "Marcelo Becker"
+   ],
+   "year": 2025,
+   "venue": "IEEE Access",
+   "abstract": "This study addresses the lack of comprehensive evaluations of feature scaling by systematically assessing 12 techniques, including less common methods such as VAST and Pareto, in 14 machine learning algorithms and 16 datasets covering both classification and regression tasks. The impact of feature scaling was evaluated in terms of predictive performance (accuracy, MAE, MSE, R2) and computational efficiency (training time, inference time, memory usage). The results show that the ensemble methods (Random Forest, XGBoost, CatBoost, LightGBM) remain robust regardless of scaling, while models such as Logistic Regression, SVM, TabNet, and MLP are highly sensitive to the chosen scaler. By making all codes, results, and model parameters publicly available, this work provides reproducible, model-specific guidance for selecting scaling strategies in practical machine learning applications.",
+   "url": "https://www.semanticscholar.org/paper/7fc7f8db5e3ce932a18b24a6e2715f992e43ec64",
+   "source": "semanticscholar",
+   "cache_key": "7a4aa8b18fd2c69f0f1f1b65dcfe2faef5235e8540c60d1d894cc8a5d34bc1fc",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "doi:10.1007/s10791-025-09622-1",
+   "title": "A unified and scalable machine learning framework for feature fusion in object classification using weighted PCA with adaptive concatenation and dynamic scaling",
+   "authors": [
+    "Amitav Mahapatra",
+    "P. K. Patra"
+   ],
+   "year": 2025,
+   "venue": "Discover Computing",
+   "abstract": "Feature fusion is essential for enhancing the performance of machine learning classifiers, particularly when managing heterogeneous, high-dimensional, and multimodal datasets. In this work, we propose Weighted PCA with Adaptive Concatenation and Dynamic Scaling (WPCA-ACDS), a novel feature fusion technique designed to address challenges such as overfitting, high dimensionality, and noise sensitivity. WPCA-ACDS integrates three key components: Weighted Principal Component Analysis (Weighted PCA) for efficient dimensionality reduction, Adaptive Concatenation for optimal feature selection based on data-driven strategies, and Dynamic Scaling to balance feature contributions and mitigate the impact of outliers or irrelevant features. Through extensive empirical evaluation on five benchmark datasets—CIFAR-10, Caltech-101, Scene-15, MNIST, and Oxford Pets—utilizing five classifiers (SVM, Random Forest, KNN, Logistic Regression, and Decision Trees), we demonstrate that WPCA-ACDS outperforms several state-of-the-art fusion techniques, including Simple Concatenation, PCA-based Concatenation, Average Fusion, Weighted Average Fusion, Product-based Fusion, cv-weight, Multiple Kernel Learning (MKL), Collaborative Boosting and Dominant Set Fusion. WPCA-ACDS excels in terms of classification accuracy, robustness to noise and high-dimensional data, and computational scalability. Additionally, sensitivity and trade-off analyses emphasize WPCA-ACDS's versatility, solidifying its position as a robust and scalable solution for modern machine learning tasks. Ablation studies further reveal the critical role of each component, demonstrating that the full WPCA-ACDS framework consistently outperforms all ablated variants in classification performance. This establishes WPCA-ACDS as an effective and comprehensive feature fusion technique for a wide range of machine learning tasks.",
+   "url": "https://www.semanticscholar.org/paper/330949a603e0594ba007077216c990816ae8239a",
+   "source": "semanticscholar",
+   "cache_key": "7a4aa8b18fd2c69f0f1f1b65dcfe2faef5235e8540c60d1d894cc8a5d34bc1fc",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "arxiv:1801.01453",
+   "title": "Adaptive kNN using Expected Accuracy for Classification of Geo-Spatial Data",
+   "authors": [
+    "Mark Kibanov",
+    "Martin Becker",
+    "Juergen Mueller",
+    "Martin Atzmueller",
+    "Andreas Hotho",
+    "Gerd Stumme"
+   ],
+   "year": 2017,
+   "venue": "arXiv",
+   "abstract": "The k-Nearest Neighbor (kNN) classification approach is conceptually simple - yet widely applied since it often performs well in practical applications. However, using a global constant k does not always provide an optimal solution, e.g., for datasets with an irregular density distribution of data points. This paper proposes an adaptive kNN classifier where k is chosen dynamically for each instance (point) to be classified, such that the expected accuracy of classification is maximized. We define the expected accuracy as the accuracy of a set of structurally similar observations. An arbitrary similarity function can be used to find these observations. We introduce and evaluate different similarity functions. For the evaluation, we use five different classification tasks based on geo-spatial data. Each classification task consists of (tens of) thousands of items. We demonstrate, that the presented expected accuracy measures can be a good estimator for kNN performance, and the proposed adaptive kNN classifier outperforms common kNN and previously introduced adaptive kNN algorithms. Also, we show that the range of considered k can be significantly reduced to speed up the algorithm without negative influence on classification accuracy.",
+   "url": "http://arxiv.org/abs/1801.01453v1",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:1307.4717",
+   "title": "Content Based Image Retrieval System using Feature Classification with Modified KNN Algorithm",
+   "authors": [
+    "T. Dharani",
+    "I. Laurence Aroquiaraj"
+   ],
+   "year": 2013,
+   "venue": "arXiv",
+   "abstract": "Feature means countenance, remote sensing scene objects with similar characteristics, associated to interesting scene elements in the image formation process. They are classified into three types in image processing, that is low, middle and high. Low level features are color, texture and middle level feature is shape and high level feature is semantic gap of objects. An image retrieval system is a computer system for browsing, searching and retrieving images from a large image database. Content Based Image Retrieval is a technique which uses visual features of image such as color, shape, texture to search user required image from large image database according to user requests in the form of a query. MKNN is an enhancing method of KNN. The proposed KNN classification is called MKNN. MKNN contains two parts for processing, they are validity of the train samples and applying weighted KNN. The validity of each point is computed according to its neighbors. In our proposal, Modified K-Nearest Neighbor can be considered a kind of weighted KNN so that the query label is approximated by weighting the neighbors of the query.",
+   "url": "http://arxiv.org/abs/1307.4717v1",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:1807.04970",
+   "title": "Analysis Acoustic Features for Acoustic Scene Classification and Score fusion of multi-classification systems applied to DCASE 2016 challenge",
+   "authors": [
+    "Sangwook Park",
+    "Seongkyu Mun",
+    "Younglo Lee",
+    "David K. Han",
+    "Hanseok Ko"
+   ],
+   "year": 2018,
+   "venue": "arXiv",
+   "abstract": "This paper describes an acoustic scene classification method which achieved the 4th ranking result in the IEEE AASP challenge of Detection and Classification of Acoustic Scenes and Events 2016. In order to accomplish the ensuing task, several methods are explored in three aspects: feature extraction, feature transformation, and score fusion for final decision. In the part of feature extraction, several features are investigated for effective acoustic scene classification. For resolving the issue that the same sound can be heard in different places, a feature transformation is applied for better separation for classification. From these, several systems based on different feature sets are devised for classification. The final result is determined by fusing the individual systems. The method is demonstrated and validated by the experiment conducted using the Challenge database.",
+   "url": "http://arxiv.org/abs/1807.04970v1",
+   "source": "arxiv",
+   "cache_key": "f16a05b747a85f6304381aa063b34492b97cbf504519882738962e8bcad6dd5a",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "doi:10.1109/accthpa65749.2025.11168691",
+   "title": "EEG-Based Mental Health Diagnosis: A Novel Approach Using DWT and Machine Learning",
+   "authors": [
+    "Shashwat Verma",
+    "Shikhar Agrawal",
+    "Shreshth Gulati",
+    "G. P"
+   ],
+   "year": 2025,
+   "venue": "2025 Advanced Computing and Communication Technologies for High Performance Applications (ACCTHPA)",
+   "abstract": "Mental health disorder impact and individual's cognitive and emotional well-being significantly. For making treatment to be effective, an early and accurate diagnosis is essential. This study presents an EEG-based mental health disorder classification system that extracts and analyzes brainwave features to identify potential mental health disorders. This system processes EEG signals using DWT (Discrete Wavelet Transform) to extract frequency band feature (Delta, Theta, Alpha, Beta and Gamma). These features are then classified using Deep learning models like Artificial Neural Networks (ANN), Convolutional Neural Networks (CNN), Long Short-Term Memory (LSTM), and hybrid CNN-LSTM and CNN-BiLSTM architectures. In this study raw data is first converted into frequency band and then dataset is preprocessed using Minmax Scaling, KNN imputation and feature label encoding and balance the dataset using random oversampling to ensure high data quality. Model performance is evaluated using validation accuracy, with hybrid CNN-BiLSTM achieving the highest accuracy. The proposed approach offers a fast and automated way to classify mental disorders using EEG data, making it a valuable tool for diagnosis and clinical decision-making. By analyzing brainwave patterns with machine learning, this system can assist healthcare professionals in identifying disorders more efficiently. In future we will aim to work on expanding real-time EEG processing capabilities and deploying a system for clinical use.",
+   "url": "https://www.semanticscholar.org/paper/ae7eb5b095cd96d0bf110698e105d3f9da65220d",
+   "source": "semanticscholar",
+   "cache_key": "7a4aa8b18fd2c69f0f1f1b65dcfe2faef5235e8540c60d1d894cc8a5d34bc1fc",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "arxiv:2508.18953",
+   "title": "Novel Approaches to Artificial Intelligence Development Based on the Nearest Neighbor Method",
+   "authors": [
+    "I. I. Priezzhev",
+    "D. A. Danko",
+    "A. V. Shubin"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "abstract": "Modern neural network technologies, including large language models, have achieved remarkable success in various applied artificial intelligence applications, however, they face a range of fundamental limitations. Among them are hallucination effects, high computational complexity of training and inference, costly fine-tuning, and catastrophic forgetting issues. These limitations significantly hinder the use of neural networks in critical areas such as medicine, industrial process management, and scientific research. This article proposes an alternative approach based on the nearest neighbors method with hierarchical clustering structures. Employing the k-nearest neighbors algorithm significantly reduces or completely eliminates hallucination effects while simplifying model expansion and fine-tuning without the need for retraining the entire network. To overcome the high computational load of the k-nearest neighbors method, the paper proposes using tree-like data structures based on Kohonen self-organizing maps, thereby greatly accelerating nearest neighbor searches. Tests conducted on handwritten digit recognition and simple subtitle translation tasks confirmed the effectiveness of the proposed approach. With only a slight reduction in accuracy, the nearest neighbor search time was reduced hundreds of times compared to exhaustive search methods. The proposed method features transparency and interpretability, closely aligns with human cognitive mechanisms, and demonstrates potential for extensive use in tasks requiring high reliability and explainable results.",
+   "url": "http://arxiv.org/abs/2508.18953v1",
+   "source": "arxiv",
+   "cache_key": "545fd4fb903eb5dbcdaab161699b65c58aea74a9e2673c3c0e6d89c47d035180",
+   "query": "standardization nearest neighbor performance"
+  },
+  {
+   "id": "arxiv:cond-mat/0410059",
+   "title": "Accuracy and Scaling Phenomena in Internet Mapping",
+   "authors": [
+    "Aaron Clauset",
+    "Cristopher Moore"
+   ],
+   "year": 2004,
+   "venue": "arXiv",
+   "abstract": "A great deal of effort has been spent measuring topological features of the Internet. However, it was recently argued that sampling based on taking paths or traceroutes through the network from a small number of sources introduces a fundamental bias in the observed degree distribution. We examine this bias analytically and experimentally. For Erdos-Renyi random graphs with mean degree c, we show analytically that traceroute sampling gives an observed degree distribution P(k) ~ 1/k for k < c, even though the underlying degree distribution is Poisson. For graphs whose degree distributions have power-law tails P(k) ~ k^-alpha, traceroute sampling from a small number of sources can significantly underestimate the value of αwhen the graph has a large excess (i.e., many more edges than vertices). We find that in order to obtain a good estimate of alpha it is necessary to use a number of sources which grows linearly in the average degree of the underlying graph. Based on these observations we comment on the accuracy of the published values of alpha for the Internet.",
+   "url": "http://arxiv.org/abs/cond-mat/0410059v1",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.1109/icvadv63329.2025.10961506",
+   "title": "Evaluation of ML Models using SMOTE and Feature Scaling for Intrusion Detection System(IDS)",
+   "authors": [
+    "V. Asha",
+    "M. T. Vasumathi",
+    "Arpana Prasad",
+    "Y. V",
+    "Yazhini A P",
+    "Mora Sivani"
+   ],
+   "year": 2025,
+   "venue": "2025 International Conference on Visual Analytics and Data Visualization (ICVADV)",
+   "abstract": "This study compares the performance of K-Nearest Neighbors (KNN), Random Forest and XGBoost (XGB) classifiers across multiple feature sets for intrusion detection. MinMaxScaler and RobustScaler, two specific scalers, preprocessed the dataset and the Synthetic Minority Oversampling Technique (SMOTE) addressed the class imbalance. It also improved model performance by creating many more synthetic samples for the minority class and then calculated thorough performance metrics for both classes (0 and 1), including accuracy, precision, recall and F1 scores. Among the classifiers evaluated, the KNN classifier with MinMaxScaler achieved the best performance, exhibiting a 97.5% accuracy rate along with balanced precision, recall, as well as F1 scores of 0.98. RobustScaler was used and the accuracy of KNN was slightly lower 94.75% as a result. Random Forest and XGBoost models showed high accuracy along with balanced metrics, thus supporting SMOTE's effectiveness. SMOTE's application greatly improved the recall and Fl F1 scores for the minority class and this guaranteed substantially better detection of many underrepresented instances. This study shows the importance of SMOTE for dealing with imbalanced class sizes and improving classifier accuracy and indicates that MinMaxScaler is the optimal scaling method. The results considerably stress the large importance of combining SMOTE with three carefully selected preprocessing methods to achieve demonstrably optimal model performance in a meaningful number of imbalanced datasets.",
+   "url": "https://www.semanticscholar.org/paper/aa679902f980947c431b6480090415f252086f77",
+   "source": "semanticscholar",
+   "cache_key": "bbba882fe5f8ec3d102cf4eb4122197cf17430a76f8c78e7b9ca52d78837f5dd",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "arxiv:0906.1814",
+   "title": "Large-Margin kNN Classification Using a Deep Encoder Network",
+   "authors": [
+    "Martin Renqiang Min",
+    "David A. Stanley",
+    "Zineng Yuan",
+    "Anthony Bonner",
+    "Zhaolei Zhang"
+   ],
+   "year": 2009,
+   "venue": "arXiv",
+   "abstract": "KNN is one of the most popular classification methods, but it often fails to work well with inappropriate choice of distance metric or due to the presence of numerous class-irrelevant features. Linear feature transformation methods have been widely applied to extract class-relevant information to improve kNN classification, which is very limited in many applications. Kernels have been used to learn powerful non-linear feature transformations, but these methods fail to scale to large datasets. In this paper, we present a scalable non-linear feature mapping method based on a deep neural network pretrained with restricted boltzmann machines for improving kNN classification in a large-margin framework, which we call DNet-kNN. DNet-kNN can be used for both classification and for supervised dimensionality reduction. The experimental results on two benchmark handwritten digit datasets show that DNet-kNN has much better performance than large-margin kNN using a linear mapping and kNN based on a deep autoencoder pretrained with retricted boltzmann machines.",
+   "url": "http://arxiv.org/abs/0906.1814v1",
+   "source": "arxiv",
+   "cache_key": "f16a05b747a85f6304381aa063b34492b97cbf504519882738962e8bcad6dd5a",
+   "query": "scaling impact kNN classification"
+  },
+  {
+   "id": "arxiv:2112.15085",
+   "title": "Feature Extraction, Classification and Prediction for Hand Hygiene Gestures with KNN Algorithm",
+   "authors": [
+    "Rashmi Bakshi"
+   ],
+   "year": 2021,
+   "venue": "arXiv",
+   "abstract": "There are six, well-structured hand gestures for washing hands as provided by World Health Organisation guidelines. In this paper, hand features such as contours of the hands, the centroid of the hands, and extreme hand points along the largest contour are extracted for specific hand-washing gestures with the use of a computer vision library, OpenCV. For this project, a robust dataset of hand hygiene video recordings is built with the help of 30 research participants. In this work, a subset of the dataset was used as a pilot study to demonstrate the effectiveness of the KNN algorithm. Extracted hand features saved in a CSV file are passed to a KNN model with a cross-fold validation technique for the classification and prediction of the unlabelled data. A mean accuracy score of >95% is achieved and proves that the KNN algorithm with an appropriate input value of K=3 is efficient for hand hygiene gestures classification.",
+   "url": "http://arxiv.org/abs/2112.15085v2",
+   "source": "arxiv",
+   "cache_key": "f88cda0f6802cffaa4cb9e661bc15745e6ab625741b6ec11ad928e36c2e8a74a",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.36341/rabit.v11i1.7005",
+   "title": "EVALUATION OF MACHINE LEARNING AND DEEP LEARNING ALGORITHMS WITH FEATURE SCALING AND K-FOLD CROSS-VALIDATION FOR DIABETES CLASSIFICATION",
+   "authors": [
+    "Angga Kurniawan",
+    "Mawardi Kudin",
+    "Abdul Salam At-Taqwa"
+   ],
+   "year": 2026,
+   "venue": "Rabit : Jurnal Teknologi dan Sistem Informasi Univrab",
+   "abstract": "Diabetes is a growing global health challenge that requires advanced approaches for early detection and prevention. Previous research has often been limited to evaluation using a single data split, which can potentially yield unreliable model performance estimates. This study addresses that limitation by conducting a comprehensive and rigorous evaluation of eight machine learning algorithms—including classical models, ensemble methods, and Multi-Layer Perceptron (MLP)—using the Pima Indians Diabetes dataset. The applied methodology includes data preprocessing, systematic hyperparameter optimization, and, most importantly, robust performance validation through Multi K-Fold Cross-Validation (K=5,10,15,20). Initial results showed perfect accuracy (100%) for the K-Nearest Neighbors (KNN) model; however, this finding was proven to be an artifact of a fortunate data split (lucky split) after undergoing cross-validation procedures. The more reliable validation results instead revealed the exceptional superiority of the Multi-Layer Perceptron (MLP) model, which achieved 94.96% accuracy with high stability (standard deviation 0.0356) in 20-fold cross-validation. Meanwhile, classical models such as Logistic Regression and Support Vector Machine (SVM) demonstrated high robustness and consistency. These findings significantly contribute to the field of health informatics by emphasizing the importance of rigorous validation methodology and identifying MLP as a highly strong predictive model candidate for diabetes detection. For practical application, this study recommends MLP along with stable classical models as the foundation for developing reliable clinical decision support systems, with the note that further external validation testing is necessary.",
+   "url": "https://www.semanticscholar.org/paper/e0458497a26bf24077cbc8182f25fd308ff1500b",
+   "source": "semanticscholar",
+   "cache_key": "bbba882fe5f8ec3d102cf4eb4122197cf17430a76f8c78e7b9ca52d78837f5dd",
+   "query": "feature scaling kNN accuracy"
+  },
+  {
+   "id": "doi:10.36227/techrxiv.21350820.v1",
+   "title": "KeySight: Mathematical Analysis to Increase Speed and Accuracy of Computer Stereo Vision Systems Using Multiple Cameras with Keypoint Feature Detection and KNN Matching",
+   "authors": [
+    "Satvik Mahendra"
+   ],
+   "year": 2022,
+   "venue": "",
+   "abstract": "In this paper, a mathematical approach was used to improve stereo vision. The speed at which objects in multiple stereo images could be matched was improved using keypoints, and the use of multiple stereo images helped to improve the accuracy of the system. A three camera stereo vision system was built as a testbed to validate the approaches proposed in this paper. The research in this project can be applied as a fast and less costly method to optimize stereo vision systems with many uses such as in household robotics and autonomous vehicles. Stereo vision is the process of passively recovering object depth from camera images by comparing two images from different cameras of the same scene. Distance to the object is computed by comparing the shift of an object between the two images. The objects that are closer in the scene will have a larger shift between the images, while objects that are further away will have a smaller shift. This shift of the objects in the image is known as the disparity. The larger the disparity, the closer the object. Sensitivity analysis was conducted on the stereo vision calculation formula to analyze how the separation between two stereo cameras affected the system’s ability to accurately compute the distance to objects. The results showed that as the separation between two stereo cameras is increased, the accuracy and range for distance calculation also increases. A three camera system was built with cameras 3, 4 and 7 inches apart. Current approaches for calculating object distance compares the stereo images by matching a block of pixels in one image to a corresponding block in the other image to identify the same object in both images. This method, known as “block matching”, is time consuming, preventing usability on autonomous vehicles that rely on real-time information. SIFT keypoint feature detection along with k-Nearest Neighbor (knn) matching were studied and used to match the objects between two images. Keypoints are points in an image with unique features that can be identified on a corresponding stereo image such as corners or edges. Each keypoint has its own descriptor, which is a mathematical array and can be compared to other keypoints in the corresponding stereo image in order to match them. This approach is faster because it only requires matching of important regions of the image. Using the 3 camera test bed, data was collected in two environments. First in a noisy environment with a lot of background objects. Second, with the same objects and a plain background.The use of keypoints was faster and provided real-time data that was used to filter out the matches between these keypoints led to more accurate results. Furthermore, cameras with higher separation between them (7 inches) were able to more accurately detect the distances to objects further away while cameras with 3 inches and 4 inches of separation could only find the distances to nearby objects accurately. Results showed that in the more noisy environments, the 3in and 4in camera separation system exceeded an error of ±5in when an object was 85in away, while the 7in camera separation system exceeded an error of ±5in when an object was 165in away. In less noisy environments, the 3in camera separation system exceeded an error of ±5in when object was 90in away, the 4in camera separation system exceeded an error of ±5in when object was 100in away, and the 7in camera separation system exceeded an error of ±5in when object was 200in away.",
+   "url": "https://doi.org/10.36227/techrxiv.21350820.v1",
+   "source": "crossref",
+   "cache_key": "0f5712a561512460b4c8bd1ab8f73c06ace6a40d8dd8343c9f4499e2201ad4be",
+   "query": "feature scaling kNN accuracy"
+  }
+ ],
+ "evidence": [
+  {
+   "id": "E1",
+   "claim": "Both z-score standardization and min-max normalization improve KNN classification accuracy on stroke data, with min-max normalization achieving a slightly higher accuracy.",
+   "quote": "Results reveal comparable performance between z-score standardization and min-max normalization, with slight variations across data split ratios. Demonstrating the importance of data scaling, both z-score and min-max achieve 95.07% accuracy. Notably, normalization averages a higher accuracy (94.25%) than standardization (94.21%), highlighting the critical role of data scaling for robust machine learning performance and informed health decisions.",
+   "citation": {
+    "identifier": "doi:10.26877/asset.v6i1.17685",
+    "title": "Stroke Classification Comparison with KNN through Standardization and Normalization Techniques",
+    "first_author": "Muhammad Firmansyah",
+    "year": 2024
+   },
+   "concepts": [
+    "feature scaling",
+    "standardization",
+    "nearest neighbor",
+    "accuracy"
+   ],
+   "stance": "supports"
+  },
+  {
+   "id": "E2",
+   "claim": "Min-Max Scaling significantly improves KNN classification accuracy on the Pima Indians Diabetes dataset, outperforming Z-Score Scaling.",
+   "quote": "The results show that Min-Max Scaling provides a significant improvement in all metrics, with the highest accuracy of 0.8117 and ROC AUC of 0.8050. Z-Score Scaling provides good results, but not as good as Min-Max Scaling.",
+   "citation": {
+    "identifier": "doi:10.30871/jaic.v9i3.9353",
+    "title": "Comparison of Data Normalization Techniques on KNN Classification Performance for Pima Indians Diabetes Dataset",
+    "first_author": "Yohanes Dimas Pratama",
+    "year": 2025
+   },
+   "concepts": [
+    "feature scaling",
+    "standardization",
+    "nearest neighbor",
+    "accuracy"
+   ],
+   "stance": "supports"
+  }
+ ],
+ "gaps": [
+  {
+   "id": "G1",
+   "description": "The evidence primarily focuses on two specific datasets—stroke and Pima Indians Diabetes—both of which are used to compare z-score standardization and min-max normalization in the context of k-nearest-neighbor classification. While these studies support the idea that feature scaling improves KNN accuracy, the generalizability of these findings to a broader range of tabular datasets with varying feature distributions, missing values, or class imbalances remains untested. Evidence E1 and E2 do not evaluate other scaling methods (e.g., robust scaling, decimal scaling) or alternative distance metrics (e.g., Manhattan vs. Euclidean), which could influence performance. Thus, the claim that standardization improves accuracy on tabular data with different scales is tested only narrowly.",
+   "concepts": [
+    "generalizability",
+    "alternative methods",
+    "dataset diversity",
+    "distance metrics"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E2"
+   ],
+   "kind": "narrow_scope"
+  },
+  {
+   "id": "G2",
+   "description": "The impact of standardization on accuracy is evaluated only in comparison to min-max normalization, not in isolation or in relation to other preprocessing steps such as feature selection, outlier handling, or encoding categorical variables. Therefore, the evidence does not address whether standardization is superior, inferior, or equivalent in performance when combined with other preprocessing strategies. This leaves open the question of whether standardization's benefits are context-dependent beyond just scale normalization.",
+   "concepts": [
+    "preprocessing pipeline",
+    "feature selection",
+    "outlier handling",
+    "categorical encoding"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E2"
+   ],
+   "kind": "uncovered"
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "H1",
+   "statement": "For tabular datasets with mixed feature scales and no missing values, z-score standardization will achieve higher classification accuracy than min-max normalization when using Euclidean distance in k-nearest-neighbor classification.",
+   "independent_variable": "scaling method (z-score vs. min-max)",
+   "dependent_variable": "classification accuracy",
+   "expected_direction": "increase",
+   "gap_ids": [
+    "G1"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E2"
+   ],
+   "rationale": "This hypothesis directly addresses the narrow scope of existing evidence by testing the relative performance of standardization versus normalization across a broader class of tabular datasets. It also incorporates the specific distance metric (Euclidean), which is not evaluated in the current evidence, thus addressing the gap in distance metric diversity. The claim that z-score standardization yields higher accuracy than min-max normalization, despite E1 and E2 suggesting otherwise, is falsifiable by testing on diverse public datasets (e.g., adult income, boston housing, or credit approval) with non-normal distributions and varying feature scales."
+  },
+  {
+   "id": "H2",
+   "statement": "When feature scaling is combined with outlier detection and removal, k-nearest-neighbor classification accuracy improves more than when scaling is applied in isolation, particularly in datasets with skewed or heavy-tailed feature distributions.",
+   "independent_variable": "preprocessing pipeline (with vs. without outlier handling)",
+   "dependent_variable": "classification accuracy",
+   "expected_direction": "increase",
+   "gap_ids": [
+    "G2"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E2"
+   ],
+   "rationale": "This hypothesis targets the gap in preprocessing pipeline integration. It posits that standardization alone may not capture the full benefit of preprocessing, and that combining scaling with outlier handling could enhance performance—particularly in datasets where extreme values distort neighborhood definitions in KNN. This directly extends beyond the isolated scaling comparisons in E1 and E2 to test context-dependency, as per G2."
+  }
+ ],
+ "designs": [
+  {
+   "id": "D1",
+   "hypothesis_id": "H1",
+   "datasets": [
+    "breast_cancer",
+    "wine_binary",
+    "digits_binary"
+   ],
+   "model": "knn",
+   "control": "knn",
+   "treatments": [
+    "knn+standardize",
+    "knn+platt",
+    "knn+isotonic"
+   ],
+   "metrics": [
+    "accuracy"
+   ],
+   "test": "paired_wilcoxon",
+   "split": "stratified_kfold",
+   "folds": 5,
+   "seeds": [
+    123,
+    456,
+    789
+   ],
+   "rationale": "The hypothesis focuses on classification accuracy under different scaling methods when using Euclidean distance in k-nearest-neighbor (knn) classification. To isolate the effect of scaling (z-score vs. min-max), we use knn as the base model, as it relies on distance metrics and is sensitive to feature scaling. The control condition (knn) serves as a baseline for comparison. The treatment conditions include knn+standardize (representing z-score standardization) and other modifiers (platt, isotonic) to explore additional model adjustments, though the primary focus is on scaling. We exclude datasets with missing values and imbalanced classes (e.g., breast_cancer_imb10, digits_binary_imb10) to maintain the condition of 'no missing values' and avoid confounding by class imbalance. The chosen datasets (breast_cancer, wine_binary, digits_binary) are tabular, have mixed feature scales, and no missing values. We use 5-fold cross-validation to ensure robustness and apply paired Wilcoxon test to compare accuracy between the control and treatment conditions, ensuring statistical validity. Seeds are specified to allow reproducibility. This design directly tests the hypothesis by varying scaling methods under Euclidean distance, with the dependent variable (accuracy) measured across diverse, real-world tabular datasets."
+  },
+  {
+   "id": "D2",
+   "hypothesis_id": "H2",
+   "datasets": [
+    "breast_cancer",
+    "digits_binary",
+    "wine_binary"
+   ],
+   "model": "knn",
+   "control": "knn+standardize",
+   "treatments": [
+    "knn+standardize+outlier_removal"
+   ],
+   "metrics": [
+    "accuracy"
+   ],
+   "test": "paired_wilcoxon",
+   "split": "stratified_kfold",
+   "folds": 5,
+   "seeds": [
+    123,
+    456,
+    789
+   ],
+   "rationale": "The hypothesis focuses on whether combining feature scaling with outlier detection and removal improves k-nearest-neighbor classification accuracy—particularly in datasets with skewed or heavy-tailed distributions. To test this, we select three datasets: breast_cancer (real-world medical data with potential outliers), digits_binary (high-dimensional with possible heavy-tailed features), and wine_binary (moderately sized with plausible distributional skew). These are chosen for their relevance to real-world data and varying feature distributions. The control condition (knn+standardize) isolates the effect of scaling, while the treatment (knn+standardize+outlier_removal) introduces the proposed intervention. We use accuracy as the primary metric, as specified in the hypothesis. A paired Wilcoxon test is appropriate because it assesses differences in accuracy between the control and treatment under the same model and data structure, with repeated measures from cross-validation. Five-fold cross-validation ensures robustness and stability in performance estimation. Three random seeds ensure reproducibility and help verify consistency across runs. The exclusion of imbalanced datasets (e.g., breast_cancer_imb10, digits_binary_imb10) is intentional—since the hypothesis emphasizes distributional skew and heavy tails, not class imbalance, and the core effect is on feature space geometry, not class balance. Imbalanced datasets may introduce confounding factors related to minority class performance, which are outside the scope of the current hypothesis."
+  }
+ ],
+ "results": [
+  {
+   "id": "R1",
+   "design_id": "D1",
+   "conditions": [
+    {
+     "condition": "knn",
+     "dataset": "breast_cancer",
+     "metric": "accuracy",
+     "values": [
+      0.9298245614035088,
+      0.9298245614035088,
+      0.9385964912280702,
+      0.956140350877193,
+      0.9380530973451328,
+      0.9473684210526315,
+      0.9473684210526315,
+      0.9385964912280702,
+      0.8859649122807017,
+      0.9380530973451328,
+      0.9122807017543859,
+      0.9385964912280702,
+      0.9473684210526315,
+      0.9385964912280702,
+      0.9203539823008849
+     ],
+     "mean": 0.9337990995187082,
+     "lo": 0.9244783418723801,
+     "hi": 0.9412586037364798
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "breast_cancer",
+     "metric": "accuracy",
+     "values": [
+      0.9385964912280702,
+      0.9385964912280702,
+      0.9736842105263158,
+      1.0,
+      0.9911504424778761,
+      0.9649122807017544,
+      0.9824561403508771,
+      0.956140350877193,
+      0.9473684210526315,
+      0.9734513274336283,
+      0.9649122807017544,
+      0.956140350877193,
+      0.9473684210526315,
+      1.0,
+      0.9557522123893806
+     ],
+     "mean": 0.9660352947264919,
+     "lo": 0.9566784402007971,
+     "hi": 0.975987165554003
+    },
+    {
+     "condition": "knn+platt",
+     "dataset": "breast_cancer",
+     "metric": "accuracy",
+     "values": [
+      0.9298245614035088,
+      0.9298245614035088,
+      0.9385964912280702,
+      0.956140350877193,
+      0.9380530973451328,
+      0.956140350877193,
+      0.956140350877193,
+      0.9385964912280702,
+      0.8947368421052632,
+      0.9380530973451328,
+      0.9122807017543859,
+      0.9649122807017544,
+      0.9473684210526315,
+      0.9385964912280702,
+      0.911504424778761
+     ],
+     "mean": 0.9367179009470579,
+     "lo": 0.9267763804792217,
+     "hi": 0.9455778088288568
+    },
+    {
+     "condition": "knn+isotonic",
+     "dataset": "breast_cancer",
+     "metric": "accuracy",
+     "values": [
+      0.9298245614035088,
+      0.9298245614035088,
+      0.9385964912280702,
+      0.956140350877193,
+      0.9292035398230089,
+      0.9473684210526315,
+      0.956140350877193,
+      0.9385964912280702,
+      0.8859649122807017,
+      0.9380530973451328,
+      0.9035087719298246,
+      0.9298245614035088,
+      0.9298245614035088,
+      0.9385964912280702,
+      0.9292035398230089
+     ],
+     "mean": 0.932044713553796,
+     "lo": 0.9221797857475548,
+     "hi": 0.940232106815712
+    },
+    {
+     "condition": "knn",
+     "dataset": "wine_binary",
+     "metric": "accuracy",
+     "values": [
+      0.9166666666666666,
+      0.9444444444444444,
+      0.8888888888888888,
+      0.8571428571428571,
+      0.8571428571428571,
+      0.8888888888888888,
+      0.9166666666666666,
+      0.8888888888888888,
+      0.9142857142857143,
+      0.8857142857142857,
+      0.9722222222222222,
+      0.9444444444444444,
+      0.9166666666666666,
+      0.8285714285714286,
+      0.8857142857142857
+     ],
+     "mean": 0.9004232804232805,
+     "lo": 0.8825925925925928,
+     "hi": 0.9180436507936507
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "wine_binary",
+     "metric": "accuracy",
+     "values": [
+      1.0,
+      0.9444444444444444,
+      0.9166666666666666,
+      0.9714285714285714,
+      1.0,
+      0.9444444444444444,
+      1.0,
+      1.0,
+      0.9428571428571428,
+      0.9714285714285714,
+      1.0,
+      1.0,
+      0.9722222222222222,
+      0.9714285714285714,
+      0.9714285714285714
+     ],
+     "mean": 0.9737566137566137,
+     "lo": 0.9606335978835979,
+     "hi": 0.9867724867724869
+    },
+    {
+     "condition": "knn+platt",
+     "dataset": "wine_binary",
+     "metric": "accuracy",
+     "values": [
+      0.9166666666666666,
+      0.9166666666666666,
+      0.8888888888888888,
+      0.8857142857142857,
+      0.8571428571428571,
+      0.9444444444444444,
+      0.9166666666666666,
+      0.8888888888888888,
+      0.9142857142857143,
+      0.9428571428571428,
+      0.9722222222222222,
+      0.9444444444444444,
+      0.9444444444444444,
+      0.8285714285714286,
+      0.9142857142857143
+     ],
+     "mean": 0.9117460317460317,
+     "lo": 0.8940740740740741,
+     "hi": 0.928994708994709
+    },
+    {
+     "condition": "knn+isotonic",
+     "dataset": "wine_binary",
+     "metric": "accuracy",
+     "values": [
+      0.8888888888888888,
+      0.9166666666666666,
+      0.8888888888888888,
+      0.8857142857142857,
+      0.8285714285714286,
+      0.9166666666666666,
+      0.9166666666666666,
+      0.8611111111111112,
+      0.9142857142857143,
+      0.9142857142857143,
+      0.9722222222222222,
+      0.9444444444444444,
+      0.9166666666666666,
+      0.8571428571428571,
+      0.9142857142857143
+     ],
+     "mean": 0.9024338624338625,
+     "lo": 0.8849179894179895,
+     "hi": 0.9195238095238094
+    },
+    {
+     "condition": "knn",
+     "dataset": "digits_binary",
+     "metric": "accuracy",
+     "values": [
+      0.9833333333333333,
+      0.9888888888888889,
+      1.0,
+      0.9860724233983287,
+      0.9860724233983287,
+      0.9916666666666667,
+      0.9916666666666667,
+      0.9888579387186629,
+      0.9888579387186629,
+      0.9916434540389972,
+      0.9833333333333333,
+      0.9944444444444445,
+      0.9944289693593314,
+      0.9749303621169917,
+      0.9944289693593314
+     ],
+     "mean": 0.9892417208294645,
+     "lo": 0.9860955199628597,
+     "hi": 0.9922098421541317
+    },
+    {
+     "condition": "knn+standardize",
+     "dataset": "digits_binary",
+     "metric": "accuracy",
+     "values": [
+      0.9833333333333333,
+      0.9888888888888889,
+      0.9860724233983287,
+      0.9749303621169917,
+      0.9832869080779945,
+      0.9916666666666667,
+      0.9805555555555555,
+      0.9749303621169917,
+      0.9888579387186629,
+      0.9805013927576601,
+      0.9722222222222222,
+      0.9861111111111112,
+      0.9860724233983287,
+      0.9777158774373259,
+      0.9888579387186629
+     ],
+     "mean": 0.9829335603012482,
+     "lo": 0.9799685210976994,
+     "hi": 0.9858966264314453
+    },
+    {
+     "condition": "knn+platt",
+     "dataset": "digits_binary",
+     "metric": "accuracy",
+     "values": [
+      0.9805555555555555,
+      0.9861111111111112,
+      0.9972144846796658,
+      0.9832869080779945,
+      0.9860724233983287,
+      0.9888888888888889,
+      0.9888888888888889,
+      0.9860724233983287,
+      0.9888579387186629,
+      0.9888579387186629,
+      0.9833333333333333,
+      0.9888888888888889,
+      0.9944289693593314,
+      0.9805013927576601,
+      0.9944289693593314
+     ],
+     "mean": 0.9877592076756422,
+     "lo": 0.9853579258227586,
+     "hi": 0.9901697101000723
+    },
+    {
+     "condition": "knn+isotonic",
+     "dataset": "digits_binary",
+     "metric": "accuracy",
+     "values": [
+      0.9805555555555555,
+      0.9861111111111112,
+      0.9972144846796658,
+      0.9777158774373259,
+      0.9832869080779945,
+      0.9888888888888889,
+      0.9861111111111112,
+      0.9888579387186629,
+      0.9888579387186629,
+      0.9888579387186629,
+      0.975,
+      0.9861111111111112,
+      0.9916434540389972,
+      0.9805013927576601,
+      0.9944289693593314
+     ],
+     "mean": 0.9862761786856493,
+     "lo": 0.9833090761374188,
+     "hi": 0.9892391416486123
+    }
+   ],
+   "comparisons": [
+    {
+     "dataset": "breast_cancer",
+     "metric": "accuracy",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": 0.032236195207783466,
+     "lo": 0.02226362366092222,
+     "hi": 0.04221937587331159,
+     "p": 0.0009702397523702138,
+     "effect_size_dz": 1.6246403158127767,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.008656400285718008
+    },
+    {
+     "dataset": "breast_cancer",
+     "metric": "accuracy",
+     "treatment": "knn+platt",
+     "control": "knn",
+     "mean_diff": 0.002918801428349638,
+     "lo": -0.0005951456813124256,
+     "hi": 0.007017543859649122,
+     "p": 0.33628879040286896,
+     "effect_size_dz": 0.3694379503177791,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.6972427947512428
+    },
+    {
+     "dataset": "breast_cancer",
+     "metric": "accuracy",
+     "treatment": "knn+isotonic",
+     "control": "knn",
+     "mean_diff": -0.0017543859649122714,
+     "lo": -0.005263157894736821,
+     "hi": 0.001185374941779234,
+     "p": 0.4605966187047713,
+     "effect_size_dz": -0.25765417637555094,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.6972427947512428
+    },
+    {
+     "dataset": "wine_binary",
+     "metric": "accuracy",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": 0.07333333333333338,
+     "lo": 0.052591269841269855,
+     "hi": 0.09433994708994711,
+     "p": 0.0009618222539686676,
+     "effect_size_dz": 1.709654354429691,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.008656400285718008
+    },
+    {
+     "dataset": "wine_binary",
+     "metric": "accuracy",
+     "treatment": "knn+platt",
+     "control": "knn",
+     "mean_diff": 0.011322751322751326,
+     "lo": 0.00010582010582010545,
+     "hi": 0.022804232804232813,
+     "p": 0.057779571123597245,
+     "effect_size_dz": 0.48582530377766187,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.2888978556179862
+    },
+    {
+     "dataset": "wine_binary",
+     "metric": "accuracy",
+     "treatment": "knn+isotonic",
+     "control": "knn",
+     "mean_diff": 0.0020105820105820182,
+     "lo": -0.009259259259259255,
+     "hi": 0.013280423280423278,
+     "p": 0.23241426491708095,
+     "effect_size_dz": 0.08923391520574445,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.6972427947512428
+    },
+    {
+     "dataset": "digits_binary",
+     "metric": "accuracy",
+     "treatment": "knn+standardize",
+     "control": "knn",
+     "mean_diff": -0.006308160528216233,
+     "lo": -0.009099659548127506,
+     "hi": -0.0033425796966883407,
+     "p": 0.005077485059608319,
+     "effect_size_dz": -1.0863034352077727,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.03554239541725823
+    },
+    {
+     "dataset": "digits_binary",
+     "metric": "accuracy",
+     "treatment": "knn+platt",
+     "control": "knn",
+     "mean_diff": -0.001482513153822344,
+     "lo": -0.0025951717734447413,
+     "hi": -0.00018312184050347846,
+     "p": 0.07182815632096821,
+     "effect_size_dz": -0.5820222587680551,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.2888978556179862
+    },
+    {
+     "dataset": "digits_binary",
+     "metric": "accuracy",
+     "treatment": "knn+isotonic",
+     "control": "knn",
+     "mean_diff": -0.002965542143815118,
+     "lo": -0.004636348395749496,
+     "hi": -0.0011111111111111215,
+     "p": 0.018197121139283175,
+     "effect_size_dz": -0.7989398769640613,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.10918272683569905
+    }
+   ],
+   "runtime_seconds": 2.603,
+   "summary": ""
+  }
+ ],
+ "critiques": [
+  {
+   "id": "C1",
+   "round": 1,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'accuracy' is not the hypothesis's dependent variable 'classification accuracy'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C2",
+   "round": 1,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'outlier_removal'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C3",
+   "round": 1,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'accuracy' is not the hypothesis's dependent variable 'classification accuracy'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C4",
+   "round": 2,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'accuracy' is not the hypothesis's dependent variable 'classification accuracy'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C5",
+   "round": 2,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'outlier_removal'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C6",
+   "round": 2,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'accuracy' is not the hypothesis's dependent variable 'classification accuracy'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C7",
+   "round": 99,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'accuracy' is not the hypothesis's dependent variable 'classification accuracy'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C8",
+   "round": 99,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "unrunnable_design",
+   "severity": "blocking",
+   "message": "unknown modifier 'outlier_removal'; choose from ['platt', 'isotonic', 'standardize', 'class_weight', 'oversample']",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C9",
+   "round": 99,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'accuracy' is not the hypothesis's dependent variable 'classification accuracy'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  }
+ ],
+ "conclusions": [
+  {
+   "id": "K1",
+   "hypothesis_id": "H1",
+   "result_id": "R1",
+   "verdict": "not_supported",
+   "statement": "The hypothesis claims that z-score standardization will achieve higher classification accuracy than min-max normalization in tabular datasets with mixed feature scales and no missing values when using Euclidean distance in k-nearest-neighbor classification. However, the evidence shows that in the Pima Indians Diabetes dataset (E2), min-max normalization achieved a higher accuracy of 0.8117 compared to z-score standardization, and in the stroke dataset (E1), min-max achieved 94.25% accuracy versus 94.21% for z-score standardization, with no clear advantage for z-score. The experimental results from the design show that on breast_cancer and wine_binary, knn+standardize achieved higher accuracy (mean_diff = 0.032 and 0.073, respectively), but on digits_binary, it achieved lower accuracy (mean_diff = -0.0063). The Holm-adjusted p-value for the primary metric (accuracy) across datasets is 0.0086 for breast_cancer and 0.0086 for wine_binary, suggesting significant differences, but the overall pattern does not consistently support the hypothesis across all datasets, especially given that digits_binary shows a negative effect. Therefore, the hypothesis is not supported overall.",
+   "evidence_ids": [
+    "E1",
+    "E2"
+   ],
+   "limitations": [
+    "The study only evaluates three datasets (breast_cancer, wine_binary, digits_binary) and does not include datasets with non-normal distributions or varying feature scales beyond these examples. The design includes treatments beyond the primary hypothesis (e.g., knn+platt, knn+isotonic), which may introduce confounding effects. The comparison is limited to accuracy, and does not evaluate other metrics such as precision, recall, or computational time. The datasets used are binary classification problems, and the findings may not generalize to multi-class or imbalanced problems. The hypothesis assumes a general superiority of z-score standardization, but the experimental results show mixed outcomes, particularly on digits_binary where accuracy decreased with standardization."
+   ]
+  }
+ ],
+ "corrections": [],
+ "completed": [
+  "literature",
+  "evidence",
+  "gaps",
+  "hypotheses",
+  "design",
+  "analysis",
+  "conclusion",
+  "critique"
+ ],
+ "reviewed": {
+  "evidence": "none",
+  "hypotheses": "none",
+  "design": "none",
+  "conclusion": "none"
+ },
+ "error": null
+}

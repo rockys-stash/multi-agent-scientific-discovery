@@ -1,0 +1,488 @@
+{
+ "title": "E1 Arm comparison",
+ "question": "How do the reasoners compare on the same questions when only the process is judged?",
+ "findings": [
+  "Rule baseline: 24.3 ± 1.2 evidence items per run, citations verified 97% ± 2%, evidence correct 97% ± 2%, design checks 100% ± 0%, 1.0 ± 0.0 conclusions per run, verdicts matching the statistics 100% ± 0% over the 3 runs with a conclusion.",
+  "Local model: 3.2 ± 4.4 evidence items per run, citations verified 100% ± 0%, evidence correct 100% ± 0%, design checks 86% ± 5%, 0.9 ± 0.9 conclusions per run, verdicts matching the statistics 70% ± 45% over the 5 runs with a conclusion.",
+  "Local model + model critic: 2.1 ± 2.0 evidence items per run, citations verified 100% ± 0%, evidence correct 100% ± 0%, design checks 87% ± 3%, 1.1 ± 0.9 conclusions per run, verdicts matching the statistics 83% ± 26% over the 6 runs with a conclusion.",
+  "Local model, 5 records per read: 8.6 ± 2.8 evidence items per run, citations verified 100% ± 0%, evidence correct 100% ± 0%, design checks 83% ± 5%, 1.0 ± 0.9 conclusions per run, verdicts matching the statistics 60% ± 55% over the 5 runs with a conclusion.",
+  "Failed run (local-b5, q2_scaling_knn, repeat 2): ValueError: knn does not support class_weight."
+ ],
+ "tables": [
+  {
+   "id": "arms",
+   "caption": "All questions: mean ± standard deviation over runs",
+   "columns": [
+    {
+     "key": "metric",
+     "label": "Metric",
+     "align": "l"
+    },
+    {
+     "key": "rule",
+     "label": "Rule baseline (n=3)",
+     "align": "r"
+    },
+    {
+     "key": "local",
+     "label": "Local model (n=9)",
+     "align": "r"
+    },
+    {
+     "key": "local+mc",
+     "label": "Local model + model critic (n=9)",
+     "align": "r"
+    },
+    {
+     "key": "local-b5",
+     "label": "Local model, 5 records per read (n=8)",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "metric": "Evidence items",
+     "rule": "24.3 ± 1.2",
+     "local": "3.2 ± 4.4",
+     "local+mc": "2.1 ± 2.0",
+     "local-b5": "8.6 ± 2.8"
+    },
+    {
+     "metric": "Citations verified",
+     "rule": "97% ± 2%",
+     "local": "100% ± 0%",
+     "local+mc": "100% ± 0%",
+     "local-b5": "100% ± 0%"
+    },
+    {
+     "metric": "Evidence correct",
+     "rule": "97% ± 2%",
+     "local": "100% ± 0%",
+     "local+mc": "100% ± 0%",
+     "local-b5": "100% ± 0%"
+    },
+    {
+     "metric": "Quotes judged to support claim",
+     "rule": "100% ± 0%",
+     "local": "74% ± 43%",
+     "local+mc": "74% ± 25%",
+     "local-b5": "86% ± 11%"
+    },
+    {
+     "metric": "Hypotheses",
+     "rule": "1.0 ± 0.0",
+     "local": "1.1 ± 1.1",
+     "local+mc": "1.6 ± 0.9",
+     "local-b5": "2.0 ± 0.0"
+    },
+    {
+     "metric": "Hypothesis rubric (of 10)",
+     "rule": "8.3 ± 2.9",
+     "local": "6.9 ± 0.7",
+     "local+mc": "7.1 ± 1.5",
+     "local-b5": "7.4 ± 1.6"
+    },
+    {
+     "metric": "Design checks passed",
+     "rule": "100% ± 0%",
+     "local": "86% ± 5%",
+     "local+mc": "87% ± 3%",
+     "local-b5": "83% ± 5%"
+    },
+    {
+     "metric": "Conclusions reached",
+     "rule": "1.0 ± 0.0",
+     "local": "0.9 ± 0.9",
+     "local+mc": "1.1 ± 0.9",
+     "local-b5": "1.0 ± 0.9"
+    },
+    {
+     "metric": "Verdicts matching the statistics",
+     "rule": "100% ± 0%",
+     "local": "70% ± 45%",
+     "local+mc": "83% ± 26%",
+     "local-b5": "60% ± 55%"
+    },
+    {
+     "metric": "Critiques raised",
+     "rule": "0.0 ± 0.0",
+     "local": "7.4 ± 4.3",
+     "local+mc": "10.0 ± 4.8",
+     "local-b5": "12.0 ± 5.8"
+    },
+    {
+     "metric": "Evidence removed by critique",
+     "rule": "0.0 ± 0.0",
+     "local": "1.4 ± 0.7",
+     "local+mc": "0.7 ± 1.0",
+     "local-b5": "1.1 ± 1.1"
+    },
+    {
+     "metric": "Run time (min)",
+     "rule": "2.9 ± 0.9",
+     "local": "13.8 ± 9.0",
+     "local+mc": "17.4 ± 7.3",
+     "local-b5": "14.8 ± 5.2"
+    }
+   ]
+  },
+  {
+   "id": "arms_q1_calibration",
+   "caption": "q1_calibration: mean ± standard deviation over repeats",
+   "columns": [
+    {
+     "key": "metric",
+     "label": "Metric",
+     "align": "l"
+    },
+    {
+     "key": "rule",
+     "label": "Rule baseline",
+     "align": "r"
+    },
+    {
+     "key": "local",
+     "label": "Local model",
+     "align": "r"
+    },
+    {
+     "key": "local+mc",
+     "label": "Local model + model critic",
+     "align": "r"
+    },
+    {
+     "key": "local-b5",
+     "label": "Local model, 5 records per read",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "metric": "Evidence items",
+     "rule": "25.0",
+     "local": "9.0 ± 1.7",
+     "local+mc": "3.7 ± 2.9",
+     "local-b5": "11.3 ± 0.6"
+    },
+    {
+     "metric": "Citations verified",
+     "rule": "100%",
+     "local": "100% ± 0%",
+     "local+mc": "100% ± 0%",
+     "local-b5": "100% ± 0%"
+    },
+    {
+     "metric": "Evidence correct",
+     "rule": "100%",
+     "local": "100% ± 0%",
+     "local+mc": "100% ± 0%",
+     "local-b5": "100% ± 0%"
+    },
+    {
+     "metric": "Quotes judged to support claim",
+     "rule": "100%",
+     "local": "90% ± 17%",
+     "local+mc": "90% ± 16%",
+     "local-b5": "85% ± 5%"
+    },
+    {
+     "metric": "Hypotheses",
+     "rule": "1.0",
+     "local": "2.0 ± 0.0",
+     "local+mc": "2.0 ± 0.0",
+     "local-b5": "2.0 ± 0.0"
+    },
+    {
+     "metric": "Hypothesis rubric (of 10)",
+     "rule": "10.0",
+     "local": "7.3 ± 0.6",
+     "local+mc": "7.8 ± 0.3",
+     "local-b5": "7.7 ± 2.0"
+    },
+    {
+     "metric": "Design checks passed",
+     "rule": "100%",
+     "local": "89% ± 0%",
+     "local+mc": "87% ± 3%",
+     "local-b5": "81% ± 6%"
+    },
+    {
+     "metric": "Conclusions reached",
+     "rule": "1.0",
+     "local": "2.0 ± 0.0",
+     "local+mc": "1.7 ± 0.6",
+     "local-b5": "0.7 ± 1.2"
+    },
+    {
+     "metric": "Verdicts matching the statistics",
+     "rule": "100%",
+     "local": "83% ± 29%",
+     "local+mc": "83% ± 29%",
+     "local-b5": "0%"
+    },
+    {
+     "metric": "Critiques raised",
+     "rule": "0.0",
+     "local": "6.0 ± 2.6",
+     "local+mc": "12.0 ± 7.0",
+     "local-b5": "16.3 ± 5.0"
+    },
+    {
+     "metric": "Evidence removed by critique",
+     "rule": "0.0",
+     "local": "1.0 ± 1.0",
+     "local+mc": "0.7 ± 1.2",
+     "local-b5": "2.0 ± 1.0"
+    },
+    {
+     "metric": "Run time (min)",
+     "rule": "3.9",
+     "local": "25.1 ± 2.0",
+     "local+mc": "24.3 ± 3.3",
+     "local-b5": "20.2 ± 4.3"
+    }
+   ]
+  },
+  {
+   "id": "arms_q2_scaling_knn",
+   "caption": "q2_scaling_knn: mean ± standard deviation over repeats",
+   "columns": [
+    {
+     "key": "metric",
+     "label": "Metric",
+     "align": "l"
+    },
+    {
+     "key": "rule",
+     "label": "Rule baseline",
+     "align": "r"
+    },
+    {
+     "key": "local",
+     "label": "Local model",
+     "align": "r"
+    },
+    {
+     "key": "local+mc",
+     "label": "Local model + model critic",
+     "align": "r"
+    },
+    {
+     "key": "local-b5",
+     "label": "Local model, 5 records per read",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "metric": "Evidence items",
+     "rule": "23.0",
+     "local": "0.3 ± 0.6",
+     "local+mc": "1.3 ± 1.2",
+     "local-b5": "8.5 ± 2.1"
+    },
+    {
+     "metric": "Citations verified",
+     "rule": "96%",
+     "local": "100%",
+     "local+mc": "100% ± 0%",
+     "local-b5": "100% ± 0%"
+    },
+    {
+     "metric": "Evidence correct",
+     "rule": "96%",
+     "local": "100%",
+     "local+mc": "100% ± 0%",
+     "local-b5": "100% ± 0%"
+    },
+    {
+     "metric": "Quotes judged to support claim",
+     "rule": "100%",
+     "local": "0%",
+     "local+mc": "50% ± 0%",
+     "local-b5": "78% ± 11%"
+    },
+    {
+     "metric": "Hypotheses",
+     "rule": "1.0",
+     "local": "0.7 ± 1.2",
+     "local+mc": "1.3 ± 1.2",
+     "local-b5": "2.0 ± 0.0"
+    },
+    {
+     "metric": "Hypothesis rubric (of 10)",
+     "rule": "10.0",
+     "local": "6.0",
+     "local+mc": "5.0 ± 0.0",
+     "local-b5": "8.0 ± 1.4"
+    },
+    {
+     "metric": "Design checks passed",
+     "rule": "100%",
+     "local": "78%",
+     "local+mc": "83% ± 0%",
+     "local-b5": "81% ± 4%"
+    },
+    {
+     "metric": "Conclusions reached",
+     "rule": "1.0",
+     "local": "0.3 ± 0.6",
+     "local+mc": "0.3 ± 0.6",
+     "local-b5": "0.5 ± 0.7"
+    },
+    {
+     "metric": "Verdicts matching the statistics",
+     "rule": "100%",
+     "local": "0%",
+     "local+mc": "100%",
+     "local-b5": "0%"
+    },
+    {
+     "metric": "Critiques raised",
+     "rule": "0.0",
+     "local": "7.7 ± 4.6",
+     "local+mc": "9.7 ± 5.0",
+     "local-b5": "14.0 ± 2.8"
+    },
+    {
+     "metric": "Evidence removed by critique",
+     "rule": "0.0",
+     "local": "1.7 ± 0.6",
+     "local+mc": "0.7 ± 1.2",
+     "local-b5": "0.5 ± 0.7"
+    },
+    {
+     "metric": "Run time (min)",
+     "rule": "2.4",
+     "local": "8.4 ± 4.2",
+     "local+mc": "12.5 ± 4.0",
+     "local-b5": "10.6 ± 2.8"
+    }
+   ]
+  },
+  {
+   "id": "arms_q3_imbalance",
+   "caption": "q3_imbalance: mean ± standard deviation over repeats",
+   "columns": [
+    {
+     "key": "metric",
+     "label": "Metric",
+     "align": "l"
+    },
+    {
+     "key": "rule",
+     "label": "Rule baseline",
+     "align": "r"
+    },
+    {
+     "key": "local",
+     "label": "Local model",
+     "align": "r"
+    },
+    {
+     "key": "local+mc",
+     "label": "Local model + model critic",
+     "align": "r"
+    },
+    {
+     "key": "local-b5",
+     "label": "Local model, 5 records per read",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "metric": "Evidence items",
+     "rule": "25.0",
+     "local": "0.3 ± 0.6",
+     "local+mc": "1.3 ± 1.2",
+     "local-b5": "6.0 ± 2.0"
+    },
+    {
+     "metric": "Citations verified",
+     "rule": "96%",
+     "local": "100%",
+     "local+mc": "100% ± 0%",
+     "local-b5": "100% ± 0%"
+    },
+    {
+     "metric": "Evidence correct",
+     "rule": "96%",
+     "local": "100%",
+     "local+mc": "100% ± 0%",
+     "local-b5": "100% ± 0%"
+    },
+    {
+     "metric": "Quotes judged to support claim",
+     "rule": "100%",
+     "local": "100%",
+     "local+mc": "75% ± 35%",
+     "local-b5": "92% ± 14%"
+    },
+    {
+     "metric": "Hypotheses",
+     "rule": "1.0",
+     "local": "0.7 ± 1.2",
+     "local+mc": "1.3 ± 1.2",
+     "local-b5": "2.0 ± 0.0"
+    },
+    {
+     "metric": "Hypothesis rubric (of 10)",
+     "rule": "5.0",
+     "local": "6.5",
+     "local+mc": "8.0 ± 1.4",
+     "local-b5": "6.7 ± 1.6"
+    },
+    {
+     "metric": "Design checks passed",
+     "rule": "100%",
+     "local": "83%",
+     "local+mc": "89% ± 0%",
+     "local-b5": "87% ± 3%"
+    },
+    {
+     "metric": "Conclusions reached",
+     "rule": "1.0",
+     "local": "0.3 ± 0.6",
+     "local+mc": "1.3 ± 1.2",
+     "local-b5": "1.7 ± 0.6"
+    },
+    {
+     "metric": "Verdicts matching the statistics",
+     "rule": "100%",
+     "local": "100%",
+     "local+mc": "75% ± 35%",
+     "local-b5": "100% ± 0%"
+    },
+    {
+     "metric": "Critiques raised",
+     "rule": "0.0",
+     "local": "8.7 ± 6.4",
+     "local+mc": "8.3 ± 3.1",
+     "local-b5": "6.3 ± 2.5"
+    },
+    {
+     "metric": "Evidence removed by critique",
+     "rule": "0.0",
+     "local": "1.7 ± 0.6",
+     "local+mc": "0.7 ± 1.2",
+     "local-b5": "0.7 ± 1.2"
+    },
+    {
+     "metric": "Run time (min)",
+     "rule": "2.4",
+     "local": "8.0 ± 4.1",
+     "local+mc": "15.4 ± 8.4",
+     "local-b5": "12.3 ± 1.3"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "'Verdicts matching the statistics' averages over runs that reached a conclusion; runs whose designs were all blocked, or that found no evidence, have none.",
+  "The rule baseline runs once per question (it is deterministic), so its spread is undefined; model arms ran 3 repeats per question with different sampling seeds.",
+  "The rule baseline's hypotheses and designs come from a person-written operationalisation and its verdicts are the fixed rule itself (D4), so its design and verdict scores are not its own reasoning.",
+  "Quote support and the hypothesis rubric come from a small local judge (D17); citations, quotes, design checks and verdicts are checked independently and carry more weight.",
+  "Not run in E1: claude (ANTHROPIC_API_KEY is not set); claude+mc (ANTHROPIC_API_KEY is not set)."
+ ]
+}

@@ -1,0 +1,302 @@
+{
+ "run_id": "20261009T213348Z-q1_calibration-local-b5-r1",
+ "evidence": [
+  {
+   "evidence_id": "E1",
+   "citation": {
+    "identifier": "doi:10.1101/2025.09.28.25336834",
+    "normalised": "doi:10.1101/2025.09.28.25336834",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Model uncertainty quantification: A post hoc calibration approach for heart disease prediction",
+    "resolved_first_author": "Peter Adebayo Odesola",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E2",
+   "citation": {
+    "identifier": "doi:10.1101/2025.09.28.25336834",
+    "normalised": "doi:10.1101/2025.09.28.25336834",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Model uncertainty quantification: A post hoc calibration approach for heart disease prediction",
+    "resolved_first_author": "Peter Adebayo Odesola",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E3",
+   "citation": {
+    "identifier": "doi:10.48550/arxiv.2606.29720",
+    "normalised": "doi:10.48550/arxiv.2606.29720",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "The Hidden Cost of Resampling: How Imbalance Correction Degrades Probability Calibration in Tree Ensembles",
+    "resolved_first_author": "Zewen Liu",
+    "resolved_year": 2026,
+    "resolved_by": "openalex",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E4",
+   "citation": {
+    "identifier": "doi:10.1145/3788910.3788923",
+    "normalised": "doi:10.1145/3788910.3788923",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Trustworthy Fraud Detection under Distribution Shift: Calibrated, Cost-Optimal Ensembles with Statistical Guarantees and External Validation",
+    "resolved_first_author": "Huanzhang Xu",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E5",
+   "citation": {
+    "identifier": "doi:10.1109/isiber68248.2026.11469881",
+    "normalised": "doi:10.1109/isiber68248.2026.11469881",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Sleep Disorder Classification Using Ensemble Stacking and Genetic Algorithm-Based Feature Selection",
+    "resolved_first_author": "Berliana Rahmadhani",
+    "resolved_year": 2026,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E6",
+   "citation": {
+    "identifier": "doi:10.1145/3703323.3703330",
+    "normalised": "doi:10.1145/3703323.3703330",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "ForeCal: Random Forest-based Calibration for DNNs",
+    "resolved_first_author": "Dhruv Nigam",
+    "resolved_year": 2024,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E7",
+   "citation": {
+    "identifier": "doi:10.56038/ejrnd.v5i1.717",
+    "normalised": "doi:10.56038/ejrnd.v5i1.717",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Probability-Calibrated Ensemble Methods for Automotive CRM Lead Scoring",
+    "resolved_first_author": "Bilal Sedef",
+    "resolved_year": 2025,
+    "resolved_by": "crossref",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "crossref",
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E8",
+   "citation": {
+    "identifier": "arxiv:2305.00070",
+    "normalised": "arxiv:2305.00070",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Online Platt Scaling with Calibeating",
+    "resolved_first_author": "Chirag Gupta",
+    "resolved_year": 2023,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E9",
+   "citation": {
+    "identifier": "doi:10.48550/arxiv.2511.11636",
+    "normalised": "doi:10.48550/arxiv.2511.11636",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "An Explainable and Fair AI Tool for PCOS Risk Assessment: Calibration, Subgroup Equity, and Interactive Clinical Deployment",
+    "resolved_first_author": "Asma Khan",
+    "resolved_year": 2025,
+    "resolved_by": "openalex",
+    "tried": [
+     "crossref",
+     "openalex",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "openalex",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E10",
+   "citation": {
+    "identifier": "arxiv:1511.05191",
+    "normalised": "arxiv:1511.05191",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Binary Classifier Calibration using an Ensemble of Near Isotonic Regression Models",
+    "resolved_first_author": "Mahdi Pakdaman Naeini",
+    "resolved_year": 2015,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv",
+    "semanticscholar"
+   ],
+   "correct": true
+  },
+  {
+   "evidence_id": "E12",
+   "citation": {
+    "identifier": "arxiv:2609.09189",
+    "normalised": "arxiv:2609.09189",
+    "status": "verified",
+    "title_similarity": 1.0,
+    "author_match": true,
+    "year_match": true,
+    "resolved_title": "Reliability-Aware Hybrid-K Ensemble Selection for Cervical Cytology Classification: Integrating Discrimination, Calibration, and Selective Prediction",
+    "resolved_first_author": "Nisreen Albzour",
+    "resolved_year": 2026,
+    "resolved_by": "arxiv",
+    "tried": [
+     "arxiv",
+     "semanticscholar"
+    ],
+    "problems": []
+   },
+   "quote": "found",
+   "found_in": [
+    "arxiv"
+   ],
+   "correct": true
+  }
+ ],
+ "citations_emitted": 10
+}

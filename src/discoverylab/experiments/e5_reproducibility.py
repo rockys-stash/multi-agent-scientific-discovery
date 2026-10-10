@@ -129,7 +129,7 @@ def summarise(s: Summary, rows: list[dict[str, Any]]) -> None:
     ok = [r for r in rows if r["replayed"] and not r["different"] and r["verification_identical"]]
     s.findings.append(f"{len(ok)}/{len(rows)} runs replayed with every artefact group and the verification identical.")
     s.notes.append(
-        "Live re-run overlap (papers, evidence, verdicts) needs the scholarly APIs and, for model runs, an API key: Status pending until a run with both."
+        "Model runs replay from their recorded transcripts, so replay checks the process code, not the model's determinism; how much a live re-run differs is shown by the repeats in E1 and the fresh-clone reproduction in the report."
     )
 
 

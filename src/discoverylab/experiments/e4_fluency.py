@@ -67,8 +67,10 @@ class FluencyJudge:
             output_format=_Rating,
         )
         out = resp.parsed_output
-        if out is None:
-            raise RuntimeError("judge returned no rating")
+        if out is None:  # recorded as unrated with the reason; never imputed
+            why = getattr(resp, "stop_reason", None) or "unparsed"
+            return {"convincingness": None, "clarity": None, "rationale": None,
+                    "unrated": f"{why}: {getattr(resp, 'raw', '')[:300]}"}  # fmt: skip
         return out.model_dump()
 
 
@@ -146,6 +148,8 @@ def evaluate(states: list[RunState], verifier: Verifier, judge: Judge | None, se
                     "clarity": rating["clarity"],
                     "judge_rationale": rating["rationale"],
                 }
+                if rating.get("unrated"):
+                    row["unrated"] = rating["unrated"]
             rows.append(row)
     return rows
 
@@ -181,6 +185,10 @@ def summarise(s: Summary, rows: list[dict[str, Any]], judged: bool) -> None:
     s.findings.append(f"Spearman correlation of readability with process score: {rho:.2f}." if rho is not None
                       else "Too few distinct scores for a readability-process correlation.")  # fmt: skip
     if judged:
+        unrated = [r for r in rows if r.get("unrated")]
+        if unrated:
+            s.notes.append(f"The judge gave no usable rating for {len(unrated)} of {len(rows)} reports (reasons in variants.json); "
+                           "they are left out of the convincingness means and correlation, not imputed.")  # fmt: skip
         rj = _spearman(rows, "convincingness", "process")
         s.findings.append(f"Spearman correlation of judged convincingness with process score: {rj:.2f}." if rj is not None
                           else "Too few distinct judged scores for a correlation.")  # fmt: skip

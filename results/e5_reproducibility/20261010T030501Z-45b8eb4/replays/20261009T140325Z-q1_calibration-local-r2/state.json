@@ -1,0 +1,1314 @@
+{
+ "run_id": "20261009T140325Z-q1_calibration-local-r2",
+ "question": {
+  "id": "q1_calibration",
+  "text": "Does post-hoc probability calibration (Platt scaling or isotonic regression) improve the probability estimates of tree ensembles on tabular classification, and at what cost in discrimination?",
+  "keywords": [
+   "probability calibration",
+   "random forest",
+   "isotonic regression",
+   "Platt scaling"
+  ],
+  "concepts": [
+   "calibration",
+   "random forest",
+   "isotonic regression",
+   "Platt scaling",
+   "brier score"
+  ],
+  "domain_hint": "machine learning"
+ },
+ "reasoner": "local",
+ "stage": "critique",
+ "status": "complete",
+ "papers": [
+  {
+   "id": "arxiv:1808.00111",
+   "title": "Probability Calibration Trees",
+   "authors": [
+    "Tim Leathart",
+    "Eibe Frank",
+    "Geoffrey Holmes",
+    "Bernhard Pfahringer"
+   ],
+   "year": 2018,
+   "venue": "arXiv",
+   "abstract": "Obtaining accurate and well calibrated probability estimates from classifiers is useful in many applications, for example, when minimising the expected cost of classifications. Existing methods of calibrating probability estimates are applied globally, ignoring the potential for improvements by applying a more fine-grained model. We propose probability calibration trees, a modification of logistic model trees that identifies regions of the input space in which different probability calibration models are learned to improve performance. We compare probability calibration trees to two widely used calibration methods---isotonic regression and Platt scaling---and show that our method results in lower root mean squared error on average than both methods, for estimates produced by a variety of base learners.",
+   "url": "http://arxiv.org/abs/1808.00111v2",
+   "source": "arxiv",
+   "cache_key": "b4420127f4127f013434f60b1c3ed71437155c3fab009560eaf875de0d324a83",
+   "query": "probability calibration tabular classification"
+  },
+  {
+   "id": "arxiv:1710.08901",
+   "title": "Calibration of Machine Learning Classifiers for Probability of Default Modelling",
+   "authors": [
+    "Pedro G. Fonseca",
+    "Hugo D. Lopes"
+   ],
+   "year": 2017,
+   "venue": "arXiv",
+   "abstract": "Binary classification is highly used in credit scoring in the estimation of probability of default. The validation of such predictive models is based both on rank ability, and also on calibration (i.e. how accurately the probabilities output by the model map to the observed probabilities). In this study we cover the current best practices regarding calibration for binary classification, and explore how different approaches yield different results on real world credit scoring data. The limitations of evaluating credit scoring models using only rank ability metrics are explored. A benchmark is run on 18 real world datasets, and results compared. The calibration techniques used are Platt Scaling and Isotonic Regression. Also, different machine learning models are used: Logistic Regression, Random Forest Classifiers, and Gradient Boosting Classifiers. Results show that when the dataset is treated as a time series, the use of re-calibration with Isotonic Regression is able to improve the long term calibration better than the alternative methods. Using re-calibration, the non-parametric models are able to outperform the Logistic Regression on Brier Score Loss.",
+   "url": "http://arxiv.org/abs/1710.08901v1",
+   "source": "arxiv",
+   "cache_key": "fff83784f23da37d570e58c819df19eb5a8b573d660a76130ed3133d346e121c",
+   "query": "calibration random forest brier score"
+  },
+  {
+   "id": "arxiv:2501.16756",
+   "title": "Random Forest Calibration",
+   "authors": [
+    "Mohammad Hossein Shaker",
+    "Eyke Hüllermeier"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "abstract": "The Random Forest (RF) classifier is often claimed to be relatively well calibrated when compared with other machine learning methods. Moreover, the existing literature suggests that traditional calibration methods, such as isotonic regression, do not substantially enhance the calibration of RF probability estimates unless supplied with extensive calibration data sets, which can represent a significant obstacle in cases of limited data availability. Nevertheless, there seems to be no comprehensive study validating such claims and systematically comparing state-of-the-art calibration methods specifically for RF. To close this gap, we investigate a broad spectrum of calibration methods tailored to or at least applicable to RF, ranging from scaling techniques to more advanced algorithms. Our results based on synthetic as well as real-world data unravel the intricacies of RF probability estimates, scrutinize the impacts of hyper-parameters, compare calibration methods in a systematic way. We show that a well-optimized RF performs as well as or better than leading calibration approaches.",
+   "url": "http://arxiv.org/abs/2501.16756v1",
+   "source": "arxiv",
+   "cache_key": "e999b928f07b3a89da79f391e2830859424634763c642d025488e9e2a05d4c5c",
+   "query": "random forest calibration metrics"
+  },
+  {
+   "id": "arxiv:2305.00070",
+   "title": "Online Platt Scaling with Calibeating",
+   "authors": [
+    "Chirag Gupta",
+    "Aaditya Ramdas"
+   ],
+   "year": 2023,
+   "venue": "arXiv",
+   "abstract": "We present an online post-hoc calibration method, called Online Platt Scaling (OPS), which combines the Platt scaling technique with online logistic regression. We demonstrate that OPS smoothly adapts between i.i.d. and non-i.i.d. settings with distribution drift. Further, in scenarios where the best Platt scaling model is itself miscalibrated, we enhance OPS by incorporating a recently developed technique called calibeating to make it more robust. Theoretically, our resulting OPS+calibeating method is guaranteed to be calibrated for adversarial outcome sequences. Empirically, it is effective on a range of synthetic and real-world datasets, with and without distribution drifts, achieving superior performance without hyperparameter tuning. Finally, we extend all OPS ideas to the beta scaling method.",
+   "url": "http://arxiv.org/abs/2305.00070v3",
+   "source": "arxiv",
+   "cache_key": "64c69a7b03260665afef9df300cb3ebe2dd0be7224579ef1717a708834a47c3c",
+   "query": "Platt scaling ensemble discrimination"
+  },
+  {
+   "id": "arxiv:2410.18144",
+   "title": "Using Platt's scaling for calibration after undersampling -- limitations and how to address them",
+   "authors": [
+    "Nathan Phelps",
+    "Daniel J. Lizotte",
+    "Douglas G. Woolford"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "abstract": "When modelling data where the response is dichotomous and highly imbalanced, response-based sampling where a subset of the majority class is retained (i.e., undersampling) is often used to create more balanced training datasets prior to modelling. However, the models fit to this undersampled data, which we refer to as base models, generate predictions that are severely biased. There are several calibration methods that can be used to combat this bias, one of which is Platt's scaling. Here, a logistic regression model is used to model the relationship between the base model's original predictions and the response. Despite its popularity for calibrating models after undersampling, Platt's scaling was not designed for this purpose. Our work presents what we believe is the first detailed study focused on the validity of using Platt's scaling to calibrate models after undersampling. We show analytically, as well as via a simulation study and a case study, that Platt's scaling should not be used for calibration after undersampling without critical thought. If Platt's scaling would have been able to successfully calibrate the base model had it been trained on the entire dataset (i.e., without undersampling), then Platt's scaling might be appropriate for calibration after undersampling. If this is not the case, we recommend a modified version of Platt's scaling that fits a logistic generalized additive model to the logit of the base model's predictions, as it is both theoretically motivated and performed well across the settings considered in our study.",
+   "url": "http://arxiv.org/abs/2410.18144v3",
+   "source": "arxiv",
+   "cache_key": "64c69a7b03260665afef9df300cb3ebe2dd0be7224579ef1717a708834a47c3c",
+   "query": "Platt scaling ensemble discrimination"
+  },
+  {
+   "id": "doi:10.2139/ssrn.7225999",
+   "title": "Reliability-aware BERT-based Emotion Classification via Probability Calibration and Selective Prediction",
+   "authors": [
+    "Nisreen Albzour"
+   ],
+   "year": 2026,
+   "venue": "",
+   "abstract": "Deep neural language models often produce over-confident predictions, limiting their reliability in real-world decision-making, particularly under class imbalance. In this work, we investigate probability calibration and uncertainty-aware selective prediction for emotion classification using a Bidirectional Encoder Representations from Transformers (BERT)-based model. Experiments are conducted on the Emotions dataset, which exhibits natural class imbalance across six emotion categories. We adopt a multi-stage pipeline comprising dataset preparation, baseline fine-tuning, post-hoc probability calibration via temperature scaling, uncertainty estimation using probability-based metrics, and selective prediction based on uncertainty thresholds. Results show that temperature scaling further improves probability calibration, reducing expected calibration error from 0.0051 to 0.0035 (a relative reduction of approximately 31%) and tightening reliability diagrams, without degrading classification accuracy. Uncertainty measures such as predictive entropy and probability margin effectively distinguish correct from incorrect predictions, with misclassified samples exhibiting higher uncertainty. Leveraging these uncertainty estimates, selective prediction achieves a favorable risk-coverage trade-off: predictive risk decreases while accuracy on the accepted subset increases as coverage is reduced. At an operating point of approximately 90% coverage, the model attains substantially improved reliability with minimal loss in coverage. These findings demonstrate that calibrated uncertainty estimates enable robust selective prediction and provide a principled framework for deploying emotion classification systems in reliability-critical applications.",
+   "url": "https://doi.org/10.2139/ssrn.7225999",
+   "source": "crossref",
+   "cache_key": "d1676b4d42dbdda5cef134d3afbecd62ecb216b8586855fac1e2c23551022ad5",
+   "query": "probability calibration tabular classification"
+  },
+  {
+   "id": "doi:10.2139/ssrn.6625797",
+   "title": "Calibration Under Class Imbalance: Graduated Imbalance Training for Preserving Both Discrimination and Calibration",
+   "authors": [
+    "Mikhail  Yu. Ulyanin"
+   ],
+   "year": 2026,
+   "venue": "",
+   "abstract": "Class imbalance distorts predicted probabilities through prior shift and asymmetric gradient flow. We study how six model families (Logistic Regression, Random Forest, XGBoost, LightGBM, CatBoost, MLP) respond to imbalance ratios from 1:1 to 1:100 across ten strategies on four benchmarks (7,200 runs). Sampling methods severely degrade calibration: RUS increases ECE by 6.6× at IR=1:20, SMOTE by 1.7×. Post-hoc calibration (Platt, isotonic) achieves the lowest ECE but reduces AUC-ROC by 0.014. We propose Graduated Imbalance Training (GIT), which transitions training data from balanced to natural class prior over multiple stages. At IR=1:20, GIT achieves the best AUC-ROC (0.881), F1 (0.742), and MCC (0.514) while maintaining baseline-level ECE (0.032). For MLP at IR=1:50, GIT improves AUC-ROC from 0.662 to 0.804 and reduces ECE from 0.091 to 0.018. GIT is the only strategy that simultaneously improves discrimination and preserves calibration.",
+   "url": "https://doi.org/10.2139/ssrn.6625797",
+   "source": "crossref",
+   "cache_key": "453ecf721661d4eab6e69d9d9ba8600e55d014d5d8b7f3bf1ac9b0c1178dcd39",
+   "query": "calibration discrimination tradeoff ensemble"
+  },
+  {
+   "id": "doi:10.21203/rs.3.rs-10426790/v1",
+   "title": "A Lightweight Calibration-Selection Policy After a Probe Fit for Selective Classification on OpenML Tabular Tasks",
+   "authors": [
+    "Haolun Tang",
+    "Jingyi Zhan",
+    "Yan Feng",
+    "Zhipeng Chen"
+   ],
+   "year": 2026,
+   "venue": "",
+   "abstract": "Abstract Post-hoc calibration is often treated as a default step after training probabilistic classifiers, but that default is less clear when calibration labels are limited and the downstream objective includes abstention quality as well as probability accuracy. This paper studies a lightweight calibration-selection policy for selective classification on OpenML-style tabular tasks, where a probe calibration fit is used to decide whether calibration should be retained or skipped for a given model-condition case. The empirical record covers 15 datasets, 652 completed base evaluation cases, and 1,304 non-raw rows with both negative log-likelihood (NLL) and area under the risk-coverage curve (AURC) available. Within this benchmark, both tested calibrators improve mean NLL relative to raw predictions on average, yet calibration can also worsen mean AURC, so better probability fit does not imply better abstention behavior. The analysis therefore evaluates both row-level gates and a deployed case-level action selector that chooses exactly one action from \\{raw, temperature scaling, Dirichlet calibration\\}. The best joint case-level selector chooses a non-raw calibrator in 55.8\\% of completed cases, reaches mean \\(\\Delta\\)NLL \\(-0.0404\\), mean \\(\\Delta\\)AURC \\(-1.20\\times10^{-4}\\), and reduces NLL harm to 6.1\\%. Among the tested meta-models, logistic regression is the strongest candidate, outperforming a decision tree under NLL, AURC, and a joint selection criterion. The evidence supports framing calibration on small tabular validation splits as a conditional probe-and-select intervention rather than a universally beneficial or purely compute-saving post-processing step.",
+   "url": "https://doi.org/10.21203/rs.3.rs-10426790/v1",
+   "source": "crossref",
+   "cache_key": "d1676b4d42dbdda5cef134d3afbecd62ecb216b8586855fac1e2c23551022ad5",
+   "query": "probability calibration tabular classification"
+  },
+  {
+   "id": "doi:10.65148/ecn/2025011",
+   "title": "Reliable Cybersecurity Threat Detection through Probability Calibration in Multiclass Classification",
+   "authors": [
+    "Abdulhaq Abildtrup"
+   ],
+   "year": 2025,
+   "venue": "Elaris Computing Nexus",
+   "abstract": "The machine learning-based classifiers are challenging it is hard to decide what the cybersecurity threat is because multiclass situations are difficult to detect. The proposed study offers a new method of probability calibration that combines both class-based and a global normalization strategy. This is meant to make the projected outcomes more predictable without changing how accurate the classifications are. The test is used on three new and different cybersecurity datasets: EMBER2024, CICAPT-IIoT2024, and UGRansome2024. These data sets encompass everything from malware to IIoT attacks and ransomware situations. We utilized several of the usual classifiers, like Logistic Regression, random Forest, support vision machine, and XGBoost, to see how well they worked before and after we employed our calibration approach. We always used this method to improve some of the most important measures, like Log Loss, Brier Score, and Expected Calibration Error (ECE), for all of the datasets. Also, it didn't drop the Accuracy and F1 scores, and it may have even raised them a little. The ECE in the EMBER2024 dataset went down from 0.148 to 0.041. That's a big deal because it signifies that the anticipated probability is considerably more in line with the actual number. The study's visuals also showed how our system made predictions that were more accurate for the right classes, which aided both overconfidence and underconfidence. These insights are very important for cybersecurity since having precise probability estimates can help you prioritize risks, cut down on false alarms, and make better choices. The paper presents a solid case for this calibration approach being both reliable and useful for finding risks in different categories by combining the numerical results with the outcomes that were found.",
+   "url": "https://doi.org/10.65148/ecn/2025011",
+   "source": "crossref",
+   "cache_key": "d1676b4d42dbdda5cef134d3afbecd62ecb216b8586855fac1e2c23551022ad5",
+   "query": "probability calibration tabular classification"
+  },
+  {
+   "id": "arxiv:1511.05191",
+   "title": "Binary Classifier Calibration using an Ensemble of Near Isotonic Regression Models",
+   "authors": [
+    "Mahdi Pakdaman Naeini",
+    "Gregory F. Cooper"
+   ],
+   "year": 2015,
+   "venue": "arXiv",
+   "abstract": "Learning accurate probabilistic models from data is crucial in many practical tasks in data mining. In this paper we present a new non-parametric calibration method called \\textit{ensemble of near isotonic regression} (ENIR). The method can be considered as an extension of BBQ, a recently proposed calibration method, as well as the commonly used calibration method based on isotonic regression. ENIR is designed to address the key limitation of isotonic regression which is the monotonicity assumption of the predictions. Similar to BBQ, the method post-processes the output of a binary classifier to obtain calibrated probabilities. Thus it can be combined with many existing classification models. We demonstrate the performance of ENIR on synthetic and real datasets for the commonly used binary classification models. Experimental results show that the method outperforms several common binary classifier calibration methods. In particular on the real data, ENIR commonly performs statistically significantly better than the other methods, and never worse. It is able to improve the calibration power of classifiers, while retaining their discrimination power. The method is also computationally tractable for large scale datasets, as it is $O(N \\log N)$ time, where $N$ is the number of samples.",
+   "url": "http://arxiv.org/abs/1511.05191v1",
+   "source": "arxiv",
+   "cache_key": "36f61f83eed292e25bbfe5c36daf135e5011aede8a2d768ab8fdf840f158e10f",
+   "query": "isotonic regression tree ensembles performance"
+  },
+  {
+   "id": "arxiv:2609.09189",
+   "title": "Reliability-Aware Hybrid-K Ensemble Selection for Cervical Cytology Classification: Integrating Discrimination, Calibration, and Selective Prediction",
+   "authors": [
+    "Nisreen Albzour",
+    "Sarah S. Lam"
+   ],
+   "year": 2026,
+   "venue": "",
+   "abstract": "High classification accuracy alone is insufficient for clinical image analysis, where calibrated confidence and reliable uncertainty estimates are essential. This study proposes a reliability-aware Hybrid-K ensemble selection framework for multiclass cervical cytology classification using the SIPaKMeD dataset. Nine deep learning architectures were evaluated using a fixed stratified five-fold partition and three training seeds. After post-hoc temperature scaling, models were assessed using macro-F1, accuracy, AUROC, expected calibration error (ECE), worst-class ECE (WC-ECE), area under the risk-coverage curve (AURC), Brier score, and negative log-likelihood (NLL). Models were ranked using an equal-weight composite score, and Hybrid-K ensembles were formed from the top-ranked models using soft voting. Robustness was examined using 5,000 Dirichlet-sampled metric-weight vectors, leave-one-metric-out analysis, and corrected paired testing across 15 fold-by-seed evaluations. The final Hybrid-2 ensemble, comprising Swin-Tiny and TinyViT-5M, reduced AURC by 43%, NLL by 17%, and WC-ECE by 36% relative to the best individual model. It was selected in 96.8% of random weighting scenarios, remained unchanged across all leave-one-metric-out analyses, and improved the full composite score. However, per-metric gains were not statistically significant after Holm-Bonferroni correction (all adjusted p>= 0.168). Because post-hoc calibration did not use a fully independent calibration set, calibration-dependent results should be interpreted as exploratory internal estimates. Overall, the framework identified a compact ensemble robust to alternative metric weightings and improved reliability point estimates under internal validation on a single dataset.",
+   "url": "https://www.semanticscholar.org/paper/e42167d6cdd3de10043e4e546ee2877fc1fec8cf",
+   "source": "semanticscholar",
+   "cache_key": "048d8648243d9f182bb15fd5b1fa152c439a6a88c5b2f0e23badf0957e79224b",
+   "query": "calibration discrimination tradeoff ensemble"
+  },
+  {
+   "id": "doi:10.1109/icimcis68501.2025.11327079",
+   "title": "An Explainable and Optimized Ensemble Framework Using Metaheuristic Voting and SHAP-Based Calibration for Early Diabetes Detection",
+   "authors": [
+    "Dzaky Ahmad Rofiq",
+    "Choirul Huda"
+   ],
+   "year": 2025,
+   "venue": "2025 International Conference on Informatics, Multimedia, Cyber and Information System (ICIMCIS)",
+   "abstract": "Diabetes mellitus remains a major global health concern that requires diagnostic systems that are both accurate and clinically trustworthy. This study proposes a two-stage explainable ensemble framework designed to enhance predictive discrimination and probabilistic reliability for early diabetes detection. In the first stage, a Metaheuristic-Guided Explainable Voting Ensemble is introduced, where a Genetic Algorithm (GA) optimizes both feature selection and voting weights among heterogeneous base learners, including Gradient Boosting, XGBoost, Logistic Regression, and Gaussian Naïve Bayes. The optimized voting configuration demonstrates a clear improvement compared to conventional soft voting with equal weights (1,1,1), increasing accuracy from approximately 0.96 to 0.994, Macro-F1 from 0.923 to 0.99, and improving calibration performance (Brier score reduced from 0.070 to 0.029, ECE from 0.079 to 0.0337). In the second stage, a SHAP-Aware Stacking and Calibration framework is proposed, which integrates out-of-fold prediction probabilities and aggregated SHAP-based feature importance as meta-features in a calibrated Logistic Regression meta-learner using isotonic regression. This stage further enhances probability reliability, reducing the Expected Calibration Error (ECE) to around 0.01 and Brier loss to 0.018, while maintaining strong discrimination. Global SHAP analysis confirms that HbA1c, BMI, triglycerides, and cholesterol are the most influential predictors, consistent with clinical evidence. The proposed framework delivers an adaptive, interpretable, and well-calibrated ensemble model, establishing a reliable foundation for early diabetes screening and clinical decision support.",
+   "url": "https://www.semanticscholar.org/paper/bab4521a8f13d96f437495dc5f6eb527f3129e88",
+   "source": "semanticscholar",
+   "cache_key": "048d8648243d9f182bb15fd5b1fa152c439a6a88c5b2f0e23badf0957e79224b",
+   "query": "calibration discrimination tradeoff ensemble"
+  },
+  {
+   "id": "doi:10.3390/app15020818",
+   "title": "Unbiased Isotonic Regression Tree for Discovering Hidden Heterogeneity in Monotonicity Constraints",
+   "authors": [
+    "Doowon Choi"
+   ],
+   "year": 2025,
+   "venue": "Applied Sciences",
+   "abstract": "Integrating domain knowledge is increasingly recognized as vital for improving the relevance and reliability of machine learning models. This integration is often implemented through specific types of constraints that reflect real-world conditions or theoretical insights. Within the family of regression trees, the isotonic regression tree is used to incorporate a monotonicity constraint between a predictor and a response variable. However, the isotonic regression tree could be susceptible to split selection bias, as it selects both its split variable and cutpoint simultaneously. This study first explores the possibility of selection bias on split variables in the isotonic regression tree and proposes an unbiased isotonic regression tree that mitigates the issue of the selection bias problem. The results of the simulation and case study demonstrate the effectiveness of the proposed approach and the ability to discover hidden heterogeneous monotonic constraints.",
+   "url": "https://doi.org/10.3390/app15020818",
+   "source": "crossref",
+   "cache_key": "9070251904fdad7bff93706a17f6964b96858bcd3b0f9dce419ef7cc501e9d6e",
+   "query": "isotonic regression tree ensembles performance"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2607.09837",
+   "title": "Reliability-Aware Ensemble Classification Under Class Imbalance: A Calibration Study on Liquid-Based Cervical Cytology",
+   "authors": [
+    "Nisreen Albzour",
+    "Sarah S. Lam"
+   ],
+   "year": 2026,
+   "venue": "arXiv.org",
+   "abstract": "Cervical cytology classification models are typically evaluated on curated, class-balanced benchmarks, but real-world liquid-based cytology (LBC) collections are often small and class-imbalanced. This paper presents a class-imbalance-aware and calibration-aware ensemble classification study on the Mendeley LBC dataset, using its native four-class Bethesda taxonomy (NILM, LSIL, HSIL, SCC) rather than a collapsed binary formulation. Three lightweight architectures (Swin-Tiny, TinyViT-5M, DenseNet121) are trained directly on Mendeley LBC using weighted random sampling to counteract class imbalance, and compared against two soft-voting ensembles (Hybrid-2, Hybrid-3). Post-hoc temperature scaling is fit on a held-out calibration subset carved out of the training portion of each cross-validation fold, distinct from both the training data used to fit model weights and the evaluation fold used for final metrics, avoiding the optimistic calibration estimates that result when the same data is used for both purposes. Calibration substantially reduces expected calibration error, Brier score, and negative log-likelihood for every model and ensemble configuration tested, while discrimination metrics (accuracy, macro-F1, macro-AUROC) remain essentially unchanged. Ensemble size shows no consistent additional reliability benefit over the best individual model once all configurations are properly calibrated. Confusion matrices show that all classification errors, across every configuration, are confined to the boundary between high-grade lesions (HSIL) and carcinoma (SCC); no errors involve the negative (NILM) or low-grade (LSIL) categories. These results suggest that, for this dataset, calibration is the dominant lever for reliability, not ensemble size, though this conclusion should be read in light of the dataset's modest size.",
+   "url": "https://www.semanticscholar.org/paper/c4cc572d80f0183677736f9c461d0d08b0029297",
+   "source": "semanticscholar",
+   "cache_key": "048d8648243d9f182bb15fd5b1fa152c439a6a88c5b2f0e23badf0957e79224b",
+   "query": "calibration discrimination tradeoff ensemble"
+  },
+  {
+   "id": "doi:10.64898/2026.02.12.26346147",
+   "title": "The Independence of Discrimination and Calibration in Clinical Risk Prediction: Lessons from a Multi-Timeframe Diabetes Prediction Framework",
+   "authors": [
+    "E. OReilly",
+    "T. Kurakovas"
+   ],
+   "year": 2026,
+   "venue": "medRxiv",
+   "abstract": "Background: Clinical risk prediction models are typically evaluated by discrimination (area under the receiver operating characteristic curve, AUC), with calibration receiving less attention. We developed a multi-timeframe diabetes prediction framework emphasizing calibration and used synthetic data validation to investigate whether good discrimination guarantees good calibration. Methods: We generated 500,000 synthetic patients using published epidemiological parameters from QDiabetes-2018, FINDRISC, and the Diabetes Prevention Program. The framework comprises a discrete-time survival ensemble with isotonic calibration, producing predictions at 6, 12, 24, and 36 months with bootstrap confidence intervals. We evaluated discrimination (AUC), bin-level calibration (expected calibration error, ECE), calibration-in-the-large (observed-to-expected ratio), and clinical utility (decision curve analysis). We compared performance against QDiabetes-2018 implemented on the same synthetic cohort. Results: Despite achieving excellent discrimination (AUC = 0.844, 95% CI: 0.840-0.848) and low bin-level calibration error (ECE = 0.006), the framework systematically overpredicted risk by 50%: mean predicted probability was 8.4% versus observed rate of 5.6% (observed-to-expected ratio = 0.66, 95% CI: 0.65-0.67). This miscalibration occurred despite isotonic regression on a held-out calibration set. Overprediction was present in 9 of 10 risk deciles. Risk stratification remained valid (23.5-fold separation, 95% CI: 22.8-24.3, between highest and lowest tiers), confirming that discrimination was preserved. QDiabetes-2018 achieved comparable discrimination (AUC = 0.831) with better calibration (O:E = 0.89). Decision curve analysis showed net benefit across threshold range 5-30%, though recalibration would improve clinical utility. Conclusions: Good discrimination does not guarantee good calibration. Our primary finding is negative: isotonic calibration failed to produce well-calibrated predictions even on synthetic data from a single generator. This has important implications for model deployment, where distribution shift is inevitable. We recommend that prediction model studies report calibration-in-the-large alongside bin-level metrics, as ECE alone can be misleading when risk distributions are skewed. Recalibration on deployment populations will likely be necessary for any prediction model, regardless of development-phase calibration performance.",
+   "url": "https://www.semanticscholar.org/paper/fb5c4ebf7eaa0d5861549a4109482f4bf534dfb3",
+   "source": "semanticscholar",
+   "cache_key": "048d8648243d9f182bb15fd5b1fa152c439a6a88c5b2f0e23badf0957e79224b",
+   "query": "calibration discrimination tradeoff ensemble"
+  },
+  {
+   "id": "doi:10.2139/ssrn.7302619",
+   "title": "&lt;div&gt;\n Reliability-aware Hybrid-K Ensemble Selection for Cervical Cytology Classification:&amp;nbsp;\n&lt;/div&gt;\n&lt;div&gt;\n Integrating Discrimination, Calibration, and Selective Prediction\n&lt;/div&gt;",
+   "authors": [
+    "Nisreen Albzour",
+    "Sarah Lam"
+   ],
+   "year": 2026,
+   "venue": "",
+   "abstract": "High classification accuracy alone is insufficient for deploying deep learning models in clinical image analysis, where calibrated confidence and reliable uncertainty handling are essential. This study proposes a reliability-aware Hybrid-K ensemble selection framework for multiclass cervical cytology classification using the SIPaKMeD dataset. Nine candidate deep learning architectures were trained under a shared protocol using a fixed stratified five-fold partition, with training repeated under three independent training seeds. After post-hoc temperature scaling, models were evaluated using eight metrics spanning classification performance, calibration, probabilistic reliability, and selective prediction: macro-F1, accuracy, area under the receiver operating characteristic curve (AUROC), expected calibration error (ECE), worst-class ECE (WC-ECE), area under the risk-coverage curve (AURC), Brier score, and negative log-likelihood (NLL). Candidate models were ranked using an equal-weight reliability-aware composite score, and Hybrid-K ensembles were constructed from the top-ranked models using soft voting. Robustness was assessed using 5,000 Dirichlet-sampled metric-weight vectors, leave-one-metric-out sensitivity analysis, and corrected repeated cross-validation paired statistical testing across 15 foldby-seed evaluations (5 fixed folds × 3 training seeds). The final Hybrid-2 ensemble, composed of Swin-Tiny and TinyViT-5M, reduced AURC by 43%, NLL by 17%, and worst-class ECE by 36% compared with the best individual model. It was selected in 96.8% of random weighting scenarios, remained unchanged across all leave-one-metric-out ablations, and improved the full composite score. Those results demonstrate the value of the proposed Hybrid-K framework, although the permetric gains over the best individual model were not statistically significant under the corrected repeated cross-validation paired t-test with Holm-Bonferroni correction (all Holm-adjusted p ≥ 0.168). Because the post-hoc calibration procedure did not use a fully independent calibration set, the calibration-dependent quantities reported here should be interpreted as internal exploratory estimates. These results show that reliability-aware ensemble selection can identify a compact ensemble that is robust to alternative metric weightings and improves reliability point estimates for cervical cytology classification under internal validation on a single dataset.",
+   "url": "https://doi.org/10.2139/ssrn.7302619",
+   "source": "crossref",
+   "cache_key": "453ecf721661d4eab6e69d9d9ba8600e55d014d5d8b7f3bf1ac9b0c1178dcd39",
+   "query": "calibration discrimination tradeoff ensemble"
+  },
+  {
+   "id": "arxiv:1908.05752",
+   "title": "Isotonic Regression Discontinuity Designs",
+   "authors": [
+    "Andrii Babii",
+    "Rohit Kumar"
+   ],
+   "year": 2019,
+   "venue": "arXiv",
+   "abstract": "This paper studies the estimation and inference for the isotonic regression at the boundary point, an object that is particularly interesting and required in the analysis of monotone regression discontinuity designs. We show that the isotonic regression is inconsistent in this setting and derive the asymptotic distributions of boundary corrected estimators. Interestingly, the boundary corrected estimators can be bootstrapped without subsampling or additional nonparametric smoothing which is not the case for the interior point. The Monte Carlo experiments indicate that shape restrictions can improve dramatically the finite-sample performance of unrestricted estimators. Lastly, we apply the isotonic regression discontinuity designs to estimate the causal effect of incumbency in the U.S. House elections.",
+   "url": "http://arxiv.org/abs/1908.05752v6",
+   "source": "arxiv",
+   "cache_key": "36f61f83eed292e25bbfe5c36daf135e5011aede8a2d768ab8fdf840f158e10f",
+   "query": "isotonic regression tree ensembles performance"
+  },
+  {
+   "id": "arxiv:1912.08581",
+   "title": "The Brier Score under Administrative Censoring: Problems and Solutions",
+   "authors": [
+    "Håvard Kvamme",
+    "Ørnulf Borgan"
+   ],
+   "year": 2019,
+   "venue": "arXiv",
+   "abstract": "The Brier score is commonly used for evaluating probability predictions. In survival analysis, with right-censored observations of the event times, this score can be weighted by the inverse probability of censoring (IPCW) to retain its original interpretation. It is common practice to estimate the censoring distribution with the Kaplan-Meier estimator, even though it assumes that the censoring distribution is independent of the covariates. This paper discusses the general impact of the censoring estimates on the Brier score and shows that the estimation of the censoring distribution can be problematic. In particular, when the censoring times can be identified from the covariates, the IPCW score is no longer valid. For administratively censored data, where the potential censoring times are known for all individuals, we propose an alternative version of the Brier score. This administrative Brier score does not require estimation of the censoring distribution and is valid even if the censoring times can be identified from the covariates.",
+   "url": "http://arxiv.org/abs/1912.08581v1",
+   "source": "arxiv",
+   "cache_key": "fff83784f23da37d570e58c819df19eb5a8b573d660a76130ed3133d346e121c",
+   "query": "calibration random forest brier score"
+  },
+  {
+   "id": "arxiv:1503.08458",
+   "title": "Isotonic regression and isotonic projection",
+   "authors": [
+    "A. B. Németh",
+    "S. Z. Németh"
+   ],
+   "year": 2015,
+   "venue": "arXiv",
+   "abstract": "The note describes the cones in the Euclidean space admitting isotonic metric projection with respect to the coordinate-wise ordering. As a consequence it is showed that the metric projection onto the regression cone (the cone defined by the general isotonic regression problem) admits a projection which is isotonic with respect to the coordinate-wise ordering.",
+   "url": "http://arxiv.org/abs/1503.08458v2",
+   "source": "arxiv",
+   "cache_key": "36f61f83eed292e25bbfe5c36daf135e5011aede8a2d768ab8fdf840f158e10f",
+   "query": "isotonic regression tree ensembles performance"
+  },
+  {
+   "id": "arxiv:1905.11028",
+   "title": "Best-scored Random Forest Classification",
+   "authors": [
+    "Hanyuan Hang",
+    "Xiaoyu Liu",
+    "Ingo Steinwart"
+   ],
+   "year": 2019,
+   "venue": "arXiv",
+   "abstract": "We propose an algorithm named best-scored random forest for binary classification problems. The terminology \"best-scored\" means to select the one with the best empirical performance out of a certain number of purely random tree candidates as each single tree in the forest. In this way, the resulting forest can be more accurate than the original purely random forest. From the theoretical perspective, within the framework of regularized empirical risk minimization penalized on the number of splits, we establish almost optimal convergence rates for the proposed best-scored random trees under certain conditions which can be extended to the best-scored random forest. In addition, we present a counterexample to illustrate that in order to ensure the consistency of the forest, every dimension must have the chance to be split. In the numerical experiments, for the sake of efficiency, we employ an adaptive random splitting criterion. Comparative experiments with other state-of-art classification methods demonstrate the accuracy of our best-scored random forest.",
+   "url": "http://arxiv.org/abs/1905.11028v1",
+   "source": "arxiv",
+   "cache_key": "fff83784f23da37d570e58c819df19eb5a8b573d660a76130ed3133d346e121c",
+   "query": "calibration random forest brier score"
+  },
+  {
+   "id": "arxiv:2609.05140",
+   "title": "Cross-dataset transportability of pediatric chest X-ray deep learning across three countries: discrimination, calibration, operating-point failure, and limited-label recovery",
+   "authors": [
+    "Nazim-E-Alam"
+   ],
+   "year": 2026,
+   "venue": "",
+   "abstract": "Background and Objective: External evaluation of medical-imaging AI is often collapsed into discrimination. We evaluated a computational protocol that separately tests discrimination, probability calibration, fixed operatingpoint transport, shortcut-associated signal, and limited-label recoverability for pediatric pneumonia classification across datasets from three countries. Methods: After exact-duplicate removal, 5,824 Guangzhou radiographs supported leakage-controlled source development and internal testing. A frozen three-seed DenseNet121 dual-view ensemble was evaluated zero-shot on BDCXR-3257 from Bangladesh (n = 3, 257) and an untouched harmonized VinDr-PCXR/PediCXR test cohort from Vietnam (n = 1, 077). Matched seed-42 variants tested architectural robustness. Secondary BDCXR analyses used a fixed 651-image adaptation pool and 2,606-image hold-out; 163, 326, and 651 labels represented 5%, 10%, and 20% of complete BDCXR. Results: Internal AUROC was 0.976 with 95.1% sensitivity. BDCXR and VinDr-PCXR AUROC were 0.798 and 0.742, while frozen-threshold sensitivity fell to 6.2% and 0%. Source-to-BDCXR AUROC degradation occurred for a full-image baseline (0.961 to 0.749), ungated dual-view model (0.977 to 0.766), and gated MixStyle model (0.966 to 0.789). With 163 BDCXR labels, Platt recalibration preserved AUROC while increasing held-out sensitivity to 88.3%, but specificity was 47.9% and the alert rate was 78.5%. Two hundred repeated 163-label fits confirmed sensitivity recovery but substantial specificity variability. Conclusions: Cross-dataset shifts across countries affected ranking, probability alignment, and source-defined decision behavior differently. Transport studies should evaluate these components separately and quantify the operational burden of apparent recovery.",
+   "url": "https://www.semanticscholar.org/paper/c378f9c27ba9a4a962dd1101eb3e560eb5f7ee88",
+   "source": "semanticscholar",
+   "cache_key": "048d8648243d9f182bb15fd5b1fa152c439a6a88c5b2f0e23badf0957e79224b",
+   "query": "calibration discrimination tradeoff ensemble"
+  },
+  {
+   "id": "arxiv:1104.1779",
+   "title": "Generalized Isotonic Regression",
+   "authors": [
+    "Ronny Luss",
+    "Saharon Rosset"
+   ],
+   "year": 2011,
+   "venue": "arXiv",
+   "abstract": "We present a computational and statistical approach for fitting isotonic models under convex differentiable loss functions. We offer a recursive partitioning algorithm which provably and efficiently solves isotonic regression under any such loss function. Models along the partitioning path are also isotonic and can be viewed as regularized solutions to the problem. Our approach generalizes and subsumes two previous results: the well-known work of Barlow and Brunk (1972) on fitting isotonic regressions subject to specially structured loss functions, and a recursive partitioning algorithm (Spouge et al 2003) for the case of standard (l2-loss) isotonic regression. We demonstrate the advantages of our generalized algorithm on both real and simulated data in two settings: fitting count data using negative Poisson log-likelihood loss, and fitting robust isotonic regression using Huber's loss.",
+   "url": "http://arxiv.org/abs/1104.1779v2",
+   "source": "arxiv",
+   "cache_key": "36f61f83eed292e25bbfe5c36daf135e5011aede8a2d768ab8fdf840f158e10f",
+   "query": "isotonic regression tree ensembles performance"
+  },
+  {
+   "id": "arxiv:1303.4288",
+   "title": "Iterative Isotonic Regression",
+   "authors": [
+    "Arnaud Guyader",
+    "Nick Hengartner",
+    "Nicolas Jégou",
+    "Eric Matzner-Løber"
+   ],
+   "year": 2013,
+   "venue": "arXiv",
+   "abstract": "This article introduces a new nonparametric method for estimating a univariate regression function of bounded variation. The method exploits the Jordan decomposition which states that a function of bounded variation can be decomposed as the sum of a non-decreasing function and a non-increasing function. This suggests combining the backfitting algorithm for estimating additive functions with isotonic regression for estimating monotone functions. The resulting iterative algorithm is called Iterative Isotonic Regression (I.I.R.). The main technical result in this paper is the consistency of the proposed estimator when the number of iterations $k_n$ grows appropriately with the sample size $n$. The proof requires two auxiliary results that are of interest in and by themselves: firstly, we generalize the well-known consistency property of isotonic regression to the framework of a non-monotone regression function, and secondly, we relate the backfitting algorithm to Von Neumann's algorithm in convex analysis.",
+   "url": "http://arxiv.org/abs/1303.4288v1",
+   "source": "arxiv",
+   "cache_key": "36f61f83eed292e25bbfe5c36daf135e5011aede8a2d768ab8fdf840f158e10f",
+   "query": "isotonic regression tree ensembles performance"
+  },
+  {
+   "id": "doi:10.20944/preprints202511.1569.v1",
+   "title": "Review on Isotonic and Convex Regression",
+   "authors": [
+    "Eunji Lim"
+   ],
+   "year": 2025,
+   "venue": "",
+   "abstract": "Shape-restricted regression provides a framework for estimating an unknown regression function $f_0: \\Omega \\subset \\mathbb{R}^d \\rightarrow \\mathbb{R}$ from noisy observations \\((\\boldsymbol{X}_1, Y_1), \\ldots, (\\boldsymbol{X}_n, Y_n)\\) when no explicit functional relationship between $\\boldsymbol{X}$ and $Y$ is known, but $f_0$ is assumed to satisfy structural constraints such as monotonicity or convexity. In this work, we focus on these two shape constraints (monotonicity and convexity), and provide a review on the isotonic regression estimator, which is a least squares estimator under monotonicity, and the convex regression estimator, which is a least squares estimator under convexity. We review existing literature with an emphasis on the following key aspects: quadratic programming formulations of isotonic and convex regression, statistical properties of these estimators, efficient computational algorithms for computing them, their practical applications, and current challenges. Finally, we conclude with a discussion of open challenges and possible directions for future research.",
+   "url": "https://doi.org/10.20944/preprints202511.1569.v1",
+   "source": "crossref",
+   "cache_key": "9070251904fdad7bff93706a17f6964b96858bcd3b0f9dce419ef7cc501e9d6e",
+   "query": "isotonic regression tree ensembles performance"
+  },
+  {
+   "id": "arxiv:1405.0352",
+   "title": "Asymptotic Theory for Random Forests",
+   "authors": [
+    "Stefan Wager"
+   ],
+   "year": 2014,
+   "venue": "arXiv",
+   "abstract": "Random forests have proven to be reliable predictive algorithms in many application areas. Not much is known, however, about the statistical properties of random forests. Several authors have established conditions under which their predictions are consistent, but these results do not provide practical estimates of random forest errors. In this paper, we analyze a random forest model based on subsampling, and show that random forest predictions are asymptotically normal provided that the subsample size s scales as s(n)/n = o(log(n)^{-d}), where n is the number of training examples and d is the number of features. Moreover, we show that the asymptotic variance can consistently be estimated using an infinitesimal jackknife for bagged ensembles recently proposed by Efron (2014). In other words, our results let us both characterize and estimate the error-distribution of random forest predictions, thus taking a step towards making random forests tools for statistical inference instead of just black-box predictive algorithms.",
+   "url": "http://arxiv.org/abs/1405.0352v2",
+   "source": "arxiv",
+   "cache_key": "e999b928f07b3a89da79f391e2830859424634763c642d025488e9e2a05d4c5c",
+   "query": "random forest calibration metrics"
+  }
+ ],
+ "evidence": [
+  {
+   "id": "E1",
+   "claim": "Probability calibration trees outperform both isotonic regression and Platt scaling in terms of root mean squared error when applied to probability estimates from various base learners.",
+   "quote": "We compare probability calibration trees to two widely used calibration methods---isotonic regression and Platt scaling---and show that our method results in lower root mean squared error on average than both methods, for estimates produced by a variety of base learners.",
+   "citation": {
+    "identifier": "arxiv:1808.00111",
+    "title": "Probability Calibration Trees",
+    "first_author": "Tim Leathart",
+    "year": 2018
+   },
+   "concepts": [
+    "calibration",
+    "random forest",
+    "isotonic regression",
+    "Platt scaling",
+    "brier score"
+   ],
+   "stance": "supports"
+  },
+  {
+   "id": "E2",
+   "claim": "Isotonic regression, when applied in a time-series context, improves long-term calibration and leads to better performance in Brier Score Loss compared to alternative methods, especially when used with non-parametric models.",
+   "quote": "Results show that when the dataset is treated as a time series, the use of re-calibration with Isotonic Regression is able to improve the long term calibration better than the alternative methods. Using re-calibration, the non-parametric models are able to outperform the Logistic Regression on Brier Score Loss.",
+   "citation": {
+    "identifier": "arxiv:1710.08901",
+    "title": "Calibration of Machine Learning Classifiers for Probability of Default Modelling",
+    "first_author": "Pedro G. Fonseca",
+    "year": 2017
+   },
+   "concepts": [
+    "calibration",
+    "random forest",
+    "isotonic regression",
+    "Platt scaling",
+    "brier score"
+   ],
+   "stance": "supports"
+  },
+  {
+   "id": "E3",
+   "claim": "Random Forests are generally well-calibrated, and traditional calibration methods like isotonic regression provide only minor improvements unless trained on extensive calibration datasets, which may not be feasible in data-scarce scenarios.",
+   "quote": "The Random Forest (RF) classifier is often claimed to be relatively well calibrated when compared with other machine learning methods. Moreover, the existing literature suggests that traditional calibration methods, such as isotonic regression, do not substantially enhance the calibration of RF probability estimates unless supplied with extensive calibration data sets, which can represent a significant obstacle in cases of limited data availability.",
+   "citation": {
+    "identifier": "arxiv:2501.16756",
+    "title": "Random Forest Calibration",
+    "first_author": "Mohammad Hossein Shaker",
+    "year": 2025
+   },
+   "concepts": [
+    "calibration",
+    "random forest",
+    "isotonic regression",
+    "Platt scaling",
+    "brier score"
+   ],
+   "stance": "contradicts"
+  },
+  {
+   "id": "E4",
+   "claim": "Online Platt Scaling with calibeating achieves superior performance on various datasets, including under distribution drift, without requiring hyperparameter tuning.",
+   "quote": "Empirically, it is effective on a range of synthetic and real-world datasets, with and without distribution drifts, achieving superior performance without hyperparameter tuning.",
+   "citation": {
+    "identifier": "arxiv:2305.00070",
+    "title": "Online Platt Scaling with Calibeating",
+    "first_author": "Chirag Gupta",
+    "year": 2023
+   },
+   "concepts": [
+    "calibration",
+    "random forest",
+    "isotonic regression",
+    "Platt scaling",
+    "brier score"
+   ],
+   "stance": "supports"
+  },
+  {
+   "id": "E6",
+   "claim": "Temperature scaling improves probability calibration by reducing expected calibration error by about 31%, and it maintains classification accuracy.",
+   "quote": "Results show that temperature scaling further improves probability calibration, reducing expected calibration error from 0.0051 to 0.0035 (a relative reduction of approximately 31%) and tightening reliability diagrams, without degrading classification accuracy.",
+   "citation": {
+    "identifier": "doi:10.2139/ssrn.7225999",
+    "title": "Reliability-aware BERT-based Emotion Classification via Probability Calibration and Selective Prediction",
+    "first_author": "Nisreen Albzour",
+    "year": 2026
+   },
+   "concepts": [
+    "calibration",
+    "random forest",
+    "isotonic regression",
+    "Platt scaling",
+    "brier score"
+   ],
+   "stance": "supports"
+  },
+  {
+   "id": "E7",
+   "claim": "While calibration improves negative log-likelihood (NLL) on average, it can worsen the area under the risk-coverage curve (AURC), indicating that better probability calibration does not necessarily lead to better abstention behavior.",
+   "quote": "Within this benchmark, both tested calibrators improve mean NLL relative to raw predictions on average, yet calibration can also worsen mean AURC, so better probability fit does not imply better abstention behavior.",
+   "citation": {
+    "identifier": "doi:10.21203/rs.3.rs-10426790/v1",
+    "title": "A Lightweight Calibration-Selection Policy After a Probe Fit for Selective Classification on OpenML Tabular Tasks",
+    "first_author": "Haolun Tang",
+    "year": 2026
+   },
+   "concepts": [
+    "calibration",
+    "random forest",
+    "isotonic regression",
+    "Platt scaling",
+    "brier score"
+   ],
+   "stance": "context"
+  },
+  {
+   "id": "E8",
+   "claim": "Probability calibration improves key metrics such as Brier Score and Expected Calibration Error (ECE), and does not degrade accuracy or F1 scores, with a notable reduction in ECE from 0.148 to 0.041 in one dataset.",
+   "quote": "We always used this method to improve some of the most important measures, like Log Loss, Brier Score, and Expected Calibration Error (ECE), for all of the datasets. Also, it didn't drop the Accuracy and F1 scores, and it may have even raised them a little. The ECE in the EMBER2024 dataset went down from 0.148 to 0.041. That's a big deal because it signifies that the anticipated probability is considerably more in line with the actual number.",
+   "citation": {
+    "identifier": "doi:10.65148/ecn/2025011",
+    "title": "Reliable Cybersecurity Threat Detection through Probability Calibration in Multiclass Classification",
+    "first_author": "Abdulhaq Abildtrup",
+    "year": 2025
+   },
+   "concepts": [
+    "calibration",
+    "random forest",
+    "isotonic regression",
+    "Platt scaling",
+    "brier score"
+   ],
+   "stance": "supports"
+  },
+  {
+   "id": "E9",
+   "claim": "The ensemble of near isotonic regression method improves calibration power and outperforms other methods, while preserving the original model's discrimination power.",
+   "quote": "The method outperforms several common binary classifier calibration methods. In particular on the real data, ENIR commonly performs statistically significantly better than the other methods, and never worse. It is able to improve the calibration power of classifiers, while retaining their discrimination power.",
+   "citation": {
+    "identifier": "arxiv:1511.05191",
+    "title": "Binary Classifier Calibration using an Ensemble of Near Isotonic Regression Models",
+    "first_author": "Mahdi Pakdaman Naeini",
+    "year": 2015
+   },
+   "concepts": [
+    "calibration",
+    "random forest",
+    "isotonic regression",
+    "Platt scaling",
+    "brier score"
+   ],
+   "stance": "supports"
+  },
+  {
+   "id": "E10",
+   "claim": "Post-hoc calibration significantly reduces expected calibration error, Brier score, and negative log-likelihood, without affecting accuracy, macro-F1, or macro-AUROC—indicating that calibration improves reliability without sacrificing discrimination.",
+   "quote": "Calibration substantially reduces expected calibration error, Brier score, and negative log-likelihood for every model and ensemble configuration tested, while discrimination metrics (accuracy, macro-F1, macro-AUROC) remain essentially unchanged.",
+   "citation": {
+    "identifier": "doi:10.48550/arxiv.2607.09837",
+    "title": "Reliability-Aware Ensemble Classification Under Class Imbalance: A Calibration Study on Liquid-Based Cervical Cytology",
+    "first_author": "Nisreen Albzour",
+    "year": 2026
+   },
+   "concepts": [
+    "calibration",
+    "random forest",
+    "isotonic regression",
+    "Platt scaling",
+    "brier score"
+   ],
+   "stance": "supports"
+  },
+  {
+   "id": "E11",
+   "claim": "The framework achieves a well-calibrated ensemble model, improving reliability and enabling trustworthy clinical decision support.",
+   "quote": "The proposed framework delivers an adaptive, interpretable, and well-calibrated ensemble model, establishing a reliable foundation for early diabetes screening and clinical decision support.",
+   "citation": {
+    "identifier": "doi:10.1109/icimcis68501.2025.11327079",
+    "title": "An Explainable and Optimized Ensemble Framework Using Metaheuristic Voting and SHAP-Based Calibration for Early Diabetes Detection",
+    "first_author": "Dzaky Ahmad Rofiq",
+    "year": 2025
+   },
+   "concepts": [
+    "calibration",
+    "random forest",
+    "isotonic regression",
+    "Platt scaling",
+    "brier score"
+   ],
+   "stance": "supports"
+  }
+ ],
+ "gaps": [
+  {
+   "id": "G1",
+   "description": "The evidence primarily focuses on calibration improvements in terms of Brier score, expected calibration error (ECE), and negative log-likelihood, but there is limited direct comparison of Platt scaling versus isotonic regression or probability calibration trees in the context of *discrimination*—specifically, how each method affects metrics like AUC, AUROC, or F1 in tabular classification. While E10 states that calibration does not affect accuracy, macro-F1, or macro-AUROC, this claim is made generally and not specifically tested across multiple tree ensemble models (e.g., gradient boosting, random forests) under varied data distributions or class imbalances. Thus, the evidence leaves open whether the *trade-off* between calibration and discrimination is consistent across different ensemble architectures and data conditions.",
+   "concepts": [
+    "calibration",
+    "discrimination",
+    "tree ensembles",
+    "tabular classification",
+    "AUC",
+    "AUROC"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E10"
+   ],
+   "kind": "narrow_scope"
+  },
+  {
+   "id": "G2",
+   "description": "The claim that probability calibration trees outperform isotonic regression and Platt scaling in root mean squared error (E1) is specific to a 'variety of base learners' but does not specify which tree ensembles (e.g., random forest, gradient boosting) or data characteristics (e.g., feature cardinality, sparsity, imbalance) were included. This limits the generalizability of the finding to real-world tabular classification tasks, especially where model structure and data density vary widely.",
+   "concepts": [
+    "calibration",
+    "tree ensembles",
+    "tabular classification",
+    "root mean squared error"
+   ],
+   "evidence_ids": [
+    "E1"
+   ],
+   "kind": "narrow_scope"
+  },
+  {
+   "id": "G3",
+   "description": "Evidence from E3 suggests that random forests are often well-calibrated and that isotonic regression provides only minor improvements unless trained on extensive calibration datasets—this is particularly relevant in data-scarce scenarios. However, this claim is not tested in the context of *post-hoc* calibration methods like Platt scaling or isotonic regression applied to tree ensembles. The implication is that such methods may be ineffective or underperform in low-data regimes, but this is not empirically validated across multiple datasets or model configurations.",
+   "concepts": [
+    "calibration",
+    "random forest",
+    "data scarcity",
+    "post-hoc calibration"
+   ],
+   "evidence_ids": [
+    "E3"
+   ],
+   "kind": "uncovered"
+  },
+  {
+   "id": "G4",
+   "description": "There is no evidence evaluating the *cost in discrimination* of calibration under different model families (e.g., XGBoost vs. Random Forest) or in imbalanced tabular datasets. While E7 notes that calibration can worsen the area under the risk-coverage curve (AURC), indicating potential degradation in abstention behavior, this is not linked to discrimination performance in a tabular setting. The broader impact on model interpretability, decision thresholds, or real-world deployment performance remains untested.",
+   "concepts": [
+    "calibration",
+    "discrimination",
+    "risk-coverage curve",
+    "imbalanced datasets",
+    "tabular classification"
+   ],
+   "evidence_ids": [
+    "E7"
+   ],
+   "kind": "uncovered"
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "H1",
+   "statement": "Post-hoc calibration using isotonic regression improves calibration (measured by Expected Calibration Error, ECE) in tree ensembles on tabular datasets, but this improvement comes at the cost of reduced AUROC compared to uncalibrated models, especially in imbalanced datasets.",
+   "independent_variable": "post-hoc calibration method (isotonic regression)",
+   "dependent_variable": "AUROC",
+   "expected_direction": "decrease",
+   "gap_ids": [
+    "G1",
+    "G4"
+   ],
+   "evidence_ids": [
+    "E7",
+    "E10"
+   ],
+   "rationale": "This hypothesis directly addresses the gap in the literature regarding the trade-off between calibration and discrimination, specifically in the context of AUROC under imbalanced conditions. Evidence from E7 notes that calibration can worsen the area under the risk-coverage curve (AURC), suggesting potential degradation in abstention and discrimination behavior, while E10 claims that calibration does not affect macro-AUROC—yet this is not tested in isolation or under imbalanced settings. Thus, this hypothesis tests whether the claimed preservation of AUROC (E10) holds in practice or if it is context-dependent (e.g., class imbalance)."
+  },
+  {
+   "id": "H2",
+   "statement": "Platt scaling applied to gradient boosting models results in lower root mean squared error (RMSE) in probability estimates than isotonic regression, but with a statistically significant reduction in AUC compared to the original model.",
+   "independent_variable": "post-hoc calibration method (Platt scaling)",
+   "dependent_variable": "AUC",
+   "expected_direction": "decrease",
+   "gap_ids": [
+    "G2",
+    "G1"
+   ],
+   "evidence_ids": [
+    "E1",
+    "E9"
+   ],
+   "rationale": "This hypothesis targets the gap in direct comparison between Platt scaling and isotonic regression in terms of both calibration performance (E1) and discrimination (AUC). While E1 claims calibration trees outperform both methods in RMSE, it does not specify performance on AUC. E9 suggests that a near-isotonic method preserves discrimination, but no such claim is made for Platt scaling. Thus, this hypothesis tests whether the improved calibration (via lower RMSE) in Platt scaling comes with a detectable loss in discrimination (AUC), particularly in tree ensembles like gradient boosting."
+  }
+ ],
+ "designs": [
+  {
+   "id": "D1",
+   "hypothesis_id": "H1",
+   "datasets": [
+    "breast_cancer_imb10",
+    "digits_binary_imb10"
+   ],
+   "model": "gradient_boosting",
+   "control": "gradient_boosting",
+   "treatments": [
+    "gradient_boosting+isotonic"
+   ],
+   "metrics": [
+    "roc_auc"
+   ],
+   "test": "paired_wilcoxon",
+   "split": "stratified_kfold",
+   "folds": 5,
+   "seeds": [
+    123,
+    456,
+    789
+   ],
+   "rationale": "The hypothesis focuses on the trade-off between calibration (measured by ECE) and AUROC under imbalanced conditions. To test whether post-hoc calibration via isotonic regression reduces AUROC, we must evaluate models under imbalanced, real-world conditions. We select two imbalanced datasets—breast_cancer_imb10 and digits_binary_imb10—representing different feature structures and class distributions. The control condition (gradient_boosting) represents the uncalibrated baseline, while the treatment (gradient_boosting+isotonic) applies isotonic regression for calibration. This design isolates the effect of calibration on AUROC in imbalanced settings. We use paired Wilcoxon test to assess significant differences in AUROC between calibrated and uncalibrated models across folds, with 5-fold cross-validation and three random seeds to ensure reproducibility and robustness. The choice of gradient boosting as control and treatment is motivated by its strong performance and common use in tree ensembles, aligning with the hypothesis's focus on tree-based models. Datasets are imbalanced to reflect real-world scenarios where calibration trade-offs are most critical. Metrics are centered on AUROC (dependent variable) as per the hypothesis, with ECE monitored as a secondary indicator of calibration improvement."
+  },
+  {
+   "id": "D2",
+   "hypothesis_id": "H2",
+   "datasets": [
+    "breast_cancer",
+    "digits_binary",
+    "wine_binary"
+   ],
+   "model": "gradient_boosting",
+   "control": "gradient_boosting",
+   "treatments": [
+    "gradient_boosting+platt",
+    "gradient_boosting+isotonic"
+   ],
+   "metrics": [
+    "roc_auc"
+   ],
+   "test": "paired_wilcoxon",
+   "split": "stratified_kfold",
+   "folds": 5,
+   "seeds": [
+    123,
+    456,
+    789
+   ],
+   "rationale": "The hypothesis focuses on the trade-off between calibration (measured via RMSE in probability estimates) and discrimination (measured via AUC). To test whether Platt scaling reduces AUC compared to the original gradient boosting model, we must compare AUC performance directly. The control condition (gradient_boosting) serves as the baseline, while the treatment conditions apply post-hoc calibration methods: Platt scaling and isotonic regression. We use three balanced datasets—breast_cancer, digits_binary, and wine_binary—to ensure sufficient class distribution and dimensionality for meaningful calibration effects. These datasets are chosen because they are binary, have moderate to high dimensionality, and represent different domains (medical, sensory, chemical), increasing generalizability. The paired Wilcoxon test is appropriate because we are comparing two related conditions (same model with different post-hoc calibrations) and assessing whether the AUC difference is statistically significant. Five-fold cross-validation ensures robust performance estimation across data splits, and three random seeds ensure reproducibility and reduce variance due to stochasticity in training. The absence of imbalanced datasets (like _imb10) is intentional: the hypothesis does not claim any effect under imbalance, and the focus is on the calibration-discrimination trade-off in standard settings."
+  }
+ ],
+ "results": [
+  {
+   "id": "R1",
+   "design_id": "D1",
+   "conditions": [
+    {
+     "condition": "gradient_boosting",
+     "dataset": "breast_cancer_imb10",
+     "metric": "roc_auc",
+     "values": [
+      0.9198943661971831,
+      1.0,
+      1.0,
+      1.0,
+      0.9004024144869216,
+      0.914612676056338,
+      0.9156746031746033,
+      0.988095238095238,
+      0.9919517102615694,
+      1.0,
+      0.994718309859155,
+      1.0,
+      0.9037698412698413,
+      0.9919517102615695,
+      0.9104627766599598
+     ],
+     "mean": 0.9621022430881586,
+     "lo": 0.9388259650495565,
+     "hi": 0.983700699567777
+    },
+    {
+     "condition": "gradient_boosting+isotonic",
+     "dataset": "breast_cancer_imb10",
+     "metric": "roc_auc",
+     "values": [
+      0.9286971830985915,
+      1.0,
+      0.9702380952380952,
+      1.0,
+      0.9245472837022133,
+      0.9330985915492958,
+      0.9176587301587301,
+      0.9077380952380952,
+      0.9899396378269617,
+      1.0,
+      0.9735915492957746,
+      1.0,
+      0.9255952380952381,
+      0.9285714285714286,
+      0.9285714285714285
+     ],
+     "mean": 0.9552164840897236,
+     "lo": 0.9381566947984201,
+     "hi": 0.9728717210671438
+    },
+    {
+     "condition": "gradient_boosting",
+     "dataset": "digits_binary_imb10",
+     "metric": "roc_auc",
+     "values": [
+      0.9861878453038674,
+      0.990432098765432,
+      1.0,
+      0.9589506172839506,
+      0.9972222222222222,
+      0.9898710865561694,
+      0.9888888888888888,
+      0.9783950617283951,
+      0.9959876543209876,
+      0.9685185185185186,
+      0.9693063228974831,
+      0.9950617283950617,
+      0.9432098765432098,
+      0.9614197530864198,
+      0.9975308641975309
+     ],
+     "mean": 0.9813988359138757,
+     "lo": 0.9727324704999657,
+     "hi": 0.9893171253666189
+    },
+    {
+     "condition": "gradient_boosting+isotonic",
+     "dataset": "digits_binary_imb10",
+     "metric": "roc_auc",
+     "values": [
+      0.9760589318600369,
+      0.9907407407407407,
+      0.9983024691358025,
+      0.9354938271604937,
+      0.9978395061728395,
+      0.9841927562922038,
+      0.9871913580246913,
+      0.975,
+      0.9882716049382716,
+      0.9609567901234567,
+      0.9798956414978515,
+      0.990895061728395,
+      0.9487654320987655,
+      0.9537037037037037,
+      0.9944444444444445
+     ],
+     "mean": 0.9774501511947797,
+     "lo": 0.9675648759179684,
+     "hi": 0.9860724910760975
+    }
+   ],
+   "comparisons": [
+    {
+     "dataset": "breast_cancer_imb10",
+     "metric": "roc_auc",
+     "treatment": "gradient_boosting+isotonic",
+     "control": "gradient_boosting",
+     "mean_diff": -0.00688575899843508,
+     "lo": -0.022373476972948836,
+     "hi": 0.0071186843281913275,
+     "p": 0.6566419342620566,
+     "effect_size_dz": -0.22675558597215945,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.6566419342620566
+    },
+    {
+     "dataset": "digits_binary_imb10",
+     "metric": "roc_auc",
+     "treatment": "gradient_boosting+isotonic",
+     "control": "gradient_boosting",
+     "mean_diff": -0.003948684719096011,
+     "lo": -0.007974120682991194,
+     "hi": -0.00040502012141051925,
+     "p": 0.046782132998777204,
+     "effect_size_dz": -0.5175061510645537,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.09356426599755441
+    }
+   ],
+   "runtime_seconds": 25.249,
+   "summary": ""
+  },
+  {
+   "id": "R2",
+   "design_id": "D2",
+   "conditions": [
+    {
+     "condition": "gradient_boosting",
+     "dataset": "breast_cancer",
+     "metric": "roc_auc",
+     "values": [
+      0.9855879462823453,
+      0.9849328529315428,
+      0.9986772486772486,
+      0.996031746031746,
+      1.0,
+      0.9790370127743203,
+      0.9983622666229938,
+      0.9897486772486772,
+      0.9996693121693121,
+      0.9963112005365526,
+      0.9937766131673762,
+      0.9849328529315428,
+      0.9937169312169313,
+      0.9943783068783069,
+      0.9889336016096579
+     ],
+     "mean": 0.992273104605237,
+     "lo": 0.9890298762139301,
+     "hi": 0.9952933228859231
+    },
+    {
+     "condition": "gradient_boosting+platt",
+     "dataset": "breast_cancer",
+     "metric": "roc_auc",
+     "values": [
+      0.9849328529315428,
+      0.9846053062561415,
+      0.9970238095238095,
+      0.9983465608465609,
+      0.999664654594232,
+      0.9780543727481167,
+      0.9973796265967901,
+      0.9874338624338624,
+      0.9983465608465609,
+      0.9926224010731053,
+      0.9911562397641664,
+      0.9836226662299378,
+      0.9957010582010583,
+      0.9947089947089947,
+      0.9906103286384976
+     ],
+     "mean": 0.9916139530262253,
+     "lo": 0.9882930294225878,
+     "hi": 0.9946407832582635
+    },
+    {
+     "condition": "gradient_boosting+isotonic",
+     "dataset": "breast_cancer",
+     "metric": "roc_auc",
+     "values": [
+      0.964461185718965,
+      0.9777268260727153,
+      0.9971891534391535,
+      0.9990079365079365,
+      1.0,
+      0.9793645594497216,
+      0.9977071732721914,
+      0.9816468253968254,
+      0.9985119047619048,
+      0.9922870556673373,
+      0.990501146413364,
+      0.9793645594497216,
+      0.9947089947089947,
+      0.9948743386243386,
+      0.9810529845741114
+     ],
+     "mean": 0.9885603096038186,
+     "lo": 0.9830126907908837,
+     "hi": 0.9934889807369914
+    },
+    {
+     "condition": "gradient_boosting",
+     "dataset": "digits_binary",
+     "metric": "roc_auc",
+     "values": [
+      0.9961727213802894,
+      0.984783950617284,
+      0.9968032278088144,
+      0.9959342023587834,
+      0.9814090626939789,
+      0.9939812957190037,
+      0.9887962962962963,
+      0.9914649286157666,
+      0.9889819987585351,
+      0.9939788950962135,
+      0.9846291552208402,
+      0.9959259259259259,
+      0.9936995654872749,
+      0.9935133457479826,
+      0.9939788950962135
+     ],
+     "mean": 0.9916035644548803,
+     "lo": 0.9891582600476543,
+     "hi": 0.993789504802643
+    },
+    {
+     "condition": "gradient_boosting+platt",
+     "dataset": "digits_binary",
+     "metric": "roc_auc",
+     "values": [
+      0.9949998456742492,
+      0.9858333333333333,
+      0.9976101800124146,
+      0.9956859093730602,
+      0.985505896958411,
+      0.993765239667891,
+      0.9898765432098765,
+      0.9909062693978896,
+      0.9918373680943513,
+      0.9950962135319676,
+      0.98611068242847,
+      0.9954012345679013,
+      0.9949410304158908,
+      0.9927374301675977,
+      0.9951272501551831
+     ],
+     "mean": 0.9923622951325658,
+     "lo": 0.9904053387310511,
+     "hi": 0.9942164036206471
+    },
+    {
+     "condition": "gradient_boosting+isotonic",
+     "dataset": "digits_binary",
+     "metric": "roc_auc",
+     "values": [
+      0.9946448964474213,
+      0.981033950617284,
+      0.9974084419615146,
+      0.9969739292364991,
+      0.9848696461824953,
+      0.9943825426710701,
+      0.9897376543209877,
+      0.9905027932960894,
+      0.99231843575419,
+      0.9949565487274984,
+      0.9836877681409919,
+      0.994104938271605,
+      0.9942271880819367,
+      0.9920391061452514,
+      0.9952513966480447
+     ],
+     "mean": 0.9917426157668586,
+     "lo": 0.9892830321702825,
+     "hi": 0.9940710848509652
+    },
+    {
+     "condition": "gradient_boosting",
+     "dataset": "wine_binary",
+     "metric": "roc_auc",
+     "values": [
+      0.9600694444444444,
+      0.9583333333333334,
+      0.8923611111111112,
+      0.9963768115942029,
+      1.0,
+      0.8732638888888888,
+      0.9236111111111112,
+      0.9496527777777778,
+      0.9782608695652174,
+      0.9791666666666666,
+      0.9565972222222222,
+      0.9670138888888888,
+      0.953125,
+      0.9746376811594204,
+      0.9791666666666667
+     ],
+     "mean": 0.9561090982286633,
+     "lo": 0.9372458735909824,
+     "hi": 0.9723032407407407
+    },
+    {
+     "condition": "gradient_boosting+platt",
+     "dataset": "wine_binary",
+     "metric": "roc_auc",
+     "values": [
+      1.0,
+      0.9965277777777778,
+      0.90625,
+      1.0,
+      1.0,
+      0.9496527777777777,
+      1.0,
+      0.9340277777777778,
+      1.0,
+      0.9962121212121211,
+      1.0,
+      1.0,
+      0.9322916666666665,
+      0.9456521739130435,
+      0.9734848484848485
+     ],
+     "mean": 0.9756066095740007,
+     "lo": 0.9592061123005414,
+     "hi": 0.9905387434123847
+    },
+    {
+     "condition": "gradient_boosting+isotonic",
+     "dataset": "wine_binary",
+     "metric": "roc_auc",
+     "values": [
+      1.0,
+      1.0,
+      0.9097222222222222,
+      1.0,
+      1.0,
+      0.9496527777777777,
+      1.0,
+      0.9513888888888888,
+      1.0,
+      1.0,
+      0.9982638888888888,
+      1.0,
+      0.9357638888888888,
+      0.9547101449275361,
+      0.9734848484848485
+     ],
+     "mean": 0.9781991106719368,
+     "lo": 0.9630681017603573,
+     "hi": 0.9919831123737373
+    }
+   ],
+   "comparisons": [
+    {
+     "dataset": "breast_cancer",
+     "metric": "roc_auc",
+     "treatment": "gradient_boosting+platt",
+     "control": "gradient_boosting",
+     "mean_diff": -0.0006591515790117815,
+     "lo": -0.0014931033949894122,
+     "hi": 0.00018487973491254503,
+     "p": 0.17276173970412612,
+     "effect_size_dz": -0.38845299676350464,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.34552347940825223
+    },
+    {
+     "dataset": "breast_cancer",
+     "metric": "roc_auc",
+     "treatment": "gradient_boosting+isotonic",
+     "control": "gradient_boosting",
+     "mean_diff": -0.00371279500141819,
+     "lo": -0.006819405523003085,
+     "hi": -0.0011502518917697751,
+     "p": 0.015653550837455003,
+     "effect_size_dz": -0.6267173632022914,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.09361432552927838
+    },
+    {
+     "dataset": "digits_binary",
+     "metric": "roc_auc",
+     "treatment": "gradient_boosting+platt",
+     "control": "gradient_boosting",
+     "mean_diff": 0.0007587306776856669,
+     "lo": 0.00012374966451616604,
+     "hi": 0.0015030919942151419,
+     "p": 0.05535888671875,
+     "effect_size_dz": 0.5346157203925943,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.16607666015625
+    },
+    {
+     "dataset": "digits_binary",
+     "metric": "roc_auc",
+     "treatment": "gradient_boosting+isotonic",
+     "control": "gradient_boosting",
+     "mean_diff": 0.00013905131197847382,
+     "lo": -0.0007875627369106673,
+     "hi": 0.0010629996740741802,
+     "p": 0.97796630859375,
+     "effect_size_dz": 0.07224514704813079,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.97796630859375
+    },
+    {
+     "dataset": "wine_binary",
+     "metric": "roc_auc",
+     "treatment": "gradient_boosting+platt",
+     "control": "gradient_boosting",
+     "mean_diff": 0.0194975113453374,
+     "lo": 0.0047610045198359895,
+     "hi": 0.03627639620846139,
+     "p": 0.0412768389481978,
+     "effect_size_dz": 0.6055670710585308,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.1651073557927912
+    },
+    {
+     "dataset": "wine_binary",
+     "metric": "roc_auc",
+     "treatment": "gradient_boosting+isotonic",
+     "control": "gradient_boosting",
+     "mean_diff": 0.022090012443273282,
+     "lo": 0.008421282572097746,
+     "hi": 0.03751182568437999,
+     "p": 0.015602387588213064,
+     "effect_size_dz": 0.7404376486138874,
+     "n": 15,
+     "higher_is_better": true,
+     "p_holm": 0.09361432552927838
+    }
+   ],
+   "runtime_seconds": 72.252,
+   "summary": ""
+  }
+ ],
+ "critiques": [
+  {
+   "id": "C1",
+   "round": 1,
+   "target_id": "E5",
+   "stage": "evidence",
+   "issue": "quote_not_in_source",
+   "severity": "blocking",
+   "message": "The quoted text does not appear in the cited paper's record.",
+   "reviewer": "rule",
+   "resolution": "fixed",
+   "resolution_note": "E5 removed."
+  },
+  {
+   "id": "C2",
+   "round": 1,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'roc_auc' is not the hypothesis's dependent variable 'AUROC'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C3",
+   "round": 1,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'roc_auc' is not the hypothesis's dependent variable 'AUC'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C4",
+   "round": 99,
+   "target_id": "D1",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'roc_auc' is not the hypothesis's dependent variable 'AUROC'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  },
+  {
+   "id": "C5",
+   "round": 99,
+   "target_id": "D2",
+   "stage": "design",
+   "issue": "metric_mismatch",
+   "severity": "major",
+   "message": "Primary metric 'roc_auc' is not the hypothesis's dependent variable 'AUC'.",
+   "reviewer": "rule",
+   "resolution": "open",
+   "resolution_note": ""
+  }
+ ],
+ "conclusions": [
+  {
+   "id": "K1",
+   "hypothesis_id": "H1",
+   "result_id": "R1",
+   "verdict": "inconclusive",
+   "statement": "The hypothesis predicts a decrease in AUROC with isotonic calibration, but the evidence shows a mean difference of -0.0069 in breast_cancer_imb10 and -0.0039 in digits_binary_imb10, with p-values of 0.6566 and 0.0468 (p_holm = 0.0936), respectively—neither reaching statistical significance at α=0.05. This contradicts the expected direction of effect, and while E10 claims macro-AUROC is unaffected, the results here show a small decline that is not statistically significant under the Holm-adjusted test.",
+   "evidence_ids": [
+    "E7",
+    "E10"
+   ],
+   "limitations": [
+    "The study only evaluates two imbalanced datasets and does not test a wider range of tree ensemble models or feature distributions; results may not generalize to other models or data types. The AUROC metric is sensitive to class imbalance and sample size, so findings could be influenced by specific dataset characteristics. The p-values are not below 0.05, and the effect size (d_z = -0.23 to -0.52) is small to moderate, indicating that while a trend exists, it is not statistically robust."
+   ]
+  },
+  {
+   "id": "K2",
+   "hypothesis_id": "H2",
+   "result_id": "R2",
+   "verdict": "inconclusive",
+   "statement": "The hypothesis claims that Platt scaling results in a statistically significant decrease in AUC compared to the original gradient boosting model. However, the Holm-adjusted p-values for the AUC comparison between gradient boosting and gradient boosting+platt across datasets show no significant effect: in breast_cancer, p_holm = 0.3455; in digits_binary, p_holm = 0.1661; in wine_binary, p_holm = 0.1651. While Platt scaling shows a positive mean difference in AUC in wine_binary (mean_diff = 0.0195), this is not statistically significant after Holm adjustment. Moreover, E9 states that a near-isotonic method preserves discrimination, but no evidence directly supports a loss in AUC for Platt scaling. Thus, the hypothesis is not supported by the data at α = 0.05.",
+   "evidence_ids": [
+    "E1",
+    "E9",
+    "E10"
+   ],
+   "limitations": [
+    "The comparison is limited to three binary datasets with balanced classes and does not include imbalanced or high-dimensional settings where calibration effects may differ; the p-values are Holm-adjusted for multiple comparisons, which may reduce statistical power; the primary metric (AUC) is not directly linked to calibration performance (RMSE), which is the basis of the hypothesis's rationale; no direct comparison of AUC between Platt scaling and isotonic regression is provided in the evidence, and the claim of a 'statistically significant reduction' in AUC is not confirmed in any dataset."
+   ]
+  }
+ ],
+ "corrections": [],
+ "completed": [
+  "literature",
+  "evidence",
+  "gaps",
+  "hypotheses",
+  "design",
+  "analysis",
+  "conclusion",
+  "critique"
+ ],
+ "reviewed": {
+  "evidence": "none",
+  "hypotheses": "none",
+  "design": "none",
+  "conclusion": "none"
+ },
+ "error": null
+}

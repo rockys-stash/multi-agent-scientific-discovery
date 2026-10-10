@@ -1,0 +1,7 @@
+cache_mode: record
+sources:
+- openalex
+- crossref
+- arxiv
+- semanticscholar
+seed: 0

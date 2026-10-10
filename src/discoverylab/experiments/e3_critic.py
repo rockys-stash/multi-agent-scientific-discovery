@@ -14,7 +14,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from discoverylab.critic import rule_critique
+from discoverylab.critic import expected_verdict, rule_critique
 from discoverylab.experiments.common import Summary, e1_run_dirs, load_run, result_dir, table
 from discoverylab.models import RunState, Stage
 from discoverylab.reasoners.base import Reasoner
@@ -68,8 +68,16 @@ def _hyp(s: RunState, i: str) -> Any:
 
 
 def _flip_verdict(s: RunState, i: str, _: random.Random) -> bool:
+    """Set a verdict the statistics do not support. Flipping blindly could turn a model's wrong verdict
+    into the right one, which is a repair, not a fault (D21)."""
     k = next(c for c in s.conclusions if c.id == i)
-    k.verdict = "supported" if k.verdict != "supported" else "not_supported"
+    r = next((x for x in s.results if x.id == k.result_id), None)
+    h = next((x for x in s.hypotheses if x.id == k.hypothesis_id), None)
+    d = next((x for x in s.designs if r is not None and x.id == r.design_id), None)
+    if r is None or h is None or d is None:
+        return False
+    right = expected_verdict(h, d, r)
+    k.verdict = "supported" if right != "supported" else "not_supported"
     return True
 
 

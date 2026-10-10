@@ -75,6 +75,7 @@ class _Response:
     stop_reason: str
     usage: _Usage
     seed: int
+    raw: str = ""  # the generated text, kept so an unusable answer can be reported, not just counted
 
 
 class _Messages:
@@ -104,12 +105,12 @@ class _Messages:
         choice = out["choices"][0]
         usage = _Usage(out["usage"]["prompt_tokens"], out["usage"]["completion_tokens"])
         if choice.get("finish_reason") == "length":
-            return _Response(None, "max_tokens", usage, seed)
+            return _Response(None, "max_tokens", usage, seed, choice["message"]["content"] or "")
         try:
             parsed = output_format.model_validate_json(choice["message"]["content"] or "")
         except ValidationError:  # the grammar enforces shape, not every constraint (e.g. ranges)
             parsed = None
-        return _Response(parsed, "end_turn", usage, seed)
+        return _Response(parsed, "end_turn", usage, seed, choice["message"]["content"] or "")
 
 
 class LocalClient:

@@ -1,0 +1,503 @@
+[
+ {
+  "run_id": "20261009T125639Z-q1_calibration-rule-r0",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T130654Z-q1_calibration-local-r0",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T133458Z-q1_calibration-local-r1",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": [
+    "K2:verdict_mismatch"
+   ]
+  }
+ },
+ {
+  "run_id": "20261009T140325Z-q1_calibration-local-r2",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T143523Z-q1_calibration-local+mc-r0",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T145800Z-q1_calibration-local+mc-r1",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": [
+    "K2:verdict_mismatch"
+   ]
+  }
+ },
+ {
+  "run_id": "20261009T152656Z-q1_calibration-local+mc-r2",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:unrunnable_design",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T210610Z-q1_calibration-local-b5-r0",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:unrunnable_design",
+    "D1:unrunnable_design",
+    "D1:metric_mismatch",
+    "D2:unrunnable_design",
+    "D2:unrunnable_design",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T213348Z-q1_calibration-local-b5-r1",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:unrunnable_design",
+    "D1:metric_mismatch",
+    "D2:unrunnable_design",
+    "D2:unrunnable_design",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T215512Z-q1_calibration-local-b5-r2",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": [
+    "K1:overreach",
+    "K2:overreach"
+   ]
+  },
+  "model_critiques": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [
+    "H1:major",
+    "H2:major",
+    "G1:major",
+    "G2:minor",
+    "G3:major",
+    "G4:major"
+   ],
+   "design": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T155618Z-q2_scaling_knn-rule-r0",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T160535Z-q2_scaling_knn-local-r0",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:unrunnable_design",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": [
+    "K1:verdict_mismatch"
+   ]
+  }
+ },
+ {
+  "run_id": "20261009T162107Z-q2_scaling_knn-local-r1",
+  "false_alarms": {
+   "evidence": [
+    "evidence:no_evidence"
+   ],
+   "gaps": [
+    "gaps:no_gaps"
+   ],
+   "hypotheses": [],
+   "design": [],
+   "analysis": [],
+   "conclusion": []
+  },
+  "model_critiques": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T162657Z-q2_scaling_knn-local-r2",
+  "false_alarms": {
+   "evidence": [
+    "evidence:no_evidence"
+   ],
+   "gaps": [
+    "gaps:no_gaps"
+   ],
+   "hypotheses": [],
+   "design": [],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T163307Z-q2_scaling_knn-local+mc-r0",
+  "false_alarms": {
+   "evidence": [
+    "evidence:no_evidence"
+   ],
+   "gaps": [
+    "gaps:no_gaps"
+   ],
+   "hypotheses": [],
+   "design": [],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T164142Z-q2_scaling_knn-local+mc-r1",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:unrunnable_design",
+    "D1:unrunnable_design",
+    "D1:metric_mismatch",
+    "D2:unrunnable_design",
+    "D2:unrunnable_design"
+   ],
+   "analysis": [],
+   "conclusion": []
+  },
+  "model_critiques": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:major",
+    "D2:major",
+    "H1:major",
+    "H2:major"
+   ],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T165618Z-q2_scaling_knn-local+mc-r2",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:unrunnable_design",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  },
+  "model_critiques": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261010T003921Z-q2_scaling_knn-local-b5-r0",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:unrunnable_design",
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": [
+    "K1:verdict_mismatch"
+   ]
+  }
+ },
+ {
+  "run_id": "20261010T005541Z-q2_scaling_knn-local-b5-r1",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:unrunnable_design",
+    "D1:metric_mismatch",
+    "D2:unrunnable_design",
+    "D2:unrunnable_design",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  },
+  "model_critiques": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T171446Z-q3_imbalance-rule-r0",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T172244Z-q3_imbalance-local-r0",
+  "false_alarms": {
+   "evidence": [
+    "evidence:no_evidence"
+   ],
+   "gaps": [
+    "gaps:no_gaps"
+   ],
+   "hypotheses": [],
+   "design": [],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T172823Z-q3_imbalance-local-r1",
+  "false_alarms": {
+   "evidence": [
+    "evidence:no_evidence"
+   ],
+   "gaps": [
+    "gaps:no_gaps"
+   ],
+   "hypotheses": [],
+   "design": [],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T173359Z-q3_imbalance-local-r2",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:unrunnable_design",
+    "D2:unrunnable_design",
+    "D2:unrunnable_design",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T174849Z-q3_imbalance-local+mc-r0",
+  "false_alarms": {
+   "evidence": [
+    "evidence:no_evidence"
+   ],
+   "gaps": [
+    "gaps:no_gaps"
+   ],
+   "hypotheses": [],
+   "design": [],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261009T175433Z-q3_imbalance-local+mc-r1",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": [
+    "K2:verdict_mismatch"
+   ]
+  }
+ },
+ {
+  "run_id": "20261009T181615Z-q3_imbalance-local+mc-r2",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261010T012033Z-q3_imbalance-local-b5-r0",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261010T013639Z-q3_imbalance-local-b5-r1",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  }
+ },
+ {
+  "run_id": "20261010T014955Z-q3_imbalance-local-b5-r2",
+  "false_alarms": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [],
+   "design": [
+    "D1:metric_mismatch",
+    "D2:unrunnable_design",
+    "D2:metric_mismatch"
+   ],
+   "analysis": [],
+   "conclusion": []
+  },
+  "model_critiques": {
+   "evidence": [],
+   "gaps": [],
+   "hypotheses": [
+    "H1:major",
+    "H2:major"
+   ],
+   "design": [
+    "D1:major",
+    "D1:major",
+    "D2:major",
+    "D2:major",
+    "H1:major",
+    "H2:major"
+   ],
+   "conclusion": []
+  }
+ }
+]
