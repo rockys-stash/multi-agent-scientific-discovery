@@ -1,96 +1,99 @@
 # Internal review board
 
-Reviewed 2026-10-09 at the commit that added this file, against the rule-baseline results in
-[REPORT.md](REPORT.md). **Overall: not complete.** Every reviewer below passes what exists, but
-the project's central comparison, a language-model research agent against the rule baseline,
-has not run because no `ANTHROPIC_API_KEY` reached this build environment. Until it runs, the
-Completion Gate's "model/condition comparisons executed" item fails.
+Reviewed 2026-10-10 against [REPORT.md](REPORT.md), at the commit that changed this file. The
+first review (2026-10-09) failed the Completion Gate because no model arm had run. The model arms
+have now run on local open-weights models (D17), at the owner's request to finish without the
+Anthropic API. **Overall: pass**, with the Claude arms recorded as pending and the model
+substitution stated in the first paragraph of the README and the report.
 
 | Reviewer | Verdict | Required fixes |
 |---|---|---|
-| Research | Pass for what ran; **fail for the gate** | Run E1's Claude arms (3 repeats each), the judges and the model critic |
+| Research | Pass | None open; Claude arms and a larger judge listed as future work |
 | Engineering | Pass | None open |
 | QA | Pass | None open |
 | Security | Pass | None open |
 | UX | Pass | None open |
 | Recruiter | Pass | None open |
-| PhD supervisor | Pass with reservation | Same as Research |
+| PhD supervisor | Pass | None open |
 
 ## Research reviewer
 
 *Is this scientifically defensible?*
 
-- Questions, hypotheses and a baseline were fixed before the runs (README, configs, D4). Metrics
-  are defined in METRICS.md and computed only from artefacts and independent verification.
-- Findings that held: verifier 482/482 corruptions rejected and 0/273 benign variants rejected;
-  rule critic 72/72 structural and 0/18 semantic faults; readability uncorrelated with process
-  (ρ = 0.04); replay 3/3 identical.
-- Negative and awkward results are reported, not tuned: two real false rejections by the verifier
-  (D14, D15), a verdict rule that calls q2 "not supported" although the effect appears where
-  feature scales differ, and the first E5 failing 0/3 (D13).
-- Variance: the rule baseline is deterministic, so run-to-run variance is undefined and stated as
-  such; the agents' own experiments report bootstrap intervals over 15 paired folds.
-- **Open:** the comparison that answers "does a multi-agent LLM system do research soundly" is
-  pending. E3's semantic faults and E4's convincingness need a model. Verified evidence is often
-  only lexically related to the question (REPORT §3), which the rule baseline cannot fix.
+- The model/condition comparison now exists: rule baseline against three local-model arms on the
+  same three questions, 3 repeats per model arm with logged seeds, mean and standard deviation
+  per arm and per question (E1 compare). Arm differences smaller than their spreads (the model
+  critic's effect) are reported as not distinguishable, not as findings.
+- The ablation (`local-b5`) was added as a new arm after seeing the first result, and is labelled
+  as such (D18); the original arm was not changed.
+- Negative results are reported: 14/40 unrunnable model designs, 7/26 verdicts against the
+  statistics, a model critic that misses 32/40 structural faults, a judge that prefers corrupted
+  reports (ρ = −0.37), one failed run kept as failed (D20).
+- Two harness defects found on the model runs were fixed and the experiment rerun, with the first
+  result kept (D21 verdict fault, D20 validator).
+- A metric limitation found in the error analysis (exact-name primary-metric check) is stated in
+  the report and METRICS.md rather than changed after seeing results.
+- Substituting a 4B local model for the designed model is the largest threat; it is stated in the
+  scope paragraph, in threats to validity, and in every model-arm label.
 
 ## Engineering reviewer
 
 *Is this technically sound?*
 
-- Live runs exposed three defects that offline fixtures had not: a 429 read as "no record"
-  (D12), replay serving newer cache versions (D13), and the E2 same-author corruption (D15). Each
-  was fixed with a regression test before results were regenerated.
-- arXiv requests are now spaced 3 s apart as its API terms ask; DATASET.md said so but the code
-  used 1 s (fixed in this review).
-- Typed core (mypy strict on src, tests, scripts), ruff, ESLint, TypeScript strict; results are
-  versioned with config, commit and a dirty flag; a failed experiment leaves `FAILED` and never
-  moves `LATEST`.
+- The local client implements the same `messages.parse` call as the Anthropic client, so agents,
+  critic and judges have one code path; output is grammar-constrained to each schema, an unusable
+  answer is retried once and then fails the step, never repaired.
+- Weights are hash-pinned (`configs/models.sha256`) and recorded in each experiment's provenance
+  with package versions.
+- Live runs exposed defects that fixtures had not: container restarts from double-resident
+  weights (D19, fixed with no-mmap loading and smaller contexts), an E1 without checkpoints (D18,
+  now checkpointed after every run, `reuse_from` takes a list), the validator gap (D20). The
+  fresh clone exposed a hash check that broke when `models/` is a symlink (fixed in this review).
+- mypy strict, ruff, ESLint and TypeScript strict are clean.
 
 ## QA reviewer
 
 *Does it actually work, end to end?*
 
-- 44 unit, workflow, harness and API tests and 27 browser tests pass; CI runs lint and tests on
-  every push.
-- Fresh clone at e3319b4 → `make setup` → `make test` (41 passed) → E1–E5 from an empty cache
-  against the live indexes: all qualitative findings reproduced (REPORT §3). The run exposed one
-  metric defect (D16), fixed with a regression test.
-- The console was driven against the real runs to capture docs/screenshots (desktop light and
-  dark, mobile); loading, empty, error and not-found states are covered by the browser tests.
+- 52 offline tests (including the local adapter against a fake llama.cpp model) and 27 browser
+  tests pass; CI runs lint, the offline tests, the web build and the browser tests on every push.
+- Fresh clone of the pushed commit: `make setup`, `make test` (52 passed), `make setup-local`,
+  then E1 compare, E2, the error analysis and E5 from the archived runs and cache; results in
+  REPORT §3, "Reproduction from a fresh clone".
+- Screenshots regenerated from the console serving the real runs, including a local-model run's
+  network and critiques.
 
 ## Security reviewer
 
 *Any obvious security or privacy problems?*
 
-- No credentials in code or history; configuration via `.env` (ignored) and `.env.example`.
-- The API refuses a non-loopback host without `DISCOVERYLAB_API_TOKEN`, rate-limits clients and
-  requires the token for writes; same-origin CSP and security headers on the console.
-- The literature cache holds publishers' abstracts and is not committed (DATASET.md). No contact
-  address is sent to the indexes unless `DISCOVERYLAB_MAILTO` is set.
+- No credentials in code or history; `.env` is ignored. The local path needs no key and makes no
+  network call after the weights are downloaded.
+- Weights are downloaded over HTTPS from a fixed URL and checked against pinned hashes before
+  use.
+- API, CSP and token rules unchanged from the first review.
 
 ## UX reviewer
 
 *Does it feel like a professionally designed product?*
 
-- The research network reads left to right like the workflow; the citation table shows what was
-  cited next to what the source says, with the failing field named.
-- Fixed in this review: experiments with a pending part (the Claude arms, judges) were labelled
-  "Complete"; they now show "Partial: part pending".
-- 0 axe violations in both themes and both viewports (browser tests).
+- Model arms are labelled in plain words in the console ("Local model, 5 abstracts per read") and
+  the Evaluation page shows the arm comparison. 0 axe violations in both themes and viewports.
 
 ## Recruiter reviewer
 
 *Does this repository demonstrate meaningful skill?*
 
-- A working multi-agent pipeline over four real scholarly APIs, an independent verifier, a fixed
-  experiment toolbox with proper statistics, fault injection, replay, and a designed console. The
-  decision log shows defects found by measurement and fixed, which is the strongest signal here.
+- A working multi-agent pipeline over four real scholarly APIs, run end to end with both a rule
+  baseline and an open model on a CPU, with independent verification, fault injection, replay and
+  a measured account of where the model failed. The decision log shows problems found by
+  measurement and fixed.
 
 ## PhD supervisor reviewer
 
 *Does it demonstrate research ability, not merely software development?*
 
-- Yes in method: the project measures the instruments (verifier, critic, replay) before trusting
-  them, reports their failures, and separates "verified" from "relevant". The substantive
-  scientific question about LLM agents is still open; the report says so in its first paragraph.
+- Yes: the instruments are validated before being trusted (E2, E3, E5), the agent comparison is
+  run with repeats and reported with spreads, the ablation is labelled as post hoc, and the most
+  interesting finding (a small judge rates corrupted reports as more convincing) is reported with
+  its limits. What a frontier model would do remains open and is said to be open.

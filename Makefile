@@ -17,7 +17,7 @@ models: ## Download the local reasoner and judge weights (about 4.9 GB) into mod
 	mkdir -p models
 	[ -f models/qwen3-4b-instruct-2507-q4_0.gguf ] || curl -fL -o models/qwen3-4b-instruct-2507-q4_0.gguf $(QWEN)
 	[ -f models/phi-4-mini-instruct-q4_k_m.gguf ] || curl -fL -o models/phi-4-mini-instruct-q4_k_m.gguf $(PHI)
-	cd models && sha256sum -c ../configs/models.sha256
+	cd models && sha256sum -c $(CURDIR)/configs/models.sha256  # absolute: models/ may be a symlink
 
 test: ## Unit, workflow, experiment-harness and API tests (fixtures only, offline)
 	uv run pytest

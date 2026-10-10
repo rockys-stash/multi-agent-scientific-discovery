@@ -10,7 +10,7 @@ independent verification (`verification.json`). Code: `src/discoverylab/evaluate
 | Evidence correctness | Evidence items whose citation is verified **and** whose quote occurs in the source text (title + abstract) after normalising case, Unicode, whitespace and punctuation, divided by evidence items. A source with no abstract gives "no source text", which is not correct. | Indexes |
 | Quote supports claim | A judge's verdict per evidence item: supports / partly / does not support. | Judge |
 | Hypothesis quality | Rubric of five criteria (specificity, testability, grounding, falsifiability, consistency), each 0–2, total out of 10 (`judges.RUBRIC`). | Judge |
-| Experimental validity | Share of nine checks passed by each design: runnable by the toolbox, has a control, has a treatment, held-out evaluation, primary metric equals the hypothesis's dependent variable, paired test, at least 5 paired measurements, more than one seed, more than one dataset. | None |
+| Experimental validity | Share of nine checks passed by each design: runnable by the toolbox, has a control, has a treatment, held-out evaluation, primary metric equals the hypothesis's dependent variable, paired test, at least 5 paired measurements, more than one seed, more than one dataset. The primary-metric check compares names exactly, so a design that names the same quantity in other words (`ece` for "Expected Calibration Error") fails it; error_analysis.md lists every such pair. | None |
 | Novelty indicator | Maximum TF-IDF cosine similarity of a hypothesis to any retrieved abstract. High values mean the hypothesis restates prior work. An indicator, not proof. | None |
 | Critique counts | Critiques by stage, reviewer (rule / model / human) and severity, and how each was resolved (fixed / accepted / dismissed / open). | None |
 | Human-correction count | Edits, rejections and additions per checkpoint stage. Reported as "no review" (`null`), never 0, when nobody reviewed the stage. | A person |
@@ -20,8 +20,9 @@ independent verification (`verification.json`). Code: `src/discoverylab/evaluate
 
 | Experiment | Metric |
 |---|---|
+| E1 compare | Per arm, mean and standard deviation over runs of: evidence items, citation accuracy, evidence correctness, quotes judged to support their claim, hypotheses, hypothesis rubric, design checks passed, conclusions reached, verdicts matching the statistics (`critic.expected_verdict`, over runs with a conclusion), critiques raised, evidence removed by a fixed blocking critique, and run time from the first to the last log event. The rule baseline runs once per question, so its spread is undefined. |
 | E2 | Share of corrupted variants rejected (target 100%) and share of benign variants accepted (target 100%), by variant. |
-| E3 | Per fault: share of injections caught as an expected issue on the faulted artefact, and share where the artefact was flagged at all. Critiques raised on unmodified final states (false alarms). |
+| E3 | Per fault: share of injections caught as an expected issue on the faulted artefact, and share where the artefact was flagged at all. Critiques raised on unmodified final states. The model critic names issues in its own words, so it is scored on whether it flagged the faulted artefact at all, on a sample of the same faulted states (4 per fault type), with the same injection seed as the rule critic's trial. |
 | E4 | Mean readability (Flesch reading ease), judged convincingness (1–10) and process score per variant; Spearman correlation of each fluency score with the process score. Process score = mean of evidence correctness and the share of conclusions whose verdict matches the statistics. |
 | E5 | Per run: artefact groups (papers, evidence, gaps, hypotheses, designs, results without runtimes, conclusions, critiques) identical under replay, and identical verification. |
 

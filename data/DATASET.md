@@ -11,7 +11,7 @@
 
 Every response is cached under `cache/` by a content hash of the request, with the URL, status
 and retrieval time, so runs replay offline. The cache is not committed: abstracts belong to
-their publishers. Literature was first retrieved on 2026-10-08 (E1, `results/e1_runs/`). That day OpenAlex's
+their publishers. Literature was retrieved on 2026-10-08 and 2026-10-09 (E1, `results/e1_runs/`). That day OpenAlex's
 anonymous daily credit was exhausted and Semantic Scholar rate-limited the shared address, so
 those two indexes contributed fewer records; such answers are recorded as "could not check",
 never as missing papers (docs/DECISIONS.md D12). Requests are spaced at least 1 s per host, 3 s
@@ -36,6 +36,18 @@ underlying datasets are from the UCI repository).
 Counts above were printed from the loaders. Splits are stratified k-fold inside each design
 (folds and seeds chosen by the design); every metric is computed out of fold, and calibration
 and oversampling are fitted inside the training folds only, so no test fold leaks into training.
+
+## Model weights (downloaded by `make models`, not committed)
+
+| Role | Model | File | Source | Licence |
+|---|---|---|---|---|
+| Agents and model critic | Qwen3-4B-Instruct-2507, Q4_0 | `qwen3-4b-instruct-2507-q4_0.gguf` (2.38 GB) | huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF | Apache-2.0 |
+| Judges | Phi-4-mini-instruct, Q4_K_M | `phi-4-mini-instruct-q4_k_m.gguf` (2.49 GB) | huggingface.co/unsloth/Phi-4-mini-instruct-GGUF | MIT |
+
+SHA-256 hashes are in `configs/models.sha256`; `make models` checks them and every experiment's
+`provenance.json` records the file, size and hash of the weights it used. The models' training
+data is the developers' and is not documented here; what they know about the literature is not
+used as evidence, because every evidence item must quote a retrieved abstract (DECISIONS D17).
 
 ## Test fixtures
 
