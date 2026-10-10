@@ -40,6 +40,8 @@ def test_toolbox_runs_designs_and_reports_consistent_numbers() -> None:
     assert primary["p_holm"] is not None and primary["n"] == 6
     assert toolbox.run_design(_design(), "R1").comparisons == r.comparisons  # seeded: reproducible
     assert toolbox.validate(_design(datasets=["mnist"], treatments=["svm"], test="anova"))
+    # a known model with a modifier it cannot take is unrunnable at design time, not a crash mid-run
+    assert toolbox.validate(_design(treatments=["knn+class_weight"])) == ["knn does not support class_weight"]
     _X, y = toolbox.DATASETS["digits_binary_imb10"].loader()
     counts = sorted(int(n) for n in __import__("numpy").bincount(y))
     assert counts[0] <= 0.11 * counts[1]

@@ -2,4 +2,5 @@
 seed: 0
 max_targets_per_fault: 5
 model_critic: local          # also review a sample of the same faulted states with the model critic
-model_trials_per_fault: 6
+model_trials_per_fault: 4     # sampled trials per fault the model critic reviews (same faulted states)
+model_clean_runs: 6           # unmodified final states it reviews, for critiques without a planted fault

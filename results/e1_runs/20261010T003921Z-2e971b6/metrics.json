@@ -1,0 +1,2872 @@
+[
+ {
+  "run_id": "20261009T125639Z-q1_calibration-rule-r0",
+  "reasoner": "rule",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 25,
+  "citation_accuracy": {
+   "k": 25,
+   "n": 25,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 25
+  },
+  "evidence_correctness": {
+   "k": 25,
+   "n": 25,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 25
+  },
+  "gaps": 4,
+  "hypotheses": 1,
+  "design_validity": {
+   "D1": {
+    "passed": 9,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": true,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.16122901189037248
+  },
+  "verdicts": {
+   "K1": "inconclusive"
+  },
+  "critiques": [],
+  "critique_resolution": {},
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 10
+   },
+   "mean_of_10": 10.0
+  },
+  "evidence_support": {
+   "supports": 25,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 25
+  },
+  "question": "q1_calibration",
+  "label": "rule"
+ },
+ {
+  "run_id": "20261009T130654Z-q1_calibration-local-r0",
+  "reasoner": "local",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 10,
+  "citation_accuracy": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 10
+  },
+  "evidence_correctness": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 10
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.23833794904970212,
+   "H2": 0.24501079848498902
+  },
+  "verdicts": {
+   "K1": "not_supported",
+   "K2": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 4
+   }
+  ],
+  "critique_resolution": {
+   "open": 4
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 7,
+    "H2": 7
+   },
+   "mean_of_10": 7.0
+  },
+  "evidence_support": {
+   "supports": 7,
+   "partly": 2,
+   "does_not_support": 1,
+   "n": 10
+  },
+  "question": "q1_calibration",
+  "label": "local"
+ },
+ {
+  "run_id": "20261009T133458Z-q1_calibration-local-r1",
+  "reasoner": "local",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 7,
+  "citation_accuracy": {
+   "k": 7,
+   "n": 7,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 7
+  },
+  "evidence_correctness": {
+   "k": 7,
+   "n": 7,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 7
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.11336932372500934,
+   "H2": 0.17084163074907258
+  },
+  "verdicts": {
+   "K1": "inconclusive",
+   "K2": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "conclusion",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 4
+   },
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 2
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 2,
+   "open": 7
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 9,
+    "H2": 7
+   },
+   "mean_of_10": 8.0
+  },
+  "evidence_support": {
+   "supports": 7,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 7
+  },
+  "question": "q1_calibration",
+  "label": "local"
+ },
+ {
+  "run_id": "20261009T140325Z-q1_calibration-local-r2",
+  "reasoner": "local",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 10,
+  "citation_accuracy": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 10
+  },
+  "evidence_correctness": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 10
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.13423685536311486,
+   "H2": 0.2995170225127426
+  },
+  "verdicts": {
+   "K1": "inconclusive",
+   "K2": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 4
+   },
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 1
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 1,
+   "open": 4
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 7,
+    "H2": 7
+   },
+   "mean_of_10": 7.0
+  },
+  "evidence_support": {
+   "supports": 10,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 10
+  },
+  "question": "q1_calibration",
+  "label": "local"
+ },
+ {
+  "run_id": "20261009T143523Z-q1_calibration-local+mc-r0",
+  "reasoner": "local+mc",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 2,
+  "citation_accuracy": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 2
+  },
+  "evidence_correctness": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 2
+  },
+  "gaps": 3,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.1284616162136879,
+   "H2": 0.1108360268624607
+  },
+  "verdicts": {
+   "K1": "supported",
+   "K2": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 4
+   }
+  ],
+  "critique_resolution": {
+   "open": 4
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 9,
+    "H2": 7
+   },
+   "mean_of_10": 8.0
+  },
+  "evidence_support": {
+   "supports": 2,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 2
+  },
+  "question": "q1_calibration",
+  "label": "local+mc"
+ },
+ {
+  "run_id": "20261009T145800Z-q1_calibration-local+mc-r1",
+  "reasoner": "local+mc",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 2,
+  "citation_accuracy": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 2
+  },
+  "evidence_correctness": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 2
+  },
+  "gaps": 3,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.2571318691637301,
+   "H2": 0.1543733819053252
+  },
+  "verdicts": {
+   "K1": "inconclusive",
+   "K2": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "conclusion",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "design",
+    "reviewer": "model",
+    "severity": "major",
+    "n": 7
+   },
+   {
+    "stage": "design",
+    "reviewer": "model",
+    "severity": "minor",
+    "n": 1
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 4
+   }
+  ],
+  "critique_resolution": {
+   "open": 15
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 9,
+    "H2": 7
+   },
+   "mean_of_10": 8.0
+  },
+  "evidence_support": {
+   "supports": 2,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 2
+  },
+  "question": "q1_calibration",
+  "label": "local+mc"
+ },
+ {
+  "run_id": "20261009T152656Z-q1_calibration-local+mc-r2",
+  "reasoner": "local+mc",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 7,
+  "citation_accuracy": {
+   "k": 7,
+   "n": 7,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 7
+  },
+  "evidence_correctness": {
+   "k": 7,
+   "n": 7,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 7
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.23664936515436297,
+   "H2": 0.1344657653776358
+  },
+  "verdicts": {
+   "K1": "not_supported"
+  },
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 6
+   },
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 2
+   },
+   {
+    "stage": "hypotheses",
+    "reviewer": "model",
+    "severity": "major",
+    "n": 4
+   },
+   {
+    "stage": "hypotheses",
+    "reviewer": "model",
+    "severity": "minor",
+    "n": 2
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 2,
+   "open": 15
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 9,
+    "H2": 6
+   },
+   "mean_of_10": 7.5
+  },
+  "evidence_support": {
+   "supports": 5,
+   "partly": 2,
+   "does_not_support": 0,
+   "n": 7
+  },
+  "question": "q1_calibration",
+  "label": "local+mc"
+ },
+ {
+  "run_id": "20261009T210610Z-q1_calibration-local-b5-r0",
+  "reasoner": "local-b5",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 12,
+  "citation_accuracy": {
+   "k": 12,
+   "n": 12,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 12
+  },
+  "evidence_correctness": {
+   "k": 12,
+   "n": 12,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 12
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.18237477833259919,
+   "H2": 0.1987276482839117
+  },
+  "verdicts": {},
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 12
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 6
+   },
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 3,
+   "open": 18
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 9,
+    "H2": 7
+   },
+   "mean_of_10": 8.0
+  },
+  "evidence_support": {
+   "supports": 10,
+   "partly": 2,
+   "does_not_support": 0,
+   "n": 12
+  },
+  "question": "q1_calibration",
+  "label": "local-b5"
+ },
+ {
+  "run_id": "20261009T213348Z-q1_calibration-local-b5-r1",
+  "reasoner": "local-b5",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 11,
+  "citation_accuracy": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 10
+  },
+  "evidence_correctness": {
+   "k": 11,
+   "n": 11,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 11
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.1728606616164974,
+   "H2": 0.1418220871628218
+  },
+  "verdicts": {},
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 9
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 6
+   },
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 2
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 2,
+   "open": 15
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 9,
+    "H2": 10
+   },
+   "mean_of_10": 9.5
+  },
+  "evidence_support": {
+   "supports": 9,
+   "partly": 2,
+   "does_not_support": 0,
+   "n": 11
+  },
+  "question": "q1_calibration",
+  "label": "local-b5"
+ },
+ {
+  "run_id": "20261009T215512Z-q1_calibration-local-b5-r2",
+  "reasoner": "local-b5",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 11,
+  "citation_accuracy": {
+   "k": 11,
+   "n": 11,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 11
+  },
+  "evidence_correctness": {
+   "k": 11,
+   "n": 11,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 11
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.21574475843471544,
+   "H2": 0.21524881285380587
+  },
+  "verdicts": {
+   "K1": "supported",
+   "K2": "supported"
+  },
+  "critiques": [
+   {
+    "stage": "conclusion",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 6
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 4
+   },
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 1
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 1,
+   "open": 10
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 2,
+    "H2": 9
+   },
+   "mean_of_10": 5.5
+  },
+  "evidence_support": {
+   "supports": 10,
+   "partly": 1,
+   "does_not_support": 0,
+   "n": 11
+  },
+  "question": "q1_calibration",
+  "label": "local-b5"
+ },
+ {
+  "run_id": "20261009T155618Z-q2_scaling_knn-rule-r0",
+  "reasoner": "rule",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 23,
+  "citation_accuracy": {
+   "k": 22,
+   "n": 23,
+   "rate": 0.9565217391304348
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 22,
+   "metadata_mismatch": 1
+  },
+  "evidence_correctness": {
+   "k": 22,
+   "n": 23,
+   "rate": 0.9565217391304348
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 23
+  },
+  "gaps": 8,
+  "hypotheses": 1,
+  "design_validity": {
+   "D1": {
+    "passed": 9,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": true,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.09231205468320075
+  },
+  "verdicts": {
+   "K1": "not_supported"
+  },
+  "critiques": [],
+  "critique_resolution": {},
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 10
+   },
+   "mean_of_10": 10.0
+  },
+  "evidence_support": {
+   "supports": 23,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 23
+  },
+  "question": "q2_scaling_knn",
+  "label": "rule"
+ },
+ {
+  "run_id": "20261009T160535Z-q2_scaling_knn-local-r0",
+  "reasoner": "local",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 1,
+  "citation_accuracy": {
+   "k": 1,
+   "n": 1,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 1
+  },
+  "evidence_correctness": {
+   "k": 1,
+   "n": 1,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 1
+  },
+  "gaps": 2,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 6,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": false
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.17660299615506322,
+   "H2": 0.14410817627761538
+  },
+  "verdicts": {
+   "K1": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "conclusion",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 6
+   },
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 1
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 1,
+   "open": 12
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 7,
+    "H2": 5
+   },
+   "mean_of_10": 6.0
+  },
+  "evidence_support": {
+   "supports": 0,
+   "partly": 1,
+   "does_not_support": 0,
+   "n": 1
+  },
+  "question": "q2_scaling_knn",
+  "label": "local"
+ },
+ {
+  "run_id": "20261009T162107Z-q2_scaling_knn-local-r1",
+  "reasoner": "local",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 0,
+  "citation_accuracy": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {},
+  "evidence_correctness": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {},
+  "gaps": 0,
+  "hypotheses": 0,
+  "design_validity": {},
+  "novelty_max_tfidf_similarity": {},
+  "verdicts": {},
+  "critiques": [
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "gaps",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 2
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 2,
+   "open": 3
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {},
+   "mean_of_10": null
+  },
+  "evidence_support": {
+   "supports": 0,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 0
+  },
+  "question": "q2_scaling_knn",
+  "label": "local"
+ },
+ {
+  "run_id": "20261009T162657Z-q2_scaling_knn-local-r2",
+  "reasoner": "local",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 0,
+  "citation_accuracy": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {},
+  "evidence_correctness": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {},
+  "gaps": 0,
+  "hypotheses": 0,
+  "design_validity": {},
+  "novelty_max_tfidf_similarity": {},
+  "verdicts": {},
+  "critiques": [
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "gaps",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 2
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 2,
+   "open": 3
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {},
+   "mean_of_10": null
+  },
+  "evidence_support": {
+   "supports": 0,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 0
+  },
+  "question": "q2_scaling_knn",
+  "label": "local"
+ },
+ {
+  "run_id": "20261009T163307Z-q2_scaling_knn-local+mc-r0",
+  "reasoner": "local+mc",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 0,
+  "citation_accuracy": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {},
+  "evidence_correctness": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {},
+  "gaps": 0,
+  "hypotheses": 0,
+  "design_validity": {},
+  "novelty_max_tfidf_similarity": {},
+  "verdicts": {},
+  "critiques": [
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "gaps",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 2
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 2,
+   "open": 3
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {},
+   "mean_of_10": null
+  },
+  "evidence_support": {
+   "supports": 0,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 0
+  },
+  "question": "q2_scaling_knn",
+  "label": "local+mc"
+ },
+ {
+  "run_id": "20261009T164142Z-q2_scaling_knn-local+mc-r1",
+  "reasoner": "local+mc",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 2,
+  "citation_accuracy": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 2
+  },
+  "evidence_correctness": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 2
+  },
+  "gaps": 3,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": true,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.27390710701358384,
+   "H2": 0.21366583344750095
+  },
+  "verdicts": {},
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 12
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 3
+   }
+  ],
+  "critique_resolution": {
+   "open": 15
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 5,
+    "H2": 5
+   },
+   "mean_of_10": 5.0
+  },
+  "evidence_support": {
+   "supports": 1,
+   "partly": 1,
+   "does_not_support": 0,
+   "n": 2
+  },
+  "question": "q2_scaling_knn",
+  "label": "local+mc"
+ },
+ {
+  "run_id": "20261009T165618Z-q2_scaling_knn-local+mc-r2",
+  "reasoner": "local+mc",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 2,
+  "citation_accuracy": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 2
+  },
+  "evidence_correctness": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 2
+  },
+  "gaps": 2,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.34766431628447375,
+   "H2": 0.12437041010354649
+  },
+  "verdicts": {
+   "K1": "not_supported"
+  },
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 6
+   }
+  ],
+  "critique_resolution": {
+   "open": 9
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 9,
+    "H2": 1
+   },
+   "mean_of_10": 5.0
+  },
+  "evidence_support": {
+   "supports": 1,
+   "partly": 1,
+   "does_not_support": 0,
+   "n": 2
+  },
+  "question": "q2_scaling_knn",
+  "label": "local+mc"
+ },
+ {
+  "run_id": "20261010T003921Z-q2_scaling_knn-local-b5-r0",
+  "reasoner": "local-b5",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 10,
+  "citation_accuracy": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 10
+  },
+  "evidence_correctness": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 10
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.2423129779546087,
+   "H2": 0.15718091857133948
+  },
+  "verdicts": {
+   "K1": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "conclusion",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 6
+   }
+  ],
+  "critique_resolution": {
+   "open": 12
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 9,
+    "H2": 5
+   },
+   "mean_of_10": 7.0
+  },
+  "evidence_support": {
+   "supports": 7,
+   "partly": 2,
+   "does_not_support": 1,
+   "n": 10
+  },
+  "question": "q2_scaling_knn",
+  "label": "local-b5"
+ },
+ {
+  "run_id": "20261010T005541Z-q2_scaling_knn-local-b5-r1",
+  "reasoner": "local-b5",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 7,
+  "citation_accuracy": {
+   "k": 7,
+   "n": 7,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 7
+  },
+  "evidence_correctness": {
+   "k": 7,
+   "n": 7,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 7
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.20632252110743388,
+   "H2": 0.15941205085605747
+  },
+  "verdicts": {},
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 9
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 6
+   },
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 1
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 1,
+   "open": 15
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 8,
+    "H2": 10
+   },
+   "mean_of_10": 9.0
+  },
+  "evidence_support": {
+   "supports": 6,
+   "partly": 1,
+   "does_not_support": 0,
+   "n": 7
+  },
+  "question": "q2_scaling_knn",
+  "label": "local-b5"
+ },
+ {
+  "run_id": "20261009T171446Z-q3_imbalance-rule-r0",
+  "reasoner": "rule",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 25,
+  "citation_accuracy": {
+   "k": 24,
+   "n": 25,
+   "rate": 0.96
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 24,
+   "metadata_mismatch": 1
+  },
+  "evidence_correctness": {
+   "k": 24,
+   "n": 25,
+   "rate": 0.96
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 25
+  },
+  "gaps": 6,
+  "hypotheses": 1,
+  "design_validity": {
+   "D1": {
+    "passed": 9,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": true,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.24755857539115908
+  },
+  "verdicts": {
+   "K1": "inconclusive"
+  },
+  "critiques": [],
+  "critique_resolution": {},
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 5
+   },
+   "mean_of_10": 5.0
+  },
+  "evidence_support": {
+   "supports": 25,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 25
+  },
+  "question": "q3_imbalance",
+  "label": "rule"
+ },
+ {
+  "run_id": "20261009T172244Z-q3_imbalance-local-r0",
+  "reasoner": "local",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 0,
+  "citation_accuracy": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {},
+  "evidence_correctness": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {},
+  "gaps": 0,
+  "hypotheses": 0,
+  "design_validity": {},
+  "novelty_max_tfidf_similarity": {},
+  "verdicts": {},
+  "critiques": [
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "gaps",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 2
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 2,
+   "open": 3
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {},
+   "mean_of_10": null
+  },
+  "evidence_support": {
+   "supports": 0,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 0
+  },
+  "question": "q3_imbalance",
+  "label": "local"
+ },
+ {
+  "run_id": "20261009T172823Z-q3_imbalance-local-r1",
+  "reasoner": "local",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 0,
+  "citation_accuracy": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {},
+  "evidence_correctness": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {},
+  "gaps": 0,
+  "hypotheses": 0,
+  "design_validity": {},
+  "novelty_max_tfidf_similarity": {},
+  "verdicts": {},
+  "critiques": [
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "gaps",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 2
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 2,
+   "open": 3
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {},
+   "mean_of_10": null
+  },
+  "evidence_support": {
+   "supports": 0,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 0
+  },
+  "question": "q3_imbalance",
+  "label": "local"
+ },
+ {
+  "run_id": "20261009T173359Z-q3_imbalance-local-r2",
+  "reasoner": "local",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 1,
+  "citation_accuracy": {
+   "k": 1,
+   "n": 1,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 1
+  },
+  "evidence_correctness": {
+   "k": 1,
+   "n": 1,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 1
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.17308822315405098,
+   "H2": 0.18936136869624567
+  },
+  "verdicts": {
+   "K1": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 9
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 6
+   },
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 1
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 1,
+   "open": 15
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 8,
+    "H2": 5
+   },
+   "mean_of_10": 6.5
+  },
+  "evidence_support": {
+   "supports": 1,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 1
+  },
+  "question": "q3_imbalance",
+  "label": "local"
+ },
+ {
+  "run_id": "20261009T174849Z-q3_imbalance-local+mc-r0",
+  "reasoner": "local+mc",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 0,
+  "citation_accuracy": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {},
+  "evidence_correctness": {
+   "k": 0,
+   "n": 0,
+   "rate": null
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {},
+  "gaps": 0,
+  "hypotheses": 0,
+  "design_validity": {},
+  "novelty_max_tfidf_similarity": {},
+  "verdicts": {},
+  "critiques": [
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "gaps",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 2
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 2,
+   "open": 3
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {},
+   "mean_of_10": null
+  },
+  "evidence_support": {
+   "supports": 0,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 0
+  },
+  "question": "q3_imbalance",
+  "label": "local+mc"
+ },
+ {
+  "run_id": "20261009T175433Z-q3_imbalance-local+mc-r1",
+  "reasoner": "local+mc",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 2,
+  "citation_accuracy": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 2
+  },
+  "evidence_correctness": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 2
+  },
+  "gaps": 3,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.1664657169894749,
+   "H2": 0.1521611511906476
+  },
+  "verdicts": {
+   "K1": "inconclusive",
+   "K2": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "conclusion",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "design",
+    "reviewer": "model",
+    "severity": "major",
+    "n": 4
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 4
+   }
+  ],
+  "critique_resolution": {
+   "open": 11
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 8,
+    "H2": 10
+   },
+   "mean_of_10": 9.0
+  },
+  "evidence_support": {
+   "supports": 2,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 2
+  },
+  "question": "q3_imbalance",
+  "label": "local+mc"
+ },
+ {
+  "run_id": "20261009T181615Z-q3_imbalance-local+mc-r2",
+  "reasoner": "local+mc",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 2,
+  "citation_accuracy": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 2
+  },
+  "evidence_correctness": {
+   "k": 2,
+   "n": 2,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 2
+  },
+  "gaps": 3,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.15363847541689976,
+   "H2": 0.14052783774017677
+  },
+  "verdicts": {
+   "K1": "inconclusive",
+   "K2": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 4
+   },
+   {
+    "stage": "hypotheses",
+    "reviewer": "model",
+    "severity": "major",
+    "n": 5
+   }
+  ],
+  "critique_resolution": {
+   "open": 9
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 7,
+    "H2": 7
+   },
+   "mean_of_10": 7.0
+  },
+  "evidence_support": {
+   "supports": 1,
+   "partly": 1,
+   "does_not_support": 0,
+   "n": 2
+  },
+  "question": "q3_imbalance",
+  "label": "local+mc"
+ },
+ {
+  "run_id": "20261010T012033Z-q3_imbalance-local-b5-r0",
+  "reasoner": "local-b5",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 6,
+  "citation_accuracy": {
+   "k": 6,
+   "n": 6,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 6
+  },
+  "evidence_correctness": {
+   "k": 6,
+   "n": 6,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 6
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.1875165818406169,
+   "H2": 0.14289909825626854
+  },
+  "verdicts": {
+   "K1": "inconclusive",
+   "K2": "supported"
+  },
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 4
+   },
+   {
+    "stage": "evidence",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 2
+   }
+  ],
+  "critique_resolution": {
+   "fixed": 2,
+   "open": 4
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 8,
+    "H2": 9
+   },
+   "mean_of_10": 8.5
+  },
+  "evidence_support": {
+   "supports": 6,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 6
+  },
+  "question": "q3_imbalance",
+  "label": "local-b5"
+ },
+ {
+  "run_id": "20261010T013639Z-q3_imbalance-local-b5-r1",
+  "reasoner": "local-b5",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 4,
+  "citation_accuracy": {
+   "k": 4,
+   "n": 4,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 4
+  },
+  "evidence_correctness": {
+   "k": 4,
+   "n": 4,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 4
+  },
+  "gaps": 4,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.1902252814839486,
+   "H2": 0.1792395784083144
+  },
+  "verdicts": {
+   "K1": "supported",
+   "K2": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 4
+   }
+  ],
+  "critique_resolution": {
+   "open": 4
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 7,
+    "H2": 5
+   },
+   "mean_of_10": 6.0
+  },
+  "evidence_support": {
+   "supports": 3,
+   "partly": 1,
+   "does_not_support": 0,
+   "n": 4
+  },
+  "question": "q3_imbalance",
+  "label": "local-b5"
+ },
+ {
+  "run_id": "20261010T014955Z-q3_imbalance-local-b5-r2",
+  "reasoner": "local-b5",
+  "status": "complete",
+  "papers": 25,
+  "papers_with_abstract": 25,
+  "evidence": 8,
+  "citation_accuracy": {
+   "k": 8,
+   "n": 8,
+   "rate": 1.0
+  },
+  "citations_unverifiable": 0,
+  "citation_status": {
+   "verified": 8
+  },
+  "evidence_correctness": {
+   "k": 8,
+   "n": 8,
+   "rate": 1.0
+  },
+  "evidence_unchecked": 0,
+  "quote_status": {
+   "found": 8
+  },
+  "gaps": 3,
+  "hypotheses": 2,
+  "design_validity": {
+   "D1": {
+    "passed": 8,
+    "of": 9,
+    "checks": {
+     "runnable": true,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   },
+   "D2": {
+    "passed": 7,
+    "of": 9,
+    "checks": {
+     "runnable": false,
+     "has_control": true,
+     "has_treatment": true,
+     "held_out_evaluation": true,
+     "primary_metric_matches_hypothesis": false,
+     "paired_test": true,
+     "at_least_5_paired_measurements": true,
+     "multiple_seeds": true,
+     "more_than_one_dataset": true
+    }
+   }
+  },
+  "novelty_max_tfidf_similarity": {
+   "H1": 0.16701092383035204,
+   "H2": 0.14418870185560279
+  },
+  "verdicts": {
+   "K1": "inconclusive"
+  },
+  "critiques": [
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "blocking",
+    "n": 3
+   },
+   {
+    "stage": "design",
+    "reviewer": "rule",
+    "severity": "major",
+    "n": 6
+   }
+  ],
+  "critique_resolution": {
+   "open": 9
+  },
+  "human_corrections": {
+   "evidence": null,
+   "hypotheses": null,
+   "design": null,
+   "conclusion": null
+  },
+  "human_reviewed": false,
+  "judge": "local",
+  "judge_model": "phi-4-mini-instruct-q4_k_m",
+  "hypothesis_quality": {
+   "per_hypothesis": {
+    "H1": 6,
+    "H2": 5
+   },
+   "mean_of_10": 5.5
+  },
+  "evidence_support": {
+   "supports": 8,
+   "partly": 0,
+   "does_not_support": 0,
+   "n": 8
+  },
+  "question": "q3_imbalance",
+  "label": "local-b5"
+ }
+]

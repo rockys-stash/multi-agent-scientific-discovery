@@ -114,7 +114,7 @@ def test_e3_model_critic_reviews_the_same_faulted_states_and_leaves_rule_trials_
     state = execute(tmp_path / "r1", RunState(run_id="r1", question=question, reasoner="rule"), registry,
                     RuleReasoner(min_score=0.5), op, NoReviewer())  # fmt: skip
     plain, _ = e3_critic.evaluate([state], 1, 2)
-    with_model, clean = e3_critic.evaluate([state], 1, 2, _FlagEverything(), 2)  # type: ignore[arg-type]
+    with_model, clean = e3_critic.evaluate([state], 1, 2, _FlagEverything(), 2, 1)  # type: ignore[arg-type]
     strip = [{k: v for k, v in t.items() if not k.startswith("model_")} for t in with_model]
     assert strip == plain
     judged = [t for t in with_model if "model_flagged_target" in t]

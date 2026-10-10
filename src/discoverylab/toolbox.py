@@ -220,7 +220,7 @@ def validate(design: ExperimentDesign) -> list[str]:
             problems.append(f"unknown dataset {d!r}")
     for c in [design.control, *design.treatments]:
         try:
-            parse_condition(c)
+            build(c, 0)  # constructs the estimator, so unsupported combinations fail here, not mid-run (D20)
         except ValueError as e:
             problems.append(str(e))
     for m in design.metrics:

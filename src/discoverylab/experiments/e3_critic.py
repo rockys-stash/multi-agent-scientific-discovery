@@ -196,6 +196,7 @@ def evaluate(
     max_targets: int,
     model_critic: Reasoner | None = None,
     model_trials_per_fault: int = 0,
+    model_clean_runs: int = 0,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     rng = random.Random(seed)
     trials: list[dict[str, Any]] = []
@@ -222,7 +223,7 @@ def evaluate(
                 if "model_flagged_target" in res:
                     tr["model_flagged_target"] = res["model_flagged_target"]
                     tr["model_critiques"] = res["model_critiques"]
-        for c in clean:
+        for c in mrng.sample(clean, min(model_clean_runs, len(clean))):
             c["model_critiques"] = model_clean_critiques(by_state[c["run_id"]], model_critic)
     return trials, clean
 
@@ -295,7 +296,7 @@ def run(cfg: dict[str, Any], runs: Path, results: Path | None = None, model_crit
         model_critic = make_reasoner(name)
     with result_dir("e3_critic", cfg, DESCRIPTION, results) as (rd, s):
         trials, clean = evaluate(states, int(cfg.get("seed", 0)), int(cfg.get("max_targets_per_fault", 5)),
-                                 model_critic, int(cfg.get("model_trials_per_fault", 6)))  # fmt: skip
+                                 model_critic, int(cfg.get("model_trials_per_fault", 4)), int(cfg.get("model_clean_runs", 6)))  # fmt: skip
         if why:
             s.notes.append(f"Model critic not run: {why}.")
         elif model_critic is not None:

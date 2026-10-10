@@ -33,6 +33,7 @@ METRICS: list[tuple[str, str]] = [
     ("hypotheses", "Hypotheses"),
     ("hypothesis_rubric", "Hypothesis rubric (of 10)"),
     ("design_validity", "Design checks passed"),
+    ("conclusions", "Conclusions reached"),
     ("verdict_valid", "Verdicts matching the statistics"),
     ("critiques", "Critiques raised"),
     ("evidence_removed", "Evidence removed by critique"),
@@ -76,6 +77,7 @@ def per_run(run_dir: Path) -> dict[str, Any]:
         "hypotheses": m["hypotheses"],
         "hypothesis_rubric": j["hypothesis_quality"]["mean_of_10"] if j["hypothesis_quality"] else None,
         "design_validity": (sum(v["passed"] for v in val) / sum(v["of"] for v in val)) if val else None,
+        "conclusions": len(s.conclusions),
         "verdict_valid": verdict_validity(s),
         "critiques": len(s.critiques),
         "evidence_removed": sum(
@@ -133,8 +135,12 @@ def summarise(s: Summary, rows: list[dict[str, Any]]) -> None:
             s.findings.append(
                 f"{LABELS.get(a, a)}: {_fmt(c['evidence'], False)} evidence items per run, citations verified "
                 f"{_fmt(c['citation_accuracy'], True)}, evidence correct {_fmt(c['evidence_correctness'], True)}, "
-                f"verdicts matching the statistics {_fmt(c['verdict_valid'], True)}, design checks {_fmt(c['design_validity'], True)}."
+                f"design checks {_fmt(c['design_validity'], True)}, {_fmt(c['conclusions'], False)} conclusions per run, "
+                f"verdicts matching the statistics {_fmt(c['verdict_valid'], True)} over the {c['verdict_valid']['n']} runs with a conclusion."
             )
+    s.notes.append(
+        "'Verdicts matching the statistics' averages over runs that reached a conclusion; runs whose designs were all blocked, or that found no evidence, have none."
+    )
     s.notes.append(
         "The rule baseline runs once per question (it is deterministic), so its spread is undefined; model arms ran 3 repeats per question with different sampling seeds."
     )
@@ -160,7 +166,10 @@ def run(cfg: dict[str, Any], runs: Path, results: Path | None = None, e1_results
         rd.write_json("per_run.json", rows)
         rd.write_json("comparison.json", compare(rows))
         summarise(s, rows)
-        skipped = [r for r in e1rows if r["status"] != "complete"]
+        failed = [r for r in e1rows if r["status"] == "failed"]
+        for r in failed:
+            s.findings.append(f"Failed run ({r['reasoner']}, {r['question']}, repeat {r['repeat']}): {r['reason']}.")
+        skipped = [r for r in e1rows if r["status"] == "skipped"]
         if skipped:
             s.notes.append(
                 "Not run in E1: " + "; ".join(sorted({f"{r['reasoner']} ({r['reason']})" for r in skipped})) + "."
