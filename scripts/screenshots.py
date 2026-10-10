@@ -58,7 +58,9 @@ def main() -> None:
         except OSError:
             time.sleep(0.1)
     first = run_ids[0]
-    shots = [("runs", "/runs"), ("run-network", f"/runs/{first}"), ("run-process", f"/runs/{first}/process"),
+    model = next((r["run_id"] for r in rows if r["status"] == "complete" and r["reasoner"] != "rule"), first)
+    shots = [("runs", "/runs"), ("run-network", f"/runs/{first}"), ("run-network-model", f"/runs/{model}"),
+             ("run-critiques-model", f"/runs/{model}/process"), ("run-process", f"/runs/{first}/process"),
              ("run-citations", f"/runs/{run_ids[-1]}/citations"), ("run-corrections", f"/runs/{first}/corrections"),
              ("evaluation", "/evaluation"), ("method", "/method")]  # fmt: skip
     args.out.mkdir(parents=True, exist_ok=True)
