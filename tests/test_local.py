@@ -42,7 +42,7 @@ def weights(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
 
 def _client(weights: Path, monkeypatch: pytest.MonkeyPatch, contents: list[tuple[str, str]]) -> tuple[Any, _FakeLlama]:
     fake = _FakeLlama(contents)
-    monkeypatch.setattr(local, "_load", lambda path: fake)
+    monkeypatch.setattr(local, "_load", lambda path, n_ctx=0: fake)
     return local.LocalClient(weights, seed=3), fake
 
 

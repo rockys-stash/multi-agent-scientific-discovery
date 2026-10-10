@@ -22,7 +22,10 @@ from pydantic import BaseModel, ValidationError
 # Sampling recommended by the model cards (Qwen3 instruct: 0.7 / 0.8 / 20). Repeats differ by seed.
 TEMPERATURE = float(os.environ.get("DISCOVERYLAB_LOCAL_TEMPERATURE", "0.7"))
 TOP_P, TOP_K = 0.8, 20
-N_CTX = int(os.environ.get("DISCOVERYLAB_LOCAL_CTX", "20480"))
+# Context per role. The KV cache grows with it (about 0.15 MB per token for these models), and the
+# reasoner and judge share one machine: 20480 for both used 13.5 GB of 15 GB (D19).
+N_CTX = int(os.environ.get("DISCOVERYLAB_LOCAL_CTX", "16384"))  # longest prompt (25 abstracts) about 8,500 tokens
+JUDGE_CTX = 8192
 MAX_OUTPUT = 6000  # a grammar-constrained answer that runs this long is looping; fail it loudly
 
 _LOADED: dict[str, Any] = {}
@@ -47,13 +50,16 @@ def missing(role: str = "reasoner") -> str | None:
     return None
 
 
-def _load(path: Path) -> Any:
+def _load(path: Path, n_ctx: int = N_CTX) -> Any:
     key = str(path.resolve())
     if key not in _LOADED:  # one copy of the weights per process, shared by reasoner and critic
         from llama_cpp import Llama
 
         threads = int(os.environ.get("DISCOVERYLAB_LOCAL_THREADS") or os.cpu_count() or 4)
-        _LOADED[key] = Llama(model_path=key, n_ctx=N_CTX, n_threads=threads, verbose=False)
+        # no mmap: the CPU backend repacks weights for AMX, and a mapped copy would double resident memory
+        _LOADED[key] = Llama(
+            model_path=key, n_ctx=n_ctx, n_threads=threads, flash_attn=True, use_mmap=False, verbose=False
+        )
     return _LOADED[key]
 
 
@@ -84,7 +90,7 @@ class _Messages:
         messages: list[dict[str, str]],
         output_format: type[BaseModel],
     ) -> _Response:
-        llm = _load(self._c.path)
+        llm = _load(self._c.path, self._c.n_ctx)
         seed = self._c.rng.randrange(2**31)
         out = llm.create_chat_completion(
             messages=[{"role": "system", "content": system}, *messages],
@@ -109,8 +115,10 @@ class _Messages:
 class LocalClient:
     """Stands in for ``anthropic.Anthropic()`` with a local GGUF model."""
 
-    def __init__(self, path: Path, seed: int | None = None, temperature: float = TEMPERATURE) -> None:
-        self.path = path
+    def __init__(
+        self, path: Path, seed: int | None = None, temperature: float = TEMPERATURE, n_ctx: int = N_CTX
+    ) -> None:
+        self.path, self.n_ctx = path, n_ctx
         self.temperature = temperature
         self.seed = seed if seed is not None else random.SystemRandom().randrange(2**31)
         self.rng = random.Random(self.seed)  # per-call seeds derive from this, logged with the run

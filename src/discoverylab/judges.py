@@ -48,13 +48,13 @@ def judge_client(name: str) -> tuple[Any, str]:
 
         return anthropic.Anthropic(), os.environ.get("DISCOVERYLAB_MODEL", "claude-opus-5-5")
     if name == "local":
-        from discoverylab.reasoners.local import LocalClient, model_id, model_path
+        from discoverylab.reasoners.local import JUDGE_CTX, LocalClient, model_id, model_path
 
         path = model_path("judge")
         if path is None:
             raise ValueError("DISCOVERYLAB_LOCAL_JUDGE is not set to a GGUF file")
         # judging is scoring, not generation: sample near-greedily so a re-judge agrees with itself
-        return LocalClient(path, seed=0, temperature=0.0), model_id(path)
+        return LocalClient(path, seed=0, temperature=0.0, n_ctx=JUDGE_CTX), model_id(path)
     raise ValueError(f"unknown judge {name!r}")
 
 

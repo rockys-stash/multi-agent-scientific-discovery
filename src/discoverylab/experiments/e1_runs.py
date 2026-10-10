@@ -35,17 +35,20 @@ SAME = ("run_config", "sources", "judge", "cache_mode")  # what must match for a
 
 
 def _reusable(cfg: dict[str, Any], results: Path) -> dict[tuple[str, str, int], dict[str, Any]]:
-    """Completed runs of an earlier E1 that this E1 may adopt instead of rerunning (``reuse_from``)."""
-    result_id = cfg.get("reuse_from")
-    if not result_id:
-        return {}
-    prior = results / "e1_runs" / result_id
-    old = yaml.safe_load((prior / "config.yaml").read_text(encoding="utf-8"))
-    differ = [k for k in SAME if old.get(k) != cfg.get(k)]
-    if differ:
-        raise ValueError(f"reuse_from {result_id}: configuration differs in {', '.join(differ)}")
-    rows = json.loads((prior / "runs.json").read_text(encoding="utf-8"))
-    return {(r["question"], r["reasoner"], r["repeat"]): r for r in rows if r["status"] == "complete"}
+    """Completed runs of earlier E1 results that this E1 may adopt instead of rerunning (``reuse_from``:
+    one result id or a list, later ones taking precedence; an interrupted result's checkpoint counts)."""
+    ids = cfg.get("reuse_from") or []
+    out: dict[tuple[str, str, int], dict[str, Any]] = {}
+    for result_id in [ids] if isinstance(ids, str) else ids:
+        prior = results / "e1_runs" / result_id
+        old = yaml.safe_load((prior / "config.yaml").read_text(encoding="utf-8"))
+        differ = [k for k in SAME if old.get(k) != cfg.get(k)]
+        if differ:
+            raise ValueError(f"reuse_from {result_id}: configuration differs in {', '.join(differ)}")
+        rows = json.loads((prior / "runs.json").read_text(encoding="utf-8"))
+        out.update({(r["question"], r["reasoner"], r["repeat"]): {**r, "reused_from": r.get("reused_from") or result_id}
+                    for r in rows if r["status"] == "complete"})  # fmt: skip
+    return out
 
 
 def run(
@@ -76,7 +79,7 @@ def run(
                 for rep in range(int(spec.get("repeats", 1))):
                     prior = reused.get((q.id, label, rep))
                     if prior is not None:  # an identical arm already ran under this config; not rerun (logged)
-                        rows.append({**prior, "reused_from": prior.get("reused_from") or cfg["reuse_from"]})
+                        rows.append(prior)
                         continue
                     why = unavailable(name) or (unavailable(critic_name) if critic_name else None)
                     if why:
